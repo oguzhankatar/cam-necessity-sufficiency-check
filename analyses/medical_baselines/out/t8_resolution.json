@@ -1,0 +1,89 @@
+{
+ "Atelectasis": {
+  "n_boxes": 180,
+  "n_items": 180,
+  "area_lt_cell": 0.5388888888888889,
+  "both_lt_cell": 0.24444444444444444,
+  "either_lt_cell": 0.6888888888888889,
+  "gt_frac": 0.03195621193596916,
+  "median_side_px1024": 140.2346866822822,
+  "ceiling_hit": 0.7388888888888889
+ },
+ "Cardiomegaly": {
+  "n_boxes": 146,
+  "n_items": 146,
+  "area_lt_cell": 0.0,
+  "both_lt_cell": 0.0,
+  "either_lt_cell": 0.0,
+  "gt_frac": 0.17579509152452666,
+  "median_side_px1024": 423.33248476615904,
+  "ceiling_hit": 1.0
+ },
+ "Effusion": {
+  "n_boxes": 153,
+  "n_items": 153,
+  "area_lt_cell": 0.16339869281045752,
+  "both_lt_cell": 0.08496732026143791,
+  "either_lt_cell": 0.3790849673202614,
+  "gt_frac": 0.06866716438747426,
+  "median_side_px1024": 241.66176399402246,
+  "ceiling_hit": 0.8496732026143791
+ },
+ "Infiltration": {
+  "n_boxes": 123,
+  "n_items": 123,
+  "area_lt_cell": 0.04065040650406504,
+  "both_lt_cell": 0.032520325203252036,
+  "either_lt_cell": 0.12195121951219512,
+  "gt_frac": 0.09668496550615965,
+  "median_side_px1024": 243.67222942088918,
+  "ceiling_hit": 0.975609756097561
+ },
+ "Mass": {
+  "n_boxes": 85,
+  "n_items": 85,
+  "area_lt_cell": 0.5882352941176471,
+  "both_lt_cell": 0.5529411764705883,
+  "either_lt_cell": 0.6352941176470588,
+  "gt_frac": 0.0423230343660098,
+  "median_side_px1024": 124.36697016947771,
+  "ceiling_hit": 0.7411764705882353
+ },
+ "Nodule": {
+  "n_boxes": 79,
+  "n_items": 79,
+  "area_lt_cell": 1.0,
+  "both_lt_cell": 0.9873417721518988,
+  "either_lt_cell": 1.0,
+  "gt_frac": 0.005215426588408976,
+  "median_side_px1024": 69.28250658142342,
+  "ceiling_hit": 0.25316455696202533
+ },
+ "Pneumonia": {
+  "n_boxes": 120,
+  "n_items": 120,
+  "area_lt_cell": 0.03333333333333333,
+  "both_lt_cell": 0.016666666666666666,
+  "either_lt_cell": 0.1,
+  "gt_frac": 0.09423820257458262,
+  "median_side_px1024": 244.8808181245626,
+  "ceiling_hit": 0.9833333333333333
+ },
+ "Pneumothorax": {
+  "n_boxes": 98,
+  "n_items": 98,
+  "area_lt_cell": 0.32653061224489793,
+  "both_lt_cell": 0.17346938775510204,
+  "either_lt_cell": 0.5102040816326531,
+  "gt_frac": 0.05211312613228714,
+  "median_side_px1024": 193.76748068807046,
+  "ceiling_hit": 0.7448979591836735
+ },
+ "ALL": {
+  "n_boxes": 984,
+  "area_lt_cell": 0.2967479674796748,
+  "both_lt_cell": 0.20833333333333334
+ },
+ "reachable_pixels": 372,
+ "cell_px_1024": 146.28571428571428
+}

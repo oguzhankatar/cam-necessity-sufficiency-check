@@ -1,0 +1,51 @@
+{
+ "post_hoc": true,
+ "n_census": 895,
+ "n_census_traces": 43,
+ "n_checked_traces": 33,
+ "census_entries_covered_by_checked_traces": 865,
+ "n_zero_readout": 18,
+ "zero_readout_on_dev_traces": 18,
+ "dev_trace_direct": {
+  "n": 772,
+  "agree": 772
+ },
+ "no_dev_trace": {
+  "n": 105,
+  "agree": 89,
+  "binary_agree": 94,
+  "majority_verdict": "degenerate",
+  "majority_agree": 56,
+  "labels": {
+   "class-token": 7,
+   "hard": 40,
+   "normalisation-blocked": 2,
+   "degenerate": 56
+  },
+  "errors": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny",
+   "convnext_zepto_rms",
+   "convnext_zepto_rms_ols",
+   "volo_d1_224",
+   "volo_d1_384",
+   "volo_d2_224",
+   "volo_d2_384",
+   "volo_d3_224",
+   "volo_d3_448",
+   "volo_d4_224",
+   "volo_d4_448",
+   "volo_d5_224",
+   "volo_d5_448",
+   "volo_d5_512"
+  ]
+ },
+ "development_label_counts": {
+  "degenerate": 32,
+  "hard": 13,
+  "class-token": 5,
+  "normalisation-blocked": 13,
+  "None": 1
+ }
+}

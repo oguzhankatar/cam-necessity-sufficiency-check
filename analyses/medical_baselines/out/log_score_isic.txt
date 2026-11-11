@@ -1,0 +1,5 @@
+<python-env>\Lib\site-packages\scipy\stats\_wilcoxon.py:181: RuntimeWarning: invalid value encountered in scalar divide
+  z = (r_plus - mn) / se
+== isic n=735 best=collapsed_1x1 ceiling=0.988
+   max |dev| from archive 0.2966
+wrote <repo>\analyses/medical_baselines\out\t6_score_isic.json

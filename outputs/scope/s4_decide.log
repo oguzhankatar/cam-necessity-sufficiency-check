@@ -1,0 +1,93 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+resnet50                               IN-SCOPE        blocker=None                               d0=2.44e-16 d1=2.44e-16  AFFINE-SHIPPED OK
+resnet18                               IN-SCOPE        blocker=None                               d0=3.13e-16 d1=3.13e-16  AFFINE-SHIPPED OK
+wide_resnet50_2                        IN-SCOPE        blocker=None                               d0=2.18e-16 d1=2.18e-16  AFFINE-SHIPPED OK
+resnext50_32x4d                        IN-SCOPE        blocker=None                               d0=3.34e-16 d1=3.34e-16  AFFINE-SHIPPED OK
+regnety_032                            IN-SCOPE        blocker=None                               d0=1.94e-16 d1=1.94e-16  AFFINE-SHIPPED OK
+regnetx_032                            IN-SCOPE        blocker=None                               d0=4.56e-16 d1=4.56e-16  AFFINE-SHIPPED OK
+densenet121                            IN-SCOPE        blocker=None                               d0=2.19e-16 d1=2.19e-16  AFFINE-SHIPPED OK
+vgg16                                  NONLIN-BLOCKED  blocker=pre_logits.act1(ReLU)              d0=8.43e-02 d1=8.43e-02  HARD-BLOCKED   OK
+inception_v3                           IN-SCOPE        blocker=None                               d0=1.57e-16 d1=1.57e-16  AFFINE-SHIPPED OK
+inception_v4                           IN-SCOPE        blocker=None                               d0=3.85e-16 d1=3.85e-16  AFFINE-SHIPPED OK
+xception41                             IN-SCOPE        blocker=None                               d0=1.17e-16 d1=1.17e-16  AFFINE-SHIPPED OK
+dpn68                                  IN-SCOPE        blocker=None                               d0=4.71e-16 d1=4.71e-16  AFFINE-SHIPPED OK
+res2net50_26w_4s                       IN-SCOPE        blocker=None                               d0=1.98e-16 d1=1.98e-16  AFFINE-SHIPPED OK
+convnext_tiny                          NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=1.39e-01 d1=2.01e-16  NORM-ONLY      OK
+convnext_base                          NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=1.43e-01 d1=7.38e-17  NORM-ONLY      OK
+convnextv2_tiny                        NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=1.45e-01 d1=1.53e-16  NORM-ONLY      OK
+efficientnet_b0                        IN-SCOPE        blocker=None                               d0=1.62e-16 d1=1.62e-16  AFFINE-SHIPPED OK
+tf_efficientnetv2_s                    IN-SCOPE        blocker=None                               d0=3.85e-16 d1=3.85e-16  AFFINE-SHIPPED OK
+mobilenetv3_large_100                  NONLIN-BLOCKED  blocker=act2(Hardswish)                    d0=1.06e-01 d1=1.06e-01  HARD-BLOCKED   OK
+mobilenetv3_small_100                  NONLIN-BLOCKED  blocker=act2(Hardswish)                    d0=3.17e-01 d1=3.17e-01  HARD-BLOCKED   OK
+mobilenetv4_conv_small                 NONLIN-BLOCKED  blocker=norm_head.act(ReLU)                d0=5.65e-01 d1=5.65e-01  HARD-BLOCKED   OK
+lcnet_050                              NONLIN-BLOCKED  blocker=act2(Hardswish)                    d0=1.27e-01 d1=1.27e-01  HARD-BLOCKED   OK
+tinynet_a                              IN-SCOPE        blocker=None                               d0=1.75e-16 d1=1.75e-16  AFFINE-SHIPPED OK
+mnasnet_100                            IN-SCOPE        blocker=None                               d0=1.90e-16 d1=1.90e-16  AFFINE-SHIPPED OK
+ghostnet_100                           NONLIN-BLOCKED  blocker=act2(ReLU)                         d0=1.82e-01 d1=1.82e-01  HARD-BLOCKED   OK
+hardcorenas_a                          NONLIN-BLOCKED  blocker=act2(Hardswish)                    d0=1.91e-01 d1=1.91e-01  HARD-BLOCKED   OK
+repvgg_a2                              IN-SCOPE        blocker=None                               d0=1.56e-16 d1=1.56e-16  AFFINE-SHIPPED OK
+mobilevit_s                            IN-SCOPE        blocker=None                               d0=4.92e-16 d1=4.92e-16  AFFINE-SHIPPED OK
+mobilevitv2_050                        IN-SCOPE        blocker=None                               d0=2.52e-16 d1=2.52e-16  AFFINE-SHIPPED OK
+fastvit_t8                             IN-SCOPE        blocker=None                               d0=3.30e-16 d1=3.30e-16  AFFINE-SHIPPED OK
+efficientformer_l1                     IN-SCOPE        blocker=None                               d0=1.50e-16 d1=1.50e-16  AFFINE-SHIPPED OK
+efficientformerv2_s0                   IN-SCOPE        blocker=None                               d0=1.61e-16 d1=1.61e-16  AFFINE-SHIPPED OK
+levit_128                              IN-SCOPE        blocker=None                               d0=1.56e-16 d1=1.56e-16  AFFINE-SHIPPED OK
+tiny_vit_5m_224                        NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=3.14e-01 d1=3.57e-16  NORM-ONLY      OK
+edgenext_small                         NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=3.07e-01 d1=2.37e-16  NORM-ONLY      OK
+vit_base_patch16_224                   DEGENERATE      blocker=None                               d0=1.88e-16 d1=1.88e-16  AFFINE-SHIPPED OK
+deit3_small_patch16_224                DEGENERATE      blocker=None                               d0=1.59e-16 d1=1.59e-16  AFFINE-SHIPPED OK
+vit_betwixt_patch16_reg4_gap_256       NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=3.07e-02 d1=2.16e-16  NORM-ONLY      OK
+vit_base_patch16_rope_reg1_gap_256     NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=6.95e-02 d1=2.08e-16  NORM-ONLY      OK
+eva02_tiny_patch14_336                 NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=3.50e-01 d1=1.72e-16  NORM-ONLY      OK
+beitv2_base_patch16_224                NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=1.61e-01 d1=1.84e-16  NORM-ONLY      OK
+naflexvit_base_patch16_gap             NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=8.98e-02 d1=1.77e-16  NORM-ONLY      OK
+swin_tiny_patch4_window7_224           IN-SCOPE        blocker=None                               d0=1.85e-16 d1=1.85e-16  AFFINE-SHIPPED OK
+swinv2_tiny_window8_256                IN-SCOPE        blocker=None                               d0=3.86e-16 d1=3.86e-16  AFFINE-SHIPPED OK
+maxvit_tiny_tf_224                     NONLIN-BLOCKED  blocker=head.pre_logits.act(Tanh)          d0=3.29e-01 d1=3.11e-01  HARD-BLOCKED   OK
+coatnet_0_rw_224                       IN-SCOPE        blocker=None                               d0=2.02e-16 d1=2.02e-16  AFFINE-SHIPPED OK
+davit_tiny                             NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=1.18e-01 d1=2.16e-16  NORM-ONLY      OK
+caformer_s18                           NONLIN-BLOCKED  blocker=head.fc.act.relu(ReLU)             d0=4.17e-01 d1=4.73e-01  HARD-BLOCKED   OK
+poolformer_s12                         NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=1.46e-01 d1=1.89e-16  NORM-ONLY      OK
+poolformerv2_s12                       NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=3.04e-01 d1=1.24e-16  NORM-ONLY      OK
+convformer_s18                         NONLIN-BLOCKED  blocker=head.fc.act.relu(ReLU)             d0=4.54e-01 d1=5.94e-01  HARD-BLOCKED   OK
+pvt_v2_b0                              IN-SCOPE        blocker=None                               d0=3.64e-16 d1=3.64e-16  AFFINE-SHIPPED OK
+twins_svt_small                        IN-SCOPE        blocker=None                               d0=1.78e-16 d1=1.78e-16  AFFINE-SHIPPED OK
+pit_s_224                              DEGENERATE      blocker=None                               d0=1.94e-16 d1=1.94e-16  AFFINE-SHIPPED OK
+cait_xxs24_224                         DEGENERATE      blocker=None                               d0=1.86e-16 d1=1.86e-16  AFFINE-SHIPPED OK
+crossvit_9_240                         SKIP TypeError: unsupported operand type(s) for -: 'list' and 'list'
+<repo>\scripts\scope\s4_decide.py", line 205, in <module>
+    d0, d1, killed = numeric(m, x, [q[0] for q in st['post']])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\scripts\scope\s4_decide.py", line 166, in numeric
+    d0, _ = slib.seg_dev(lambda v: m.forward_head(v), f[0:1], f[1:2])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\scripts\scope\slib.py", line 53, in seg_dev
+    z = torch.stack([fwd(fa + l * (fb - fa))[0] for l in LAM])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\scripts\scope\slib.py", line 53, in <listcomp>
+    z = torch.stack([fwd(fa + l * (fb - fa))[0] for l in LAM])
+                                   ~~~^~~~
+TypeError: unsupported operand type(s) for -: 'list' and 'list'
+
+nest_tiny_jx                           IN-SCOPE        blocker=None                               d0=1.95e-16 d1=1.95e-16  AFFINE-SHIPPED OK
+hiera_tiny_224                         NORM-BLOCKED    blocker=head.norm(LayerNorm)               d0=1.36e-01 d1=1.25e-16  NORM-ONLY      OK
+focalnet_tiny_srf                      IN-SCOPE        blocker=None                               d0=1.87e-16 d1=1.87e-16  AFFINE-SHIPPED OK
+gcvit_tiny                             IN-SCOPE        blocker=None                               d0=1.85e-16 d1=1.85e-16  AFFINE-SHIPPED OK
+nextvit_small                          IN-SCOPE        blocker=None                               d0=1.22e-16 d1=1.22e-16  AFFINE-SHIPPED OK
+rdnet_tiny                             NORM-BLOCKED    blocker=head.norm(LayerNorm2d)             d0=9.00e-02 d1=1.20e-16  NORM-ONLY      OK
+mambaout_tiny                          NONLIN-BLOCKED  blocker=head.pre_logits.act(GELU)          d0=4.15e-01 d1=3.28e-01  HARD-BLOCKED   OK
+hgnetv2_b0                             NONLIN-BLOCKED  blocker=head.last_conv.1(ReLU)             d0=1.48e-01 d1=1.48e-01  HARD-BLOCKED   OK
+repghostnet_100                        NONLIN-BLOCKED  blocker=act2(ReLU)                         d0=2.34e-01 d1=2.34e-01  HARD-BLOCKED   OK
+vitamin_small_224                      NORM-BLOCKED    blocker=fc_norm(LayerNorm)                 d0=1.97e-01 d1=4.03e-16  NORM-ONLY      OK
+
+AGREEMENT: 65/65
+   32  IN-SCOPE
+   16  NORM-BLOCKED
+   13  NONLIN-BLOCKED
+    4  DEGENERATE
+
+DISAGREEMENTS:
+  -> <repo>\outputs\scope\s4_decide.json

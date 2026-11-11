@@ -1,0 +1,6 @@
+<repo>\analyses/theory_sweeps\scripts\theory_sweeps_lib.py:50: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:209.)
+  t = torch.from_numpy(np.ascontiguousarray(F)).to(dev)
+T= +4.0 acc=0.9860 | del N 0.516 S 0.264 G 0.266 C0 0.252 CAM 0.266 R 0.647 | ins N 0.730 S 0.808 G 0.819 C0 0.813 CAM 0.819 R 0.637 || norm del N 0.798 S 0.409 C0 0.390 | norm ins N 1.147 S 1.269 C0 1.277
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness_posT2.json
+T= +8.0 acc=0.9850 | del N 0.585 S 0.264 G 0.265 C0 0.251 CAM 0.265 R 0.634 | ins N 0.710 S 0.806 G 0.816 C0 0.811 CAM 0.818 R 0.639 || norm del N 0.924 S 0.417 C0 0.396 | norm ins N 1.111 S 1.261 C0 1.269
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness_posT2.json

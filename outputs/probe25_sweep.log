@@ -1,0 +1,257 @@
+########## vit_betwixt_patch16_reg4_gap_256.sbb_in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[vit_betwixt_patch16_reg4_gap_256.sbb_in1k] family=VisionTransformer shipped=post C=640 input=256 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8408 pre=0.8344 none=0.8411
+   acc 12800/50000  post=0.8494 pre=0.8471 none=0.8497
+   acc 19200/50000  post=0.8492 pre=0.8463 none=0.8494
+   acc 25600/50000  post=0.8313 pre=0.8276 none=0.8314
+   acc 32000/50000  post=0.8233 pre=0.8198 none=0.8235
+   acc 38400/50000  post=0.8175 pre=0.8137 none=0.8174
+   acc 44800/50000  post=0.8119 pre=0.8078 none=0.8122
+  top-1 on 50000 val images: post=0.8092  pre=0.8057  none=0.8097   (110s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 5.46e-05 PASS
+                 post  <-- SHIPPED    +0.493761  [+0.470201,+0.517993]   4.68e-01  +0.4159 5.63e-03     0.532
+  [audit pre] fast vs brute-force rel err 4.60e-05 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   9.92e-06  +1.0000 2.95e-05     1.031
+  [audit none] fast vs brute-force rel err 3.32e-05 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.09e-05  +1.0000 2.94e-05     1.019
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.09e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.8092 pre=0.8057 none=0.8097   (pre-none = -0.40 pts, shipped-pre = +0.35 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_vit_betwixt_patch16_reg4_gap_256.json
+exit=0
+########## vit_medium_patch16_reg4_gap_256.sbb_in1k
+[vit_medium_patch16_reg4_gap_256.sbb_in1k] family=VisionTransformer shipped=post C=512 input=256 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8370 pre=0.8341 none=0.8392
+   acc 12800/50000  post=0.8490 pre=0.8468 none=0.8489
+   acc 19200/50000  post=0.8502 pre=0.8467 none=0.8495
+   acc 25600/50000  post=0.8316 pre=0.8274 none=0.8311
+   acc 32000/50000  post=0.8232 pre=0.8193 none=0.8223
+   acc 38400/50000  post=0.8181 pre=0.8138 none=0.8172
+   acc 44800/50000  post=0.8129 pre=0.8081 none=0.8117
+  top-1 on 50000 val images: post=0.8106  pre=0.8061  none=0.8096   (82s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 7.31e-05 PASS
+                 post  <-- SHIPPED    +0.651403  [+0.637750,+0.665798]   4.93e-01  +0.5890 6.13e-03     0.513
+  [audit pre] fast vs brute-force rel err 4.41e-05 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   1.13e-05  +1.0000 4.25e-05     1.031
+  [audit none] fast vs brute-force rel err 2.69e-05 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.02e-05  +1.0000 4.20e-05     1.028
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.02e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.8106 pre=0.8061 none=0.8096   (pre-none = -0.35 pts, shipped-pre = +0.45 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_vit_medium_patch16_reg4_gap_256.json
+exit=0
+########## vit_little_patch16_reg4_gap_256.sbb_in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[vit_little_patch16_reg4_gap_256.sbb_in1k] family=VisionTransformer shipped=post C=320 input=256 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8308 pre=0.8169 none=0.8281
+   acc 12800/50000  post=0.8407 pre=0.8326 none=0.8387
+   acc 19200/50000  post=0.8419 pre=0.8339 none=0.8382
+   acc 25600/50000  post=0.8225 pre=0.8131 none=0.8187
+   acc 32000/50000  post=0.8140 pre=0.8053 none=0.8104
+   acc 38400/50000  post=0.8064 pre=0.7976 none=0.8029
+   acc 44800/50000  post=0.8005 pre=0.7923 none=0.7966
+  top-1 on 50000 val images: post=0.7991  pre=0.7911  none=0.7948   (64s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 4.62e-05 PASS
+                 post  <-- SHIPPED    +0.659407  [+0.645874,+0.673585]   4.85e-01  +0.5491 6.23e-03     0.530
+  [audit pre] fast vs brute-force rel err 3.32e-05 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   1.06e-05  +1.0000 3.37e-05     1.073
+  [audit none] fast vs brute-force rel err 3.15e-05 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.15e-05  +1.0000 3.34e-05     1.075
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.15e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.7991 pre=0.7911 none=0.7948   (pre-none = -0.37 pts, shipped-pre = +0.80 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_vit_little_patch16_reg4_gap_256.json
+exit=0
+########## vit_base_patch16_rope_reg1_gap_256.sbb_in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[vit_base_patch16_rope_reg1_gap_256.sbb_in1k] family=Eva shipped=post C=768 input=256 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8320 pre=0.8305 none=0.8325
+   acc 12800/50000  post=0.8482 pre=0.8473 none=0.8467
+   acc 19200/50000  post=0.8476 pre=0.8468 none=0.8460
+   acc 25600/50000  post=0.8287 pre=0.8272 none=0.8271
+   acc 32000/50000  post=0.8199 pre=0.8187 none=0.8190
+   acc 38400/50000  post=0.8146 pre=0.8130 none=0.8137
+   acc 44800/50000  post=0.8098 pre=0.8083 none=0.8096
+  top-1 on 50000 val images: post=0.8071  pre=0.8059  none=0.8068   (159s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 7.08e-05 PASS
+                 post  <-- SHIPPED    +0.628641  [+0.612399,+0.645217]   4.38e-01  +0.5426 5.00e-03     0.574
+  [audit pre] fast vs brute-force rel err 7.11e-05 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   1.09e-05  +1.0000 3.22e-05     1.022
+  [audit none] fast vs brute-force rel err 4.18e-05 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.05e-05  +1.0000 3.24e-05     1.013
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.05e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.8071 pre=0.8059 none=0.8068   (pre-none = -0.09 pts, shipped-pre = +0.12 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_vit_base_patch16_rope_reg1_gap_256.json
+exit=0
+########## beitv2_base_patch16_224.in1k_ft_in1k
+[beitv2_base_patch16_224.in1k_ft_in1k] family=Beit shipped=post C=768 input=224 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8547 pre=0.8491 none=0.8539
+   acc 12800/50000  post=0.8659 pre=0.8627 none=0.8658
+   acc 19200/50000  post=0.8655 pre=0.8630 none=0.8644
+   acc 25600/50000  post=0.8489 pre=0.8456 none=0.8489
+   acc 32000/50000  post=0.8424 pre=0.8388 none=0.8412
+   acc 38400/50000  post=0.8382 pre=0.8346 none=0.8372
+   acc 44800/50000  post=0.8339 pre=0.8300 none=0.8329
+  top-1 on 50000 val images: post=0.8312  pre=0.8278  none=0.8301   (114s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 7.16e-05 PASS
+                 post  <-- SHIPPED    +0.621423  [+0.606848,+0.635781]   3.85e-01  +0.6204 5.34e-03     0.650
+  [audit pre] fast vs brute-force rel err 5.79e-05 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   7.57e-06  +1.0000 2.47e-05     0.999
+  [audit none] fast vs brute-force rel err 4.90e-05 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   8.00e-06  +1.0000 2.50e-05     1.015
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=8.00e-06
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.8312 pre=0.8278 none=0.8301   (pre-none = -0.23 pts, shipped-pre = +0.35 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_beitv2_base_patch16_224.json
+exit=0
+########## swin_tiny_patch4_window7_224.ms_in1k
+[swin_tiny_patch4_window7_224.ms_in1k] family=SwinTransformer shipped=pre C=768 input=224 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8111 pre=0.8134 none=0.7994
+   acc 12800/50000  post=0.8236 pre=0.8255 none=0.7969
+   acc 19200/50000  post=0.8256 pre=0.8277 none=0.7924
+   acc 25600/50000  post=0.8035 pre=0.8045 none=0.7677
+   acc 32000/50000  post=0.7920 pre=0.7929 none=0.7549
+   acc 38400/50000  post=0.7839 pre=0.7850 none=0.7424
+   acc 44800/50000  post=0.7767 pre=0.7777 none=0.7342
+  top-1 on 50000 val images: post=0.7749  pre=0.7758  none=0.7345   (73s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 3.02e-06 PASS
+                              post    +0.867597  [+0.858294,+0.876356]   1.14e-01  +0.7980 7.61e-03     1.024
+  [audit pre] fast vs brute-force rel err 2.93e-06 PASS
+                  pre  <-- SHIPPED    +1.000000  [+1.000000,+1.000000]   1.98e-06  +1.0000 2.69e-06     1.003
+  [audit none] fast vs brute-force rel err 2.52e-06 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.70e-06  +1.0000 2.69e-06     1.035
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.70e-06
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.7749 pre=0.7758 none=0.7345   (pre-none = +4.13 pts, shipped-pre = +0.00 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_swin_tiny_patch4_window7_224.json
+exit=0
+########## convnext_tiny.fb_in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[convnext_tiny.fb_in1k] family=ConvNeXt shipped=post C=768 input=224 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8244 pre=0.7725 none=0.8277
+   acc 12800/50000  post=0.8355 pre=0.7984 none=0.8342
+   acc 19200/50000  post=0.8363 pre=0.8015 none=0.8324
+   acc 25600/50000  post=0.8150 pre=0.7772 none=0.8109
+   acc 32000/50000  post=0.8054 pre=0.7668 none=0.7987
+   acc 38400/50000  post=0.7980 pre=0.7593 none=0.7917
+   acc 44800/50000  post=0.7915 pre=0.7517 none=0.7854
+  top-1 on 50000 val images: post=0.7891  pre=0.7501  none=0.7831   (61s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 3.46e-06 PASS
+                 post  <-- SHIPPED    +0.860431  [+0.843216,+0.875965]   6.26e-01  +0.7513 3.66e-02     0.514
+  [audit pre] fast vs brute-force rel err 1.06e-06 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   1.77e-06  +1.0000 2.52e-06     1.116
+  [audit none] fast vs brute-force rel err 1.42e-06 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   1.53e-06  +1.0000 2.47e-06     1.055
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=1.53e-06
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.7891 pre=0.7501 none=0.7831   (pre-none = -3.31 pts, shipped-pre = +3.90 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_convnext_tiny.json
+exit=0
+########## maxvit_tiny_tf_224.in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[maxvit_tiny_tf_224.in1k] family=MaxxVit shipped=post C=512 input=224 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8266 pre=0.8187 none=0.8103
+   acc 12800/50000  post=0.8408 pre=0.8350 none=0.8248
+   acc 19200/50000  post=0.8420 pre=0.8378 none=0.8247
+   acc 25600/50000  post=0.8220 pre=0.8170 none=0.8052
+   acc 32000/50000  post=0.8144 pre=0.8093 none=0.7984
+   acc 38400/50000  post=0.8078 pre=0.8024 none=0.7933
+   acc 44800/50000  post=0.8020 pre=0.7957 none=0.7883
+  top-1 on 50000 val images: post=0.7998  pre=0.7941  none=0.7853   (110s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 5.27e-06 PASS
+                 post  <-- SHIPPED    +0.514253  [+0.490157,+0.539235]   6.76e-01  +0.5820 4.57e-02     0.334
+  [audit pre] fast vs brute-force rel err 6.22e-06 PASS
+                               pre    +0.933662  [+0.927131,+0.939546]   2.24e-01  +0.9129 1.07e-02     0.589
+  [audit none] fast vs brute-force rel err 1.25e-05 PASS
+                              none    +0.409402  [+0.374266,+0.445200]   6.62e-01  +0.3924 2.93e-01     0.437
+
+INTERNAL CONTROL (mean+linear == LSE T=0): FAIL  corrNS=0.409402 Rhalf=6.62e-01
+PATTERN: pre exact = False, post broken = True  -> *** FAILS ***
+acc post=0.7998 pre=0.7941 none=0.7853   (pre-none = +0.88 pts, shipped-pre = +0.58 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_maxvit_tiny_tf_224.json
+exit=0
+########## eva02_tiny_patch14_336.mim_in22k_ft_in1k
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[eva02_tiny_patch14_336.mim_in22k_ft_in1k] family=Eva shipped=post C=192 input=336 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8091 pre=0.8020 none=0.8078
+   acc 12800/50000  post=0.8166 pre=0.8116 none=0.8161
+   acc 19200/50000  post=0.8195 pre=0.8152 none=0.8184
+   acc 25600/50000  post=0.7990 pre=0.7923 none=0.7977
+   acc 32000/50000  post=0.7894 pre=0.7829 none=0.7881
+   acc 38400/50000  post=0.7828 pre=0.7764 none=0.7813
+   acc 44800/50000  post=0.7756 pre=0.7687 none=0.7739
+  top-1 on 50000 val images: post=0.7745  pre=0.7674  none=0.7729   (74s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 4.96e-04 PASS
+                 post  <-- SHIPPED    +0.412669  [+0.375273,+0.449213]   9.90e-01  +0.3568 7.24e-03     0.229
+  [audit pre] fast vs brute-force rel err 1.93e-04 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   2.04e-05  +1.0000 8.14e-05     1.004
+  [audit none] fast vs brute-force rel err 1.00e-04 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   2.05e-05  +1.0000 8.14e-05     1.013
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=2.05e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.7745 pre=0.7674 none=0.7729   (pre-none = -0.55 pts, shipped-pre = +0.71 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_eva02_tiny_patch14_336.json
+exit=0
+########## naflexvit_base_patch16_gap.e300_s576_in1k
+[naflexvit_base_patch16_gap.e300_s576_in1k] family=NaFlexVit shipped=post C=768 input=384 val=50000
+  sanity: composed head vs model forward, rel max err = 0.00e+00 PASS
+   acc 6400/50000  post=0.8237 pre=0.8208 none=0.8127
+   acc 12800/50000  post=0.8407 pre=0.8391 none=0.8321
+   acc 19200/50000  post=0.8401 pre=0.8387 none=0.8290
+   acc 25600/50000  post=0.8223 pre=0.8211 none=0.8141
+   acc 32000/50000  post=0.8130 pre=0.8118 none=0.8044
+   acc 38400/50000  post=0.8074 pre=0.8060 none=0.7988
+   acc 44800/50000  post=0.8015 pre=0.8003 none=0.7934
+  top-1 on 50000 val images: post=0.7988  pre=0.7979  none=0.7907   (460s)
+
+                          ordering       corrNS              [95% CI]      Rhalf     spNS       I2   |N|/|z|
+  [audit post] fast vs brute-force rel err 1.31e-04 PASS
+                 post  <-- SHIPPED    +0.492364  [+0.474542,+0.511432]   4.33e-01  +0.4812 2.27e-03     0.554
+  [audit pre] fast vs brute-force rel err 1.04e-04 PASS
+                               pre    +1.000000  [+1.000000,+1.000000]   2.28e-05  +1.0000 5.34e-05     1.002
+  [audit none] fast vs brute-force rel err 1.07e-04 PASS
+                              none    +1.000000  [+1.000000,+1.000000]   2.27e-05  +1.0000 5.33e-05     1.027
+
+INTERNAL CONTROL (mean+linear == LSE T=0): PASS  corrNS=1.000000 Rhalf=2.27e-05
+PATTERN: pre exact = True, post broken = True  -> REPLICATES
+acc post=0.7988 pre=0.7979 none=0.7907   (pre-none = +0.72 pts, shipped-pre = +0.09 pts)
+wrote <repo>\scripts\..\outputs\probe25_lnplace_naflexvit_base_patch16_gap.json
+exit=0
+SWEEP DONE

@@ -1,0 +1,3304 @@
+{
+ "traces": [
+  {
+   "agg": "global_pool=avg",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "vit_medium_patch16_gap_256",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_medium_patch16_gap_384",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_relpos_base_patch32_plus_rpn_256",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_relpos_medium_patch16_rpn_224",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_so150m_patch16_reg4_gap_256",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_so150m_patch16_reg4_gap_384",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_srelpos_medium_patch16_224",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "vit_srelpos_small_patch16_224",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ]
+   ]
+  },
+  {
+   "agg": "global_pool=None",
+   "tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "mambaout_base_plus_rw",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "mambaout_base_short_rw",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "mambaout_base_tall_rw",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "mambaout_base_wide_rw",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "mambaout_small_rw",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "global_pool=token",
+   "tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "deit_base_distilled_patch16_224",
+     "DEGENERATE",
+     "DEGENERATE"
+    ],
+    [
+     "deit_base_distilled_patch16_384",
+     "DEGENERATE",
+     "DEGENERATE"
+    ],
+    [
+     "deit_small_distilled_patch16_224",
+     "DEGENERATE",
+     "DEGENERATE"
+    ],
+    [
+     "deit_tiny_distilled_patch16_224",
+     "DEGENERATE",
+     "DEGENERATE"
+    ]
+   ]
+  },
+  {
+   "agg": "Conv1d",
+   "tail": [
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "coat_mini",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "coat_small",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ],
+    [
+     "coat_tiny",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ]
+   ]
+  },
+  {
+   "agg": "AdaptiveAvgPool2d",
+   "tail": [
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "GELUTanh",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "efficientvit_l1",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "efficientvit_l2",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "efficientvit_l3",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "AdaptiveAvgPool2d",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "SimpleNorm2d",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "convnext_zepto_rms",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "convnext_zepto_rms_ols",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "AdaptiveAvgPool2d",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "tf_mobilenetv3_large_minimal_100",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ],
+    [
+     "tf_mobilenetv3_small_minimal_100",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "AdaptiveAvgPool2d",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm2d",
+     "NORM"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "convnext_large_mlp",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "AdaptiveAvgPool2d",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "mobilenetv4_hybrid_large",
+     "NONLIN-BLOCKED",
+     "NONLIN-BLOCKED"
+    ]
+   ]
+  },
+  {
+   "agg": "global_pool=map",
+   "tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "test_vit3",
+     "NONLIN-BLOCKED",
+     "DEGENERATE"
+    ]
+   ]
+  },
+  {
+   "agg": "global_pool=map",
+   "tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "vit_so400m_patch14_siglip_378",
+     "NONLIN-BLOCKED",
+     "DEGENERATE"
+    ]
+   ]
+  },
+  {
+   "agg": "global_pool=avg",
+   "tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ]
+   ],
+   "archs": [
+    [
+     "vit_so400m_patch14_siglip_gap_378",
+     "IN-SCOPE",
+     "IN-SCOPE"
+    ]
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "trace": 0,
+   "arch": "vit_medium_patch16_gap_256",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 256,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999991260277714,
+   "shipped": {
+    "eps1": 8.2453012248197e-15,
+    "eps2": 3.639414128976978e-14,
+    "eps3": 7.417425894566924e-15,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 256,
+    "absN_max": 0.0071532375319011965,
+    "T": 256,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 6.650061232050559e-15,
+    "eps2": 6.038900290066278e-14,
+    "eps3": 7.082766469392851e-15,
+    "corr_min": 0.9999999999999994,
+    "spatial_mass": 1.0,
+    "n_active": 256,
+    "absN_max": 0.006456242210748336,
+    "T": 256,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_medium_patch16_gap_384",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 576,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999987757144645,
+   "shipped": {
+    "eps1": 1.0952365725451518e-14,
+    "eps2": 2.4665443824550627e-13,
+    "eps3": 1.3202132429063109e-14,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 576,
+    "absN_max": 0.0035191170773914704,
+    "T": 576,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 8.964612858741517e-15,
+    "eps2": 9.232542124981491e-14,
+    "eps3": 7.713229585046012e-15,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 576,
+    "absN_max": 0.0038701581502992716,
+    "T": 576,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_relpos_base_patch32_plus_rpn_256",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 64,
+   "C": 896,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999999486036214,
+   "shipped": {
+    "eps1": 4.187296611409335e-15,
+    "eps2": 2.574508101659582e-14,
+    "eps3": 5.45323722050415e-15,
+    "corr_min": 0.9999999999999999,
+    "spatial_mass": 1.0,
+    "n_active": 64,
+    "absN_max": 0.03314259555915136,
+    "T": 64,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 2.7434581438780707e-15,
+    "eps2": 4.626667992920205e-15,
+    "eps3": 2.0228690229282768e-15,
+    "corr_min": 0.9999999999999997,
+    "spatial_mass": 1.0,
+    "n_active": 64,
+    "absN_max": 0.030948181970524347,
+    "T": 64,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_relpos_medium_patch16_rpn_224",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 196,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999993233535371,
+   "shipped": {
+    "eps1": 6.44754745571043e-15,
+    "eps2": 3.27790494187302e-14,
+    "eps3": 6.597762281659153e-15,
+    "corr_min": 0.9999999999999996,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.011534209966615139,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 7.360376078027076e-15,
+    "eps2": 3.822017093061818e-14,
+    "eps3": 6.545068129985363e-15,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.012058404264567418,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_so150m_patch16_reg4_gap_256",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 260,
+   "C": 896,
+   "prefix": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000001949716757,
+   "shipped": {
+    "eps1": 1.1966542752496712e-13,
+    "eps2": 3.3356489930603893e-12,
+    "eps3": 1.5805345329898444e-13,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 256,
+    "absN_max": 0.0074221806420640135,
+    "T": 260,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 5.403021900570778e-15,
+    "eps2": 8.082919557882368e-14,
+    "eps3": 1.0221885094693444e-14,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 256,
+    "absN_max": 0.00898983165739517,
+    "T": 260,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_so150m_patch16_reg4_gap_384",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 580,
+   "C": 896,
+   "prefix": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999999900506147,
+   "shipped": {
+    "eps1": 2.4035845226906473e-13,
+    "eps2": 2.3012990003575796e-12,
+    "eps3": 1.586146651711835e-13,
+    "corr_min": 0.9999999999999996,
+    "spatial_mass": 1.0,
+    "n_active": 576,
+    "absN_max": 0.0036580073083147813,
+    "T": 580,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 1.0854507354282185e-14,
+    "eps2": 1.8508432073865018e-13,
+    "eps3": 1.4113622482025173e-14,
+    "corr_min": 0.9999999999999997,
+    "spatial_mass": 1.0000000000000002,
+    "n_active": 576,
+    "absN_max": 0.00479447869725505,
+    "T": 580,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_srelpos_medium_patch16_224",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 196,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999993233535285,
+   "shipped": {
+    "eps1": 5.720738157880622e-15,
+    "eps2": 2.5798432535938552e-14,
+    "eps3": 4.98136809969258e-15,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.010916431308630459,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 4.24962708088934e-15,
+    "eps2": 1.1230640474885543e-14,
+    "eps3": 4.901751682662448e-15,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.0114031608812451,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 0,
+   "arch": "vit_srelpos_small_patch16_224",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 196,
+   "C": 384,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999995987010553,
+   "shipped": {
+    "eps1": 5.949906522933296e-15,
+    "eps2": 1.4901142987479175e-14,
+    "eps3": 4.2102579067798756e-15,
+    "corr_min": 0.9999999999999996,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.011662189779220872,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 4.30629045311029e-15,
+    "eps2": 4.7326538540168577e-14,
+    "eps3": 4.8673408729199944e-15,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 196,
+    "absN_max": 0.011375479076237593,
+    "T": 196,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 1,
+   "arch": "mambaout_base_plus_rw",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=None",
+   "trace_tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BHWC",
+   "T": 49,
+   "C": 768,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.2918806008668593,
+   "shipped": {
+    "eps1": 0.806091077281443,
+    "eps2": 0.3085070625098183,
+    "eps3": 0.07482509089493573,
+    "corr_min": 0.6536429955497828,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.17342282947056087,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.4218033822975355,
+    "eps2": 0.05673170841826797,
+    "eps3": 0.025733637799888163,
+    "corr_min": 0.9416579776770491,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.02298225782998284,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.7918596717224609,
+    "eps2": 0.3363356782735006,
+    "eps3": 0.08366948956362938,
+    "corr_min": 0.5449819875772393,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.16967788266966566,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.2121205858410445,
+    "eps2": 0.08238282599373271,
+    "eps3": 0.0197116771792837,
+    "corr_min": 0.9791641164935111,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.01744864877164097,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 1,
+   "arch": "mambaout_base_short_rw",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=None",
+   "trace_tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BHWC",
+   "T": 49,
+   "C": 768,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.293623278728878,
+   "shipped": {
+    "eps1": 0.6533228080867045,
+    "eps2": 0.22153918135070377,
+    "eps3": 0.06846165912090407,
+    "corr_min": 0.7416742080355573,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.15196998583093946,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.4125771328596435,
+    "eps2": 0.09470971845527958,
+    "eps3": 0.021264740542138304,
+    "corr_min": 0.9542482720686429,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.02321216480571675,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.8879710942130725,
+    "eps2": 0.37673968447398376,
+    "eps3": 0.08135996963163927,
+    "corr_min": 0.5932270885233367,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.20129303251211894,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.19948471012525468,
+    "eps2": 0.05337372762865272,
+    "eps3": 0.016360489731778654,
+    "corr_min": 0.984747144549293,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.02652929620338275,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 1,
+   "arch": "mambaout_base_tall_rw",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=None",
+   "trace_tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BHWC",
+   "T": 49,
+   "C": 768,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.292917066536434,
+   "shipped": {
+    "eps1": 0.7084498783679686,
+    "eps2": 0.3713126802927818,
+    "eps3": 0.09790548013556798,
+    "corr_min": 0.6726549544789423,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.12291283799697827,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.401025114700149,
+    "eps2": 0.09255630222025149,
+    "eps3": 0.024742069859654953,
+    "corr_min": 0.9611952106309928,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.022190908832193407,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 1.29734948064028,
+    "eps2": 0.373635563887172,
+    "eps3": 0.08315907539717107,
+    "corr_min": 0.5662476807345284,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.14378207704002688,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.19318561325393224,
+    "eps2": 0.05088394545899563,
+    "eps3": 0.017294556049937498,
+    "corr_min": 0.9797087303484122,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.020960300352601186,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 1,
+   "arch": "mambaout_base_wide_rw",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=None",
+   "trace_tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BHWC",
+   "T": 49,
+   "C": 768,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.2923157089553061,
+   "shipped": {
+    "eps1": 0.7390680534799785,
+    "eps2": 0.2322906821188387,
+    "eps3": 0.08311669288596073,
+    "corr_min": 0.7386885253593611,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.18314023305409233,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.2266344269873367,
+    "eps2": 0.09578004671466266,
+    "eps3": 0.021132068552227233,
+    "corr_min": 0.9747716538528517,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.029622354539675905,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.7768882764706694,
+    "eps2": 0.26885836562562104,
+    "eps3": 0.08293151156585568,
+    "corr_min": 0.6847238042446853,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.16140240055139965,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.16383774406545604,
+    "eps2": 0.05492272670769389,
+    "eps3": 0.017542865673704475,
+    "corr_min": 0.9817146648957709,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.019837173312401535,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 1,
+   "arch": "mambaout_small_rw",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=None",
+   "trace_tail": [
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BHWC",
+   "T": 49,
+   "C": 576,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.117660411514663,
+   "shipped": {
+    "eps1": 0.7633975244281924,
+    "eps2": 0.19215219639104325,
+    "eps3": 0.07015233835583265,
+    "corr_min": 0.706468438950875,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.10001621630176638,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.17849971189932468,
+    "eps2": 0.08460565813721564,
+    "eps3": 0.020122123802216188,
+    "corr_min": 0.9728409269927557,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.016752274265813716,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.8112693541317003,
+    "eps2": 0.3911575525771769,
+    "eps3": 0.09229249583112271,
+    "corr_min": 0.6483293769054651,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.1219622347116407,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.12852679707039869,
+    "eps2": 0.03675243734081454,
+    "eps3": 0.014016828915937078,
+    "corr_min": 0.9875988580418026,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.01865600119954705,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 2,
+   "arch": "deit_base_distilled_patch16_224",
+   "census_verdict": "DEGENERATE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=token",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "DEGENERATE",
+   "frozen_paper": "class-token",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 198,
+   "C": 768,
+   "prefix": [
+    0,
+    1
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000003037302276,
+   "shipped": {
+    "eps1": 3.9392393122745917e-16,
+    "eps2": 1.2998656722040082e-16,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.26142527550435934,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 2.8779708524899857e-16,
+    "eps2": 1.3617972726233352e-16,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.5944466080091535,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 2,
+   "arch": "deit_base_distilled_patch16_384",
+   "census_verdict": "DEGENERATE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=token",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "DEGENERATE",
+   "frozen_paper": "class-token",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 578,
+   "C": 768,
+   "prefix": [
+    0,
+    1
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999999509891624,
+   "shipped": {
+    "eps1": 3.16452811679669e-16,
+    "eps2": 1.0833860254962323e-16,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.07876627811797854,
+    "T": 578,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 1.262226022770925e-16,
+    "eps2": 4.8879325112642574e-17,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.8795754520952744,
+    "T": 578,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 2,
+   "arch": "deit_small_distilled_patch16_224",
+   "census_verdict": "DEGENERATE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=token",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "DEGENERATE",
+   "frozen_paper": "class-token",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 198,
+   "C": 384,
+   "prefix": [
+    0,
+    1
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000003707835647,
+   "shipped": {
+    "eps1": 1.79253768668495e-15,
+    "eps2": 4.422582427192288e-16,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.06193582611244053,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 4.407245398474775e-16,
+    "eps2": 1.347135699380457e-16,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.3846274144795159,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 2,
+   "arch": "deit_tiny_distilled_patch16_224",
+   "census_verdict": "DEGENERATE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=token",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "DEGENERATE",
+   "frozen_paper": "class-token",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 198,
+   "C": 192,
+   "prefix": [
+    0,
+    1
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000009106519085,
+   "shipped": {
+    "eps1": 2.5599448243185952e-15,
+    "eps2": 8.58027215327293e-16,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.0433690216319671,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 0.0,
+    "eps2": 7.457196535220346e-17,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999999,
+    "spatial_mass": 0.0,
+    "n_active": 2,
+    "absN_max": 0.2681448493172315,
+    "T": 198,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 3,
+   "arch": "coat_mini",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "Conv1d",
+   "trace_tail": [
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "DENSE",
+   "agg_name": "aggregate(Conv1d)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "LIST",
+   "T": 1032,
+   "C": 216,
+   "prefix": [
+    0,
+    785,
+    982
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000003543117488,
+   "shipped": {
+    "eps1": 1.8049666613898132e-14,
+    "eps2": 2.623588140069251e-14,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.006150933689657578,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 1.588347771165107e-15,
+    "eps2": 3.5557701513245743e-16,
+    "eps3": 0.0,
+    "corr_min": 1.0,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.10484697162487,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": false,
+   "agree_unit": false
+  },
+  {
+   "trace": 3,
+   "arch": "coat_small",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "Conv1d",
+   "trace_tail": [
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "DENSE",
+   "agg_name": "aggregate(Conv1d)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "LIST",
+   "T": 1032,
+   "C": 320,
+   "prefix": [
+    0,
+    785,
+    982
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.0000002433932125,
+   "shipped": {
+    "eps1": 5.674587614609056e-15,
+    "eps2": 4.669080883290315e-15,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.03912964606509617,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 1.524688718035502e-15,
+    "eps2": 5.175044176783421e-16,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.2912654921604281,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": false,
+   "agree_unit": false
+  },
+  {
+   "trace": 3,
+   "arch": "coat_tiny",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "Conv1d",
+   "trace_tail": [
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "DENSE",
+   "agg_name": "aggregate(Conv1d)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "LIST",
+   "T": 1032,
+   "C": 152,
+   "prefix": [
+    0,
+    785,
+    982
+   ],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.000000488516987,
+   "shipped": {
+    "eps1": 8.963095048283193e-14,
+    "eps2": 8.291069350289937e-14,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999999,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.0012386603273138452,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "shipped_unit": {
+    "eps1": 1.4088326578016961e-14,
+    "eps2": 6.80846573145283e-15,
+    "eps3": 0.0,
+    "corr_min": 0.9999999999999999,
+    "spatial_mass": 0.0,
+    "n_active": 3,
+    "absN_max": 0.003940223199955906,
+    "T": 1032,
+    "additive": true,
+    "vacuous": true
+   },
+   "nonorm_unit": null,
+   "measured_unit": "VACUOUS",
+   "agree": false,
+   "agree_unit": false
+  },
+  {
+   "trace": 4,
+   "arch": "efficientvit_l1",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "GELUTanh",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.classifier.2(GELUTanh)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [
+    "head.classifier.1"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.16612567522094338,
+   "shipped": {
+    "eps1": 3.0869961530659136e-05,
+    "eps2": 1.7844547240007775e-05,
+    "eps3": 2.5081387397585068e-06,
+    "corr_min": 0.999999999640818,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 3.456364941145651e-06,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 2.810082554910732e-06,
+    "eps2": 7.272446917672559e-07,
+    "eps3": 1.3847646082024185e-07,
+    "corr_min": 0.9999999999982562,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 6.023600546828378e-08,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.5610374897033119,
+    "eps2": 0.33673957675837135,
+    "eps3": 0.04625849304529312,
+    "corr_min": 0.8862999004427545,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.07239999111595763,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.05325301043765269,
+    "eps2": 0.026317000983331115,
+    "eps3": 0.006393934654046127,
+    "corr_min": 0.9985194197121823,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.003556566777113364,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 4,
+   "arch": "efficientvit_l2",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "GELUTanh",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.classifier.2(GELUTanh)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 512,
+   "prefix": [],
+   "norms_deleted": [
+    "head.classifier.1"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.19978721442924952,
+   "shipped": {
+    "eps1": 3.0124858525430372e-05,
+    "eps2": 2.0531540222858327e-05,
+    "eps3": 1.98307896455935e-06,
+    "corr_min": 0.999999999748354,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 3.391759353155166e-06,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 1.975546936271429e-06,
+    "eps2": 9.803973932952638e-07,
+    "eps3": 1.3937325169421595e-07,
+    "corr_min": 0.9999999999982027,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 8.556879346754975e-08,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.37337243936321857,
+    "eps2": 0.2300548667642257,
+    "eps3": 0.0461059506461347,
+    "corr_min": 0.9134302784344792,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.06580780619877746,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.0779375583569408,
+    "eps2": 0.0326940948945471,
+    "eps3": 0.006642702874512804,
+    "corr_min": 0.9977403748002273,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.003149296162604981,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 4,
+   "arch": "efficientvit_l3",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "GELUTanh",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.classifier.2(GELUTanh)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 1024,
+   "prefix": [],
+   "norms_deleted": [
+    "head.classifier.1"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.19102501173235054,
+   "shipped": {
+    "eps1": 3.1299397987447746e-05,
+    "eps2": 3.865109672696435e-05,
+    "eps3": 2.242180617776321e-06,
+    "corr_min": 0.9999999996284615,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 3.234961256648461e-06,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 1.995619520519122e-06,
+    "eps2": 1.5262733213125414e-06,
+    "eps3": 1.4463573371347714e-07,
+    "corr_min": 0.999999999998554,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 8.006976866259397e-08,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.40751001559546673,
+    "eps2": 0.14049412849460008,
+    "eps3": 0.039836166008452766,
+    "corr_min": 0.9154310769699947,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.06736097968043353,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.06021906530937389,
+    "eps2": 0.03724729803593787,
+    "eps3": 0.00773096411933235,
+    "corr_min": 0.9979417382751311,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.003178939926547511,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 5,
+   "arch": "convnext_zepto_rms",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "SimpleNorm2d",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.norm(SimpleNorm2d)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 256,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.45025594246037404,
+   "shipped": {
+    "eps1": 0.2753963888456211,
+    "eps2": 0.17277038946339546,
+    "eps3": 0.03994312732093401,
+    "corr_min": 0.9649324348041356,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.13313675053682794,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 3.3151294612526555e-15,
+    "eps2": 6.9896675593237824e-15,
+    "eps3": 2.6926979294249505e-15,
+    "corr_min": 0.9999999999999994,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.008372395690737576,
+    "T": 49,
+    "additive": true,
+    "vacuous": false
+   },
+   "measured": "NORM-ONLY",
+   "shipped_unit": {
+    "eps1": 0.20527891686738015,
+    "eps2": 0.1138388843645081,
+    "eps3": 0.03283671957486311,
+    "corr_min": 0.9755048205526782,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.16582026282970852,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 2.4182140865195835e-15,
+    "eps2": 5.742428193063934e-15,
+    "eps3": 2.0743901461191946e-15,
+    "corr_min": 0.9999999999999997,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.024741869452052367,
+    "T": 49,
+    "additive": true,
+    "vacuous": false
+   },
+   "measured_unit": "NORM-ONLY",
+   "agree": false,
+   "agree_unit": false
+  },
+  {
+   "trace": 5,
+   "arch": "convnext_zepto_rms_ols",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "SimpleNorm2d",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.norm(SimpleNorm2d)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 256,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.44937582722073677,
+   "shipped": {
+    "eps1": 0.42943425306542626,
+    "eps2": 0.20817425252744562,
+    "eps3": 0.049711312164301406,
+    "corr_min": 0.9105666313740101,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.11052555380358786,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 3.3619348502242066e-15,
+    "eps2": 7.899774149102706e-15,
+    "eps3": 3.5431241272025623e-15,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.010841867586196985,
+    "T": 49,
+    "additive": true,
+    "vacuous": false
+   },
+   "measured": "NORM-ONLY",
+   "shipped_unit": {
+    "eps1": 0.21946821341459852,
+    "eps2": 0.08699005912824709,
+    "eps3": 0.03345795690406887,
+    "corr_min": 0.9656714719995289,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.14450692331627701,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 3.7526604563700025e-15,
+    "eps2": 8.482299958538692e-15,
+    "eps3": 2.223909505851695e-15,
+    "corr_min": 0.9999999999999998,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.020973634028054758,
+    "T": 49,
+    "additive": true,
+    "vacuous": false
+   },
+   "measured_unit": "NORM-ONLY",
+   "agree": false,
+   "agree_unit": false
+  },
+  {
+   "trace": 6,
+   "arch": "tf_mobilenetv3_large_minimal_100",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "act2(ReLU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 960,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 121.21102063012053,
+   "shipped": {
+    "eps1": 0.18947262238094342,
+    "eps2": 0.08815407679632613,
+    "eps3": 0.01832248112569927,
+    "corr_min": 0.9785206909313267,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.8406143515680355,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.9753177004339464,
+    "eps2": 0.4024330981682759,
+    "eps3": 0.18400714295763387,
+    "corr_min": 0.45020644374068475,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.03428569190117062,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 6,
+   "arch": "tf_mobilenetv3_small_minimal_100",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "act2(ReLU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 49,
+   "C": 576,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 5.045261559751227,
+   "shipped": {
+    "eps1": 0.20314210372816552,
+    "eps2": 0.19105138672712807,
+    "eps3": 0.038242619991137365,
+    "corr_min": 0.9729743419616582,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.07824827198450457,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 1.0006415725364621,
+    "eps2": 0.6481125807620127,
+    "eps3": 0.20198049593130435,
+    "corr_min": 0.47014336032831916,
+    "spatial_mass": 1.0,
+    "n_active": 49,
+    "absN_max": 0.02762343443962914,
+    "T": 49,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 7,
+   "arch": "convnext_large_mlp",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm2d",
+     "NORM"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "head.pre_logits.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 100,
+   "C": 1536,
+   "prefix": [],
+   "norms_deleted": [
+    "head.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 1.1110075120653715,
+   "shipped": {
+    "eps1": 1.0959103087145576,
+    "eps2": 0.5909663967164193,
+    "eps3": 0.0715943132326897,
+    "corr_min": 0.5039631245057719,
+    "spatial_mass": 1.0,
+    "n_active": 100,
+    "absN_max": 0.11193749935904429,
+    "T": 100,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.2107763805698855,
+    "eps2": 0.07565336173477859,
+    "eps3": 0.014582467290900073,
+    "corr_min": 0.9791965725454088,
+    "spatial_mass": 1.0,
+    "n_active": 100,
+    "absN_max": 0.011348843295957617,
+    "T": 100,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.9119623520169419,
+    "eps2": 0.5125285426945262,
+    "eps3": 0.07112743339851291,
+    "corr_min": 0.47517380645302676,
+    "spatial_mass": 1.0,
+    "n_active": 100,
+    "absN_max": 0.14410954210558824,
+    "T": 100,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.21177257275114858,
+    "eps2": 0.04377397709891704,
+    "eps3": 0.013119741993487099,
+    "corr_min": 0.9816500260045108,
+    "spatial_mass": 1.0,
+    "n_active": 100,
+    "absN_max": 0.011163705712922023,
+    "T": 100,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 8,
+   "arch": "mobilenetv4_hybrid_large",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "AdaptiveAvgPool2d",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": "norm_head.act(GELU)",
+   "v2b": "NONLIN-BLOCKED",
+   "aten_classes": [],
+   "fmt": "BCHW",
+   "T": 144,
+   "C": 960,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.0,
+   "feat_std": 3.43965084956576e-17,
+   "shipped": {
+    "eps1": 4.1262237576866004e-14,
+    "eps2": 3.104461567152097e-13,
+    "eps3": 3.890536239076038e-14,
+    "corr_min": 1.0,
+    "spatial_mass": 1.0,
+    "n_active": 144,
+    "absN_max": 2.987223274335635e-19,
+    "T": 144,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 0.263291552479091,
+    "eps2": 0.039297860500379006,
+    "eps3": 0.011345024191407921,
+    "corr_min": 0.9795132109728425,
+    "spatial_mass": 1.0,
+    "n_active": 144,
+    "absN_max": 0.011641834258642694,
+    "T": 144,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "HARD-BLOCKED",
+   "agree": false,
+   "agree_unit": true
+  },
+  {
+   "trace": 9,
+   "arch": "test_vit3",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": true,
+   "in_p2": true,
+   "trace_agg": "global_pool=map",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=map)",
+   "blocker": "attn_pool.mlp.act(GELU)",
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 101,
+   "C": 96,
+   "prefix": [
+    0
+   ],
+   "norms_deleted": [
+    "attn_pool.norm"
+   ],
+   "head_reproduces_model": 0.0,
+   "feat_std": 0.9999947992747072,
+   "shipped": {
+    "eps1": 0.6270150806509454,
+    "eps2": 0.29339131828603987,
+    "eps3": 0.06795246691673536,
+    "corr_min": 0.700478389276188,
+    "spatial_mass": 0.9999999971862936,
+    "n_active": 101,
+    "absN_max": 0.0019291544585964722,
+    "T": 101,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.0009296538542020471,
+    "eps2": 0.00026332222109150646,
+    "eps3": 5.170021452705018e-05,
+    "corr_min": 0.9999994903830532,
+    "spatial_mass": 0.9999999994091734,
+    "n_active": 101,
+    "absN_max": 0.00029243527725217235,
+    "T": 101,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 0.6851733995220854,
+    "eps2": 0.18141186481041854,
+    "eps3": 0.06798694014306084,
+    "corr_min": 0.8031920904784234,
+    "spatial_mass": 0.9954175916919917,
+    "n_active": 101,
+    "absN_max": 0.0012745648276849299,
+    "T": 101,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.0008815873844699717,
+    "eps2": 0.00033217772552378093,
+    "eps3": 5.906876535807915e-05,
+    "corr_min": 0.9999995502291846,
+    "spatial_mass": 0.99903772207759,
+    "n_active": 101,
+    "absN_max": 0.00031044871272511336,
+    "T": 101,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 10,
+   "arch": "vit_so400m_patch14_siglip_378",
+   "census_verdict": "NONLIN-BLOCKED",
+   "in_p1": false,
+   "in_p2": true,
+   "trace_agg": "global_pool=map",
+   "trace_tail": [
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=map)",
+   "blocker": "attn_pool.mlp.act(GELU)",
+   "v2b": "DEGENERATE",
+   "aten_classes": [
+    "TOKEN"
+   ],
+   "fmt": "BTC",
+   "T": 729,
+   "C": 1152,
+   "prefix": [],
+   "norms_deleted": [
+    "attn_pool.norm"
+   ],
+   "head_reproduces_model": 0.002995826991348698,
+   "feat_std": 1.0000000416421526,
+   "shipped": {
+    "eps1": 0.08354832381169103,
+    "eps2": 0.09497269413043077,
+    "eps3": 0.001367150751279414,
+    "corr_min": 0.9969632037481143,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.005290301895841898,
+    "T": 729,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm": {
+    "eps1": 0.009193785242611137,
+    "eps2": 0.007546386927779727,
+    "eps3": 0.00015365875513255944,
+    "corr_min": 0.9999646818733071,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.0018505254351721678,
+    "T": 729,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured": "HARD-BLOCKED",
+   "shipped_unit": {
+    "eps1": 1.041635736205117,
+    "eps2": 0.24426049480719264,
+    "eps3": 0.02475106612350405,
+    "corr_min": 0.5359356763228936,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.09311802333504637,
+    "T": 729,
+    "additive": false,
+    "vacuous": false
+   },
+   "nonorm_unit": {
+    "eps1": 0.007260562679536564,
+    "eps2": 0.002602970201805457,
+    "eps3": 0.00021080628250636117,
+    "corr_min": 0.9999749506866571,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.002313103167063235,
+    "T": 729,
+    "additive": false,
+    "vacuous": false
+   },
+   "measured_unit": "HARD-BLOCKED",
+   "agree": true,
+   "agree_unit": true
+  },
+  {
+   "trace": 11,
+   "arch": "vit_so400m_patch14_siglip_gap_378",
+   "census_verdict": "IN-SCOPE",
+   "in_p1": false,
+   "in_p2": true,
+   "trace_agg": "global_pool=avg",
+   "trace_tail": [
+    [
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "Identity",
+     "AFFINE"
+    ]
+   ],
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=avg)",
+   "blocker": null,
+   "v2b": "IN-SCOPE",
+   "aten_classes": [
+    "MEAN"
+   ],
+   "fmt": "BTC",
+   "T": 729,
+   "C": 1152,
+   "prefix": [],
+   "norms_deleted": [],
+   "head_reproduces_model": 0.002976322944914111,
+   "feat_std": 1.0000000440856032,
+   "shipped": {
+    "eps1": 1.6743609746535814e-13,
+    "eps2": 2.7713530084974003e-12,
+    "eps3": 1.0117594750427845e-13,
+    "corr_min": 0.9999999999999999,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.005127493046814591,
+    "T": 729,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "shipped_unit": {
+    "eps1": 6.490514533005996e-15,
+    "eps2": 6.135906707162959e-14,
+    "eps3": 4.678547863571343e-15,
+    "corr_min": 0.9999999999999994,
+    "spatial_mass": 1.0,
+    "n_active": 729,
+    "absN_max": 0.0058799523947471455,
+    "T": 729,
+    "additive": true,
+    "vacuous": false
+   },
+   "nonorm_unit": null,
+   "measured_unit": "ADDITIVE",
+   "agree": true,
+   "agree_unit": true
+  }
+ ]
+}

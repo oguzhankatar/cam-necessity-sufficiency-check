@@ -1,0 +1,2261 @@
+[
+ {
+  "model": "resnet50",
+  "n_ev": 191,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "resnet18",
+  "n_ev": 77,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "wide_resnet50_2",
+  "n_ev": 191,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "resnext50_32x4d",
+  "n_ev": 191,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "regnety_032",
+  "n_ev": 374,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "regnetx_032",
+  "n_ev": 342,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "densenet121",
+  "n_ev": 370,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "vgg16",
+  "n_ev": 41,
+  "pool": {
+   "name": "pre_logits.fc1",
+   "cls": "Conv2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "pre_logits.act1",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "pre_logits.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "pre_logits.fc2",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "pre_logits.act2",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.global_pool.pool",
+    "cls": "AdaptiveAvgPool2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "inception_v3",
+  "n_ev": 288,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   64,
+   64,
+   64,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "inception_v4",
+  "n_ev": 469,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "last_linear",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   64,
+   64,
+   64,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "xception41",
+  "n_ev": 294,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 100
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   100,
+   100,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "dpn68",
+  "n_ev": 220,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "res2net50_26w_4s",
+  "n_ev": 259,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "convnext_tiny",
+  "n_ev": 197,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "convnext_base",
+  "n_ev": 377,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "convnextv2_tiny",
+  "n_ev": 197,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "efficientnet_b0",
+  "n_ev": 239,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "tf_efficientnetv2_s",
+  "n_ev": 536,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 100
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   100,
+   100,
+   100,
+   100,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mobilenetv3_large_100",
+  "n_ev": 210,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "Hardswish",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mobilenetv3_small_100",
+  "n_ev": 165,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "Hardswish",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mobilenetv4_conv_small",
+  "n_ev": 203,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head.drop",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head.act",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "act2",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "lcnet_050",
+  "n_ev": 120,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "Hardswish",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "tinynet_a",
+  "n_ev": 284,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 36
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   36,
+   36,
+   36,
+   36,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mnasnet_100",
+  "n_ev": 203,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "ghostnet_100",
+  "n_ev": 272,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "hardcorenas_a",
+  "n_ev": 161,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "norm_head",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "Hardswish",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "repvgg_a2",
+  "n_ev": 233,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mobilevit_s",
+  "n_ev": 306,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   64,
+   64,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mobilevitv2_050",
+  "n_ev": 235,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   64,
+   64,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "fastvit_t8",
+  "n_ev": 316,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   64,
+   64,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "efficientformer_l1",
+  "n_ev": 200,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   49,
+   49,
+   49,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "efficientformerv2_s0",
+  "n_ev": 264,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   49,
+   49,
+   49,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "levit_128",
+  "n_ev": 204,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "tiny_vit_5m_224",
+  "n_ev": 186,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "edgenext_small",
+  "n_ev": 201,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 64
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "vit_base_patch16_224",
+  "n_ev": 225,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   197,
+   197,
+   197,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "deit3_small_patch16_224",
+  "n_ev": 225,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   197,
+   197,
+   197,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "vit_betwixt_patch16_reg4_gap_256",
+  "n_ev": 225,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   260,
+   260,
+   260,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "vit_base_patch16_rope_reg1_gap_256",
+  "n_ev": 188,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   257,
+   257,
+   257,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "eva02_tiny_patch14_336",
+  "n_ev": 188,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   577,
+   577,
+   577,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "beitv2_base_patch16_224",
+  "n_ev": 151,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   197,
+   197,
+   197,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "naflexvit_base_patch16_gap",
+  "n_ev": 224,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   580,
+   580,
+   580,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "swin_tiny_patch4_window7_224",
+  "n_ev": 195,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "FastAdaptiveAvgPool",
+   "cells": 5376
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   5376,
+   5376,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "swinv2_tiny_window8_256",
+  "n_ev": 219,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "FastAdaptiveAvgPool",
+   "cells": 6144
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   6144,
+   6144,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "maxvit_tiny_tf_224",
+  "n_ev": 534,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits.act",
+    "cls": "Tanh",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "coatnet_0_rw_224",
+  "n_ev": 240,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "davit_tiny",
+  "n_ev": 209,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "caformer_s18",
+  "n_ev": 337,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.fc1",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.act.relu",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.fc.norm",
+    "cls": "LayerNorm",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.fc.head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.fc2",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "poolformer_s12",
+  "n_ev": 195,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "poolformerv2_s12",
+  "n_ev": 195,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "convformer_s18",
+  "n_ev": 361,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.fc1",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.act.relu",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.fc.norm",
+    "cls": "LayerNorm",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.fc.head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc.fc2",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "pvt_v2_b0",
+  "n_ev": 146,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "twins_svt_small",
+  "n_ev": 276,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   49,
+   49,
+   49,
+   49,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "pit_s_224",
+  "n_ev": 228,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   50,
+   50,
+   50,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "cait_xxs24_224",
+  "n_ev": 420,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   1,
+   1,
+   1,
+   197,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "crossvit_9_240",
+  "n_ev": 310,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   401,
+   197,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "nest_tiny_jx",
+  "n_ev": 170,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 196
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head_drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   75264,
+   5376,
+   196,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "hiera_tiny_224",
+  "n_ev": 177,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "focalnet_tiny_srf",
+  "n_ev": 303,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "gcvit_tiny",
+  "n_ev": 647,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   3584,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "nextvit_small",
+  "n_ev": 364,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   49,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "rdnet_tiny",
+  "n_ev": 178,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.norm",
+    "cls": "LayerNorm2d",
+    "kind": "NORM"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.pre_logits",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.drop",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "mambaout_tiny",
+  "n_ev": 144,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "hgnetv2_b0",
+  "n_ev": 179,
+  "pool": {
+   "name": "head.global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "head.global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.last_conv.0",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.last_conv.1",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.last_conv.2",
+    "cls": "LearnableAffineBlock",
+    "kind": "OTHER"
+   },
+   {
+    "name": "head.dropout",
+    "cls": "Dropout",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "head.fc",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "repghostnet_100",
+  "n_ev": 336,
+  "pool": {
+   "name": "global_pool.pool",
+   "cls": "AdaptiveAvgPool2d",
+   "cells": 49
+  },
+  "post": [
+   {
+    "name": "global_pool.flatten",
+    "cls": "Identity",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "conv_head",
+    "cls": "Conv2d",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "act2",
+    "cls": "ReLU",
+    "kind": "OTHER"
+   },
+   {
+    "name": "flatten",
+    "cls": "Flatten",
+    "kind": "AFFINE"
+   },
+   {
+    "name": "classifier",
+    "cls": "Linear",
+    "kind": "AFFINE"
+   }
+  ],
+  "last_cells": [
+   49,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "model": "vitamin_small_224",
+  "n_ev": 314,
+  "pool": null,
+  "post": [],
+  "last_cells": [
+   196,
+   196,
+   196,
+   1,
+   1,
+   1
+  ]
+ }
+]

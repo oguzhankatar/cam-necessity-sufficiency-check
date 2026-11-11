@@ -1,0 +1,3 @@
+regnet_y_128gf                           cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 5.0e-13 eps2 1.8e-12 (ADDITIVE) 19s
+vit_h_14                                 cpu      orig degenerate             aud degenerate             sound unknown                | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 13s
+total 32 s

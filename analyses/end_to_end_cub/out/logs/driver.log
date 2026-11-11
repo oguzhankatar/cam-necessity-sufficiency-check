@@ -1,0 +1,43 @@
+skip H0_s0 (exists)
+skip H1_s0 (exists)
+skip H2_s0 (exists)
+skip H3_s0 (exists)
+22:43:35 start H0_s1
+skip H0_s0 (exists)
+skip H1_s0 (exists)
+skip H2_s0 (exists)
+skip H3_s0 (exists)
+23:59:33 start H0_s1
+01:22:55 done H0_s1 rc=0  83.4 min
+01:22:55 start H1_s1
+02:44:19 done H1_s1 rc=0  81.4 min
+02:44:19 start H2_s1
+04:04:12 done H2_s1 rc=0  79.9 min
+04:04:12 start H3_s1
+05:23:53 done H3_s1 rc=0  79.7 min
+05:23:53 start H0_s2
+06:25:07 done H0_s2 rc=1073807364  61.2 min
+06:25:07 start H1_s2
+06:25:07 done H1_s2 rc=3221226091  0.0 min
+06:25:07 start H2_s2
+06:25:07 done H2_s2 rc=3221226091  0.0 min
+06:25:07 start H3_s2
+06:25:07 done H3_s2 rc=3221226091  0.0 min
+all training runs finished
+skip H0_s0 (exists)
+skip H1_s0 (exists)
+skip H2_s0 (exists)
+skip H3_s0 (exists)
+skip H0_s1 (exists)
+skip H1_s1 (exists)
+skip H2_s1 (exists)
+skip H3_s1 (exists)
+11:10:04 start H0_s2
+12:48:17 done H0_s2 rc=0  98.2 min
+12:48:17 start H1_s2
+14:25:25 done H1_s2 rc=0  97.1 min
+14:25:25 start H2_s2
+15:51:42 done H2_s2 rc=0  86.3 min
+15:51:42 start H3_s2
+17:03:48 done H3_s2 rc=0  72.1 min
+all training runs finished

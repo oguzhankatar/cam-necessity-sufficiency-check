@@ -1,0 +1,24 @@
+loading annotations into memory...
+Done (t=0.35s)
+creating index...
+index created!
+[     3s] coco17 resnet50 fit=2476 eval=2476 K=80 grid=14x14 C=2048
+[    22s] fit features extracted
+[    33s]   fit gap      final train loss 0.3939
+[   108s]   fit lse-refit T=1 final train loss 0.4633
+[   111s]   cert T=-8 corr per pair [0.834, 0.8444, 0.4552]  effective cells [1.0, 1.0, 1.0, 1.0, 1.0, 1.9]
+[   114s]   cert T=-2 corr per pair [0.8378, 0.8574, 0.4837]  effective cells [1.3, 1.1, 1.0, 1.1, 2.9, 2.0]
+[   117s]   cert T=-0.5 corr per pair [0.9596, 0.9307, 0.6558]  effective cells [5.7, 4.5, 1.8, 5.1, 9.1, 3.5]
+[   120s]   cert T=+0.5 corr per pair [0.7961, 0.7796, 0.4476]  effective cells [1.1, 1.0, 3.0, 3.9, 1.5, 4.1]
+[   124s]   cert T=+1 corr per pair [0.7161, 0.6659, 0.3937]  effective cells [1.0, 1.0, 2.0, 1.5, 1.1, 1.7]
+[   127s]   cert T=+2 corr per pair [0.6996, 0.5962, 0.388]  effective cells [1.0, 1.0, 1.7, 1.0, 1.0, 1.2]
+[   129s]   cert T=+8 corr per pair [0.699, 0.4894, 0.3874]  effective cells [1.0, 1.0, 1.1, 1.0, 1.0, 1.0]
+[   132s]   certificate T=1 corr reproduced 0.393725 vs archived 0.393725
+[   133s]   24/2476 images, 77 records
+[   160s]   984/2476 images, 2864 records
+[   188s]   1944/2476 images, 5753 records
+[   203s] evaluation done: 7339 records
+[   204s] reproduction: {"pt_collapsed_agree": 1.0, "iou_collapsed_maxabs": 0.0, "pt_N_lse_agree": 1.0, "iou_N_lse_maxabs": 0.0, "pt_S_lse_agree": 1.0, "iou_S_lse_maxabs": 0.0, "pt_center_agree": 1.0, "iou_center_maxabs": 0.0}
+[   204s] classification: {"gap": {"mAP": 0.620459063612749}, "lse_reused": {"mAP": 0.588557669243638}, "lse_refit": {"mAP": 0.6589671753536008}}
+[   204s] eval-record separation (1-corr): {"lse": {"n": 7339, "mean_sep": 0.47474345036681737, "median_sep": 0.49369519196627565, "q25": 0.31589776062056657, "q75": 0.626759939025266}, "rf": {"n": 7339, "mean_sep": 0.1333681493750176, "median_sep": 0.0032672420056371054, "q25": 0.0002551541664953527, "q75": 0.1178082645008296}}
+[   204s] saved coco17_resnet50

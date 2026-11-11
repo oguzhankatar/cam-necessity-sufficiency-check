@@ -1,0 +1,35 @@
+n = 13   y range -18.52 .. -0.06  mean -6.90
+
+feature         n  pearson        p spearman        p    q(BH)   LOO-R2
+f_nnorm        13   +0.490   0.0719   +0.945   0.0000   0.0003   +0.182
+m_lingap       12   +0.927   0.0002   +0.944   0.0000   0.0003   +0.800
+m_acc          13   +0.713   0.0052   +0.725   0.0055   0.0257   +0.399
+m_linr2        13   +0.665   0.0152   +0.604   0.0313   0.0780   +0.352
+f_nact         13   -0.518   0.1540   +0.599   0.0329   0.0780   +0.137
+f_dense        13   -0.518   0.1536   +0.599   0.0334   0.0780   +0.010
+m_corrmin      13   -0.401   0.1762   -0.560   0.0489   0.0884   +0.100
+f_pos          13   +0.525   0.0660   +0.555   0.0505   0.0884   +0.173
+m_logRhalf     13   +0.499   0.0815   +0.522   0.0716   0.1114   -0.044
+m_maxNS        13   +0.544   0.0549   +0.451   0.1295   0.1813   +0.134
+f_expand       13   -0.563   0.0424   -0.401   0.1760   0.2241   +0.154
+f_sat          13   -0.075   0.7991   +0.341   0.2519   0.2939   -0.226
+f_npost        13   -0.103   0.7522   +0.297   0.3258   0.3509   -0.226
+f_logC         13   +0.396   0.1882   -0.011   0.9775   0.9775   -0.244
+
+best LOO-R2, STRUCTURAL-only predictors (1 or 2 at a time):
+  f_nnorm+f_expand             n=13  LOO-R2 = +0.806
+  f_logC+f_nnorm               n=13  LOO-R2 = +0.515
+  f_nact+f_nnorm               n=13  LOO-R2 = +0.312
+  f_pos+f_sat                  n=13  LOO-R2 = +0.245
+  f_nnorm+f_pos                n=13  LOO-R2 = +0.244
+  f_nnorm+f_dense              n=13  LOO-R2 = +0.188
+best LOO-R2, ALL predictors:
+  f_expand+m_lingap            n=12  LOO-R2 = +0.914
+  f_nnorm+m_lingap             n=12  LOO-R2 = +0.884
+  f_npost+m_lingap             n=12  LOO-R2 = +0.883
+  m_acc+m_lingap               n=12  LOO-R2 = +0.866
+  f_sat+m_lingap               n=12  LOO-R2 = +0.828
+  f_nnorm+f_expand             n=13  LOO-R2 = +0.806
+permutation test (structural, n=13): best searched LOO-R2 = +0.806, p = 0.0050
+permutation test (all, n=12): best searched LOO-R2 = +0.914, p = 0.0025
+  -> <repo>\outputs\heldout\h4_price.json

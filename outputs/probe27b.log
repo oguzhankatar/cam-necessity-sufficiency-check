@@ -1,0 +1,24 @@
+[imagenette] train=9469 val=3925 classes=10 img=128 patch=16 tokens=64 epochs=30 seeds=3
+  seed 0  post: top-1 0.7159  corrNS +0.801318  Rhalf 8.51e-01  (147s)
+  seed 0   pre: top-1 0.7167  corrNS +1.000000  Rhalf 2.08e-06  (135s)
+  seed 0  none: top-1 0.7269  corrNS +1.000000  Rhalf 2.04e-06  (93s)
+wrote <repo>\scripts\..\outputs\probe27b_scratch_imagenette.json
+  seed 1  post: top-1 0.7264  corrNS +0.734383  Rhalf 8.09e-01  (94s)
+  seed 1   pre: top-1 0.7200  corrNS +1.000000  Rhalf 2.21e-06  (95s)
+  seed 1  none: top-1 0.7269  corrNS +1.000000  Rhalf 2.45e-06  (103s)
+wrote <repo>\scripts\..\outputs\probe27b_scratch_imagenette.json
+  seed 2  post: top-1 0.7248  corrNS +0.751170  Rhalf 8.46e-01  (104s)
+  seed 2   pre: top-1 0.7139  corrNS +1.000000  Rhalf 2.19e-06  (111s)
+  seed 2  none: top-1 0.7269  corrNS +1.000000  Rhalf 3.45e-06  (112s)
+wrote <repo>\scripts\..\outputs\probe27b_scratch_imagenette.json
+
+ordering  top-1 mean            [95% CI]      corrNS      Rhalf
+    post      0.7224  [0.7159,0.7264]   +0.762290   8.35e-01
+     pre      0.7169  [0.7139,0.7200]   +1.000000   2.16e-06
+    none      0.7269  [0.7269,0.7269]   +1.000000   2.65e-06
+
+PAIRED, trained from scratch under each ordering:
+  pre  - none = -1.00 pts  [-1.30,-0.69]   (MoCo v3 linear probe: -6.6)
+  post - none = -0.45 pts  [-1.10,-0.05]
+INTERNAL CONTROL (none == GAP+linear == LSE T=0): PASS corrNS=1.000000
+wrote <repo>\scripts\..\outputs\probe27b_scratch_imagenette.json

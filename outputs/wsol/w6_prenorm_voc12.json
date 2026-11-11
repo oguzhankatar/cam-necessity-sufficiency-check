@@ -1,0 +1,73 @@
+{
+ "dataset": "voc12",
+ "backbone": "vitb16_prenorm_none",
+ "ordering": "none",
+ "n_eval": 5823,
+ "n_records": 8856,
+ "certificate": {
+  "collapsed_pre": {
+   "tag": "collapsed_pre",
+   "maxNS": 1.606281369411271e-14,
+   "Rhalf": 1.4053467519668827e-13,
+   "I2": 1.292077117319831e-14,
+   "corrNS_recorded_never_used": 0.9999999999999999,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  }
+ },
+ "maps": [
+  "collapsed_pre",
+  "collapsed_pre_b3",
+  "cam_pre"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "note": "GAP over the PRE-norm tokens with no LayerNorm at all (the project `none` ordering).  Additive, so N == S and there is a single map.  This isolates the feature change from the necessity/sufficiency split.",
+ "classification": {
+  "mAP": 0.9000740923023077
+ },
+ "per_map": {
+  "collapsed_pre": {
+   "pointing_strict": [
+    0.7286585365853658,
+    0.7193992773261066,
+    0.7379206187895212
+   ],
+   "pointing_tol15": [
+    0.8482384823848238,
+    0.8407830849141825,
+    0.8558039747064138
+   ]
+  },
+  "collapsed_pre_b3": {
+   "pointing_strict": [
+    0.7896341463414634,
+    0.7809394760614273,
+    0.7984417344173442
+   ],
+   "pointing_tol15": [
+    0.8589656729900632,
+    0.8516231933152666,
+    0.8665311653116531
+   ]
+  },
+  "cam_pre": {
+   "pointing_strict": [
+    0.7535004516711834,
+    0.7444670280036134,
+    0.7625366982836495
+   ],
+   "pointing_tol15": [
+    0.8631436314363143,
+    0.8560269873532069,
+    0.8705990289069557
+   ]
+  }
+ },
+ "per_record_saved": [
+  "cam_pre",
+  "collapsed_pre",
+  "collapsed_pre_b3"
+ ]
+}

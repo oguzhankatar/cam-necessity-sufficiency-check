@@ -1,0 +1,10 @@
+﻿NIH primary H1 (archived maps): item -0.0904 [-0.1159, -0.0661] P=3.33e-13 | image -0.0904 [-0.1148, -0.0665] Pz=1.36e-13 Pflip=1e-05 deff=0.98
+H2_lse8.0_1x1_hit        item -0.0498 [-0.0650, -0.0356] P=5.91e-12 | image [-0.0650, -0.0353] Pz=3.92e-11 deff=1.01
+Sminus_lse-8.0_1x1_hit   item -0.0427 [-0.0630, -0.0224] P=6.55e-05 | image [-0.0630, -0.0223] Pz=3.67e-05 deff=0.97
+H1_lse8.0_1x1_ap         item -0.1063 [-0.1199, -0.0931] P=4e-61 | image [-0.1196, -0.0929] Pz=2.07e-55 deff=0.99
+H1_lse8.0_1x1_iou        item -0.0961 [-0.1067, -0.0861] P=4.22e-77 | image [-0.1065, -0.0859] Pz=3.96e-75 deff=1.01
+interval side changes item->image: []
+design effect range [0.9737870638065029, 1.0721947233111724]
+nih_m10 item -0.0640 [-0.0894, -0.0396] P=5.34e-07 image [-0.0880, -0.0398] Pz=2.76e-07
+nih_m6 item -0.0569 [-0.0772, -0.0366] P=4.48e-08 image [-0.0772, -0.0370] Pz=2.17e-08
+wrote <repo>\analyses/medical_extra\out\t4_cluster.json

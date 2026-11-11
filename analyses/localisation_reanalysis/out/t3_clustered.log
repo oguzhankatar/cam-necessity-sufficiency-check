@@ -1,0 +1,78 @@
+cub resnet50 MaxBoxAccV2 done
+cub resnet50 best_iou done
+cub resnet50 pointing_strict done
+cub resnet50 pointing_tol15 done
+cub vgg16gap MaxBoxAccV2 done
+cub vgg16gap best_iou done
+cub vgg16gap pointing_strict done
+cub vgg16gap pointing_tol15 done
+cub vitb16 MaxBoxAccV2 done
+cub vitb16 best_iou done
+cub vitb16 pointing_strict done
+cub vitb16 pointing_tol15 done
+voc12 resnet50 pointing_strict done
+voc12 resnet50 pointing_tol15 done
+voc12 vgg16gap pointing_strict done
+voc12 vgg16gap pointing_tol15 done
+voc12 vitb16 pointing_strict done
+voc12 vitb16 pointing_tol15 done
+voc12seg resnet50 pointing_strict done
+voc12seg resnet50 pointing_tol15 done
+voc12seg resnet50 peak_mask_iou done
+voc12seg vgg16gap pointing_strict done
+voc12seg vgg16gap pointing_tol15 done
+voc12seg vgg16gap peak_mask_iou done
+voc12seg vitb16 pointing_strict done
+voc12seg vitb16 pointing_tol15 done
+voc12seg vitb16 peak_mask_iou done
+coco17 resnet50 pointing_strict done
+coco17 resnet50 pointing_tol15 done
+coco17 resnet50 peak_mask_iou done
+coco17 vgg16gap pointing_strict done
+coco17 vgg16gap pointing_tol15 done
+coco17 vgg16gap peak_mask_iou done
+coco17 vitb16 pointing_strict done
+coco17 vitb16 pointing_tol15 done
+coco17 vitb16 peak_mask_iou done
+
+verdict changes vs the shipped record-level verdicts (192 primary contrasts)
+  image-level sign-flip permutation
+    cub       n= 64 changed= 0 (vs collapsed 0) {}
+    voc12     n= 32 changed= 0 (vs collapsed 0) {}
+    voc12seg  n= 48 changed= 1 (vs collapsed 1) {'loss->tie': 1}
+    coco17    n= 48 changed= 1 (vs collapsed 0) {'tie->win': 1}
+    all       n=192 changed= 2 (vs collapsed 1) {'loss->tie': 1, 'tie->win': 1}
+  image-clustered bootstrap p
+    cub       n= 64 changed= 0 (vs collapsed 0) {}
+    voc12     n= 32 changed= 0 (vs collapsed 0) {}
+    voc12seg  n= 48 changed= 1 (vs collapsed 1) {'loss->tie': 1}
+    coco17    n= 48 changed= 1 (vs collapsed 0) {'tie->win': 1}
+    all       n=192 changed= 2 (vs collapsed 1) {'loss->tie': 1, 'tie->win': 1}
+  Wilcoxon on image-mean differences
+    cub       n= 64 changed= 0 (vs collapsed 0) {}
+    voc12     n= 32 changed= 0 (vs collapsed 0) {}
+    voc12seg  n= 48 changed= 6 (vs collapsed 3) {'tie->win': 1, 'win->tie': 5}
+    coco17    n= 48 changed= 3 (vs collapsed 1) {'win->tie': 1, 'tie->win': 2}
+    all       n=192 changed= 9 (vs collapsed 4) {'tie->win': 3, 'win->tie': 6}
+  record-level sign-flip permutation (test change only)
+    cub       n= 64 changed= 0 (vs collapsed 0) {}
+    voc12     n= 32 changed= 0 (vs collapsed 0) {}
+    voc12seg  n= 48 changed= 1 (vs collapsed 1) {'loss->tie': 1}
+    coco17    n= 48 changed= 1 (vs collapsed 0) {'tie->win': 1}
+    all       n=192 changed= 2 (vs collapsed 1) {'loss->tie': 1, 'tie->win': 1}
+  clustering alone (record-level permutation -> image-level permutation):
+    cub       n= 64 changed= 0 {}
+    voc12     n= 32 changed= 0 {}
+    voc12seg  n= 48 changed= 0 {}
+    coco17    n= 48 changed= 0 {}
+    all       n=192 changed= 0 {}
+  tally orig      vs collapsed win 39 loss 26 tie 31
+  tally orig      vs center    win 68 loss 24 tie  4
+  tally perm_img  vs collapsed win 39 loss 25 tie 32
+  tally perm_img  vs center    win 69 loss 24 tie  3
+  tally cboot     vs collapsed win 39 loss 25 tie 32
+  tally cboot     vs center    win 69 loss 24 tie  3
+  rows whose verdict changes under the image-level permutation:
+    voc12seg resnet50 peak-mask IoU   S_lse  vs collapsed diff -0.0005  p_holm orig 0.00514 -> img 0.569  loss->tie
+    coco17   vgg16gap peak-mask IoU   N_lse  vs center    diff +0.0110  p_holm orig 0.0581 -> img 0.0002  tie->win
+  -> <repo>\analyses/localisation_reanalysis\out\t3_clustered.json

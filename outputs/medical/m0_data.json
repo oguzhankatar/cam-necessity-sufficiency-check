@@ -1,0 +1,54 @@
+{
+ "chexlocalize": {
+  "status": "GATED",
+  "portal": "https://aimi.stanford.edu/datasets/chexlocalize -> https://stanford.redivis.com/datasets/efx9-5nspnbb4b",
+  "note": "Redivis requires a Stanford SAML web login; the Redivis REST API returns 401 invalid_token without credentials.  No HuggingFace mirror exists (dataset search for \"chexlocalize\" returns 0 hits).",
+  "public_sample": {
+   "gt_annotations_val.json": {
+    "bytes": 22988,
+    "studies": 2
+   },
+   "gt_segmentations_val.json": {
+    "bytes": 10038,
+    "studies": 2
+   }
+  },
+  "public_sample_source": "github.com/rajpurkarlab/cheXlocalize/tree/master/sample"
+ },
+ "nih_chestxray14": {
+  "status": "OBTAINED",
+  "source": "HuggingFace mirror iraqigold/nih-chest-xray-14-flat (original file names preserved); integrity checked against alkzar90/NIH-Chest-X-ray-dataset zips",
+  "box_rows": 984,
+  "box_images": 880,
+  "box_images_on_disk": 880,
+  "images_on_disk": 13082,
+  "official_test_sample": 5720,
+  "official_test_target": 5720,
+  "official_train_sample": 7000,
+  "official_train_target": 7000,
+  "box_images_all_in_official_test": true
+ },
+ "isic2018_task1": {
+  "status": "OBTAINED",
+  "source": "isic-challenge-data.s3.amazonaws.com (open, no registration)",
+  "zip_bytes": 11165358566,
+  "masks": 2594,
+  "images": 2594,
+  "labelled_with_masks": 2450,
+  "class_counts": [
+   1752,
+   490,
+   208
+  ],
+  "label_source": "ISIC-2017 Part 3 (melanoma / seborrheic keratosis); the ISIC-2018 Task 3 (HAM10000) ids do not intersect the Task 1 mask ids at all (0 of 2594)"
+ },
+ "rsna_pneumonia": {
+  "status": "OBTAINED",
+  "source": "HuggingFace mirror Baldezo313/rsna-pneumonia-dataset (open)",
+  "dcm_on_disk": 3884
+ },
+ "kaggle": {
+  "status": "UNAVAILABLE",
+  "note": "no ~/.kaggle/kaggle.json and no kaggle package; SIIM-ACR and the Kaggle route to RSNA were not reachable.  RSNA was obtained from an open HuggingFace mirror instead."
+ }
+}

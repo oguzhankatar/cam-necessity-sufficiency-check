@@ -1,0 +1,67 @@
+{
+ "meta": {
+  "ntr": 40,
+  "epochs": 60,
+  "mocov3": {
+   "cls": 76.5,
+   "ln_pool": 69.7,
+   "pool": 76.3,
+   "delta_pre_minus_none": -6.6
+  }
+ },
+ "vit_betwixt_patch16_reg4_gap_256.sbb_in1k": {
+  "m": 0.8100000023841858,
+  "mhat": 0.8137999773025513,
+  "mbar": 0.810699999332428,
+  "mhat_trainedaffine": 0.814300000667572,
+  "mbar_trainedaffine": 0.810699999332428,
+  "tokenCV": 0.4292927384376526,
+  "regime": "sup-GAP"
+ },
+ "vit_medium_patch16_reg4_gap_256.sbb_in1k": {
+  "m": 0.8070999979972839,
+  "mhat": 0.8082999587059021,
+  "mbar": 0.8055999875068665,
+  "mhat_trainedaffine": 0.8082999587059021,
+  "mbar_trainedaffine": 0.8055999875068665,
+  "tokenCV": 0.459597647190094,
+  "regime": "sup-GAP"
+ },
+ "vit_base_patch16_224.augreg2_in21k_ft_in1k": {
+  "m": 0.8276999592781067,
+  "mhat": 0.8269000053405762,
+  "mbar": 0.8276000022888184,
+  "mhat_trainedaffine": 0.8269000053405762,
+  "mbar_trainedaffine": 0.8276000022888184,
+  "tokenCV": 0.22877457737922668,
+  "regime": "sup-CLS"
+ },
+ "deit3_small_patch16_224.fb_in1k": {
+  "m": 0.7608000040054321,
+  "mhat": 0.7586999535560608,
+  "mbar": 0.7591999769210815,
+  "mhat_trainedaffine": 0.7586999535560608,
+  "mbar_trainedaffine": 0.7590999603271484,
+  "tokenCV": 0.3103935122489929,
+  "regime": "sup-CLS"
+ },
+ "vit_base_patch16_224.dino": {
+  "m": 0.5758999586105347,
+  "mhat": 0.5758000016212463,
+  "mbar": 0.5773000121116638,
+  "mhat_trainedaffine": 0.5753999948501587,
+  "mbar_trainedaffine": 0.5774999856948853,
+  "tokenCV": 0.09840523451566696,
+  "regime": "SSL-CLS"
+ },
+ "vit_base_patch16_224.mae": {
+  "m": 0.48919999599456787,
+  "mhat": 0.48829999566078186,
+  "mbar": 0.4852999746799469,
+  "mhat_trainedaffine": 0.4884999990463257,
+  "mbar_trainedaffine": 0.48539999127388,
+  "tokenCV": 0.05216527357697487,
+  "regime": "SSL-CLS"
+ },
+ "cv_vs_gap_r": 0.21227918288729436
+}

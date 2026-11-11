@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[     4s] cub resnet50 fit=5994 eval=5794 K=200 grid=14x14 C=2048
+[    91s] fit features extracted
+[    94s]   fit gap      final train loss 0.0017
+[   240s]   fit lse-refit T=1 final train loss 0.0665
+[   240s]   cert T=-8 corr per pair [0.3993, 0.8955, 0.5566]  effective cells [1.8, 1.2, 1.0, 1.0, 1.0, 1.0]
+[   241s]   cert T=-2 corr per pair [0.5213, 0.9072, 0.5572]  effective cells [3.1, 1.9, 1.1, 2.0, 1.0, 1.2]
+[   241s]   cert T=-0.5 corr per pair [0.7146, 0.9883, 0.6296]  effective cells [31.0, 2.8, 3.2, 5.6, 1.5, 2.8]
+[   242s]   cert T=+0.5 corr per pair [0.3681, 0.6754, 0.7979]  effective cells [1.0, 1.9, 2.8, 3.3, 2.4, 1.9]
+[   242s]   cert T=+1 corr per pair [0.3646, 0.5819, 0.6512]  effective cells [1.0, 1.4, 1.4, 2.3, 1.5, 1.0]
+[   243s]   cert T=+2 corr per pair [0.3641, 0.5537, 0.5908]  effective cells [1.0, 1.1, 1.0, 2.0, 1.1, 1.0]
+[   243s]   cert T=+8 corr per pair [0.364, 0.4944, 0.5807]  effective cells [1.0, 1.0, 1.0, 1.8, 1.0, 1.0]
+[   244s]   certificate T=1 corr reproduced 0.364566 vs archived 0.364566
+[   245s]   24/5794 images, 24 records
+[   282s]   984/5794 images, 984 records
+[   334s]   1944/5794 images, 1944 records
+[   413s]   2904/5794 images, 2904 records
+[   492s]   3864/5794 images, 3864 records
+[   570s]   4824/5794 images, 4824 records
+[   646s]   5784/5794 images, 5784 records
+[   647s] evaluation done: 5794 records
+[   647s] reproduction: {"pt_collapsed_agree": 1.0, "curve_collapsed_maxabs": 0.0, "pt_N_lse_agree": 1.0, "curve_N_lse_maxabs": 0.0, "pt_S_lse_agree": 1.0, "curve_S_lse_maxabs": 0.0, "pt_center_agree": 1.0, "curve_center_maxabs": 0.0}
+[   647s] classification: {"gap": {"top1": 0.6215050051777701}, "lse_reused": {"top1": 0.41370383154987916}, "lse_refit": {"top1": 0.4440800828443217}}
+[   647s] eval-record separation (1-corr): {"lse": {"n": 5794, "mean_sep": 0.6276256458586762, "median_sep": 0.6257778802663457, "q25": 0.5704869129539812, "q75": 0.6744921482735752}, "rf": {"n": 5794, "mean_sep": 0.5015510332810688, "median_sep": 0.5044417208138583, "q25": 0.4037670556431847, "q75": 0.5820815271866844}}
+[   647s] saved cub_resnet50

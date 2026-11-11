@@ -1,0 +1,134 @@
+{
+ "post_hoc": true,
+ "n_test": 5794,
+ "n_boot": 1000,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "holm": "none (single contrast)",
+ "description": "H3 CAM (LayerNorm ignored) minus H3 sufficiency, seed-matched, mean over seeds",
+ "bootstrap_vs_wlib_max_abs": 0.0,
+ "raw_curves_vs_rank_npz_max_abs": 0.0,
+ "raw_MaxBoxAccV2": {
+  "a": "H3_cam",
+  "b": "H3_S",
+  "metric": "MaxBoxAccV2",
+  "version": "raw",
+  "diff": 0.005350362443907482,
+  "ci": [
+   0.002415813293445284,
+   0.00784384228895795
+  ],
+  "p": 0.001,
+  "diff_per_seed": [
+   0.006846162697042857,
+   0.0023012311586698697,
+   0.00690369347600972
+  ]
+ },
+ "rank_MaxBoxAccV2": {
+  "a": "H3_cam",
+  "b": "H3_S",
+  "metric": "MaxBoxAccV2",
+  "version": "rank_npz",
+  "diff": 0.023875273271200054,
+  "ci": [
+   0.02082566256280446,
+   0.026425804472059184
+  ],
+  "p": 0.001,
+  "diff_per_seed": [
+   0.02306984236566556,
+   0.02381774249223334,
+   0.024738234955701266
+  ]
+ },
+ "raw_best_iou": {
+  "a": "H3_cam",
+  "b": "H3_S",
+  "metric": "best_iou",
+  "version": "raw",
+  "diff": 0.003959626904113865,
+  "ci": [
+   0.003086382354102908,
+   0.004796845661700214
+  ],
+  "p": 0.001,
+  "diff_per_seed": [
+   0.004480848191090604,
+   0.003432041878304401,
+   0.00396599064294659
+  ]
+ },
+ "raw_pointing_strict": {
+  "a": "H3_cam",
+  "b": "H3_S",
+  "metric": "pointing_strict",
+  "version": "raw",
+  "diff": 0.0001725923369002416,
+  "ci": [
+   -0.00028765389483373605,
+   0.0006903693476009664
+  ],
+  "p": 0.496,
+  "diff_per_seed": [
+   -0.00034518467380048324,
+   0.0,
+   0.0008629616845012082
+  ]
+ },
+ "control_H3cam_vs_H0collapsed": {
+  "raw": {
+   "recomputed": {
+    "a": "H3_cam",
+    "b": "H0_collapsed",
+    "metric": "MaxBoxAccV2",
+    "version": "raw",
+    "diff": 0.015360717984121494,
+    "ci": [
+     0.011083783991101886,
+     0.01971435968243003
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.01536071798412142,
+     0.016453802784489713,
+     0.014267633183753348
+    ]
+   },
+   "stored_diff": 0.015360717984121494,
+   "stored_ci": [
+    0.011083783991101886,
+    0.01971435968243003
+   ],
+   "max_abs_err": 0.0
+  },
+  "rank_npz": {
+   "recomputed": {
+    "a": "H3_cam",
+    "b": "H0_collapsed",
+    "metric": "MaxBoxAccV2",
+    "version": "rank_npz",
+    "diff": 0.0409810915506463,
+    "ci": [
+     0.03632061903118174,
+     0.04525850496682392
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.034460936601081515,
+     0.04907375445863538,
+     0.03940858359222199
+    ]
+   },
+   "stored_diff": 0.0409810915506463,
+   "stored_ci": [
+    0.03632061903118174,
+    0.04525850496682392
+   ],
+   "max_abs_err": 0.0
+  }
+ }
+}

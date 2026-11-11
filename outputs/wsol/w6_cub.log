@@ -1,0 +1,16 @@
+[     2s] cub / vitb16 pre-norm control: fit=5994 eval=5794 K=200
+[    35s] fitted `none` head, final train loss 0.0057
+[    37s] certificate collapsed_pre: ADDITIVE=True maxNS=2.93e-14 Rhalf=5.16e-15 I2=6.91e-15
+[    37s] evaluation over 5794 images
+[    37s]   24/5794 images
+[    62s]   984/5794 images
+[    87s]   1944/5794 images
+[   112s]   2904/5794 images
+[   136s]   3864/5794 images
+[   161s]   4824/5794 images
+[   186s]   5784/5794 images
+  -> <repo>\outputs\wsol\w6_prenorm_cub.json
+[   191s] classification {'top1': 0.8370728339661719}
+[   191s] collapsed_pre      MaxBoxAccV2=0.4725 best_iou_mean=0.6384 pointing_strict=0.7390 pointing_tol15=0.8283
+[   191s] collapsed_pre_b3   MaxBoxAccV2=0.5643 best_iou_mean=0.6756 pointing_strict=0.8885 pointing_tol15=0.9273
+[   191s] cam_pre            MaxBoxAccV2=0.4679 best_iou_mean=0.6401 pointing_strict=0.7673 pointing_tol15=0.8493

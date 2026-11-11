@@ -1,0 +1,26 @@
+Census, all audit corrections (CoaT -> class-token; ConvNeXt-Zepto-RMS -> normalisation-blocked;
+VOLO x11 -> aggregator-blocked).  Source: c5_census.json (timm 1.0.27, random weights).
+VOLO-D1 evidence: measured HARD-BLOCKED, eps1 0.469; operator-level variant on all 11: ['AGG-BLOCKED']; one shared trace.
+
+== p1: 895 classified of 899 (test models 13)
+  frozen   all          degenerate 532 (59.4%)  normalisation-blocked 103 (11.5%)  nonlinearity-blocked 118 (13.2%)  class-token 142 (15.9%)  aggregator-blocked 0 (0.0%)   [n=895]
+      traces n=43: degenerate 15 / normalisation-blocked 4 / nonlinearity-blocked 19 / class-token 5 / aggregator-blocked 0; mixed 0
+  frozen   w/o test     degenerate 525 (59.5%)  normalisation-blocked 99 (11.2%)  nonlinearity-blocked 117 (13.3%)  class-token 141 (16.0%)  aggregator-blocked 0 (0.0%)   [n=882]
+      traces n=42: degenerate 15 / normalisation-blocked 4 / nonlinearity-blocked 18 / class-token 5 / aggregator-blocked 0; mixed 0
+  audited  all          degenerate 529 (59.1%)  normalisation-blocked 105 (11.7%)  nonlinearity-blocked 116 (13.0%)  class-token 134 (15.0%)  aggregator-blocked 11 (1.2%)   [n=895]
+      traces n=43: degenerate 14 / normalisation-blocked 5 / nonlinearity-blocked 18 / class-token 5 / aggregator-blocked 1; mixed 0
+  audited  w/o test     degenerate 522 (59.2%)  normalisation-blocked 101 (11.5%)  nonlinearity-blocked 115 (13.0%)  class-token 133 (15.1%)  aggregator-blocked 11 (1.2%)   [n=882]
+      traces n=42: degenerate 14 / normalisation-blocked 5 / nonlinearity-blocked 17 / class-token 5 / aggregator-blocked 1; mixed 0
+  changed verdicts: 16
+
+== p2: 901 classified of 905 (test models 13)
+  frozen   all          degenerate 533 (59.2%)  normalisation-blocked 106 (11.8%)  nonlinearity-blocked 119 (13.2%)  class-token 143 (15.9%)  aggregator-blocked 0 (0.0%)   [n=901]
+      traces n=45: degenerate 16 / normalisation-blocked 4 / nonlinearity-blocked 20 / class-token 5 / aggregator-blocked 0; mixed 0
+  frozen   w/o test     degenerate 526 (59.2%)  normalisation-blocked 102 (11.5%)  nonlinearity-blocked 118 (13.3%)  class-token 142 (16.0%)  aggregator-blocked 0 (0.0%)   [n=888]
+      traces n=44: degenerate 16 / normalisation-blocked 4 / nonlinearity-blocked 19 / class-token 5 / aggregator-blocked 0; mixed 0
+  audited  all          degenerate 530 (58.8%)  normalisation-blocked 108 (12.0%)  nonlinearity-blocked 117 (13.0%)  class-token 135 (15.0%)  aggregator-blocked 11 (1.2%)   [n=901]
+      traces n=45: degenerate 15 / normalisation-blocked 5 / nonlinearity-blocked 19 / class-token 5 / aggregator-blocked 1; mixed 0
+  audited  w/o test     degenerate 523 (58.9%)  normalisation-blocked 104 (11.7%)  nonlinearity-blocked 116 (13.1%)  class-token 134 (15.1%)  aggregator-blocked 11 (1.2%)   [n=888]
+      traces n=44: degenerate 15 / normalisation-blocked 5 / nonlinearity-blocked 18 / class-token 5 / aggregator-blocked 1; mixed 0
+  changed verdicts: 16
+

@@ -1,0 +1,32 @@
+[     1s] head H3 (global average pooling + LayerNorm + linear) seed 0  n_train 5994  micro 32 x accum 1  steps/epoch 187  total 5610
+[   186s] epoch  1  loss 2.5335  train acc 0.4250  lr 9.97e-04/9.97e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   355s] epoch  2  loss 0.8093  train acc 0.7816  lr 9.89e-04/9.89e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   517s] epoch  3  loss 0.4181  train acc 0.8802  lr 9.76e-04/9.76e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   680s] epoch  4  loss 0.2492  train acc 0.9246  lr 9.57e-04/9.57e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   843s] epoch  5  loss 0.1593  train acc 0.9544  lr 9.33e-04/9.33e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1005s] epoch  6  loss 0.1016  train acc 0.9724  lr 9.05e-04/9.05e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1223s] epoch  7  loss 0.0651  train acc 0.9815  lr 8.72e-04/8.72e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1608s] epoch  8  loss 0.0406  train acc 0.9903  lr 8.35e-04/8.35e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1941s] epoch  9  loss 0.0304  train acc 0.9933  lr 7.94e-04/7.94e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2103s] epoch 10  loss 0.0290  train acc 0.9948  lr 7.50e-04/7.50e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2268s] epoch 11  loss 0.0221  train acc 0.9957  lr 7.03e-04/7.03e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2434s] epoch 12  loss 0.0182  train acc 0.9975  lr 6.55e-04/6.55e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2595s] epoch 13  loss 0.0189  train acc 0.9965  lr 6.04e-04/6.04e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2756s] epoch 14  loss 0.0193  train acc 0.9963  lr 5.52e-04/5.52e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2918s] epoch 15  loss 0.0149  train acc 0.9968  lr 5.00e-04/5.00e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3079s] epoch 16  loss 0.0139  train acc 0.9973  lr 4.48e-04/4.48e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3241s] epoch 17  loss 0.0089  train acc 0.9992  lr 3.96e-04/3.96e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3403s] epoch 18  loss 0.0105  train acc 0.9992  lr 3.45e-04/3.45e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3564s] epoch 19  loss 0.0093  train acc 0.9993  lr 2.97e-04/2.97e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3726s] epoch 20  loss 0.0113  train acc 0.9985  lr 2.50e-04/2.50e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3888s] epoch 21  loss 0.0107  train acc 0.9980  lr 2.06e-04/2.06e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4049s] epoch 22  loss 0.0082  train acc 0.9992  lr 1.65e-04/1.65e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4211s] epoch 23  loss 0.0090  train acc 0.9992  lr 1.28e-04/1.28e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4372s] epoch 24  loss 0.0088  train acc 0.9983  lr 9.55e-05/9.55e-04  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4534s] epoch 25  loss 0.0062  train acc 0.9993  lr 6.70e-05/6.70e-04  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4695s] epoch 26  loss 0.0089  train acc 0.9988  lr 4.32e-05/4.32e-04  peak alloc 6.66 GiB reserved 6.77 GiB
+[  4857s] epoch 27  loss 0.0094  train acc 0.9985  lr 2.45e-05/2.45e-04  peak alloc 6.66 GiB reserved 6.77 GiB
+[  5020s] epoch 28  loss 0.0106  train acc 0.9982  lr 1.09e-05/1.09e-04  peak alloc 6.66 GiB reserved 6.77 GiB
+[  5183s] epoch 29  loss 0.0077  train acc 0.9992  lr 2.74e-06/2.74e-05  peak alloc 6.66 GiB reserved 6.77 GiB
+[  5346s] epoch 30  loss 0.0084  train acc 0.9987  lr 0.00e+00/0.00e+00  peak alloc 6.66 GiB reserved 6.77 GiB
+[  5346s] saved <repo>\analyses/end_to_end_cub\checkpoints\K2_H3_s0.pt

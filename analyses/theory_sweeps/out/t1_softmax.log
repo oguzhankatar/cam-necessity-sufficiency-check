@@ -1,0 +1,7 @@
+  gap_fc       logit    1-corr=0  corr_min=1.0000  eps1 mean=7.5e-15 med=7.27e-15 max=1.62e-14
+  gap_fc       prob     1-corr=0.14742  corr_min=0.1526  eps1 mean=0.848 med=0.945 max=1
+  gap_fc       logprob  1-corr=0.148538  corr_min=0.2239  eps1 mean=0.983 med=1 max=1.03
+  shipped_fc   logit    1-corr=0  corr_min=1.0000  eps1 mean=2.11e-14 med=1.88e-14 max=7.92e-14
+  shipped_fc   prob     1-corr=0.312024  corr_min=-0.6118  eps1 mean=0.951 med=1 max=1
+  shipped_fc   logprob  1-corr=0.310502  corr_min=-0.5905  eps1 mean=0.938 med=0.992 max=1.05
+wrote <repo>\analyses/theory_sweeps\out\t1_softmax.json

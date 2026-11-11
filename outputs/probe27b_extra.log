@@ -1,0 +1,6 @@
+none seed 3 acc 0.722548 corrNS +1.000000 (129s)
+one seed 4 acc 0.728153 corrNS +1.000000 (98s)
+pre seed 3 acc 0.714650 corrNS +1.000000 (129s)
+post seed 3 acc 0.720510 corrNS +0.752234 (149s)pnone seed 4 acc 0.728153 corrNS +1.000000 (150s)ppre seed 4 acc 0.712357 corrNS +1.000000 (122s)
+post seed 4 acc 0.722548 corrNS +0.662751 (98s)
+EXTRA DONE

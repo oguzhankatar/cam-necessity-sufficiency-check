@@ -1,0 +1,527 @@
+[
+ {
+  "model": "resnet50",
+  "family": "ResNet",
+  "dev_fp32": 8.717253052736851e-08,
+  "dev_fp64": 2.436685202495915e-16,
+  "scale_fp64": 21.870164076763565,
+  "affine_shipped": true
+ },
+ {
+  "model": "resnet18",
+  "family": "ResNet",
+  "dev_fp32": 1.681973174072482e-07,
+  "dev_fp64": 3.1340571641560526e-16,
+  "scale_fp64": 17.003743834505897,
+  "affine_shipped": true
+ },
+ {
+  "model": "wide_resnet50_2",
+  "family": "ResNet",
+  "dev_fp32": 5.844977479796398e-08,
+  "dev_fp64": 2.1790537368825728e-16,
+  "scale_fp64": 8.151964356517274,
+  "affine_shipped": true
+ },
+ {
+  "model": "resnext50_32x4d",
+  "family": "ResNet",
+  "dev_fp32": 1.7904717708461249e-07,
+  "dev_fp64": 3.335000285335389e-16,
+  "scale_fp64": 10.652813717655253,
+  "affine_shipped": true
+ },
+ {
+  "model": "regnety_032",
+  "family": "RegNet",
+  "dev_fp32": 2.0780240106432757e-07,
+  "dev_fp64": 1.9356831721144825e-16,
+  "scale_fp64": 9.176898704243067,
+  "affine_shipped": true
+ },
+ {
+  "model": "regnetx_032",
+  "family": "RegNet",
+  "dev_fp32": 8.167759091293192e-08,
+  "dev_fp64": 4.563146072236789e-16,
+  "scale_fp64": 11.678500827803914,
+  "affine_shipped": true
+ },
+ {
+  "model": "densenet121",
+  "family": "DenseNet",
+  "dev_fp32": 1.308908110786433e-07,
+  "dev_fp64": 2.1946677976512944e-16,
+  "scale_fp64": 9.105712702687603,
+  "affine_shipped": true
+ },
+ {
+  "model": "vgg16",
+  "family": "VGG",
+  "dev_fp32": 0.08423389494419098,
+  "dev_fp64": 0.08427108931842123,
+  "scale_fp64": 33.87403595078512,
+  "affine_shipped": false
+ },
+ {
+  "model": "inception_v3",
+  "family": "InceptionV3",
+  "dev_fp32": 1.6830534832479316e-07,
+  "dev_fp64": 1.5669615245212163e-16,
+  "scale_fp64": 11.33631433575253,
+  "affine_shipped": true
+ },
+ {
+  "model": "inception_v4",
+  "family": "InceptionV4",
+  "dev_fp32": 1.0327492105943747e-07,
+  "dev_fp64": 3.848013357741325e-16,
+  "scale_fp64": 9.2325918558813,
+  "affine_shipped": true
+ },
+ {
+  "model": "xception41",
+  "family": "XceptionAligned",
+  "dev_fp32": 6.291552523407518e-08,
+  "dev_fp64": 1.172058857446373e-16,
+  "scale_fp64": 15.15586719996719,
+  "affine_shipped": true
+ },
+ {
+  "model": "dpn68",
+  "family": "DPN",
+  "dev_fp32": 9.471767015156729e-08,
+  "dev_fp64": 4.707008677863826e-16,
+  "scale_fp64": 15.095420135969764,
+  "affine_shipped": true
+ },
+ {
+  "model": "res2net50_26w_4s",
+  "family": "ResNet",
+  "dev_fp32": 1.0635743308284873e-07,
+  "dev_fp64": 1.9810377697518784e-16,
+  "scale_fp64": 8.966799454927788,
+  "affine_shipped": true
+ },
+ {
+  "model": "convnext_tiny",
+  "family": "ConvNeXt",
+  "dev_fp32": 0.1387132704257965,
+  "dev_fp64": 0.138707403454581,
+  "scale_fp64": 9.050613663163755,
+  "affine_shipped": false
+ },
+ {
+  "model": "convnext_base",
+  "family": "ConvNeXt",
+  "dev_fp32": 0.14256073534488678,
+  "dev_fp64": 0.142550029837991,
+  "scale_fp64": 10.796284108461162,
+  "affine_shipped": false
+ },
+ {
+  "model": "convnextv2_tiny",
+  "family": "ConvNeXt",
+  "dev_fp32": 0.14510688185691833,
+  "dev_fp64": 0.14510948621911843,
+  "scale_fp64": 9.537943605056576,
+  "affine_shipped": false
+ },
+ {
+  "model": "efficientnet_b0",
+  "family": "EfficientNet",
+  "dev_fp32": 1.7378133065903967e-07,
+  "dev_fp64": 1.6190651437568797e-16,
+  "scale_fp64": 10.971497016348527,
+  "affine_shipped": true
+ },
+ {
+  "model": "tf_efficientnetv2_s",
+  "family": "EfficientNet",
+  "dev_fp32": 2.066946791501323e-07,
+  "dev_fp64": 3.850251657357176e-16,
+  "scale_fp64": 9.227224594558304,
+  "affine_shipped": true
+ },
+ {
+  "model": "mobilenetv3_large_100",
+  "family": "MobileNetV3",
+  "dev_fp32": 0.10626650601625443,
+  "dev_fp64": 0.10636344633567948,
+  "scale_fp64": 10.305942568782887,
+  "affine_shipped": false
+ },
+ {
+  "model": "mobilenetv3_small_100",
+  "family": "MobileNetV3",
+  "dev_fp32": 0.31628912687301636,
+  "dev_fp64": 0.3167865700819216,
+  "scale_fp64": 12.406627670935016,
+  "affine_shipped": false
+ },
+ {
+  "model": "mobilenetv4_conv_small",
+  "family": "MobileNetV3",
+  "dev_fp32": 0.5641928911209106,
+  "dev_fp64": 0.564762039897431,
+  "scale_fp64": 22.214411893018944,
+  "affine_shipped": false
+ },
+ {
+  "model": "lcnet_050",
+  "family": "MobileNetV3",
+  "dev_fp32": 0.12715251743793488,
+  "dev_fp64": 0.12745658111136948,
+  "scale_fp64": 10.695029992413364,
+  "affine_shipped": false
+ },
+ {
+  "model": "tinynet_a",
+  "family": "EfficientNet",
+  "dev_fp32": 9.418198487765039e-08,
+  "dev_fp64": 1.753610754433494e-16,
+  "scale_fp64": 10.129709999264373,
+  "affine_shipped": true
+ },
+ {
+  "model": "mnasnet_100",
+  "family": "EfficientNet",
+  "dev_fp32": 9.065010431186238e-08,
+  "dev_fp64": 1.8985423967501637e-16,
+  "scale_fp64": 10.525977443253582,
+  "affine_shipped": true
+ },
+ {
+  "model": "ghostnet_100",
+  "family": "GhostNet",
+  "dev_fp32": 0.1819395273923874,
+  "dev_fp64": 0.18187452754141986,
+  "scale_fp64": 10.901237166419017,
+  "affine_shipped": false
+ },
+ {
+  "model": "hardcorenas_a",
+  "family": "MobileNetV3",
+  "dev_fp32": 0.19088219106197357,
+  "dev_fp64": 0.19070013017393397,
+  "scale_fp64": 12.373143881249431,
+  "affine_shipped": false
+ },
+ {
+  "model": "repvgg_a2",
+  "family": "ByobNet",
+  "dev_fp32": 8.369220694248725e-08,
+  "dev_fp64": 1.5582804289745856e-16,
+  "scale_fp64": 22.798936653130763,
+  "affine_shipped": true
+ },
+ {
+  "model": "mobilevit_s",
+  "family": "ByobNet",
+  "dev_fp32": 8.773587012456119e-08,
+  "dev_fp64": 4.917576605095814e-16,
+  "scale_fp64": 10.836781907329168,
+  "affine_shipped": true
+ },
+ {
+  "model": "mobilevitv2_050",
+  "family": "ByobNet",
+  "dev_fp32": 1.350983325210109e-07,
+  "dev_fp64": 2.519689727732129e-16,
+  "scale_fp64": 7.04990308865956,
+  "affine_shipped": true
+ },
+ {
+  "model": "fastvit_t8",
+  "family": "FastVit",
+  "dev_fp32": 1.7690820186544443e-07,
+  "dev_fp64": 3.296256876607996e-16,
+  "scale_fp64": 10.778024322110511,
+  "affine_shipped": true
+ },
+ {
+  "model": "efficientformer_l1",
+  "family": "EfficientFormer",
+  "dev_fp32": 8.029609688264827e-08,
+  "dev_fp64": 1.4956854436832722e-16,
+  "scale_fp64": 11.876540263879265,
+  "affine_shipped": true
+ },
+ {
+  "model": "efficientformerv2_s0",
+  "family": "EfficientFormerV2",
+  "dev_fp32": 8.638474469080393e-08,
+  "dev_fp64": 1.6094057870397453e-16,
+  "scale_fp64": 11.03734591800857,
+  "affine_shipped": true
+ },
+ {
+  "model": "levit_128",
+  "family": "LevitDistilled",
+  "dev_fp32": 8.34928215454056e-08,
+  "dev_fp64": 1.5550664163327658e-16,
+  "scale_fp64": 11.423028757764204,
+  "affine_shipped": true
+ },
+ {
+  "model": "tiny_vit_5m_224",
+  "family": "TinyVit",
+  "dev_fp32": 0.3135709762573242,
+  "dev_fp64": 0.3136175753367746,
+  "scale_fp64": 10.823135332454134,
+  "affine_shipped": false
+ },
+ {
+  "model": "edgenext_small",
+  "family": "EdgeNeXt",
+  "dev_fp32": 0.3072451651096344,
+  "dev_fp64": 0.307250411080845,
+  "scale_fp64": 10.314761541518962,
+  "affine_shipped": false
+ },
+ {
+  "model": "vit_base_patch16_224",
+  "family": "VisionTransformer",
+  "dev_fp32": 5.0553936148389766e-08,
+  "dev_fp64": 1.8832814115981004e-16,
+  "scale_fp64": 9.432243256162568,
+  "affine_shipped": true
+ },
+ {
+  "model": "deit3_small_patch16_224",
+  "family": "VisionTransformer",
+  "dev_fp32": 8.524957451072623e-08,
+  "dev_fp64": 1.5878979734551505e-16,
+  "scale_fp64": 11.186844930187972,
+  "affine_shipped": true
+ },
+ {
+  "model": "vit_betwixt_patch16_reg4_gap_256",
+  "family": "VisionTransformer",
+  "dev_fp32": 0.03072778508067131,
+  "dev_fp64": 0.03072795288483114,
+  "scale_fp64": 9.650854229077437,
+  "affine_shipped": false
+ },
+ {
+  "model": "vit_base_patch16_rope_reg1_gap_256",
+  "family": "Eva",
+  "dev_fp32": 0.06946491450071335,
+  "dev_fp64": 0.06946494642843319,
+  "scale_fp64": 9.557537710088697,
+  "affine_shipped": false
+ },
+ {
+  "model": "eva02_tiny_patch14_336",
+  "family": "Eva",
+  "dev_fp32": 0.44027817249298096,
+  "dev_fp64": 0.35038045589594385,
+  "scale_fp64": 9.005223481992694,
+  "affine_shipped": false
+ },
+ {
+  "model": "beitv2_base_patch16_224",
+  "family": "Beit",
+  "dev_fp32": 0.1613541692495346,
+  "dev_fp64": 0.16135414503383624,
+  "scale_fp64": 9.492337634679895,
+  "affine_shipped": false
+ },
+ {
+  "model": "naflexvit_base_patch16_gap",
+  "family": "NaFlexVit",
+  "dev_fp32": 0.08984610438346863,
+  "dev_fp64": 0.08984639150482622,
+  "scale_fp64": 9.55353505724374,
+  "affine_shipped": false
+ },
+ {
+  "model": "swin_tiny_patch4_window7_224",
+  "family": "SwinTransformer",
+  "dev_fp32": 9.948455215180729e-08,
+  "dev_fp64": 1.8530439928676926e-16,
+  "scale_fp64": 9.586155786033098,
+  "affine_shipped": true
+ },
+ {
+  "model": "swinv2_tiny_window8_256",
+  "family": "SwinTransformerV2",
+  "dev_fp32": 1.554972897110929e-07,
+  "dev_fp64": 3.8618168060115884e-16,
+  "scale_fp64": 9.199591428754687,
+  "affine_shipped": true
+ },
+ {
+  "model": "maxvit_tiny_tf_224",
+  "family": "MaxxVit",
+  "dev_fp32": 0.3287093937397003,
+  "dev_fp64": 0.32872591132371104,
+  "scale_fp64": 8.901522764194006,
+  "affine_shipped": false
+ },
+ {
+  "model": "coatnet_0_rw_224",
+  "family": "MaxxVit",
+  "dev_fp32": 1.083664287193642e-07,
+  "dev_fp64": 2.018488763151839e-16,
+  "scale_fp64": 8.800429667126295,
+  "affine_shipped": true
+ },
+ {
+  "model": "davit_tiny",
+  "family": "DaVit",
+  "dev_fp32": 0.11783380806446075,
+  "dev_fp64": 0.11784676227636068,
+  "scale_fp64": 9.116052181375528,
+  "affine_shipped": false
+ },
+ {
+  "model": "caformer_s18",
+  "family": "MetaFormer",
+  "dev_fp32": 0.41676822304725647,
+  "dev_fp64": 0.4167542807345186,
+  "scale_fp64": 9.007110910257511,
+  "affine_shipped": false
+ },
+ {
+  "model": "poolformer_s12",
+  "family": "MetaFormer",
+  "dev_fp32": 0.14584186673164368,
+  "dev_fp64": 0.14586669274671193,
+  "scale_fp64": 16.481664205182582,
+  "affine_shipped": false
+ },
+ {
+  "model": "poolformerv2_s12",
+  "family": "MetaFormer",
+  "dev_fp32": 0.3040783703327179,
+  "dev_fp64": 0.3041406488661497,
+  "scale_fp64": 9.501769016977047,
+  "affine_shipped": false
+ },
+ {
+  "model": "convformer_s18",
+  "family": "MetaFormer",
+  "dev_fp32": 0.45354676246643066,
+  "dev_fp64": 0.4535275096155705,
+  "scale_fp64": 9.563086892912215,
+  "affine_shipped": false
+ },
+ {
+  "model": "pvt_v2_b0",
+  "family": "PyramidVisionTransformerV2",
+  "dev_fp32": 9.758718277907974e-08,
+  "dev_fp64": 3.635540524880489e-16,
+  "scale_fp64": 9.772174603712578,
+  "affine_shipped": true
+ },
+ {
+  "model": "twins_svt_small",
+  "family": "Twins",
+  "dev_fp32": 9.573869164114512e-08,
+  "dev_fp64": 1.7832738774664417e-16,
+  "scale_fp64": 9.96121157746101,
+  "affine_shipped": true
+ },
+ {
+  "model": "pit_s_224",
+  "family": "PoolingVisionTransformer",
+  "dev_fp32": 5.196787355998822e-08,
+  "dev_fp64": 1.93600317688838e-16,
+  "scale_fp64": 9.175381841342228,
+  "affine_shipped": true
+ },
+ {
+  "model": "cait_xxs24_224",
+  "family": "Cait",
+  "dev_fp32": 9.966244363113219e-08,
+  "dev_fp64": 1.8563014892588417e-16,
+  "scale_fp64": 9.569333697563803,
+  "affine_shipped": true
+ },
+ {
+  "model": "crossvit_9_240",
+  "family": "CrossVit",
+  "error": "TypeError: unsupported operand type(s) for -: 'list' and 'list'"
+ },
+ {
+  "model": "nest_tiny_jx",
+  "family": "Nest",
+  "dev_fp32": 1.0478726153451134e-07,
+  "dev_fp64": 1.9518506130339462e-16,
+  "scale_fp64": 9.100885219074685,
+  "affine_shipped": true
+ },
+ {
+  "model": "hiera_tiny_224",
+  "family": "Hiera",
+  "dev_fp32": 0.1359666883945465,
+  "dev_fp64": 0.13596653935115838,
+  "scale_fp64": 10.548697747796545,
+  "affine_shipped": false
+ },
+ {
+  "model": "focalnet_tiny_srf",
+  "family": "FocalNet",
+  "dev_fp32": 1.0015974538646333e-07,
+  "dev_fp64": 1.8659017021438805e-16,
+  "scale_fp64": 9.520098713449133,
+  "affine_shipped": true
+ },
+ {
+  "model": "gcvit_tiny",
+  "family": "GlobalContextVit",
+  "dev_fp32": 9.948794854608423e-08,
+  "dev_fp64": 1.8530049388936984e-16,
+  "scale_fp64": 9.586357824069216,
+  "affine_shipped": true
+ },
+ {
+  "model": "nextvit_small",
+  "family": "NextViT",
+  "dev_fp32": 1.9593646527482633e-07,
+  "dev_fp64": 1.2163245810448557e-16,
+  "scale_fp64": 7.30214971843417,
+  "affine_shipped": true
+ },
+ {
+  "model": "rdnet_tiny",
+  "family": "RDNet",
+  "dev_fp32": 0.089923195540905,
+  "dev_fp64": 0.09002406833601104,
+  "scale_fp64": 9.386152075840075,
+  "affine_shipped": false
+ },
+ {
+  "model": "mambaout_tiny",
+  "family": "MambaOut",
+  "dev_fp32": 0.41460612416267395,
+  "dev_fp64": 0.4146048020464355,
+  "scale_fp64": 9.431221075865217,
+  "affine_shipped": false
+ },
+ {
+  "model": "hgnetv2_b0",
+  "family": "HighPerfGpuNet",
+  "dev_fp32": 0.14789444208145142,
+  "dev_fp64": 0.14795018803962698,
+  "scale_fp64": 20.629367209303986,
+  "affine_shipped": false
+ },
+ {
+  "model": "repghostnet_100",
+  "family": "RepGhostNet",
+  "dev_fp32": 0.23380762338638306,
+  "dev_fp64": 0.23374143501633415,
+  "scale_fp64": 11.234381498853937,
+  "affine_shipped": false
+ },
+ {
+  "model": "vitamin_small_224",
+  "family": "VisionTransformer",
+  "dev_fp32": 0.19710291922092438,
+  "dev_fp64": 0.1970825773883117,
+  "scale_fp64": 1.3401875415661808,
+  "affine_shipped": false
+ }
+]

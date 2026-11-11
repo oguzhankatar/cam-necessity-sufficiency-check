@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[     6s] voc12seg resnet50 fit=5717 eval=1449 K=20 grid=14x14 C=2048
+[    65s] fit features extracted
+[    65s]   fit gap      final train loss 0.2980
+[   122s]   fit lse-refit T=1 final train loss 0.4408
+[   124s]   cert T=-8 corr per pair [0.7694, 0.7281, 0.1434]  effective cells [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[   125s]   cert T=-2 corr per pair [0.7892, 0.7403, 0.4162]  effective cells [1.2, 1.2, 1.0, 2.1, 1.0, 1.7]
+[   126s]   cert T=-0.5 corr per pair [0.953, 0.8651, 0.8456]  effective cells [5.7, 2.4, 1.8, 3.7, 1.5, 8.1]
+[   128s]   cert T=+0.5 corr per pair [0.9902, 0.9787, 0.9663]  effective cells [17.9, 4.6, 2.7, 10.4, 12.8, 4.0]
+[   129s]   cert T=+1 corr per pair [0.9755, 0.9613, 0.8089]  effective cells [3.4, 2.0, 1.1, 3.4, 5.0, 1.4]
+[   130s]   cert T=+2 corr per pair [0.9448, 0.9472, 0.5735]  effective cells [1.6, 1.9, 1.0, 1.7, 2.1, 1.0]
+[   131s]   cert T=+8 corr per pair [0.7658, 0.9416, 0.1469]  effective cells [1.0, 1.3, 1.0, 1.0, 1.0, 1.0]
+[   133s]   certificate T=1 corr reproduced 0.808948 vs archived 0.808948
+[   133s]   24/1449 images, 38 records
+[   154s]   984/1449 images, 1436 records
+[   164s] evaluation done: 2147 records
+[   165s] reproduction: {"pt_collapsed_agree": 1.0, "iou_collapsed_maxabs": 0.0, "pt_N_lse_agree": 1.0, "iou_N_lse_maxabs": 0.0, "pt_S_lse_agree": 1.0, "iou_S_lse_maxabs": 0.0, "pt_center_agree": 1.0, "iou_center_maxabs": 0.0}
+[   165s] classification: {"gap": {"mAP": 0.8850954625307577}, "lse_reused": {"mAP": 0.8704701893860106}, "lse_refit": {"mAP": 0.9035897014270047}}
+[   165s] eval-record separation (1-corr): {"lse": {"n": 2147, "mean_sep": 0.6774626335457781, "median_sep": 0.6637921085523835, "q25": 0.5671828192917298, "q75": 0.7576913831588823}, "rf": {"n": 2147, "mean_sep": 0.21121846648812442, "median_sep": 0.06718787302384421, "q25": 0.00821683955268493, "q75": 0.3189511642278334}}
+[   165s] saved voc12seg_resnet50

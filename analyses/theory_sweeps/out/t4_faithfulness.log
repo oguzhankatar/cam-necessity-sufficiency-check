@@ -1,0 +1,14 @@
+<repo>\analyses/theory_sweeps\scripts\theory_sweeps_lib.py:50: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:209.)
+  t = torch.from_numpy(np.ascontiguousarray(F)).to(dev)
+T= -8.0 acc=0.9702 | del N 0.325 S 0.348 G 0.409 C0 0.289 CAM 0.354 R 0.482 | ins N 0.816 S 0.526 G 0.518 C0 0.815 CAM 0.555 R 0.473 || norm del N 0.675 S 0.724 C0 0.601 | norm ins N 1.725 S 1.113 C0 1.722
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json
+T= -4.0 acc=0.9699 | del N 0.329 S 0.355 G 0.397 C0 0.290 CAM 0.352 R 0.474 | ins N 0.826 S 0.586 G 0.530 C0 0.816 CAM 0.562 R 0.479 || norm del N 0.694 S 0.749 C0 0.612 | norm ins N 1.725 S 1.225 C0 1.705
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json
+T= -2.0 acc=0.9738 | del N 0.323 S 0.335 G 0.387 C0 0.288 CAM 0.344 R 0.476 | ins N 0.830 S 0.680 G 0.544 C0 0.819 CAM 0.582 R 0.485 || norm del N 0.679 S 0.703 C0 0.604 | norm ins N 1.711 S 1.401 C0 1.688
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json
+T= -1.0 acc=0.9778 | del N 0.323 S 0.326 G 0.383 C0 0.288 CAM 0.338 R 0.491 | ins N 0.819 S 0.800 G 0.567 C0 0.820 CAM 0.603 R 0.481 || norm del N 0.658 S 0.665 C0 0.587 | norm ins N 1.702 S 1.662 C0 1.704
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json
+T= -0.5 acc=0.9832 | del N 0.331 S 0.331 G 0.404 C0 0.297 CAM 0.363 R 0.506 | ins N 0.802 S 0.802 G 0.587 C0 0.815 CAM 0.633 R 0.511 || norm del N 0.653 S 0.653 C0 0.587 | norm ins N 1.571 S 1.571 C0 1.596
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json
+T= +0.0 acc=0.9906 | del N 0.379 S 0.379 G 0.401 C0 0.379 CAM 0.399 R 0.588 | ins N 0.767 S 0.767 G 0.746 C0 0.767 CAM 0.749 R 0.581 || norm del N 0.645 S 0.645 C0 0.645 | norm ins N 1.321 S 1.321 C0 1.321
+wrote <repo>\analyses/theory_sweeps\out\t4_faithfulness.json

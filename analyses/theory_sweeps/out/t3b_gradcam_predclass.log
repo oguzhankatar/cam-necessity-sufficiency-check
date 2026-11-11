@@ -1,0 +1,11 @@
+  t = torch.from_numpy(np.ascontiguousarray(F)).to(dev)
+mean                                   rel-alpha med=9.75e-17 | GC-CAM rel max=2.63e-16 | move mean=2.43e-16 max=5.55e-16 | rho mean=1.0000 min=1.0000
+linear-gate attention                  rel-alpha med=2.24e-15 | GC-CAM rel max=2e-15 | move mean=4.43e-16 max=1.17e-15 | rho mean=1.0000 min=1.0000
+tanh-sigmoid gated attention (Ilse)    rel-alpha med=2.04 | GC-CAM rel max=1.25 | move mean=0.2 max=0.891 | rho mean=0.9316 min=0.2218
+GeM p=2                                rel-alpha med=0.332 | GC-CAM rel max=0.444 | move mean=0.0485 max=0.128 | rho mean=0.9959 min=0.9855
+GeM p=3                                rel-alpha med=0.345 | GC-CAM rel max=0.426 | move mean=0.0398 max=0.0865 | rho mean=0.9970 min=0.9894
+channel-wise max                       rel-alpha med=0 | GC-CAM rel max=2.63e-16 | move mean=2.49e-16 max=5.55e-16 | rho mean=1.0000 min=1.0000
+max                                    rel-alpha med=0 | GC-CAM rel max=2.63e-16 | move mean=2.49e-16 max=5.55e-16 | rho mean=1.0000 min=1.0000
+top-8 of 49                            rel-alpha med=0 | GC-CAM rel max=2.63e-16 | move mean=2.49e-16 max=5.55e-16 | rho mean=1.0000 min=1.0000
+zero-CAM pairs 11 / 480
+wrote <repo>\analyses/theory_sweeps\out\t3b_gradcam_predclass.json

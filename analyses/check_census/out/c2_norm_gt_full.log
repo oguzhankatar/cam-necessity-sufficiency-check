@@ -1,0 +1,141 @@
+vgg16                              HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=[] (252s)
+convnext_tiny                      NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (33s)
+convnext_base                      NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (46s)
+convnextv2_tiny                    NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (34s)
+mobilenetv3_large_100              HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(Hardswish)'] (14s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+mobilenetv3_small_100              HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(Hardswish)'] (13s)
+mobilenetv4_conv_small             HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['norm_head.act(ReLU)'] (14s)
+lcnet_050                          HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(Hardswish)'] (15s)
+ghostnet_100                       HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(ReLU)'] (15s)
+hardcorenas_a                      HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(Hardswish)'] (15s)
+tiny_vit_5m_224                    NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (32s)
+edgenext_small                     NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (31s)
+vit_betwixt_patch16_reg4_gap_256   NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (51s)
+vit_base_patch16_rope_reg1_gap_256 NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (59s)
+eva02_tiny_patch14_336             NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (64s)
+beitv2_base_patch16_224            NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (54s)
+naflexvit_base_patch16_gap         NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (77s)
+maxvit_tiny_tf_224                 HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm'] single_ok=[] (38s)
+davit_tiny                         NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (32s)
+caformer_s18                       HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.fc.norm'] single_ok=[] (58s)
+poolformer_s12                     NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (19s)
+poolformerv2_s12                   NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (19s)
+convformer_s18                     HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.fc.norm'] single_ok=[] (55s)
+hiera_tiny_224                     NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm)'] (29s)
+rdnet_tiny                         NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (28s)
+mambaout_tiny                      HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.pre_logits.norm'] single_ok=[] (40s)
+hgnetv2_b0                         HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['head.last_conv.1(ReLU)'] (20s)
+repghostnet_100                    HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(ReLU)'] (10s)
+vitamin_small_224                  NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (34s)
+poolformer_s24                     NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (18s)
+poolformerv2_s24                   NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (20s)
+convformer_s36                     HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.fc.norm'] single_ok=[] (60s)
+inception_next_tiny                HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm'] single_ok=[] (30s)
+tiny_vit_11m_224                   NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (23s)
+tiny_vit_21m_224                   NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (31s)
+davit_small                        NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm2d)'] (33s)
+hiera_small_224                    NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm)'] (37s)
+hiera_base_224                     NORM-ONLY    indep=NORM-ONLY    same ind_norms=['head.norm'] single_ok=['head.norm(LayerNorm)'] (23s)
+volo_d1_224                        HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=[] (7s)
+mambaout_femto                     HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.pre_logits.norm'] single_ok=[] (12s)
+mambaout_small                     HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.pre_logits.norm'] single_ok=[] (14s)
+mambaout_kobe                      HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.norm', 'head.pre_logits.norm'] single_ok=[] (12s)
+efficientvit_b1                    HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=['head.in_conv.norm', 'head.classifier.1'] single_ok=[] (19s)
+fasternet_t0                       HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act(GELU)'] (4s)
+ghostnetv2_100                     HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['act2(ReLU)'] (4s)
+vgg19                              HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=[] (74s)
+hgnet_tiny                         HARD-BLOCKED indep=HARD-BLOCKED same ind_norms=[] single_ok=['head.last_conv.1(ReLU)'] (6s)
+beit_base_patch16_224              NORM-ONLY    indep=NORM-ONLY    same ind_norms=['fc_norm'] single_ok=['fc_norm(LayerNorm)'] (10s)
+{
+ "n": 48,
+ "n_ok": 48,
+ "errors": [],
+ "n_label_changed": 0,
+ "changed": [],
+ "n_heldout": 19,
+ "n_heldout_changed": 0,
+ "shipped_fail_reproduced": 48,
+ "independent_set_equals_archived": 47,
+ "independent_set_differs": [
+  [
+   "efficientvit_b1",
+   [
+    "head.in_conv.norm",
+    "head.classifier.1"
+   ],
+   [
+    "head.classifier.1"
+   ]
+  ]
+ ],
+ "hard_blocked_with_single_deletion_additive": [
+  [
+   "mobilenetv3_large_100",
+   [
+    "act2(Hardswish)"
+   ]
+  ],
+  [
+   "mobilenetv3_small_100",
+   [
+    "act2(Hardswish)"
+   ]
+  ],
+  [
+   "mobilenetv4_conv_small",
+   [
+    "norm_head.act(ReLU)"
+   ]
+  ],
+  [
+   "lcnet_050",
+   [
+    "act2(Hardswish)"
+   ]
+  ],
+  [
+   "ghostnet_100",
+   [
+    "act2(ReLU)"
+   ]
+  ],
+  [
+   "hardcorenas_a",
+   [
+    "act2(Hardswish)"
+   ]
+  ],
+  [
+   "hgnetv2_b0",
+   [
+    "head.last_conv.1(ReLU)"
+   ]
+  ],
+  [
+   "repghostnet_100",
+   [
+    "act2(ReLU)"
+   ]
+  ],
+  [
+   "fasternet_t0",
+   [
+    "act(GELU)"
+   ]
+  ],
+  [
+   "ghostnetv2_100",
+   [
+    "act2(ReLU)"
+   ]
+  ],
+  [
+   "hgnet_tiny",
+   [
+    "head.last_conv.1(ReLU)"
+   ]
+  ]
+ ],
+ "seconds": 1637.5047814846039
+}

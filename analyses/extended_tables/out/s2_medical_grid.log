@@ -1,0 +1,198 @@
+{
+ "n_H1_48": 48,
+ "H1_favour_necessity": 6,
+ "H1_favour_all_at_T-8": true,
+ "H1_favour_and_holm": 4,
+ "H1_below": 29,
+ "H1_T+8_n": 24,
+ "H1_T+8_below": 24,
+ "H1_T+8_diff_negative": 24,
+ "H1_T-8_n": 24,
+ "H1_T-8_above/span/below": [
+  6,
+  13,
+  5
+ ],
+ "S_n": 28,
+ "S_below": 25,
+ "S_not_below": [
+  "isic 1x1 hit -0.018 [-0.039, +0.003]",
+  "isic 1x1 ap +0.006 [-0.002, +0.014]",
+  "isic 1x1 dice +0.010 [+0.003, +0.016]"
+ ],
+ "prespecified_arms": {
+  "arms": [
+   "ISIC",
+   "NIH, distributed (reused) head",
+   "RSNA, distributed model"
+  ],
+  "n": 32,
+  "favour": 3,
+  "favour_holm48": 1,
+  "favour_holm_within_part": 1,
+  "below": 21,
+  "T_plus8_n": 16,
+  "T_minus8_n": 16,
+  "favour_cells": [
+   "NIH, distributed (reused) head -8 1x1 iou +0.008 [+0.002, +0.014] Holm48 0.96",
+   "NIH, distributed (reused) head -8 3x3 iou +0.007 [+0.002, +0.012] Holm48 0.27",
+   "RSNA, distributed model -8 1x1 hit +0.042 [+0.015, +0.069] Holm48 0.047"
+  ]
+ },
+ "posthoc_arms": {
+  "arms": [
+   "NIH, model trained in this study",
+   "NIH, refitted head"
+  ],
+  "n": 16,
+  "favour": 3,
+  "favour_holm48": 3,
+  "favour_holm_within_part": 3,
+  "below": 8,
+  "T_plus8_n": 8,
+  "T_minus8_n": 8,
+  "favour_cells": [
+   "NIH, refitted head -8 1x1 ap +0.030 [+0.018, +0.041] Holm48 7.3e-05",
+   "NIH, refitted head -8 3x3 hit +0.063 [+0.038, +0.089] Holm48 4.7e-05",
+   "NIH, refitted head -8 3x3 ap +0.045 [+0.032, +0.058] Holm48 7.9e-05"
+  ]
+ },
+ "disjoint": {
+  "n_cells": 20,
+  "H1_Tminus8": [
+   "1x1 hit -0.012 [-0.037, +0.014]",
+   "1x1 ap +0.048 [+0.039, +0.056]",
+   "3x3 hit -0.008 [-0.035, +0.019]",
+   "3x3 ap +0.020 [+0.013, +0.028]"
+  ]
+ },
+ "per_arm_cells": {
+  "NIH, distributed (reused) head": {
+   "H1": 12,
+   "H2": 12,
+   "S": 6,
+   "metrics": [
+    "hit",
+    "ap",
+    "iou"
+   ]
+  },
+  "RSNA, distributed model": {
+   "H1": 8,
+   "H2": 8,
+   "S": 4,
+   "metrics": [
+    "hit",
+    "ap"
+   ]
+  },
+  "ISIC": {
+   "H1": 12,
+   "H2": 12,
+   "S": 6,
+   "metrics": [
+    "hit",
+    "ap",
+    "dice"
+   ]
+  },
+  "NIH, refitted head": {
+   "H1": 8,
+   "H2": 8,
+   "S": 4,
+   "metrics": [
+    "hit",
+    "ap"
+   ]
+  },
+  "NIH, model trained in this study": {
+   "H1": 8,
+   "H2": 8,
+   "S": 4,
+   "metrics": [
+    "hit",
+    "ap"
+   ]
+  },
+  "RSNA, disjoint models": {
+   "H1": 8,
+   "H2": 8,
+   "S": 4,
+   "metrics": [
+    "hit",
+    "ap"
+   ]
+  }
+ },
+ "n_rows": 140,
+ "isic_repl": {
+  "H1_lse-8.0_1x1_hit": [
+   -0.21904761904761905,
+   -0.3224489795918367
+  ],
+  "H1_lse-8.0_1x1_ap": [
+   -0.09275197207123878,
+   -0.18574941828793357
+  ],
+  "H1_lse-8.0_1x1_dice": [
+   0.0022373736195543652,
+   -0.03838591389949329
+  ],
+  "H1_lse-8.0_3x3_hit": [
+   0.02585034013605442,
+   -0.07346938775510205
+  ],
+  "H1_lse-8.0_3x3_ap": [
+   -0.013644643610496185,
+   -0.09606831583464458
+  ],
+  "H1_lse-8.0_3x3_dice": [
+   -0.012234763110808091,
+   -0.05268530822465372
+  ]
+ },
+ "m6_repl": {
+  "H1_lse8.0_1x1_hit": [
+   -0.054878048780487805,
+   -0.056910569105691054
+  ],
+  "H1_lse8.0_1x1_ap": [
+   -0.08889463419858994,
+   -0.07543928776890618
+  ],
+  "H1_lse8.0_3x3_hit": [
+   -0.0975609756097561,
+   -0.0508130081300813
+  ],
+  "H1_lse8.0_3x3_ap": [
+   -0.08244048489982134,
+   -0.049018870553574935
+  ],
+  "H1_lse-8.0_1x1_hit": [
+   0.00508130081300813,
+   -0.042682926829268296
+  ],
+  "H1_lse-8.0_1x1_ap": [
+   0.00013225255164133,
+   -0.0220040811959399
+  ],
+  "H1_lse-8.0_3x3_hit": [
+   -0.0010162601626016261,
+   -0.09451219512195122
+  ],
+  "H1_lse-8.0_3x3_ap": [
+   -0.0029981337519350217,
+   -0.02169029064907881
+  ]
+ }
+}
+rows 140 daggers 8
+ISIC first-run hit cells, exact McNemar from the Wilcoxon statistic:
+  H1_lse8.0_1x1_hit  discordant (17, 49)  Wilcoxon 8.185e-05  exact McNemar 0.0001015
+  H1_lse8.0_3x3_hit  discordant (27, 97)  Wilcoxon 3.254e-10  exact McNemar 1.855e-10
+  H1_lse-8.0_1x1_hit  discordant (33, 194)  Wilcoxon 1.184e-26  exact McNemar 6.239e-29
+  H1_lse-8.0_3x3_hit  discordant (84, 65)  Wilcoxon 0.1196  exact McNemar 0.1401
+  H2_lse8.0_1x1_hit  discordant (6, 15)  Wilcoxon 0.04953  exact McNemar 0.07835
+  H2_lse8.0_3x3_hit  discordant (139, 48)  Wilcoxon 2.841e-11  exact McNemar 1.85e-11
+  H2_lse-8.0_1x1_hit  discordant (68, 37)  Wilcoxon 0.002484  exact McNemar 0.003221
+  H2_lse-8.0_3x3_hit  discordant (59, 45)  Wilcoxon 0.1698  exact McNemar 0.2022

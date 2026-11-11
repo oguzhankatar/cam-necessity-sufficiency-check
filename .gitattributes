@@ -1,0 +1,10 @@
+* text=auto eol=lf
+# byte-identical files whose SHA-256 is recorded: never normalised
+protocols/*.md -text
+protocols/PROTOCOL_SHA256.txt -text
+scripts/heldout/frozen_rule.py -text
+*.png binary
+*.pdf binary
+*.npz binary
+*.npy binary
+*.pt binary

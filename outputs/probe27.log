@@ -1,0 +1,71 @@
+                                    backbone          regime    none    post     pre |  pre-none post-none  tokenCV
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 0/50000 (17s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 6400/50000 (40s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 12800/50000 (62s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 19200/50000 (84s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 25600/50000 (106s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 32000/50000 (129s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 38400/50000 (151s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k 44800/50000 (174s)
+   vit_betwixt_patch16_reg4_gap_256.sbb_in1k         sup-GAP  0.8100  0.8138  0.8107 |     +0.07     +0.38    0.429
+                                              [LN affine check] post fresh/trained = 0.8138/0.8143   pre fresh/trained = 0.8107/0.8107
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 0/50000 (17s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 6400/50000 (32s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 12800/50000 (48s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 19200/50000 (63s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 25600/50000 (78s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 32000/50000 (94s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 38400/50000 (109s)
+   vit_medium_patch16_reg4_gap_256.sbb_in1k 44800/50000 (125s)
+    vit_medium_patch16_reg4_gap_256.sbb_in1k         sup-GAP  0.8071  0.8083  0.8056 |     -0.15     +0.12    0.460
+                                              [LN affine check] post fresh/trained = 0.8083/0.8083   pre fresh/trained = 0.8056/0.8056
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 0/50000 (17s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 6400/50000 (38s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 12800/50000 (52s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 19200/50000 (63s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 25600/50000 (74s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 32000/50000 (84s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 38400/50000 (95s)
+   vit_base_patch16_224.augreg2_in21k_ft_in1k 44800/50000 (106s)
+  vit_base_patch16_224.augreg2_in21k_ft_in1k         sup-CLS  0.8277  0.8269  0.8276 |     -0.01     -0.08    0.229
+                                              [LN affine check] post fresh/trained = 0.8269/0.8269   pre fresh/trained = 0.8276/0.8276
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+   deit3_small_patch16_224.fb_in1k 0/50000 (16s)
+   deit3_small_patch16_224.fb_in1k 6400/50000 (20s)
+   deit3_small_patch16_224.fb_in1k 12800/50000 (24s)
+   deit3_small_patch16_224.fb_in1k 19200/50000 (27s)
+   deit3_small_patch16_224.fb_in1k 25600/50000 (31s)
+   deit3_small_patch16_224.fb_in1k 32000/50000 (35s)
+   deit3_small_patch16_224.fb_in1k 38400/50000 (39s)
+   deit3_small_patch16_224.fb_in1k 44800/50000 (42s)
+             deit3_small_patch16_224.fb_in1k         sup-CLS  0.7608  0.7587  0.7592 |     -0.16     -0.21    0.310
+                                              [LN affine check] post fresh/trained = 0.7587/0.7587   pre fresh/trained = 0.7592/0.7591
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+   vit_base_patch16_224.dino 0/50000 (17s)
+   vit_base_patch16_224.dino 6400/50000 (27s)
+   vit_base_patch16_224.dino 12800/50000 (41s)
+   vit_base_patch16_224.dino 19200/50000 (54s)
+   vit_base_patch16_224.dino 25600/50000 (67s)
+   vit_base_patch16_224.dino 32000/50000 (81s)
+   vit_base_patch16_224.dino 38400/50000 (94s)
+   vit_base_patch16_224.dino 44800/50000 (108s)
+                   vit_base_patch16_224.dino         SSL-CLS  0.5759  0.5758  0.5773 |     +0.14     -0.01    0.098
+                                              [LN affine check] post fresh/trained = 0.5758/0.5754   pre fresh/trained = 0.5773/0.5775
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+   vit_base_patch16_224.mae 0/50000 (18s)
+   vit_base_patch16_224.mae 6400/50000 (31s)
+   vit_base_patch16_224.mae 12800/50000 (45s)
+   vit_base_patch16_224.mae 19200/50000 (58s)
+   vit_base_patch16_224.mae 25600/50000 (72s)
+   vit_base_patch16_224.mae 32000/50000 (84s)
+   vit_base_patch16_224.mae 38400/50000 (94s)
+   vit_base_patch16_224.mae 44800/50000 (105s)
+                    vit_base_patch16_224.mae         SSL-CLS  0.4892  0.4883  0.4853 |     -0.39     -0.09    0.052
+                                              [LN affine check] post fresh/trained = 0.4883/0.4885   pre fresh/trained = 0.4853/0.4854
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json
+
+token-norm CV vs (pre - none) gap over 6 backbones: r = +0.2123
+wrote <repo>\scripts\..\outputs\probe27_mocov3.json

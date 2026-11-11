@@ -1,0 +1,1298 @@
+{
+ "summary": {
+  "original": {
+   "false_degenerate": 8,
+   "false_degenerate_ids": [
+    "P05",
+    "P07",
+    "P09",
+    "P23",
+    "P25",
+    "P26",
+    "P28",
+    "P29"
+   ],
+   "decided": 32,
+   "n": 32,
+   "coverage": 1.0,
+   "binary_correct": 21,
+   "binary_accuracy_decided": 0.65625,
+   "binary_accuracy_all": 0.65625,
+   "degenerate_returned": 16,
+   "degenerate_on_vacuous": [
+    "P11",
+    "P12"
+   ],
+   "unknown_ids": []
+  },
+  "audited": {
+   "false_degenerate": 5,
+   "false_degenerate_ids": [
+    "P07",
+    "P09",
+    "P23",
+    "P28",
+    "P29"
+   ],
+   "decided": 32,
+   "n": 32,
+   "coverage": 1.0,
+   "binary_correct": 24,
+   "binary_accuracy_decided": 0.75,
+   "binary_accuracy_all": 0.75,
+   "degenerate_returned": 13,
+   "degenerate_on_vacuous": [
+    "P11",
+    "P12"
+   ],
+   "unknown_ids": []
+  },
+  "sound": {
+   "false_degenerate": 1,
+   "false_degenerate_ids": [
+    "P23"
+   ],
+   "decided": 25,
+   "n": 32,
+   "coverage": 0.78125,
+   "binary_correct": 21,
+   "binary_accuracy_decided": 0.84,
+   "binary_accuracy_all": 0.65625,
+   "degenerate_returned": 6,
+   "degenerate_on_vacuous": [],
+   "unknown_ids": [
+    "P07",
+    "P09",
+    "P11",
+    "P12",
+    "P27",
+    "P28",
+    "P29"
+   ]
+  },
+  "posthoc_opguard": {
+   "false_degenerate": 0,
+   "false_degenerate_ids": [],
+   "decided": 24,
+   "n": 32,
+   "coverage": 0.75,
+   "binary_correct": 21,
+   "binary_accuracy_decided": 0.875,
+   "binary_accuracy_all": 0.65625,
+   "degenerate_returned": 5,
+   "degenerate_on_vacuous": [],
+   "unknown_ids": [
+    "P07",
+    "P09",
+    "P11",
+    "P12",
+    "P23",
+    "P27",
+    "P28",
+    "P29"
+   ]
+  }
+ },
+ "rows": [
+  {
+   "id": "P01",
+   "probe": "mean as a module (AdaptiveAvgPool2d) -> Flatten -> Linear",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "degenerate",
+   "posthoc_failed": [],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.010945000001811422,
+   "secs_sound": 0.0019640999962575734
+  },
+  {
+   "id": "P02",
+   "probe": "mean as a tensor op x.mean((2,3)) -> Linear, no declared pool",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "degenerate",
+   "posthoc_failed": [],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0004907999973511323,
+   "secs_sound": 0.0007616000075358897
+  },
+  {
+   "id": "P03",
+   "probe": "max pool as a module (AdaptiveMaxPool2d) -> Linear",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "aggregator-blocked",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    2,
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    2,
+    5
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.007671899991692044,
+   "secs_sound": 0.0016671999910613522
+  },
+  {
+   "id": "P04",
+   "probe": "max pool as timm SelectAdaptivePool2d(pool_type='max') -> Linear",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "aggregator-blocked",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    2,
+    5
+   ],
+   "sound_why": {
+    "1": "module global_pool.pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    2,
+    5
+   ],
+   "posthoc_why": {
+    "1": "module global_pool.pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0011199000000488013,
+   "secs_sound": 0.0027111000090371817
+  },
+  {
+   "id": "P05",
+   "probe": "max as a tensor op x.amax((2,3)) -> Linear, no declared pool",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.amax.default']",
+    "2": "operator aten.amax.default",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.amax.default']",
+    "2": "operator aten.amax.default",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0026556000084383413,
+   "secs_sound": 0.0007932000007713214
+  },
+  {
+   "id": "P06",
+   "probe": "max as a tensor op, model declares global_pool='max'",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "aggregator-blocked",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.amax.default']",
+    "2": "operator aten.amax.default",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.amax.default']",
+    "2": "operator aten.amax.default",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0004329999937908724,
+   "secs_sound": 0.0008030999888433143
+  },
+  {
+   "id": "P07",
+   "probe": "attention pool module without MLP (timm AttentionPoolLatent, mlp=None) -> Linear; global_pool='map'",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten._scaled_dot_product_flash_attention_for_cpu.default']",
+    "2": "operator aten._scaled_dot_product_flash_attention_for_cpu.default",
+    "3": "4 module(s) before the aggregator; rejected: ['attn_pool.q(Linear): linear not over the channel axis']",
+    "4": "reduced [] of [(2, 2, 1, 8)] -> [(2, 2, 1, 8)]",
+    "5": "module degenerate / operator class-token"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten._scaled_dot_product_flash_attention_for_cpu.default']",
+    "2": "operator aten._scaled_dot_product_flash_attention_for_cpu.default",
+    "3": "4 module(s) before the aggregator; rejected: ['attn_pool.q(Linear): linear not over the channel axis']",
+    "4": "reduced [] of [(2, 2, 1, 8)] -> [(2, 2, 1, 8)]",
+    "5": "module degenerate / operator class-token",
+    "6": "operators before the reduction outside per-cell modules: ['aten.mm.default', 'aten.add.Tensor', 'aten.unbind.int']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.015479599998798221,
+   "secs_sound": 0.010631400000420399
+  },
+  {
+   "id": "P08",
+   "probe": "attention pool + LayerNorm + MLP (timm AttentionPoolLatent as in SigLIP 'map') -> Linear",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "nonlinearity-blocked",
+   "audited": "nonlinearity-blocked",
+   "sound": "nonlinearity-blocked",
+   "sound_failed": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten._scaled_dot_product_flash_attention_for_cpu.default']",
+    "2": "operator aten._scaled_dot_product_flash_attention_for_cpu.default",
+    "3": "4 module(s) before the aggregator; rejected: ['attn_pool.q(Linear): linear not over the channel axis']",
+    "4": "reduced [] of [(2, 2, 1, 8)] -> [(2, 2, 1, 8)]",
+    "5": "module nonlinearity-blocked / operator class-token"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "nonlinearity-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten._scaled_dot_product_flash_attention_for_cpu.default']",
+    "2": "operator aten._scaled_dot_product_flash_attention_for_cpu.default",
+    "3": "4 module(s) before the aggregator; rejected: ['attn_pool.q(Linear): linear not over the channel axis']",
+    "4": "reduced [] of [(2, 2, 1, 8)] -> [(2, 2, 1, 8)]",
+    "5": "module nonlinearity-blocked / operator class-token",
+    "6": "operators before the reduction outside per-cell modules: ['aten.mm.default', 'aten.add.Tensor', 'aten.unbind.int']",
+    "7": "non-affine operators after the reduction: ['aten.native_layer_norm.default', 'aten.gelu.default']"
+   },
+   "secs_original": 0.007750799995847046,
+   "secs_sound": 0.010707199995522387
+  },
+  {
+   "id": "P09",
+   "probe": "attention pool written as tensor ops (Linear k, v; softmax over cells) -> Linear, no declared pool",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    1,
+    2,
+    4
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.sum.dim_IntList']",
+    "2": "operator aten.sum.dim_IntList",
+    "3": "2 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    6
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.sum.dim_IntList']",
+    "2": "operator aten.sum.dim_IntList",
+    "3": "2 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten.mv.default', 'aten.div.Tensor', 'aten._softmax.default', 'aten.mul.Tensor']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0046941000036895275,
+   "secs_sound": 0.0038505999982589856
+  },
+  {
+   "id": "P10",
+   "probe": "attention pool (tensor ops) followed by an MLP (Linear-GELU-Linear)",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "nonlinearity-blocked",
+   "audited": "nonlinearity-blocked",
+   "sound": "nonlinearity-blocked",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.sum.dim_IntList']",
+    "2": "operator aten.sum.dim_IntList",
+    "3": "2 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "nonlinearity-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.sum.dim_IntList']",
+    "2": "operator aten.sum.dim_IntList",
+    "3": "2 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked",
+    "6": "operators before the reduction outside per-cell modules: ['aten.mv.default', 'aten.div.Tensor', 'aten._softmax.default', 'aten.mul.Tensor']",
+    "7": "non-affine operators after the reduction: ['aten.gelu.default']"
+   },
+   "secs_original": 0.0024238000041805208,
+   "secs_sound": 0.005729199998313561
+  },
+  {
+   "id": "P11",
+   "probe": "stack of 3 class tokens reduced by Conv1d(3,1,1) -> Linear (CoaT head)",
+   "measured": "VACUOUS",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    1,
+    2,
+    4
+   ],
+   "sound_why": {
+    "1": "module aggregate; 1 spatial reduction(s) in the trace, 0 inside it",
+    "2": "aggregator class Conv1d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 3, 16)] -> [(2, 1, 16)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    6,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module aggregate; 1 spatial reduction(s) in the trace, 0 inside it",
+    "2": "aggregator class Conv1d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 3, 16)] -> [(2, 1, 16)]",
+    "5": "module degenerate / operator degenerate",
+    "6": null,
+    "7": null
+   },
+   "secs_original": 0.004033799996250309,
+   "secs_sound": 0.006989999994402751
+  },
+  {
+   "id": "P12",
+   "probe": "stack of 3 class tokens reduced by Linear(3,1) over the token axis -> Linear",
+   "measured": "VACUOUS",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    1,
+    2,
+    4
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.slice.Tensor']",
+    "2": "operator aten.slice.Tensor",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 52, 16)] -> [(2, 3, 16)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    6
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.slice.Tensor']",
+    "2": "operator aten.slice.Tensor",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 52, 16)] -> [(2, 3, 16)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten.slice.Tensor']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0017973999929381534,
+   "secs_sound": 0.0017594999953871593
+  },
+  {
+   "id": "P13",
+   "probe": "single class token x[:, 0] -> Linear, global_pool='token'",
+   "measured": "VACUOUS",
+   "can_differ": false,
+   "original": "class-token",
+   "audited": "class-token",
+   "sound": "class-token",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.select.int']",
+    "2": "operator aten.select.int",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 52, 16)] -> [(2, 16)]",
+    "5": "module class-token / operator class-token"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "class-token",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5,
+    6
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.select.int']",
+    "2": "operator aten.select.int",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 52, 16)] -> [(2, 16)]",
+    "5": "module class-token / operator class-token",
+    "6": "operators before the reduction outside per-cell modules: ['aten.slice.Tensor']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0003868999920086935,
+   "secs_sound": 0.0008013000042410567
+  },
+  {
+   "id": "P14",
+   "probe": "LayerNorm after the mean (AdaptiveAvgPool2d -> LayerNorm -> Linear)",
+   "measured": "NORM-ONLY",
+   "can_differ": true,
+   "original": "normalisation-blocked",
+   "audited": "normalisation-blocked",
+   "sound": "normalisation-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "normalisation-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.native_layer_norm.default']"
+   },
+   "secs_original": 0.0010285000025760382,
+   "secs_sound": 0.0019934000010835007
+  },
+  {
+   "id": "P15",
+   "probe": "LayerNorm before the mean, per cell (LayerNorm2d -> AdaptiveAvgPool2d -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "degenerate",
+   "posthoc_failed": [],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0018908999918494374,
+   "secs_sound": 0.002319899998838082
+  },
+  {
+   "id": "P16",
+   "probe": "LayerNorm before the mean, per token, mean as a tensor op (LayerNorm -> x.mean(1) -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "normalisation-blocked",
+   "audited": "normalisation-blocked",
+   "sound": "normalisation-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "normalisation-blocked",
+   "posthoc_failed": [
+    5
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0008412000024691224,
+   "secs_sound": 0.0019121000077575445
+  },
+  {
+   "id": "P17",
+   "probe": "RMSNorm after the mean (timm RmsNorm)",
+   "measured": "NORM-ONLY",
+   "can_differ": true,
+   "original": "normalisation-blocked",
+   "audited": "normalisation-blocked",
+   "sound": "normalisation-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "normalisation-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.pow.Tensor_Scalar', 'aten.rsqrt.default', 'aten.mul.Tensor (data x data)']"
+   },
+   "secs_original": 0.0027417999954195693,
+   "secs_sound": 0.001863400000729598
+  },
+  {
+   "id": "P18",
+   "probe": "RMSNorm after the mean (torch nn.RMSNorm)",
+   "measured": "NORM-ONLY",
+   "can_differ": true,
+   "original": "normalisation-blocked",
+   "audited": "normalisation-blocked",
+   "sound": "normalisation-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "normalisation-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator normalisation-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.pow.Tensor_Scalar', 'aten.rsqrt.default', 'aten.mul.Tensor (data x data)']"
+   },
+   "secs_original": 0.0010942000080831349,
+   "secs_sound": 0.0019677000091178343
+  },
+  {
+   "id": "P19",
+   "probe": "SimpleNorm2d after the mean (ConvNeXt-Zepto-RMS head: pool -> SimpleNorm2d -> Linear)",
+   "measured": "NORM-ONLY",
+   "can_differ": true,
+   "original": "nonlinearity-blocked",
+   "audited": "normalisation-blocked",
+   "sound": "normalisation-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator nonlinearity-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "normalisation-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module normalisation-blocked / operator nonlinearity-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.var.correction', 'aten.rsqrt.default', 'aten.mul.Tensor (data x data)']"
+   },
+   "secs_original": 0.002336499994271435,
+   "secs_sound": 0.0020491000032052398
+  },
+  {
+   "id": "P20",
+   "probe": "per-cell MLP before the mean (Conv1x1-GELU-Conv1x1 -> AdaptiveAvgPool2d -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "3 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "degenerate",
+   "posthoc_failed": [],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "3 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0025766000035218894,
+   "secs_sound": 0.003836300005787052
+  },
+  {
+   "id": "P21",
+   "probe": "per-token MLP before a tensor-op mean (Linear-GELU-Linear -> x.mean(1) -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "nonlinearity-blocked",
+   "audited": "nonlinearity-blocked",
+   "sound": "nonlinearity-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "3 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "nonlinearity-blocked",
+   "posthoc_failed": [
+    5
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "3 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[1]] of [(2, 49, 16)] -> [(2, 16)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0009113999985856935,
+   "secs_sound": 0.002693100002943538
+  },
+  {
+   "id": "P22",
+   "probe": "GeM pooling as a module (p = 3) -> Linear",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "aggregator-blocked",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    2,
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class GeM",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    2,
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class GeM",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.pow.Tensor_Scalar']"
+   },
+   "secs_original": 0.0015254000027198344,
+   "secs_sound": 0.0013707000034628436
+  },
+  {
+   "id": "P23",
+   "probe": "GeM pooling as tensor ops -> Linear, no declared pool",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    6,
+    7
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.mean.dim']",
+    "2": "operator aten.mean.dim",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2, 3]] of [(2, 16, 7, 7)] -> [(2, 16)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten.clamp.default', 'aten.pow.Tensor_Scalar']",
+    "7": "non-affine operators after the reduction: ['aten.pow.Tensor_Scalar']"
+   },
+   "secs_original": 0.0005583000020124018,
+   "secs_sound": 0.0011226000060560182
+  },
+  {
+   "id": "P24",
+   "probe": "mixed avg+max concat as timm SelectAdaptivePool2d('catavgmax') -> Linear",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "aggregator-blocked",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "module global_pool.pool; 2 spatial reduction(s) in the trace, 2 inside it",
+    "2": "aggregator class AdaptiveCatAvgMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 32, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module global_pool.pool; 2 spatial reduction(s) in the trace, 2 inside it",
+    "2": "aggregator class AdaptiveCatAvgMaxPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 32, 1, 1)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.adaptive_max_pool2d.default']"
+   },
+   "secs_original": 0.0018776000069919974,
+   "secs_sound": 0.0023074999917298555
+  },
+  {
+   "id": "P25",
+   "probe": "mixed avg+max concat as tensor ops -> Linear, no declared pool",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "2 spatial reduction(s): ['aten.mean.dim', 'aten.amax.default']",
+    "2": "operator None",
+    "3": "no aggregator located",
+    "4": "reduced None of None -> None",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "posthoc_why": {
+    "1": "2 spatial reduction(s): ['aten.mean.dim', 'aten.amax.default']",
+    "2": "operator None",
+    "3": "no aggregator located",
+    "4": "reduced None of None -> None",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": null,
+    "7": null
+   },
+   "secs_original": 0.0005290999979479238,
+   "secs_sound": 0.0010824999917531386
+  },
+  {
+   "id": "P26",
+   "probe": "per-cell class scores (Conv1x1) pooled by log-sum-exp over cells (tensor op), T = 1",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "aggregator-blocked",
+   "sound": "aggregator-blocked",
+   "sound_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sound_why": {
+    "1": "1 spatial reduction(s): ['aten.logsumexp.default']",
+    "2": "operator aten.logsumexp.default",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2]] of [(2, 10, 49)] -> [(2, 10)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked"
+   },
+   "sound_branch": "operator",
+   "posthoc_opguard": "aggregator-blocked",
+   "posthoc_failed": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "posthoc_why": {
+    "1": "1 spatial reduction(s): ['aten.logsumexp.default']",
+    "2": "operator aten.logsumexp.default",
+    "3": "1 module(s) before the aggregator; rejected: none",
+    "4": "reduced [[2]] of [(2, 10, 49)] -> [(2, 10)]",
+    "5": "module aggregator-blocked / operator aggregator-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.003699399996548891,
+   "secs_sound": 0.002039099999819882
+  },
+  {
+   "id": "P27",
+   "probe": "linear cell mixing before the mean (Conv3x3, no activation -> AdaptiveAvgPool2d -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    3
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: ['mix(Conv2d): conv not pointwise over the cell axes']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    3,
+    6
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: ['mix(Conv2d): conv not pointwise over the cell axes']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten.convolution.default']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.0015720999945187941,
+   "secs_sound": 0.0023139999975683168
+  },
+  {
+   "id": "P28",
+   "probe": "nonlinear cell mixing before the mean (Conv3x3 -> ReLU -> AdaptiveAvgPool2d -> Linear)",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    3
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "2 module(s) before the aggregator; rejected: ['mix(Conv2d): conv not pointwise over the cell axes']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    3,
+    6
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "2 module(s) before the aggregator; rejected: ['mix(Conv2d): conv not pointwise over the cell axes']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten.convolution.default']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.001636600005440414,
+   "secs_sound": 0.0026039999938802794
+  },
+  {
+   "id": "P29",
+   "probe": "self-attention over cells before the mean (nn.MultiheadAttention -> AdaptiveAvgPool2d -> Linear)",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "unknown",
+   "sound_failed": [
+    3
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: ['attn(MultiheadAttention): non-leaf module MultiheadAttention']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "unknown",
+   "posthoc_failed": [
+    3,
+    6
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "1 module(s) before the aggregator; rejected: ['attn(MultiheadAttention): non-leaf module MultiheadAttention']",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: ['aten._native_multi_head_attention.default']",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.005219300001044758,
+   "secs_sound": 0.004133300011744723
+  },
+  {
+   "id": "P30",
+   "probe": "MLP tail (AdaptiveAvgPool2d -> Linear -> GELU -> Linear)",
+   "measured": "HARD-BLOCKED",
+   "can_differ": true,
+   "original": "nonlinearity-blocked",
+   "audited": "nonlinearity-blocked",
+   "sound": "nonlinearity-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "nonlinearity-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.gelu.default']"
+   },
+   "secs_original": 0.0005606000049738213,
+   "secs_sound": 0.0013639999961014837
+  },
+  {
+   "id": "P31",
+   "probe": "BatchNorm1d (inference) after the mean -> Linear",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "degenerate",
+   "audited": "degenerate",
+   "sound": "degenerate",
+   "sound_failed": [],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "degenerate",
+   "posthoc_failed": [],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module degenerate / operator degenerate",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: none"
+   },
+   "secs_original": 0.003452000004472211,
+   "secs_sound": 0.0020693999977083877
+  },
+  {
+   "id": "P32",
+   "probe": "ReLU in the tail that is never crossed on the reachable set (Linear bias +50 -> ReLU -> Linear)",
+   "measured": "ADDITIVE",
+   "can_differ": false,
+   "original": "nonlinearity-blocked",
+   "audited": "nonlinearity-blocked",
+   "sound": "nonlinearity-blocked",
+   "sound_failed": [
+    5
+   ],
+   "sound_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked"
+   },
+   "sound_branch": "module",
+   "posthoc_opguard": "nonlinearity-blocked",
+   "posthoc_failed": [
+    5,
+    7
+   ],
+   "posthoc_why": {
+    "1": "module pool; 1 spatial reduction(s) in the trace, 1 inside it",
+    "2": "aggregator class AdaptiveAvgPool2d",
+    "3": "0 module(s) before the aggregator; rejected: none",
+    "4": "aggregator [(2, 16, 7, 7)] -> [(2, 16, 1, 1)]",
+    "5": "module nonlinearity-blocked / operator nonlinearity-blocked",
+    "6": "operators before the reduction outside per-cell modules: none",
+    "7": "non-affine operators after the reduction: ['aten.relu.default']"
+   },
+   "secs_original": 0.0005814000032842159,
+   "secs_sound": 0.0013962000084575266
+  }
+ ]
+}

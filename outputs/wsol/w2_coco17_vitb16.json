@@ -1,0 +1,460 @@
+{
+ "dataset": "coco17",
+ "backbone": "vitb16",
+ "timm": "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+ "input": 224,
+ "grid": [
+  14,
+  14
+ ],
+ "C": 768,
+ "eval_res": 224,
+ "n_fit": 2476,
+ "n_eval": 2476,
+ "n_records": 7339,
+ "n_bank": 8,
+ "bank_idx": [
+  436,
+  971,
+  1038,
+  1137,
+  1505,
+  1537,
+  1586,
+  1646
+ ],
+ "basis": "bank",
+ "tau": 1.0,
+ "n_thresholds": 100,
+ "deltas": [
+  0.3,
+  0.5,
+  0.7
+ ],
+ "certificate": {
+  "collapsed_gap": {
+   "tag": "collapsed_gap",
+   "maxNS": 1.7938391616357772e-14,
+   "Rhalf": 1.3965075880487318e-14,
+   "I2": 1.3778492688393443e-14,
+   "corrNS_recorded_never_used": 0.9999999999999999,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  },
+  "edited_lse_tau1": {
+   "tag": "edited_lse_tau1",
+   "maxNS": 0.9391071984533124,
+   "Rhalf": 3.300237039274723,
+   "I2": 0.014300128842923528,
+   "corrNS_recorded_never_used": 0.5207771120489951,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": false
+  },
+  "edited_lnpost": {
+   "tag": "edited_lnpost",
+   "maxNS": 0.5733204569571999,
+   "Rhalf": 0.37803318510405104,
+   "I2": 0.003464671035484402,
+   "corrNS_recorded_never_used": 0.8916766643441847,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": false
+  }
+ },
+ "maps": [
+  "collapsed",
+  "collapsed_b3",
+  "N_lse",
+  "S_lse",
+  "N_lse_b3",
+  "S_lse_b3",
+  "cam",
+  "gradcam",
+  "center",
+  "actnorm",
+  "random",
+  "N_ln",
+  "S_ln",
+  "N_ln_b3",
+  "S_ln_b3"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "refit": "frozen backbone; a linear head fitted on GAP-pooled cells. The LSE row reuses those weights unchanged (Condition A): the ONLY difference between the collapsed and edited-LSE models is the pooling operator.  The lnpost row refits the linear head on LN(mean_t z_t) because that is a different pooled vector; the LayerNorm itself is the shipped one.",
+ "classification": {
+  "gap": {
+   "mAP": 0.6972206105198514,
+   "n_class_eval": 80
+  },
+  "lnpost": {
+   "mAP": 0.6924945271028876,
+   "n_class_eval": 80
+  }
+ },
+ "per_map": {
+  "collapsed": {
+   "pointing_strict": [
+    0.35399918244992506,
+    0.34309851478403053,
+    0.36544828995775985
+   ],
+   "pointing_tol15": [
+    0.583458236817005,
+    0.5718728709633465,
+    0.5951764545578416
+   ],
+   "PxAP": 0.2382120859149475,
+   "peak_mask_iou": [
+    0.25588111927270385,
+    0.2506627066943176,
+    0.2614850256233223
+   ],
+   "concentration": {
+    "participation_ratio": 0.7188797202204066,
+    "top1_mass_fraction": 0.016101959439307537,
+    "entropy_over_logT": 0.9599419272675854
+   },
+   "spearman_vs_collapsed": 1.0000000000000002
+  },
+  "collapsed_b3": {
+   "pointing_strict": [
+    0.38601989371849027,
+    0.37498296770677203,
+    0.3967843030385611
+   ],
+   "pointing_tol15": [
+    0.5912249625289548,
+    0.580460553208884,
+    0.6029431802697915
+   ],
+   "PxAP": 0.25257828420635087,
+   "peak_mask_iou": [
+    0.2710403394582335,
+    0.26555308254008897,
+    0.27674301403832813
+   ],
+   "concentration": {
+    "participation_ratio": 0.7742935868457981,
+    "top1_mass_fraction": 0.013286262955835848,
+    "entropy_over_logT": 0.9686562657954653
+   },
+   "spearman_vs_collapsed": 0.565832704835031
+  },
+  "N_lse": {
+   "pointing_strict": [
+    0.365581141844938,
+    0.3544079574873961,
+    0.37702684289412725
+   ],
+   "pointing_tol15": [
+    0.5953127129036654,
+    0.5842723804333015,
+    0.6059442703365582
+   ],
+   "PxAP": 0.10387234344474963,
+   "peak_mask_iou": [
+    0.21005996021971424,
+    0.20550339252123534,
+    0.2145879621307121
+   ],
+   "concentration": {
+    "participation_ratio": 0.11730691497999654,
+    "top1_mass_fraction": 0.32320977353953384,
+    "entropy_over_logT": 0.5358911062660952
+   },
+   "spearman_vs_collapsed": 0.7506649669734832
+  },
+  "S_lse": {
+   "pointing_strict": [
+    0.3687150837988827,
+    0.3575418994413408,
+    0.38002452650224827
+   ],
+   "pointing_tol15": [
+    0.5989916882409048,
+    0.5879513557705409,
+    0.6096232456737976
+   ],
+   "PxAP": 0.2147314557727498,
+   "peak_mask_iou": [
+    0.2666064776270107,
+    0.2613206386996604,
+    0.27241291213901037
+   ],
+   "concentration": {
+    "participation_ratio": 0.3133267915359402,
+    "top1_mass_fraction": 0.08115028895347061,
+    "entropy_over_logT": 0.7988492284736871
+   },
+   "spearman_vs_collapsed": 0.9098518297740944
+  },
+  "N_lse_b3": {
+   "pointing_strict": [
+    0.3559067992914566,
+    0.3447336149339147,
+    0.3668074669573511
+   ],
+   "pointing_tol15": [
+    0.5864559204251261,
+    0.5744617795339965,
+    0.5977653631284916
+   ],
+   "PxAP": 0.1300659727874118,
+   "peak_mask_iou": [
+    0.2337498710469456,
+    0.22897296883844379,
+    0.23851810463328638
+   ],
+   "concentration": {
+    "participation_ratio": 0.2852299511395683,
+    "top1_mass_fraction": 0.06933400422746358,
+    "entropy_over_logT": 0.7443151467564453
+   },
+   "spearman_vs_collapsed": 0.4051755668454709
+  },
+  "S_lse_b3": {
+   "pointing_strict": [
+    0.3687150837988827,
+    0.35767815778716444,
+    0.3794794931189535
+   ],
+   "pointing_tol15": [
+    0.6063496389153835,
+    0.5947676795203706,
+    0.6175262297315711
+   ],
+   "PxAP": 0.23031346455452573,
+   "peak_mask_iou": [
+    0.26717142962999374,
+    0.26208791749167,
+    0.2727219333058483
+   ],
+   "concentration": {
+    "participation_ratio": 0.5799046965115887,
+    "top1_mass_fraction": 0.021766880760091974,
+    "entropy_over_logT": 0.9161549727386602
+   },
+   "spearman_vs_collapsed": 0.4742292871948317
+  },
+  "cam": {
+   "pointing_strict": [
+    0.36898760049053003,
+    0.3582197847118136,
+    0.3803004496525412
+   ],
+   "pointing_tol15": [
+    0.5988554298950811,
+    0.5879547622291865,
+    0.6097560975609756
+   ],
+   "PxAP": 0.24618836200162578,
+   "peak_mask_iou": [
+    0.2645555603701603,
+    0.2593128114199929,
+    0.27035393419897935
+   ],
+   "concentration": {
+    "participation_ratio": 0.7348165654675024,
+    "top1_mass_fraction": 0.015522393871769102,
+    "entropy_over_logT": 0.9625806104315017
+   },
+   "spearman_vs_collapsed": 0.9428584716824872
+  },
+  "gradcam": {
+   "pointing_strict": [
+    0.3687150837988827,
+    0.35781441613298814,
+    0.3798916746150701
+   ],
+   "pointing_tol15": [
+    0.5989916882409048,
+    0.5880910205750102,
+    0.6098923559067992
+   ],
+   "PxAP": 0.2760541829432262,
+   "peak_mask_iou": [
+    0.2647601897517407,
+    0.25949555269847613,
+    0.2705816795723939
+   ],
+   "concentration": {
+    "participation_ratio": 0.6584652051668485,
+    "top1_mass_fraction": 0.01999629076692244,
+    "entropy_over_logT": 0.9289774717722131
+   },
+   "spearman_vs_collapsed": 0.9284088771118966
+  },
+  "center": {
+   "pointing_strict": [
+    0.20016351001498842,
+    0.1913033110778035,
+    0.20956874233546804
+   ],
+   "pointing_tol15": [
+    0.3796157514647772,
+    0.36844256710723533,
+    0.39051641913067175
+   ],
+   "PxAP": 0.15619884668020353,
+   "peak_mask_iou": [
+    0.1736281019513438,
+    0.1688088516274961,
+    0.1782445789613294
+   ],
+   "concentration": {
+    "participation_ratio": 0.6597195353840072,
+    "top1_mass_fraction": 0.013950914861337546,
+    "entropy_over_logT": 0.9523291689967414
+   },
+   "spearman_vs_collapsed": 0.016666614979958045
+  },
+  "actnorm": {
+   "pointing_strict": [
+    0.0938820002725167,
+    0.08761070990598174,
+    0.10042240087205341
+   ],
+   "pointing_tol15": [
+    0.20166235181904893,
+    0.19239337784439295,
+    0.21011377571876275
+   ],
+   "PxAP": 0.09105438735537391,
+   "peak_mask_iou": [
+    0.13854687678958602,
+    0.13448461890443408,
+    0.14268533071951933
+   ],
+   "concentration": {
+    "participation_ratio": 0.9910381802983159,
+    "top1_mass_fraction": 0.006114314694527688,
+    "entropy_over_logT": 0.9991377219594451
+   },
+   "spearman_vs_collapsed": 0.0637895861378026
+  },
+  "random": {
+   "pointing_strict": [
+    0.0827088159149748,
+    0.07630467366126176,
+    0.08897669982286414
+   ],
+   "pointing_tol15": [
+    0.19553072625698323,
+    0.18667393377844393,
+    0.20506881046464095
+   ],
+   "PxAP": 0.10646321692811625,
+   "peak_mask_iou": [
+    0.11526092476285599,
+    0.11163487318127903,
+    0.11899259072721022
+   ],
+   "concentration": {
+    "participation_ratio": 0.7504886612336319,
+    "top1_mass_fraction": 0.010168057515483771,
+    "entropy_over_logT": 0.9634604547167226
+   },
+   "spearman_vs_collapsed": -0.00021520889989493398
+  },
+  "N_ln": {
+   "pointing_strict": [
+    0.3728028341735931,
+    0.36231094154516963,
+    0.38397601853113505
+   ],
+   "pointing_tol15": [
+    0.5774628696007631,
+    0.5662896852432211,
+    0.588636053958305
+   ],
+   "PxAP": 0.2268851177015426,
+   "peak_mask_iou": [
+    0.2646649268313774,
+    0.2594664288062503,
+    0.2702718108339264
+   ],
+   "concentration": {
+    "participation_ratio": 0.6228629705192251,
+    "top1_mass_fraction": 0.02130395630493639,
+    "entropy_over_logT": 0.9440670592685083
+   },
+   "spearman_vs_collapsed": 0.9445206350033503
+  },
+  "S_ln": {
+   "pointing_strict": [
+    0.3602670663578144,
+    0.34977517372939093,
+    0.3708952173320616
+   ],
+   "pointing_tol15": [
+    0.5687423354680474,
+    0.5577020029976836,
+    0.580460553208884
+   ],
+   "PxAP": 0.218431268192934,
+   "peak_mask_iou": [
+    0.2634181915773259,
+    0.2581809998230438,
+    0.2690549818690519
+   ],
+   "concentration": {
+    "participation_ratio": 0.6928610290290224,
+    "top1_mass_fraction": 0.018147621649023275,
+    "entropy_over_logT": 0.9570303835707126
+   },
+   "spearman_vs_collapsed": 0.9334639918208034
+  },
+  "N_ln_b3": {
+   "pointing_strict": [
+    0.40032702002997683,
+    0.3892900940182586,
+    0.4113673525003406
+   ],
+   "pointing_tol15": [
+    0.6019893718490258,
+    0.5912249625289548,
+    0.6130297043193895
+   ],
+   "PxAP": 0.23816565690368477,
+   "peak_mask_iou": [
+    0.2786528425619109,
+    0.2730297066914551,
+    0.2844524615953112
+   ],
+   "concentration": {
+    "participation_ratio": 0.6669935633957955,
+    "top1_mass_fraction": 0.017027847104456217,
+    "entropy_over_logT": 0.9508581092891015
+   },
+   "spearman_vs_collapsed": 0.5733593854909632
+  },
+  "S_ln_b3": {
+   "pointing_strict": [
+    0.40441477040468726,
+    0.3935141027387927,
+    0.4153154380705818
+   ],
+   "pointing_tol15": [
+    0.60103556342826,
+    0.5904074124540128,
+    0.6120724894399782
+   ],
+   "PxAP": 0.2493454287282671,
+   "peak_mask_iou": [
+    0.2792703956683654,
+    0.27357309635550997,
+    0.28527620509494395
+   ],
+   "concentration": {
+    "participation_ratio": 0.7672829801168594,
+    "top1_mass_fraction": 0.013687828212461655,
+    "entropy_over_logT": 0.9683362708918789
+   },
+   "spearman_vs_collapsed": 0.5373993844107469
+  }
+ }
+}

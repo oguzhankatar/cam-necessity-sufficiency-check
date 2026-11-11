@@ -1,0 +1,63 @@
+Task 5 -- separation 1-corr(N,S)
+dataset   backbone      cert per pair (T=+1)             cert_ln eval lse med[IQR]      eval ln med[IQR]       eval refit med[IQR]   
+cub       resnet50     0.635 [0.635, 0.418, 0.349]            -- 0.626 [0.570,0.674]    --                     0.504 [0.404,0.582]   
+cub       vgg16gap     0.778 []                               -- --                     --                     --                    
+cub       vitb16       0.604 []                            0.221 --                     --                     --                    
+voc12     resnet50     0.191 [0.024, 0.039, 0.191]            -- 0.669 [0.564,0.772]    --                     0.097 [0.012,0.415]   
+voc12     vgg16gap     0.397 []                               -- --                     --                     --                    
+voc12     vitb16       0.186 []                            0.022 --                     --                     --                    
+voc12seg  resnet50     0.191 [0.024, 0.039, 0.191]            -- 0.664 [0.567,0.758]    --                     0.067 [0.008,0.319]   
+voc12seg  vgg16gap     0.397 []                               -- --                     --                     --                    
+voc12seg  vitb16       0.186 []                            0.022 --                     --                     --                    
+coco17    resnet50     0.606 [0.284, 0.334, 0.606]            -- 0.494 [0.316,0.627]    --                     0.003 [0.000,0.118]   
+coco17    vgg16gap     0.670 []                               -- --                     --                     --                    
+coco17    vitb16       0.479 []                            0.108 --                     --                     --                    
+
+certificate separation vs T (GAP weights reused), and median effective #cells under LSE weights
+  cub       resnet50  range 74.7 T-8:0.601/1.0 T-2:0.479/1.6 T-0.5:0.370/3.0 T0.5:0.632/2.2 T1:0.635/1.4 T2:0.636/1.1 T8:0.636/1.0
+  voc12     resnet50  range 32.4 T-8:0.857/1.0 T-2:0.584/1.2 T-0.5:0.154/3.0 T0.5:0.034/7.5 T1:0.191/2.7 T2:0.427/1.7 T8:0.853/1.0
+  voc12seg  resnet50  range 32.4 T-8:0.857/1.0 T-2:0.584/1.2 T-0.5:0.154/3.0 T0.5:0.034/7.5 T1:0.191/2.7 T2:0.427/1.7 T8:0.853/1.0
+  coco17    resnet50  range 53.9 T-8:0.545/1.0 T-2:0.516/1.2 T-0.5:0.344/4.8 T0.5:0.552/2.2 T1:0.606/1.3 T2:0.612/1.0 T8:0.613/1.0
+
+classification of the three heads (top-1 for CUB, mAP otherwise)
+  cub       resnet50  gap 0.6215  lse(reused) 0.4137  lse(refit) 0.4441  train loss {'gap': 0.0017, 'lse_refit': 0.0665}
+  voc12     resnet50  gap 0.8792  lse(reused) 0.8586  lse(refit) 0.8940  train loss {'gap': 0.298, 'lse_refit': 0.4408}
+  voc12seg  resnet50  gap 0.8851  lse(reused) 0.8705  lse(refit) 0.9036  train loss {'gap': 0.298, 'lse_refit': 0.4408}
+  coco17    resnet50  gap 0.6205  lse(reused) 0.5886  lse(refit) 0.6590  train loss {'gap': 0.3939, 'lse_refit': 0.4633}
+
+Task 7 -- refitted LSE head (T=+1) vs collapsed / centre
+  reused  vs collapsed n=24 win  3 loss 10 tie 11   extent: {'loss': 7, 'win': 1}
+      resnet50  n=24 win  3 loss 10 tie 11
+  reused  vs center    n=24 win 20 loss  3 tie  1   extent: {'loss': 3, 'tie': 1, 'win': 4}
+      resnet50  n=24 win 20 loss  3 tie  1
+  refit   vs collapsed n=24 win 11 loss 11 tie  2   extent: {'loss': 7, 'win': 1}
+      resnet50  n=24 win 11 loss 11 tie  2
+  refit   vs center    n=24 win 16 loss  8 tie  0   extent: {'loss': 4, 'win': 4}
+      resnet50  n=24 win 16 loss  8 tie  0
+  refit rows vs collapsed:
+    cub      resnet50 MaxBoxAccV2     N_rf  0.2509 vs 0.5295 -0.2786 [-0.2887,-0.2710] loss
+    cub      resnet50 MaxBoxAccV2     S_rf  0.3595 vs 0.5295 -0.1701 [-0.1803,-0.1610] loss
+    cub      resnet50 best IoU        N_rf  0.3632 vs 0.6608 -0.2976 [-0.3016,-0.2936] loss
+    cub      resnet50 best IoU        S_rf  0.5165 vs 0.6608 -0.1443 [-0.1484,-0.1401] loss
+    cub      resnet50 pointing, strict N_rf  0.7810 vs 0.9650 -0.1840 [-0.1949,-0.1729] loss
+    cub      resnet50 pointing, strict S_rf  0.7786 vs 0.9650 -0.1864 [-0.1976,-0.1755] loss
+    cub      resnet50 pointing, 15 px N_rf  0.8359 vs 0.9952 -0.1593 [-0.1690,-0.1500] loss
+    cub      resnet50 pointing, 15 px S_rf  0.8341 vs 0.9952 -0.1610 [-0.1703,-0.1514] loss
+    voc12    resnet50 pointing, strict N_rf  0.8474 vs 0.8368 +0.0106 [+0.0055,+0.0156] win
+    voc12    resnet50 pointing, strict S_rf  0.8537 vs 0.8368 +0.0168 [+0.0119,+0.0218] win
+    voc12    resnet50 pointing, 15 px N_rf  0.9214 vs 0.9177 +0.0037 [-0.0003,+0.0080] tie
+    voc12    resnet50 pointing, 15 px S_rf  0.9293 vs 0.9177 +0.0116 [+0.0078,+0.0155] win
+    voc12seg resnet50 pointing, strict N_rf  0.6777 vs 0.6591 +0.0186 [+0.0056,+0.0321] win
+    voc12seg resnet50 pointing, strict S_rf  0.6837 vs 0.6591 +0.0247 [+0.0112,+0.0391] win
+    voc12seg resnet50 pointing, 15 px N_rf  0.9148 vs 0.9054 +0.0093 [+0.0000,+0.0186] tie
+    voc12seg resnet50 pointing, 15 px S_rf  0.9255 vs 0.9054 +0.0200 [+0.0112,+0.0293] win
+    voc12seg resnet50 peak-mask IoU   N_rf  0.4092 vs 0.4790 -0.0698 [-0.0748,-0.0646] loss
+    voc12seg resnet50 peak-mask IoU   S_rf  0.4762 vs 0.4790 -0.0027 [-0.0057,+0.0003] loss
+    coco17   resnet50 pointing, strict N_rf  0.4709 vs 0.4332 +0.0377 [+0.0293,+0.0463] win
+    coco17   resnet50 pointing, strict S_rf  0.4717 vs 0.4332 +0.0386 [+0.0302,+0.0471] win
+    coco17   resnet50 pointing, 15 px N_rf  0.7293 vs 0.7083 +0.0210 [+0.0136,+0.0289] win
+    coco17   resnet50 pointing, 15 px S_rf  0.7336 vs 0.7083 +0.0253 [+0.0176,+0.0331] win
+    coco17   resnet50 peak-mask IoU   N_rf  0.2847 vs 0.2937 -0.0090 [-0.0110,-0.0070] loss
+    coco17   resnet50 peak-mask IoU   S_rf  0.3150 vs 0.2937 +0.0213 [+0.0194,+0.0234] win
+  reused-head verdicts reproduced from the re-run: 48 of 48
+  -> <repo>\analyses/localisation_reanalysis\out\t5_t7_separation_refit.json

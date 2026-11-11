@@ -1,0 +1,46 @@
+=== PART A: head site, literal fp64 loop ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+vit_base_patch16_224                 T=197  pfx=1 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00 spatial_mass=0.00e+00
+deit3_small_patch16_224              T=197  pfx=1 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00 spatial_mass=0.00e+00
+cait_xxs24_224                       T=197  pfx=0 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00 spatial_mass=1.00e+00
+pit_s_224                            T=1    pfx=0 additive=False maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00 spatial_mass=1.00e+00
+crossvit_9_240                       SKIP forward_features returned list
+convit_tiny                          T=197  pfx=0 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00 spatial_mass=1.00e+00
+xcit_tiny_12_p16_224                 T=197  pfx=0 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00 spatial_mass=1.00e+00
+tnt_s_patch16_224                    T=197  pfx=1 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00 spatial_mass=0.00e+00
+vit_small_patch16_224                T=197  pfx=1 additive=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00 spatial_mass=0.00e+00
+vit_betwixt_patch16_reg4_gap_256     T=260  pfx=4 additive=False maxNS=7.26e-01 Rh=1.43e-01 tele_all=+0.809776 tele_spatial=+8.097756e-01 spatial_mass=1.00e+00
+vit_medium_patch16_reg4_gap_256      T=260  pfx=4 additive=False maxNS=7.00e-01 Rh=1.01e-01 tele_all=+0.882259 tele_spatial=+8.822586e-01 spatial_mass=1.00e+00
+
+=== PART B: depth scan, literal fp64 loop ===
+  vit_base_patch16_224
+    L=0   T=197  rep=0.0e+00 |N|/|z|=  0.409 maxNS=9.85e-01 Rh=1.54e+00 corr=-0.0013 tele=-0.0240
+    L=6   T=197  rep=0.0e+00 |N|/|z|=  0.254 maxNS=9.95e-01 Rh=9.10e-01 corr=-0.0668 tele=-0.0080
+    L=10  T=197  rep=0.0e+00 |N|/|z|=  0.537 maxNS=9.74e-01 Rh=1.78e+00 corr=+0.1758 tele=-0.1611
+    L=11  T=197  rep=0.0e+00 |N|/|z|=  0.729 maxNS=9.28e-01 Rh=2.92e+00 corr=+0.5380 tele=-0.2870
+  deit3_small_patch16_224
+    L=0   T=197  rep=0.0e+00 |N|/|z|=  3.424 maxNS=1.00e+00 Rh=2.33e+00 corr=+0.1423 tele=+0.4180
+    L=6   T=197  rep=0.0e+00 |N|/|z|=  0.709 maxNS=1.27e+00 Rh=8.35e-01 corr=-0.0716 tele=+0.0535
+    L=10  T=197  rep=0.0e+00 |N|/|z|=  1.436 maxNS=1.05e+00 Rh=4.45e-01 corr=+0.3020 tele=+0.3793
+    L=11  T=197  rep=0.0e+00 |N|/|z|=  1.883 maxNS=6.41e-01 Rh=3.04e-01 corr=+0.9851 tele=+0.4520
+  cait_xxs24_224
+    L=0   T=196  rep=0.0e+00 |N|/|z|=  0.451 maxNS=1.10e+00 Rh=9.72e-01 corr=-0.2478 tele=-0.0792
+    L=12  T=196  rep=0.0e+00 |N|/|z|=  0.428 maxNS=1.20e+00 Rh=1.77e+00 corr=-0.0968 tele=+0.1193
+    L=22  T=196  rep=0.0e+00 |N|/|z|=  0.167 maxNS=1.01e+00 Rh=7.29e-01 corr=-0.0190 tele=-0.0154
+    L=23  T=196  rep=0.0e+00 |N|/|z|=  0.167 maxNS=9.91e-01 Rh=7.71e-01 corr=-0.0552 tele=-0.0099
+  convit_tiny
+    L=0   T=196  rep=0.0e+00 |N|/|z|=  1.151 maxNS=9.26e-01 Rh=1.75e+00 corr=+0.0411 tele=-0.1055
+    L=6   T=196  rep=0.0e+00 |N|/|z|=  0.243 maxNS=1.02e+00 Rh=3.94e-01 corr=+0.0080 tele=-0.0513
+    L=10  T=197  rep=0.0e+00 |N|/|z|=  0.258 maxNS=9.93e-01 Rh=1.99e+00 corr=+0.1342 tele=-0.0569
+    L=11  T=197  rep=0.0e+00 |N|/|z|=  0.303 maxNS=9.09e-01 Rh=5.83e-01 corr=+0.9368 tele=+0.1073
+  xcit_tiny_12_p16_224
+    L=0   T=196  rep=0.0e+00 |N|/|z|=  0.308 maxNS=1.00e+00 Rh=1.18e+00 corr=-0.1210 tele=+0.0966
+    L=6   T=196  rep=0.0e+00 |N|/|z|=  0.135 maxNS=1.01e+00 Rh=9.29e-01 corr=-0.1482 tele=+0.0211
+    L=10  T=196  rep=0.0e+00 |N|/|z|=  0.092 maxNS=1.00e+00 Rh=3.03e+00 corr=+0.3688 tele=+0.0283
+    L=11  T=196  rep=0.0e+00 |N|/|z|=  0.297 maxNS=1.01e+00 Rh=5.64e+00 corr=-0.1651 tele=-0.2460
+  vit_betwixt_patch16_reg4_gap_256
+    L=0   T=260  rep=0.0e+00 |N|/|z|=  0.835 maxNS=9.59e-01 Rh=3.22e+00 corr=+0.0780 tele=+0.5889
+    L=6   T=260  rep=0.0e+00 |N|/|z|=  0.202 maxNS=9.97e-01 Rh=7.18e-01 corr=+0.1204 tele=+0.0332
+    L=10  T=260  rep=0.0e+00 |N|/|z|=  1.650 maxNS=1.14e+00 Rh=3.20e+00 corr=-0.0620 tele=-1.2206
+    L=11  T=260  rep=0.0e+00 |N|/|z|=  1.613 maxNS=1.15e+00 Rh=2.93e+00 corr=-0.0221 tele=-1.1226
+  -> <repo>\outputs\heldout\h3_cls.json

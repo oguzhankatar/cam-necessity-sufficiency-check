@@ -1,0 +1,54 @@
+{
+ "mobilenetv3_large_100": [
+  1280,
+  1000
+ ],
+ "mobilenetv3_small_100": [
+  1024,
+  1000
+ ],
+ "mobilenetv4_conv_small": [
+  1280,
+  1000
+ ],
+ "lcnet_050": [
+  1280,
+  1000
+ ],
+ "ghostnet_100": [
+  1280,
+  1000
+ ],
+ "repghostnet_100": [
+  1280,
+  1000
+ ],
+ "hardcorenas_a": [
+  1280,
+  1000
+ ],
+ "hgnetv2_b0": [
+  2048,
+  1000
+ ],
+ "maxvit_tiny_tf_224": [
+  512,
+  1000
+ ],
+ "caformer_s18": [
+  2048,
+  1000
+ ],
+ "convformer_s18": [
+  2048,
+  1000
+ ],
+ "mambaout_tiny": [
+  2304,
+  1000
+ ],
+ "vgg16": [
+  4096,
+  1000
+ ]
+}

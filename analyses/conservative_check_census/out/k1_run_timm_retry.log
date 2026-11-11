@@ -1,0 +1,19 @@
+vit_large_patch16_rope_mixed_224         ERROR RuntimeError: expected scalar type Float but found Double
+vit_large_patch16_rope_mixed_ape_224     ERROR RuntimeError: expected scalar type Float but found Double
+convit_base                              cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 5s
+convit_small                             cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 3s
+crossvit_15_240                          cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 5.5e-16 eps2 2.5e-16 (VACUOUS) 4s
+crossvit_15_dagger_240                   cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 1.3e-14 eps2 5.3e-15 (VACUOUS) 6s
+crossvit_15_dagger_408                   cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 14s
+crossvit_18_240                          cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 1.1e-15 eps2 5.2e-16 (VACUOUS) 6s
+crossvit_18_dagger_240                   cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 3.6e-15 eps2 1.6e-15 (VACUOUS) 6s
+crossvit_18_dagger_408                   cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 16s
+crossvit_9_dagger_240                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 3s
+crossvit_base_240                        cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 2.0e-15 eps2 1.5e-15 (VACUOUS) 7s
+crossvit_small_240                       cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 4s
+crossvit_tiny_240                        cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 1.6e-14 eps2 6.8e-15 (VACUOUS) 3s
+vit_base_patch16_rope_mixed_224          ERROR RuntimeError: expected scalar type Float but found Double
+vit_base_patch16_rope_mixed_ape_224      ERROR RuntimeError: expected scalar type Float but found Double
+vit_small_patch16_rope_mixed_224         ERROR RuntimeError: expected scalar type Float but found Double
+vit_small_patch16_rope_mixed_ape_224     ERROR RuntimeError: expected scalar type Float but found Double
+total 93 s

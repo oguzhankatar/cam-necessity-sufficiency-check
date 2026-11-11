@@ -1,0 +1,68 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+efficientnet_b3            PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=2.5e-15 Rh=3.6e-15 I2=7.4e-15 spm=1.00e+00 d0=1.5e-16 d1=1.5e-16 OK (2s)
+efficientnet_lite0         PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=3.6e-15 Rh=5.7e-15 I2=3.4e-15 spm=1.00e+00 d0=1.8e-16 d1=1.8e-16 OK (1s)
+tf_efficientnetv2_b0       PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=2.2e-15 Rh=2.1e-15 I2=2.7e-15 spm=1.00e+00 d0=2.9e-16 d1=2.9e-16 OK (1s)
+efficientnetv2_rw_t        PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=2.0e-15 Rh=7.1e-15 I2=3.9e-15 spm=1.00e+00 d0=2.1e-16 d1=2.1e-16 OK (2s)
+regnety_040                PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=2.9e-15 Rh=3.6e-15 I2=3.5e-15 spm=1.00e+00 d0=2.0e-16 d1=2.0e-16 OK (2s)
+regnetx_016                PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.1e-15 Rh=9.7e-15 I2=5.0e-15 spm=1.00e+00 d0=2.5e-16 d1=2.5e-16 OK (1s)
+regnetz_b16                PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=3.4e-15 Rh=3.9e-15 I2=2.6e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+densenet169                PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=7.9e-15 Rh=3.1e-15 I2=4.6e-15 spm=1.00e+00 d0=2.5e-16 d1=2.5e-16 OK (1s)
+densenetblur121d           PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.3e-15 Rh=4.7e-15 I2=2.9e-15 spm=1.00e+00 d0=3.2e-16 d1=3.2e-16 OK (1s)
+legacy_xception            PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=9.1e-15 Rh=1.9e-14 I2=9.9e-15 spm=1.00e+00 d0=2.0e-16 d1=2.0e-16 OK (2s)
+xception65                 PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.0e-15 Rh=8.1e-15 I2=6.5e-15 spm=1.00e+00 d0=1.0e-16 d1=1.0e-16 OK (2s)
+resnest50d                 PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=6.8e-15 Rh=5.8e-15 I2=4.9e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+resnest14d                 PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=9.5e-15 Rh=1.5e-14 I2=8.9e-15 spm=1.00e+00 d0=3.2e-16 d1=3.2e-16 OK (1s)
+seresnext26d_32x4d         PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=7.8e-15 Rh=1.5e-15 I2=4.2e-15 spm=1.00e+00 d0=2.4e-16 d1=2.4e-16 OK (1s)
+seresnet50                 PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.0e-15 Rh=6.9e-15 I2=3.7e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (1s)
+ecaresnet50d               PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=5.1e-15 Rh=6.3e-15 I2=5.0e-15 spm=1.00e+00 d0=3.8e-16 d1=3.8e-16 OK (1s)
+legacy_seresnet18          PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=1.1e-14 Rh=8.7e-15 I2=5.2e-15 spm=1.00e+00 d0=2.3e-16 d1=2.3e-16 OK (1s)
+skresnet18                 PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.3e-15 Rh=3.7e-15 I2=4.5e-15 spm=1.00e+00 d0=2.9e-16 d1=2.9e-16 OK (1s)
+poolformer_s24             PRED NORM-BLOCKED    blocker=head.norm(LayerNorm2d)         | GT NORM-ONLY     maxNS=5.2e-01 Rh=1.7e-01 I2=9.6e-03 spm=1.00e+00 d0=6.3e-02 d1=1.6e-16 OK (3s)
+poolformerv2_s24           PRED NORM-BLOCKED    blocker=head.norm(LayerNorm2d)         | GT NORM-ONLY     maxNS=1.0e+00 Rh=1.3e+00 I2=9.1e-02 spm=1.00e+00 d0=2.7e-01 d1=2.5e-16 OK (2s)
+convformer_s36             PRED NONLIN-BLOCKED  blocker=head.fc.act.relu(ReLU)         | GT HARD-BLOCKED  maxNS=1.1e+00 Rh=1.6e+00 I2=1.1e-01 spm=1.00e+00 d0=4.0e-01 d1=5.2e-01 OK (3s)
+inception_next_tiny        PRED NONLIN-BLOCKED  blocker=head.act(GELU)                 | GT HARD-BLOCKED  maxNS=1.2e+00 Rh=2.8e+00 I2=9.2e-02 spm=1.00e+00 d0=5.1e-01 d1=2.6e-01 OK (3s)
+mixer_b16_224              PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.4e-14 Rh=5.8e-15 I2=5.7e-15 spm=1.00e+00 d0=3.4e-16 d1=3.4e-16 OK (2s)
+gmixer_24_224              PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=1.6e-14 Rh=1.5e-14 I2=8.9e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+gmlp_s16_224               PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=1.6e-14 Rh=1.8e-14 I2=1.3e-14 spm=1.00e+00 d0=9.4e-17 d1=9.4e-17 OK (1s)
+resmlp_12_224              PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=3.6e-15 Rh=2.6e-14 I2=6.4e-15 spm=1.00e+00 d0=1.8e-16 d1=1.8e-16 OK (1s)
+fastvit_s12                PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=3.6e-15 Rh=4.1e-15 I2=2.7e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+fastvit_sa12               PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=5.9e-15 Rh=3.6e-15 I2=3.1e-15 spm=1.00e+00 d0=1.7e-16 d1=1.7e-16 OK (1s)
+efficientformer_l3         PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=2.4e-15 Rh=6.6e-15 I2=3.7e-15 spm=1.00e+00 d0=1.4e-16 d1=1.4e-16 OK (1s)
+efficientformerv2_s1       PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.9e-15 Rh=9.5e-15 I2=5.7e-15 spm=1.00e+00 d0=3.0e-16 d1=3.0e-16 OK (1s)
+levit_192                  PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=1.6e-15 Rh=3.7e-15 I2=2.2e-15 spm=1.00e+00 d0=2.8e-16 d1=2.8e-16 OK (1s)
+levit_conv_128s            PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=1.5e-15 Rh=1.2e-15 I2=1.1e-15 spm=1.00e+00 d0=1.4e-16 d1=1.4e-16 OK (1s)
+mobilevit_xs               PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=5.2e-15 Rh=6.6e-15 I2=5.1e-15 spm=1.00e+00 d0=1.2e-16 d1=1.2e-16 OK (1s)
+mobilevitv2_100            PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=9.3e-15 Rh=8.8e-15 I2=4.8e-15 spm=1.00e+00 d0=1.8e-16 d1=1.8e-16 OK (1s)
+tiny_vit_11m_224           PRED NORM-BLOCKED    blocker=head.norm(LayerNorm2d)         | GT NORM-ONLY     maxNS=1.3e+00 Rh=1.4e+00 I2=1.5e-01 spm=1.00e+00 d0=3.4e-01 d1=4.2e-16 OK (3s)
+tiny_vit_21m_224           PRED NORM-BLOCKED    blocker=head.norm(LayerNorm2d)         | GT NORM-ONLY     maxNS=1.1e+00 Rh=1.6e+00 I2=1.2e-01 spm=1.00e+00 d0=3.5e-01 d1=3.1e-16 OK (3s)
+davit_small                PRED NORM-BLOCKED    blocker=head.norm(LayerNorm2d)         | GT NORM-ONLY     maxNS=4.5e-01 Rh=3.1e-01 I2=1.5e-02 spm=1.00e+00 d0=6.6e-02 d1=1.2e-16 OK (3s)
+coatnet_1_rw_224           PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=4.0e-15 Rh=5.0e-15 I2=3.2e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+coatnext_nano_rw_224       PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=7.3e-15 Rh=7.2e-15 I2=5.1e-15 spm=1.00e+00 d0=1.3e-16 d1=1.3e-16 OK (2s)
+hiera_small_224            PRED NORM-BLOCKED    blocker=head.norm(LayerNorm)           | GT NORM-ONLY     maxNS=8.2e-01 Rh=4.2e-01 I2=2.2e-02 spm=1.00e+00 d0=7.9e-02 d1=2.5e-16 OK (2s)
+hiera_base_224             PRED NORM-BLOCKED    blocker=head.norm(LayerNorm)           | GT NORM-ONLY     maxNS=6.1e-01 Rh=3.1e-01 I2=2.8e-02 spm=1.00e+00 d0=5.8e-02 d1=1.2e-16 OK (3s)
+volo_d1_224                PRED DEGENERATE      blocker=None                           | GT HARD-BLOCKED  maxNS=4.7e-01 Rh=1.6e-03 I2=0.0e+00 spm=1.00e+00 d0=1.4e-02 d1=1.4e-02 *** DISAGREE *** (3s)
+twins_pcpvt_small          PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=6.4e-15 Rh=7.3e-15 I2=5.1e-15 spm=1.00e+00 d0=3.4e-16 d1=3.4e-16 OK (1s)
+twins_svt_base             PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=5.2e-15 Rh=2.2e-15 I2=3.4e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (2s)
+pvt_v2_b1                  PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=6.3e-15 Rh=6.4e-15 I2=4.1e-15 spm=1.00e+00 d0=1.8e-16 d1=1.8e-16 OK (1s)
+pvt_v2_b2                  PRED IN-SCOPE        blocker=None                           | GT ADDITIVE      maxNS=7.9e-15 Rh=9.6e-15 I2=5.0e-15 spm=1.00e+00 d0=1.9e-16 d1=1.9e-16 OK (1s)
+mambaout_femto             PRED NONLIN-BLOCKED  blocker=head.pre_logits.act(GELU)      | GT HARD-BLOCKED  maxNS=1.0e+00 Rh=1.6e+00 I2=7.5e-02 spm=1.00e+00 d0=4.9e-01 d1=1.6e-01 OK (2s)
+mambaout_small             PRED NONLIN-BLOCKED  blocker=head.pre_logits.act(GELU)      | GT HARD-BLOCKED  maxNS=9.8e-01 Rh=1.3e+00 I2=9.5e-02 spm=1.00e+00 d0=4.5e-01 d1=1.7e-01 OK (3s)
+mambaout_kobe              PRED NONLIN-BLOCKED  blocker=head.pre_logits.act(GELU)      | GT HARD-BLOCKED  maxNS=1.0e+00 Rh=1.7e+00 I2=1.1e-01 spm=1.00e+00 d0=5.0e-01 d1=3.3e-01 OK (2s)
+
+SPLIT A  v1 (FROZEN stage-5)  STRICT fp64 literal loop: 48/49
+SPLIT A  v2a (minimal repair)  STRICT                 : 49/49
+SPLIT A  v2b (principled repair) STRICT               : 49/49
+SPLIT A  v1 under stage-5's own seg_dev criterion     : 48/49
+  pred IN-SCOPE         36
+  pred NORM-BLOCKED      7
+  pred NONLIN-BLOCKED    5
+  pred DEGENERATE        1
+  gt   ADDITIVE         36
+  gt   NORM-ONLY         7
+  gt   HARD-BLOCKED      6
+
+DISAGREEMENTS (any of v1/v2a/v2b):
+  volo_d1_224                v1=DEGENERATE     v2a=AGG-BLOCKED    v2b=AGG-BLOCKED    gt=HARD-BLOCKED maxNS=4.69e-01 Rh=1.61e-03 spm=1.00e+00 nact=2/197 aten=['OTHER', 'TOKEN']
+errors: []
+total 87 s
+  -> <repo>\outputs\heldout\h1_A.json

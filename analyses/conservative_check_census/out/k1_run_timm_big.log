@@ -1,0 +1,41 @@
+beit3_large_patch16_224                  cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.0e+00 eps2 6.2e-01 (NORM-ONLY) 19s
+beit_large_patch16_224                   cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 2.2e-01 eps2 1.4e-01 (NORM-ONLY) 19s
+beit_large_patch16_384                   cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 2.0e-01 eps2 8.9e-02 (NORM-ONLY) 55s
+beit_large_patch16_512                   cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.3e-01 eps2 1.6e-01 (NORM-ONLY) 105s
+beitv2_large_patch16_224                 cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 2.2e-01 eps2 1.4e-01 (NORM-ONLY) 18s
+cait_m48_448                             cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 129s
+convnext_xlarge                          cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.1e-01 eps2 4.2e-02 (NORM-ONLY) 29s
+convnext_xxlarge                         cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.1e-01 eps2 7.3e-02 (NORM-ONLY) 54s
+convnextv2_huge                          cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.2e-02 eps2 8.9e-03 (NORM-ONLY) 84s
+deit3_huge_patch14_224                   cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 31s
+deit3_large_patch16_224                  cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 15s
+deit3_large_patch16_384                  cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 34s
+dm_nfnet_f4                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.1e-13 eps2 8.6e-13 (ADDITIVE) 37s
+dm_nfnet_f5                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 7.5e-14 eps2 4.9e-13 (ADDITIVE) 47s
+dm_nfnet_f6                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.3e-13 eps2 9.9e-13 (ADDITIVE) 63s
+eva02_large_patch14_448                  cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 8.9e-02 eps2 1.5e-01 (NORM-ONLY) 118s
+eva_large_patch14_196                    cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 7.9e-02 eps2 4.2e-01 (NORM-ONLY) 19s
+eva_large_patch14_336                    cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 4.4e-02 eps2 2.0e-01 (NORM-ONLY) 58s
+flexivit_large                           cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 16s
+hiera_huge_224                           cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 31s
+maxvit_xlarge_tf_384                     cpu      orig nonlinearity-blocked   aud nonlinearity-blocked   sound nonlinearity-blocked   | meas HARD-BLOCKED eps1 1.4e+00 eps2 7.9e+00 (HARD-BLOCKED) 95s
+maxvit_xlarge_tf_512                     cpu      orig nonlinearity-blocked   aud nonlinearity-blocked   sound nonlinearity-blocked   | meas HARD-BLOCKED eps1 1.3e+00 eps2 3.9e+01 (HARD-BLOCKED) 155s
+regnety_1280                             cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 3.4e-13 eps2 2.4e-12 (ADDITIVE) 71s
+resnetv2_101x3_bit                       cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 3.9e-13 eps2 1.2e-12 (ADDITIVE) 60s
+resnetv2_152x4_bit                       cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 5.5e-13 eps2 2.6e-12 (ADDITIVE) 146s
+resnext101_32x32d                        cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.2e-13 eps2 3.8e-13 (ADDITIVE) 26s
+tf_efficientnet_l2                       cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 8.3e-14 eps2 1.1e-12 (ADDITIVE) 92s
+vit_huge_patch14_clip_224                cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 23s
+vit_huge_patch14_clip_336                cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 55s
+vit_large_patch14_clip_224               cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 16s
+vit_large_patch14_clip_336               cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 34s
+vit_large_patch16_224                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 12s
+vit_large_patch16_384                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 37s
+vit_large_patch16_rope_224               cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 16s
+vit_large_patch16_rope_ape_224           cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 15s
+vit_large_patch16_rope_mixed_224         ERROR RuntimeError: expected scalar type Float but found Double
+vit_large_patch16_rope_mixed_ape_224     ERROR RuntimeError: expected scalar type Float but found Double
+vit_large_patch32_384                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 11s
+vit_large_r50_s32_224                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 8s
+vit_large_r50_s32_384                    cpu      orig class-token            aud class-token            sound class-token            | meas VACUOUS      eps1 0.0e+00 eps2 0.0e+00 (VACUOUS) 15s
+total 1882 s

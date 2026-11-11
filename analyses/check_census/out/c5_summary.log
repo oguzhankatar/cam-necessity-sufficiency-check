@@ -1,0 +1,98 @@
+== p1 {
+ "n_population": 899,
+ "n_classified": 895,
+ "n_skipped_over_1e9": 4,
+ "n_failed": 0,
+ "verdicts_frozen_v1": {
+  "IN-SCOPE": 532,
+  "NORM-BLOCKED": 103,
+  "NONLIN-BLOCKED": 118,
+  "DEGENERATE": 142
+ },
+ "verdicts_v2b": {
+  "IN-SCOPE": 543,
+  "NORM-BLOCKED": 103,
+  "NONLIN-BLOCKED": 117,
+  "DEGENERATE": 121,
+  "AGG-BLOCKED": 11
+ },
+ "shares_v1": {
+  "IN-SCOPE": 0.5944134078212291,
+  "NORM-BLOCKED": 0.11508379888268157,
+  "NONLIN-BLOCKED": 0.1318435754189944,
+  "DEGENERATE": 0.15865921787709497
+ },
+ "n_distinct_traces": 43,
+ "n_traces_singletons": 3,
+ "n_of_148_in_population": 144,
+ "n_of_148_classified_here": 144,
+ "n_verdict_mismatch_vs_archived": 0,
+ "n_population_traces_seen_in_148": 33,
+ "n_population_archs_with_trace_in_148": 865,
+ "verdicts_v1_outside_148": {
+  "IN-SCOPE": 443,
+  "NORM-BLOCKED": 83,
+  "NONLIN-BLOCKED": 95,
+  "DEGENERATE": 130
+ },
+ "module_pool_false": 267
+}
+  failed: []
+  skipped: ['eva_giant_patch14_224', 'eva_giant_patch14_336', 'eva_giant_patch14_560', 'regnety_2560']
+  not-in-pop of 148: ['tiny_vit_11m_224', 'tiny_vit_21m_224', 'tiny_vit_5m_224', 'vitamin_small_224']
+  mismatches: []
+  v1!=v2b: n=23 [('crossvit_15_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_15_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_15_dagger_408', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_dagger_408', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_9_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_9_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_base_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_small_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_tiny_240', 'DEGENERATE', 'IN-SCOPE'), ('test_vit3', 'NONLIN-BLOCKED', 'DEGENERATE'), ('volo_d1_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d1_384', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d2_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d2_384', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d3_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d3_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d4_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d4_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_512', 'DEGENERATE', 'AGG-BLOCKED')]
+  top trace 188 AdaptiveAvgPool2d [['Flatten', 'AFFINE'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE'], ['Identity', 'AFFINE']]
+  top trace 175 AdaptiveAvgPool2d [['Flatten', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 59 global_pool=token [['Identity', 'AFFINE'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 53 global_pool=token [['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 45 global_pool=avg [['LayerNorm', 'NORM'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]
+== p2 {
+ "n_population": 905,
+ "n_classified": 901,
+ "n_skipped_over_1e9": 4,
+ "n_failed": 0,
+ "verdicts_frozen_v1": {
+  "IN-SCOPE": 533,
+  "NORM-BLOCKED": 106,
+  "NONLIN-BLOCKED": 119,
+  "DEGENERATE": 143
+ },
+ "verdicts_v2b": {
+  "IN-SCOPE": 544,
+  "NORM-BLOCKED": 106,
+  "NONLIN-BLOCKED": 117,
+  "DEGENERATE": 123,
+  "AGG-BLOCKED": 11
+ },
+ "shares_v1": {
+  "IN-SCOPE": 0.5915649278579356,
+  "NORM-BLOCKED": 0.11764705882352941,
+  "NONLIN-BLOCKED": 0.1320754716981132,
+  "DEGENERATE": 0.15871254162042175
+ },
+ "n_distinct_traces": 45,
+ "n_traces_singletons": 5,
+ "n_of_148_in_population": 147,
+ "n_of_148_classified_here": 147,
+ "n_verdict_mismatch_vs_archived": 0,
+ "n_population_traces_seen_in_148": 33,
+ "n_population_archs_with_trace_in_148": 869,
+ "verdicts_v1_outside_148": {
+  "IN-SCOPE": 444,
+  "NORM-BLOCKED": 83,
+  "NONLIN-BLOCKED": 96,
+  "DEGENERATE": 131
+ },
+ "module_pool_false": 270
+}
+  failed: []
+  skipped: ['eva_giant_patch14_224', 'eva_giant_patch14_336', 'eva_giant_patch14_560', 'regnety_2560']
+  not-in-pop of 148: ['vitamin_small_224']
+  mismatches: []
+  v1!=v2b: n=24 [('crossvit_15_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_15_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_15_dagger_408', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_18_dagger_408', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_9_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_9_dagger_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_base_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_small_240', 'DEGENERATE', 'IN-SCOPE'), ('crossvit_tiny_240', 'DEGENERATE', 'IN-SCOPE'), ('test_vit3', 'NONLIN-BLOCKED', 'DEGENERATE'), ('vit_so400m_patch14_siglip_378', 'NONLIN-BLOCKED', 'DEGENERATE'), ('volo_d1_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d1_384', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d2_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d2_384', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d3_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d3_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d4_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d4_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_224', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_448', 'DEGENERATE', 'AGG-BLOCKED'), ('volo_d5_512', 'DEGENERATE', 'AGG-BLOCKED')]
+  top trace 188 AdaptiveAvgPool2d [['Flatten', 'AFFINE'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE'], ['Identity', 'AFFINE']]
+  top trace 175 AdaptiveAvgPool2d [['Flatten', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 60 global_pool=token [['Identity', 'AFFINE'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 53 global_pool=token [['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]
+  top trace 45 global_pool=avg [['LayerNorm', 'NORM'], ['Dropout', 'AFFINE'], ['Linear', 'AFFINE']]

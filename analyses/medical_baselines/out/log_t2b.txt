@@ -1,0 +1,61 @@
+RSNA cached (3884, 224, 224)
+fold 0: train 3107 (pos 1108), held-out 777 (pos 277)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+    ep0 loss 0.7171 35s
+    ep1 loss 0.5921 35s
+    ep2 loss 0.4777 37s
+    ep3 loss 0.3509 46s
+    ep4 loss 0.2505 39s
+    ep5 loss 0.1805 39s
+    ep6 loss 0.1425 51s
+    ep7 loss 0.1292 47s
+  fold 0 held-out AUC 0.8279  frozen rule IN-SCOPE
+fold 1: train 3107 (pos 1108), held-out 777 (pos 277)
+    ep0 loss 0.7098 44s
+    ep1 loss 0.5792 41s
+    ep2 loss 0.4696 46s
+    ep3 loss 0.3568 47s
+    ep4 loss 0.2781 47s
+    ep5 loss 0.2026 47s
+    ep6 loss 0.1620 45s
+    ep7 loss 0.1456 43s
+  fold 1 held-out AUC 0.8436  frozen rule IN-SCOPE
+fold 2: train 3107 (pos 1108), held-out 777 (pos 277)
+    ep0 loss 0.7155 33s
+    ep1 loss 0.5815 34s
+    ep2 loss 0.4822 26s
+    ep3 loss 0.3626 19s
+    ep4 loss 0.2543 31s
+    ep5 loss 0.1841 34s
+    ep6 loss 0.1441 30s
+    ep7 loss 0.1350 37s
+  fold 2 held-out AUC 0.8352  frozen rule IN-SCOPE
+fold 3: train 3107 (pos 1108), held-out 777 (pos 277)
+    ep0 loss 0.7059 38s
+    ep1 loss 0.5596 34s
+    ep2 loss 0.4475 34s
+    ep3 loss 0.3500 29s
+    ep4 loss 0.2526 27s
+    ep5 loss 0.1877 32s
+    ep6 loss 0.1466 37s
+    ep7 loss 0.1357 39s
+  fold 3 held-out AUC 0.8205  frozen rule IN-SCOPE
+fold 4: train 3108 (pos 1108), held-out 776 (pos 277)
+    ep0 loss 0.7259 39s
+    ep1 loss 0.5868 30s
+    ep2 loss 0.4798 24s
+    ep3 loss 0.3641 29s
+    ep4 loss 0.2722 23s
+    ep5 loss 0.2026 21s
+    ep6 loss 0.1521 20s
+    ep7 loss 0.1455 20s
+  fold 4 held-out AUC 0.8131  frozen rule IN-SCOPE
+cross-fitted pooled out-of-fold AUC 0.8281
+  disjoint map 0/1385 0s
+  disjoint map 250/1385 30s
+  disjoint map 500/1385 59s
+  disjoint map 750/1385 127s
+  disjoint map 1000/1385 165s
+  disjoint map 1250/1385 176s
+wrote maps maps_rsna_disjoint.npz 1385
+wrote <repo>\analyses/medical_baselines\out\t2_rsna_disjoint_model.json

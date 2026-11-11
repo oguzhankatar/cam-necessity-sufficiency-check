@@ -1,0 +1,345 @@
+{
+ "dataset": "voc12seg",
+ "backbone": "resnet50",
+ "timm": "resnet50.tv_in1k",
+ "input": 448,
+ "grid": [
+  14,
+  14
+ ],
+ "C": 2048,
+ "eval_res": 224,
+ "n_fit": 5717,
+ "n_eval": 1449,
+ "n_records": 2147,
+ "n_bank": 8,
+ "bank_idx": [
+  302,
+  1595,
+  1688,
+  2465,
+  4054,
+  4367,
+  4656,
+  5644
+ ],
+ "basis": "bank",
+ "tau": -0.5,
+ "n_thresholds": 100,
+ "deltas": [
+  0.3,
+  0.5,
+  0.7
+ ],
+ "certificate": {
+  "collapsed_gap": {
+   "tag": "collapsed_gap",
+   "maxNS": 1.2831560285700846e-14,
+   "Rhalf": 1.5592174727890647e-14,
+   "I2": 8.607080167802197e-15,
+   "corrNS_recorded_never_used": 0.9999999999999994,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  },
+  "edited_lse_tau1": {
+   "tag": "edited_lse_tau1",
+   "maxNS": 0.8708753806111054,
+   "Rhalf": 0.8510654337064043,
+   "I2": 0.0027382551779033056,
+   "corrNS_recorded_never_used": 0.8455622918516531,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": false
+  }
+ },
+ "maps": [
+  "collapsed",
+  "collapsed_b3",
+  "N_lse",
+  "S_lse",
+  "N_lse_b3",
+  "S_lse_b3",
+  "cam",
+  "gradcam",
+  "center",
+  "actnorm",
+  "random"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "refit": "frozen backbone; a linear head fitted on GAP-pooled cells. The LSE row reuses those weights unchanged (Condition A): the ONLY difference between the collapsed and edited-LSE models is the pooling operator.  The lnpost row refits the linear head on LN(mean_t z_t) because that is a different pooled vector; the LayerNorm itself is the shipped one.",
+ "classification": {
+  "gap": {
+   "mAP": 0.8850954625307577,
+   "n_class_eval": 20
+  }
+ },
+ "per_map": {
+  "collapsed": {
+   "pointing_strict": [
+    0.6590591523055426,
+    0.6394969725197951,
+    0.6781555659059152
+   ],
+   "pointing_tol15": [
+    0.9054494643688868,
+    0.8919422449930136,
+    0.9180251513740102
+   ],
+   "PxAP": 0.464230052464051,
+   "peak_mask_iou": [
+    0.4789676391359019,
+    0.46982608122852565,
+    0.4883685637464264
+   ],
+   "concentration": {
+    "participation_ratio": 0.4180007679049839,
+    "top1_mass_fraction": 0.03289587416151368,
+    "entropy_over_logT": 0.8853997546751267
+   },
+   "spearman_vs_collapsed": 1.0000000000000002
+  },
+  "collapsed_b3": {
+   "pointing_strict": [
+    0.7047042384722869,
+    0.6856078248719143,
+    0.7228691197019096
+   ],
+   "pointing_tol15": [
+    0.9161620866325105,
+    0.904052165812762,
+    0.927806241266884
+   ],
+   "PxAP": 0.4818889060534516,
+   "peak_mask_iou": [
+    0.4864508579920068,
+    0.4771975462921639,
+    0.49600698520433223
+   ],
+   "concentration": {
+    "participation_ratio": 0.4501454832928073,
+    "top1_mass_fraction": 0.027515771539841166,
+    "entropy_over_logT": 0.8922478765146492
+   },
+   "spearman_vs_collapsed": 0.8712035250285329
+  },
+  "N_lse": {
+   "pointing_strict": [
+    0.2375407545412203,
+    0.21984163949697252,
+    0.25617140195621796
+   ],
+   "pointing_tol15": [
+    0.4462040055891942,
+    0.4252328830926875,
+    0.4676292501164415
+   ],
+   "PxAP": 0.1709485682037826,
+   "peak_mask_iou": [
+    0.2219972304483531,
+    0.21397379567178082,
+    0.23015805916430546
+   ],
+   "concentration": {
+    "participation_ratio": 0.22860696727730875,
+    "top1_mass_fraction": 0.15599349815826818,
+    "entropy_over_logT": 0.7358846815137335
+   },
+   "spearman_vs_collapsed": 0.4070837682416443
+  },
+  "S_lse": {
+   "pointing_strict": [
+    0.22682813227759666,
+    0.21006054960409873,
+    0.24452724732184444
+   ],
+   "pointing_tol15": [
+    0.4471355379599441,
+    0.4266418258034467,
+    0.4690265486725664
+   ],
+   "PxAP": 0.1580584759208133,
+   "peak_mask_iou": [
+    0.21894759173742373,
+    0.2109389913247382,
+    0.22717625416498538
+   ],
+   "concentration": {
+    "participation_ratio": 0.12552320283620624,
+    "top1_mass_fraction": 0.1724859372727418,
+    "entropy_over_logT": 0.6758796255948301
+   },
+   "spearman_vs_collapsed": 0.48402269808167653
+  },
+  "N_lse_b3": {
+   "pointing_strict": [
+    0.2710759198882161,
+    0.2529110386585934,
+    0.29017233348858873
+   ],
+   "pointing_tol15": [
+    0.4969725197950629,
+    0.4760130414531905,
+    0.5179436422915695
+   ],
+   "PxAP": 0.1891230869320349,
+   "peak_mask_iou": [
+    0.2554211002966726,
+    0.24676754601764103,
+    0.2645317895758454
+   ],
+   "concentration": {
+    "participation_ratio": 0.492887326304938,
+    "top1_mass_fraction": 0.039955684399768494,
+    "entropy_over_logT": 0.8707430491115409
+   },
+   "spearman_vs_collapsed": 0.37511030652655836
+  },
+  "S_lse_b3": {
+   "pointing_strict": [
+    0.26781555659059153,
+    0.2501164415463437,
+    0.2873893805309734
+   ],
+   "pointing_tol15": [
+    0.49650675360968793,
+    0.4750815090824406,
+    0.5183977643223102
+   ],
+   "PxAP": 0.1813563831712699,
+   "peak_mask_iou": [
+    0.2519704022250239,
+    0.24330243390622228,
+    0.26112387172808166
+   ],
+   "concentration": {
+    "participation_ratio": 0.33128005754360235,
+    "top1_mass_fraction": 0.04011454152951735,
+    "entropy_over_logT": 0.8421375504139227
+   },
+   "spearman_vs_collapsed": 0.3914912720685928
+  },
+  "cam": {
+   "pointing_strict": [
+    0.6711690731252911,
+    0.6516068933395436,
+    0.6897997205402888
+   ],
+   "pointing_tol15": [
+    0.9105728924080112,
+    0.8975314392175128,
+    0.9226828132277597
+   ],
+   "PxAP": 0.48719203193513205,
+   "peak_mask_iou": [
+    0.48802224014364465,
+    0.47888741674825674,
+    0.49742921766923337
+   ],
+   "concentration": {
+    "participation_ratio": 0.40392285105011305,
+    "top1_mass_fraction": 0.03374464221102202,
+    "entropy_over_logT": 0.8787126071137493
+   },
+   "spearman_vs_collapsed": 0.9183955529452712
+  },
+  "gradcam": {
+   "pointing_strict": [
+    0.6711690731252911,
+    0.6516068933395436,
+    0.6897997205402888
+   ],
+   "pointing_tol15": [
+    0.9105728924080112,
+    0.8975314392175128,
+    0.9226828132277597
+   ],
+   "PxAP": 0.5800561564934221,
+   "peak_mask_iou": [
+    0.48826403303080296,
+    0.4791904464936627,
+    0.49765250833408736
+   ],
+   "concentration": {
+    "participation_ratio": 0.32368878352450325,
+    "top1_mass_fraction": 0.04111460985707526,
+    "entropy_over_logT": 0.8199624846989444
+   },
+   "spearman_vs_collapsed": 0.8942901149837452
+  },
+  "center": {
+   "pointing_strict": [
+    0.40987424312994875,
+    0.3879832324173265,
+    0.43176525384257103
+   ],
+   "pointing_tol15": [
+    0.6530041918956684,
+    0.632044713553796,
+    0.6734979040521658
+   ],
+   "PxAP": 0.3209715850908864,
+   "peak_mask_iou": [
+    0.320894792560503,
+    0.31091420934833097,
+    0.33108416024535753
+   ],
+   "concentration": {
+    "participation_ratio": 0.6597195353840071,
+    "top1_mass_fraction": 0.013950914861337548,
+    "entropy_over_logT": 0.9523291689967415
+   },
+   "spearman_vs_collapsed": 0.2513104608120589
+  },
+  "actnorm": {
+   "pointing_strict": [
+    0.38705170004657663,
+    0.3670237540754541,
+    0.4080228225430833
+   ],
+   "pointing_tol15": [
+    0.6283185840707964,
+    0.608290638099674,
+    0.648346530041919
+   ],
+   "PxAP": 0.35306069435334486,
+   "peak_mask_iou": [
+    0.36204079162722713,
+    0.3525298499058778,
+    0.37172301782372924
+   ],
+   "concentration": {
+    "participation_ratio": 0.850692458176425,
+    "top1_mass_fraction": 0.011730746568108418,
+    "entropy_over_logT": 0.9837733863686555
+   },
+   "spearman_vs_collapsed": 0.3672445918812926
+  },
+  "random": {
+   "pointing_strict": [
+    0.13833255705635772,
+    0.12389380530973451,
+    0.1527713088029809
+   ],
+   "pointing_tol15": [
+    0.2920353982300885,
+    0.272007452258966,
+    0.31159757801583604
+   ],
+   "PxAP": 0.17865358074371354,
+   "peak_mask_iou": [
+    0.19109074562852202,
+    0.18359980759810046,
+    0.19875819770829278
+   ],
+   "concentration": {
+    "participation_ratio": 0.7502939087571739,
+    "top1_mass_fraction": 0.010175865549861583,
+    "entropy_over_logT": 0.9634524328331721
+   },
+   "spearman_vs_collapsed": 0.0008648525607785082
+  }
+ }
+}

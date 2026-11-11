@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[lcnet_050] linfit solved on 10000 images (C=256)
+  holdout  n=40000 shipped=0.5989 linfit=0.4477 (-15.13 pts) argmax-agree=0.5971
+  -> <repo>\outputs\scope\h4_linfit_extra.json
+[repghostnet_100] linfit solved on 10000 images (C=960)
+  holdout  n=40000 shipped=0.7012 linfit=0.6518 (-4.94 pts) argmax-agree=0.8276
+  -> <repo>\outputs\scope\h4_linfit_extra.json
+[hardcorenas_a] linfit solved on 10000 images (C=960)
+  holdout  n=40000 shipped=0.7256 linfit=0.6474 (-7.83 pts) argmax-agree=0.7793
+  -> <repo>\outputs\scope\h4_linfit_extra.json
+[mobilenetv3_small_100] linfit solved on 10000 images (C=576)
+  holdout  n=40000 shipped=0.6424 linfit=0.5543 (-8.81 pts) argmax-agree=0.7281
+  -> <repo>\outputs\scope\h4_linfit_extra.json

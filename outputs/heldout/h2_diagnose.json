@@ -1,0 +1,468 @@
+{
+ "volo_d1_224": {
+  "model": "volo_d1_224",
+  "frozen": {
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "verdict": "DEGENERATE",
+   "post": [
+    [
+     "head_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "aux_head",
+     "Linear",
+     "AFFINE"
+    ]
+   ]
+  },
+  "module_trace": [
+   {
+    "name": "head_drop",
+    "cls": "Dropout",
+    "ic": 197,
+    "oc": 197
+   },
+   {
+    "name": "head",
+    "cls": "Linear",
+    "ic": 1,
+    "oc": 1
+   },
+   {
+    "name": "aux_head",
+    "cls": "Linear",
+    "ic": 196,
+    "oc": 196
+   }
+  ],
+  "aten_trace": [
+   {
+    "op": "aten.slice.Tensor",
+    "ins": [
+     [
+      6,
+      197,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      197,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten.select.int",
+    "ins": [
+     [
+      6,
+      197,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten.t.default",
+    "ins": [
+     [
+      1000,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      384,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.addmm.default",
+    "ins": [
+     [
+      1000
+     ],
+     [
+      6,
+      384
+     ],
+     [
+      384,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.slice.Tensor",
+    "ins": [
+     [
+      6,
+      197,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      197,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten.slice.Tensor",
+    "ins": [
+     [
+      6,
+      197,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      196,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten.t.default",
+    "ins": [
+     [
+      1000,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      384,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.clone.default",
+    "ins": [
+     [
+      6,
+      196,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      196,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten._unsafe_view.default",
+    "ins": [
+     [
+      6,
+      196,
+      384
+     ]
+    ],
+    "outs": [
+     [
+      1176,
+      384
+     ]
+    ]
+   },
+   {
+    "op": "aten.mm.default",
+    "ins": [
+     [
+      1176,
+      384
+     ],
+     [
+      384,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      1176,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten._unsafe_view.default",
+    "ins": [
+     [
+      1176,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      196,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.add.Tensor",
+    "ins": [
+     [
+      6,
+      196,
+      1000
+     ],
+     [
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      196,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.max.dim",
+    "ins": [
+     [
+      6,
+      196,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      1000
+     ],
+     [
+      6,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.mul.Tensor",
+    "ins": [
+     [
+      6,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      1000
+     ]
+    ]
+   },
+   {
+    "op": "aten.add.Tensor",
+    "ins": [
+     [
+      6,
+      1000
+     ],
+     [
+      6,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      1000
+     ]
+    ]
+   }
+  ],
+  "nonlinear_reductions": [
+   {
+    "op": "aten.max.dim",
+    "ins": [
+     [
+      6,
+      196,
+      1000
+     ]
+    ],
+    "outs": [
+     [
+      6,
+      1000
+     ],
+     [
+      6,
+      1000
+     ]
+    ]
+   }
+  ],
+  "shipped": {
+   "maxNS": 0.46933548005335596,
+   "Rhalf": 0.00160715639612441,
+   "I2": 0.0,
+   "corrNS_min": 0.3976868987228405,
+   "spatial_mass": 1.0,
+   "sumN_over_dz": 0.6965655634537491,
+   "pairs": [
+    {
+     "corr_pearson": 0.47101995986378675,
+     "corr_spearman": 0.17363527237915236,
+     "corr_kendall": 0.14231223123549538,
+     "max_abs_diff_rel": 0.4379349876394591,
+     "mean_abs_diff_rel": 0.32118498685422603,
+     "slope": 0.677347353394416,
+     "intercept_rel": 0.32282526337555734,
+     "Rhalf": 0.0007196965501393885,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 0.6672679030956341,
+     "sumN_over_dz": 0.6957576969117829,
+     "cls": 0,
+     "pair": [
+      0,
+      1
+     ]
+    },
+    {
+     "corr_pearson": 0.5196634869822618,
+     "corr_spearman": 0.17363527237915236,
+     "corr_kendall": 0.14231223123549538,
+     "max_abs_diff_rel": 0.4046972892946472,
+     "mean_abs_diff_rel": 0.2900503732896844,
+     "slope": 0.7085437790949226,
+     "intercept_rel": 0.2915308201090966,
+     "Rhalf": 0.00160715639612441,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 0.684983306065396,
+     "sumN_over_dz": 0.712032061683806,
+     "cls": 300,
+     "pair": [
+      2,
+      3
+     ]
+    },
+    {
+     "corr_pearson": 0.3976868987228405,
+     "corr_spearman": 0.17363527237915236,
+     "corr_kendall": 0.14231223123549538,
+     "max_abs_diff_rel": 0.46933548005335596,
+     "mean_abs_diff_rel": 0.25119719053141815,
+     "slope": 0.7488590248652542,
+     "intercept_rel": 0.25247983306240807,
+     "Rhalf": 0.0015003542632141963,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 0.715642539838032,
+     "sumN_over_dz": 0.6819069317656588,
+     "cls": 811,
+     "pair": [
+      4,
+      5
+     ]
+    }
+   ],
+   "additive": false
+  },
+  "ablate_aux_head": {
+   "maxNS": 0.0,
+   "Rhalf": 0.0,
+   "I2": 0.0,
+   "corrNS_min": 0.9999999999999998,
+   "spatial_mass": 1.0,
+   "sumN_over_dz": 1.0,
+   "pairs": [
+    {
+     "corr_pearson": 0.9999999999999998,
+     "corr_spearman": 1.0,
+     "corr_kendall": 1.0,
+     "max_abs_diff_rel": 0.0,
+     "mean_abs_diff_rel": 0.0,
+     "slope": 1.0,
+     "intercept_rel": 1.029026397466751e-17,
+     "Rhalf": 0.0,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 0.9616853108751208,
+     "sumN_over_dz": 1.0,
+     "cls": 0,
+     "pair": [
+      0,
+      1
+     ]
+    },
+    {
+     "corr_pearson": 1.0,
+     "corr_spearman": 1.0,
+     "corr_kendall": 1.0,
+     "max_abs_diff_rel": 0.0,
+     "mean_abs_diff_rel": 0.0,
+     "slope": 0.9999999999999998,
+     "intercept_rel": -4.417478528757108e-18,
+     "Rhalf": 0.0,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 0.9761972385297333,
+     "sumN_over_dz": 1.0,
+     "cls": 300,
+     "pair": [
+      2,
+      3
+     ]
+    },
+    {
+     "corr_pearson": 1.0,
+     "corr_spearman": 1.0,
+     "corr_kendall": 1.0,
+     "max_abs_diff_rel": 0.0,
+     "mean_abs_diff_rel": 0.0,
+     "slope": 1.0,
+     "intercept_rel": 8.278475532436375e-18,
+     "Rhalf": 0.0,
+     "I2": 0.0,
+     "spatial_mass": 1.0,
+     "absN_total_over_absZA": 1.068229557304513,
+     "sumN_over_dz": 1.0,
+     "cls": 811,
+     "pair": [
+      4,
+      5
+     ]
+    }
+   ],
+   "additive": true
+  }
+ }
+}

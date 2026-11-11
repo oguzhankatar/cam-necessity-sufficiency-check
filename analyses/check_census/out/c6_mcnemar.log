@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+beitv2_base_patch16_224.in1k_ft_in1k               repro=True (maxdiff 0) 116s
+   relocate  d=-0.346 pp  CI[-0.445,-0.247]  b=404 c=231  P=6.53e-12
+   delete    d=-0.118 pp  CI[-0.259,+0.023]  b=673 c=614  P=0.106
+convnext_tiny.fb_in1k                              repro=True (maxdiff 0) 67s
+   relocate  d=-3.900 pp  CI[-4.120,-3.680]  b=2595 c=645  P=4.42e-275
+   delete    d=-0.594 pp  CI[-0.778,-0.410]  b=1246 c=949  P=2.49e-10
+eva02_tiny_patch14_336.mim_in22k_ft_in1k           repro=True (maxdiff 0) 120s
+   relocate  d=-0.710 pp  CI[-0.832,-0.588]  b=663 c=308  P=1.45e-30
+   delete    d=-0.160 pp  CI[-0.255,-0.065]  b=334 c=254  P=0.0011
+maxvit_tiny_tf_224.in1k                            repro=True (maxdiff 0) 148s
+   relocate  d=-0.576 pp  CI[-0.688,-0.464]  b=552 c=264  P=3.17e-24
+   delete    d=-1.454 pp  CI[-1.656,-1.252]  b=1702 c=975  P=2.87e-45
+naflexvit_base_patch16_gap.e300_s576_in1k          repro=True (maxdiff 0) 693s
+   relocate  d=-0.094 pp  CI[-0.178,-0.010]  b=252 c=205  P=0.0313
+   delete    d=-0.810 pp  CI[-0.970,-0.650]  b=1034 c=629  P=2.37e-23

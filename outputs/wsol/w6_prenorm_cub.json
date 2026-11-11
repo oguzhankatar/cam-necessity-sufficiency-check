@@ -1,0 +1,109 @@
+{
+ "dataset": "cub",
+ "backbone": "vitb16_prenorm_none",
+ "ordering": "none",
+ "n_eval": 5794,
+ "n_records": 5794,
+ "certificate": {
+  "collapsed_pre": {
+   "tag": "collapsed_pre",
+   "maxNS": 2.9336433392448755e-14,
+   "Rhalf": 5.1584669055897604e-15,
+   "I2": 6.907306748636221e-15,
+   "corrNS_recorded_never_used": 0.9999999999999994,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  }
+ },
+ "maps": [
+  "collapsed_pre",
+  "collapsed_pre_b3",
+  "cam_pre"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "note": "GAP over the PRE-norm tokens with no LayerNorm at all (the project `none` ordering).  Additive, so N == S and there is a single map.  This isolates the feature change from the necessity/sufficiency split.",
+ "classification": {
+  "top1": 0.8370728339661719
+ },
+ "per_map": {
+  "collapsed_pre": {
+   "MaxBoxAccV2": {
+    "value": 0.47250028765389485,
+    "ci": [
+     0.46433091704061674,
+     0.4816491197790818
+    ]
+   },
+   "best_iou_mean": [
+    0.6384275083474797,
+    0.6342829716218584,
+    0.642673775846763
+   ],
+   "pointing_strict": [
+    0.7390403866068347,
+    0.7267863306869174,
+    0.7506083879875733
+   ],
+   "pointing_tol15": [
+    0.8282706247842596,
+    0.8179150845702451,
+    0.8382809803244736
+   ]
+  },
+  "collapsed_pre_b3": {
+   "MaxBoxAccV2": {
+    "value": 0.5642618801058567,
+    "ci": [
+     0.5572344954550685,
+     0.5731216200667356
+    ]
+   },
+   "best_iou_mean": [
+    0.6756243759294934,
+    0.6715449589354776,
+    0.6799068893327818
+   ],
+   "pointing_strict": [
+    0.8885053503624439,
+    0.8803935105281325,
+    0.8962720055229548
+   ],
+   "pointing_tol15": [
+    0.9273386261649983,
+    0.9202623403520883,
+    0.9337245426303072
+   ]
+  },
+  "cam_pre": {
+   "MaxBoxAccV2": {
+    "value": 0.46789782533655505,
+    "ci": [
+     0.46012829363709584,
+     0.47676044183638244
+    ]
+   },
+   "best_iou_mean": [
+    0.6400544362082887,
+    0.6359172532129177,
+    0.6443253675049114
+   ],
+   "pointing_strict": [
+    0.7673455298584743,
+    0.7561270279599586,
+    0.7780505695547117
+   ],
+   "pointing_tol15": [
+    0.8493268898860891,
+    0.8394891266827753,
+    0.8586468760787022
+   ]
+  }
+ },
+ "per_record_saved": [
+  "cam_pre",
+  "collapsed_pre",
+  "collapsed_pre_b3"
+ ]
+}

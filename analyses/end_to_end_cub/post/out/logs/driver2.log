@@ -1,0 +1,17 @@
+      0s start H1_s0
+      0s start H2_s0
+      0s start H2_s1
+    150s done H1_s0 rc=0
+    155s start H3_s1
+    245s done H2_s0 rc=0
+    245s done H2_s1 rc=0
+    250s start H0_s2
+    250s start H1_s2
+    310s done H3_s1 rc=0
+    315s start H2_s2
+    410s done H0_s2 rc=0
+    410s done H1_s2 rc=0
+    415s start H3_s2
+    535s done H2_s2 rc=0
+    550s done H3_s2 rc=0
+all done 9.3 min

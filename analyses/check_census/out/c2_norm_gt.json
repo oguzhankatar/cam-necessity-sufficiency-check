@@ -1,0 +1,8158 @@
+{
+ "summary": {
+  "n": 48,
+  "n_ok": 48,
+  "errors": [],
+  "n_label_changed": 0,
+  "changed": [],
+  "n_heldout": 19,
+  "n_heldout_changed": 0,
+  "shipped_fail_reproduced": 48,
+  "independent_set_equals_archived": 47,
+  "independent_set_differs": [
+   [
+    "efficientvit_b1",
+    [
+     "head.in_conv.norm",
+     "head.classifier.1"
+    ],
+    [
+     "head.classifier.1"
+    ]
+   ]
+  ],
+  "hard_blocked_with_single_deletion_additive": [
+   [
+    "mobilenetv3_large_100",
+    [
+     "act2(Hardswish)"
+    ]
+   ],
+   [
+    "mobilenetv3_small_100",
+    [
+     "act2(Hardswish)"
+    ]
+   ],
+   [
+    "mobilenetv4_conv_small",
+    [
+     "norm_head.act(ReLU)"
+    ]
+   ],
+   [
+    "lcnet_050",
+    [
+     "act2(Hardswish)"
+    ]
+   ],
+   [
+    "ghostnet_100",
+    [
+     "act2(ReLU)"
+    ]
+   ],
+   [
+    "hardcorenas_a",
+    [
+     "act2(Hardswish)"
+    ]
+   ],
+   [
+    "hgnetv2_b0",
+    [
+     "head.last_conv.1(ReLU)"
+    ]
+   ],
+   [
+    "repghostnet_100",
+    [
+     "act2(ReLU)"
+    ]
+   ],
+   [
+    "fasternet_t0",
+    [
+     "act(GELU)"
+    ]
+   ],
+   [
+    "ghostnetv2_100",
+    [
+     "act2(ReLU)"
+    ]
+   ],
+   [
+    "hgnet_tiny",
+    [
+     "head.last_conv.1(ReLU)"
+    ]
+   ]
+  ],
+  "seconds": 1637.5047814846039
+ },
+ "rows": [
+  {
+   "model": "vgg16",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "pre_logits.fc1",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.act1",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.fc2",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0114878124025748,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.act2",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      4096
+     ],
+     "oshape": [
+      6,
+      4096
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      4096
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1000
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8941266002258947,
+    "Rhalf": 0.10584515835338677,
+    "I2": 0.07698896245666291,
+    "corrNS_min": 0.6367919625390029
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "pre_logits.act1",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 0.05214389762554348,
+     "Rhalf": 0.0770978433090349,
+     "I2": 0.005861457350012811,
+     "corrNS_min": 0.9990597700823304
+    },
+    {
+     "name": "pre_logits.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8941266002258947,
+     "Rhalf": 0.10584515835338677,
+     "I2": 0.07698896245666291,
+     "corrNS_min": 0.6367919625390029
+    },
+    {
+     "name": "pre_logits.fc2",
+     "cls": "Conv2d",
+     "additive": false,
+     "maxNS": 1.348638997830822,
+     "Rhalf": 0.6989677756003303,
+     "I2": 0.14199748940984996,
+     "corrNS_min": -0.1580736643395937
+    },
+    {
+     "name": "pre_logits.act2",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 0.9633258594157533,
+     "Rhalf": 0.47721493878378857,
+     "I2": 0.03310170419242303,
+     "corrNS_min": 0.49536787168069585
+    },
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "additive": false,
+     "maxNS": 0.8941266002258947,
+     "Rhalf": 0.10584515835338677,
+     "I2": 0.07698896245666291,
+     "corrNS_min": 0.6367919625390029
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8941266002258947,
+     "Rhalf": 0.10584515835338677,
+     "I2": 0.07698896245666291,
+     "corrNS_min": 0.6367919625390029
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "convnext_tiny",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.1166092174841378e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.6407147566988348,
+    "Rhalf": 0.6225559177611888,
+    "I2": 0.035827736288015055,
+    "corrNS_min": 0.9452434084929782
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 6.057877789155882e-15,
+    "Rhalf": 3.352720550552771e-15,
+    "I2": 3.150545456694438e-15,
+    "corrNS_min": 0.9999999999999996
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 6.057877789155882e-15,
+     "Rhalf": 3.352720550552771e-15,
+     "I2": 3.150545456694438e-15,
+     "corrNS_min": 0.9999999999999996
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.6407147566988348,
+     "Rhalf": 0.6225559177611888,
+     "I2": 0.035827736288015055,
+     "corrNS_min": 0.9452434084929782
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "convnext_base",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      1024,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 4.0832364413116864e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1024
+     ],
+     "oshape": [
+      6,
+      1024
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      1024
+     ],
+     "oshape": [
+      6,
+      1024
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1024
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.815212707223047,
+    "Rhalf": 0.5878271491648901,
+    "I2": 0.06155038053907763,
+    "corrNS_min": 0.7373190298957591
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 5.1241160027952096e-15,
+    "Rhalf": 4.04566910242491e-15,
+    "I2": 3.580474462587284e-15,
+    "corrNS_min": 0.9999999999999993
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 5.1241160027952096e-15,
+     "Rhalf": 4.04566910242491e-15,
+     "I2": 3.580474462587284e-15,
+     "corrNS_min": 0.9999999999999993
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.815212707223047,
+     "Rhalf": 0.5878271491648901,
+     "I2": 0.06155038053907763,
+     "corrNS_min": 0.7373190298957591
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "convnextv2_tiny",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 5.073678287033739e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.853387857312731,
+    "Rhalf": 0.6597889053391554,
+    "I2": 0.0748876245632487,
+    "corrNS_min": 0.7366659013681707
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 4.128392607233919e-15,
+    "Rhalf": 3.1939081651196917e-15,
+    "I2": 3.120783205803406e-15,
+    "corrNS_min": 1.0
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 4.128392607233919e-15,
+     "Rhalf": 3.1939081651196917e-15,
+     "I2": 3.120783205803406e-15,
+     "corrNS_min": 1.0
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.853387857312731,
+     "Rhalf": 0.6597889053391554,
+     "I2": 0.0748876245632487,
+     "corrNS_min": 0.7366659013681707
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "mobilenetv3_large_100",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.7287356076136364,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8504389595462264,
+    "Rhalf": 0.2080200536571203,
+    "I2": 0.014837197397930678,
+    "corrNS_min": 0.7130455983370964
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "additive": true,
+     "maxNS": 4.145460062600497e-15,
+     "Rhalf": 7.0231567648713834e-15,
+     "I2": 5.013703347013075e-15,
+     "corrNS_min": 1.0
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(Hardswish)"
+   ]
+  },
+  {
+   "model": "mobilenetv3_small_100",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      576,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.883531798650572,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1024
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8998695424045049,
+    "Rhalf": 0.9725456873437333,
+    "I2": 0.058157371330192296,
+    "corrNS_min": 0.3543791617187015
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "additive": true,
+     "maxNS": 5.590498207352197e-15,
+     "Rhalf": 4.736474794726818e-15,
+     "I2": 4.454955671295425e-15,
+     "corrNS_min": 0.9999999999999997
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(Hardswish)"
+   ]
+  },
+  {
+   "model": "mobilenetv4_conv_small",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head.drop",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head.act",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.1246665406362268,
+    "Rhalf": 1.839411313277893,
+    "I2": 0.1180958679798844,
+    "corrNS_min": -0.017730403881937768
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "norm_head.act",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 3.1340377656795855e-15,
+     "Rhalf": 7.713701621676074e-15,
+     "I2": 4.154522582921483e-15,
+     "corrNS_min": 0.9999999999999999
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "norm_head.act(ReLU)"
+   ]
+  },
+  {
+   "model": "lcnet_050",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      256,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      256,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      256,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      256,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      256,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.7472522032818838,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.436192631719542,
+    "Rhalf": 0.10738668089975882,
+    "I2": 0.03346490889239371,
+    "corrNS_min": 0.6975692152061906
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "additive": true,
+     "maxNS": 8.109219640434944e-15,
+     "Rhalf": 1.0870480493866803e-14,
+     "I2": 5.620408170600707e-15,
+     "corrNS_min": 0.9999999999999998
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(Hardswish)"
+   ]
+  },
+  {
+   "model": "ghostnet_100",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8076523489484781,
+    "Rhalf": 0.23197869280928285,
+    "I2": 0.023440460104849438,
+    "corrNS_min": 0.6310519515613581
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 4.1014008252835235e-15,
+     "Rhalf": 1.1591229962208177e-14,
+     "I2": 5.867703882878604e-15,
+     "corrNS_min": 0.9999999999999997
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(ReLU)"
+   ]
+  },
+  {
+   "model": "hardcorenas_a",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "norm_head",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.774654856498193,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.7053800436147746,
+    "Rhalf": 0.23959500356601787,
+    "I2": 0.04473747745233948,
+    "corrNS_min": 0.6409181202352948
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "Hardswish",
+     "additive": true,
+     "maxNS": 7.093868410664738e-15,
+     "Rhalf": 1.4349415784095978e-14,
+     "I2": 8.325197789164925e-15,
+     "corrNS_min": 1.0
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(Hardswish)"
+   ]
+  },
+  {
+   "model": "tiny_vit_5m_224",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      320,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 3.738024026022387e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      320
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      320
+     ],
+     "oshape": [
+      6,
+      320
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      320
+     ],
+     "oshape": [
+      6,
+      320
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      320
+     ],
+     "oshape": [
+      6,
+      21841
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.1509935318577122,
+    "Rhalf": 1.4035676938070678,
+    "I2": 0.09271077271155662,
+    "corrNS_min": -0.47912666116081726
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 8.363519632353605e-15,
+    "Rhalf": 1.116963685058597e-14,
+    "I2": 6.417907229545702e-15,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 8.363519632353605e-15,
+     "Rhalf": 1.116963685058597e-14,
+     "I2": 6.417907229545702e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.1509935318577122,
+     "Rhalf": 1.4035676938070678,
+     "I2": 0.09271077271155662,
+     "corrNS_min": -0.47912666116081726
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "edgenext_small",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      304,
+      8,
+      8
+     ],
+     "oshape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.14009681094854e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      304,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      304
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      304
+     ],
+     "oshape": [
+      6,
+      304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      304
+     ],
+     "oshape": [
+      6,
+      304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      304
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9916014905224108,
+    "Rhalf": 0.9091874123983663,
+    "I2": 0.04140641228641726,
+    "corrNS_min": 0.0484868996349044
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 3.751036364941666e-15,
+    "Rhalf": 8.287974275273039e-15,
+    "I2": 4.9969757714803876e-15,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 3.751036364941666e-15,
+     "Rhalf": 8.287974275273039e-15,
+     "I2": 4.9969757714803876e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9916014905224108,
+     "Rhalf": 0.9091874123983663,
+     "I2": 0.04140641228641726,
+     "corrNS_min": 0.0484868996349044
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "vit_betwixt_patch16_reg4_gap_256",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      640
+     ],
+     "oshape": [
+      6,
+      640
+     ],
+     "shape_preserving": true,
+     "scale_inv": 7.431149266096428e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      640
+     ],
+     "oshape": [
+      6,
+      640
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      640
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.7264157159193563,
+    "Rhalf": 0.2337620450645175,
+    "I2": 0.002265191300845422,
+    "corrNS_min": 0.3802758037122779
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 4.674944394892661e-14,
+    "Rhalf": 3.7690896644129943e-14,
+    "I2": 2.6272230329834777e-14,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 4.674944394892661e-14,
+     "Rhalf": 3.7690896644129943e-14,
+     "I2": 2.6272230329834777e-14,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.7264157159193563,
+     "Rhalf": 0.2337620450645175,
+     "I2": 0.002265191300845422,
+     "corrNS_min": 0.3802758037122779
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "vit_base_patch16_rope_reg1_gap_256",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.7054800227774346e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.7633303963982423,
+    "Rhalf": 0.3931786118789633,
+    "I2": 0.00367307249632911,
+    "corrNS_min": 0.6025248848245753
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 2.472411349153684e-14,
+    "Rhalf": 2.3750407429628154e-14,
+    "I2": 1.8617993012277896e-14,
+    "corrNS_min": 0.9999999999999999
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 2.472411349153684e-14,
+     "Rhalf": 2.3750407429628154e-14,
+     "I2": 1.8617993012277896e-14,
+     "corrNS_min": 0.9999999999999999
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.7633303963982423,
+     "Rhalf": 0.3931786118789633,
+     "I2": 0.00367307249632911,
+     "corrNS_min": 0.6025248848245753
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "eva02_tiny_patch14_336",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      192
+     ],
+     "oshape": [
+      6,
+      192
+     ],
+     "shape_preserving": true,
+     "scale_inv": 3.656594561685869e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      192
+     ],
+     "oshape": [
+      6,
+      192
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      192
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9890377536209333,
+    "Rhalf": 0.9009346681079712,
+    "I2": 0.013961383813996829,
+    "corrNS_min": 0.4649649033696538
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 7.612196562630906e-14,
+    "Rhalf": 9.512079730663121e-14,
+    "I2": 5.95437289998255e-14,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 7.612196562630906e-14,
+     "Rhalf": 9.512079730663121e-14,
+     "I2": 5.95437289998255e-14,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9890377536209333,
+     "Rhalf": 0.9009346681079712,
+     "I2": 0.013961383813996829,
+     "corrNS_min": 0.4649649033696538
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "beitv2_base_patch16_224",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.6360210148634267e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.7686914999566536,
+    "Rhalf": 0.6217456398348981,
+    "I2": 0.010040869021587679,
+    "corrNS_min": 0.7503403915290469
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 3.2095924378086964e-14,
+    "Rhalf": 3.894621104789552e-14,
+    "I2": 2.061131838719594e-14,
+    "corrNS_min": 1.0
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 3.2095924378086964e-14,
+     "Rhalf": 3.894621104789552e-14,
+     "I2": 2.061131838719594e-14,
+     "corrNS_min": 1.0
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.7686914999566536,
+     "Rhalf": 0.6217456398348981,
+     "I2": 0.010040869021587679,
+     "corrNS_min": 0.7503403915290469
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "naflexvit_base_patch16_gap",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 5.861620474650023e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8329349618433171,
+    "Rhalf": 0.3965950505096558,
+    "I2": 0.0023052001332992205,
+    "corrNS_min": 0.37451539266780676
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 1.3224761370905886e-13,
+    "Rhalf": 1.440926271564736e-13,
+    "I2": 7.265188010987028e-14,
+    "corrNS_min": 0.9999999999999998
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 1.3224761370905886e-13,
+     "Rhalf": 1.440926271564736e-13,
+     "I2": 7.265188010987028e-14,
+     "corrNS_min": 0.9999999999999998
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8329349618433171,
+     "Rhalf": 0.3965950505096558,
+     "I2": 0.0023052001332992205,
+     "corrNS_min": 0.37451539266780676
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "maxvit_tiny_tf_224",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.4268520630517206e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.006322644901137,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "Tanh",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.6022950852310127,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9465018506025962,
+    "Rhalf": 0.6910210239749629,
+    "I2": 0.042110701449298835,
+    "corrNS_min": 0.49164924945600563
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 1.0035886154089186,
+    "Rhalf": 0.5429209176342361,
+    "I2": 0.12932819085302588,
+    "corrNS_min": 0.23988423861319363
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": false,
+     "maxNS": 1.0035886154089186,
+     "Rhalf": 0.5429209176342361,
+     "I2": 0.12932819085302588,
+     "corrNS_min": 0.23988423861319363
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "additive": false,
+     "maxNS": 0.7884555270437587,
+     "Rhalf": 0.8930414519139959,
+     "I2": 0.024543778511520942,
+     "corrNS_min": 0.3944066163057527
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "Tanh",
+     "additive": false,
+     "maxNS": 0.6642779294208153,
+     "Rhalf": 0.32708714276609074,
+     "I2": 0.013977236589885624,
+     "corrNS_min": 0.792758254268458
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9465018506025962,
+     "Rhalf": 0.6910210239749629,
+     "I2": 0.042110701449298835,
+     "corrNS_min": 0.49164924945600563
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "davit_tiny",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 4.5442510858606634e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.6333067051842506,
+    "Rhalf": 0.640060892224612,
+    "I2": 0.04521098322928451,
+    "corrNS_min": 0.9239197664033274
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 5.05130741451026e-15,
+    "Rhalf": 7.076985295525304e-15,
+    "I2": 4.241486011573784e-15,
+    "corrNS_min": 0.9999999999999996
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 5.05130741451026e-15,
+     "Rhalf": 7.076985295525304e-15,
+     "I2": 4.241486011573784e-15,
+     "corrNS_min": 0.9999999999999996
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.6333067051842506,
+     "Rhalf": 0.640060892224612,
+     "I2": 0.04521098322928451,
+     "corrNS_min": 0.9239197664033274
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "caformer_s18",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.533828659234819e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc1",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 3.2340064365631406e-09,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc2",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.042274913888609,
+    "Rhalf": 1.9341950718126737,
+    "I2": 0.05976077361283942,
+    "corrNS_min": -0.3955088378924311
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.7648560548892696,
+    "Rhalf": 0.371791163778822,
+    "I2": 0.012120107960708148,
+    "corrNS_min": 0.8795326550873599
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": false,
+     "maxNS": 1.4226237212352262,
+     "Rhalf": 0.3685528739079252,
+     "I2": 0.02494975794412995,
+     "corrNS_min": -0.38747709010198605
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.042274913888609,
+     "Rhalf": 1.9341950718126737,
+     "I2": 0.05976077361283942,
+     "corrNS_min": -0.3955088378924311
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 1.1424124083592573,
+     "Rhalf": 3.9858858220159776,
+     "I2": 0.038502526588177086,
+     "corrNS_min": -0.5412748206008766
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 1.259027081300542,
+     "Rhalf": 1.2447662054923463,
+     "I2": 0.04045731205003,
+     "corrNS_min": -0.6890521995746882
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.042274913888609,
+     "Rhalf": 1.9341950718126737,
+     "I2": 0.05976077361283942,
+     "corrNS_min": -0.3955088378924311
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "poolformer_s12",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 5.304996598091552e-10,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8419382739939087,
+    "Rhalf": 0.2877022000283835,
+    "I2": 0.01236936343312842,
+    "corrNS_min": 0.5261657864759202
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 4.84063236923377e-15,
+    "Rhalf": 4.810740092300419e-15,
+    "I2": 3.766886440239688e-15,
+    "corrNS_min": 0.9999999999999998
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 4.84063236923377e-15,
+     "Rhalf": 4.810740092300419e-15,
+     "I2": 3.766886440239688e-15,
+     "corrNS_min": 0.9999999999999998
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "poolformerv2_s12",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 3.662708551672191e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.026463571276601,
+    "Rhalf": 1.3098798352952727,
+    "I2": 0.0595670455489975,
+    "corrNS_min": -0.49550884480529056
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 2.140577151959194e-15,
+    "Rhalf": 1.1366212460088106e-14,
+    "I2": 5.1232027854661525e-15,
+    "corrNS_min": 0.9999999999999998
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 2.140577151959194e-15,
+     "Rhalf": 1.1366212460088106e-14,
+     "I2": 5.1232027854661525e-15,
+     "corrNS_min": 0.9999999999999998
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "convformer_s18",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.4179815065486323e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc1",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0277301276371804e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc2",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.038150763322908,
+    "Rhalf": 2.2620636388738276,
+    "I2": 0.11736942737116517,
+    "corrNS_min": -0.8380879783990185
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 1.2866024805164136,
+    "Rhalf": 1.0544408279109805,
+    "I2": 0.020356696307380125,
+    "corrNS_min": 0.30116163584897315
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": false,
+     "maxNS": 0.8946957095074215,
+     "Rhalf": 0.5789653411996052,
+     "I2": 0.043998429304995965,
+     "corrNS_min": 0.6546122955190276
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.038150763322908,
+     "Rhalf": 2.2620636388738276,
+     "I2": 0.11736942737116517,
+     "corrNS_min": -0.8380879783990185
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 1.268509402017788,
+     "Rhalf": 3.159476288720066,
+     "I2": 0.0465876172214443,
+     "corrNS_min": -0.9799487525103099
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 1.105148974475717,
+     "Rhalf": 2.430708768566984,
+     "I2": 0.07295540634303443,
+     "corrNS_min": -0.9438259810561862
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.038150763322908,
+     "Rhalf": 2.2620636388738276,
+     "I2": 0.11736942737116517,
+     "corrNS_min": -0.8380879783990185
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "hiera_tiny_224",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 4.155630954196418e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8633722377541543,
+    "Rhalf": 0.39671429648242196,
+    "I2": 0.01922163998495404,
+    "corrNS_min": 0.39189252846477707
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 6.540474673883619e-15,
+    "Rhalf": 4.2478721313880376e-15,
+    "I2": 4.0042443726859394e-15,
+    "corrNS_min": 0.9999999999999998
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 6.540474673883619e-15,
+     "Rhalf": 4.2478721313880376e-15,
+     "I2": 4.0042443726859394e-15,
+     "corrNS_min": 0.9999999999999998
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8633722377541543,
+     "Rhalf": 0.39671429648242196,
+     "I2": 0.01922163998495404,
+     "corrNS_min": 0.39189252846477707
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "rdnet_tiny",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      1040,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 2.5185176817282587e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1040,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1040
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1040
+     ],
+     "oshape": [
+      6,
+      1040
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      1040
+     ],
+     "oshape": [
+      6,
+      1040
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1040
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.38463402407100955,
+    "Rhalf": 0.5652994672390481,
+    "I2": 0.03492228172390905,
+    "corrNS_min": 0.9704368696193928
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 4.373331043636375e-15,
+    "Rhalf": 4.788969696380325e-15,
+    "I2": 4.223970265415524e-15,
+    "corrNS_min": 0.9999999999999999
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 4.373331043636375e-15,
+     "Rhalf": 4.788969696380325e-15,
+     "I2": 4.223970265415524e-15,
+     "corrNS_min": 0.9999999999999999
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.38463402407100955,
+     "Rhalf": 0.5652994672390481,
+     "I2": 0.03492228172390905,
+     "corrNS_min": 0.9704368696193928
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "mambaout_tiny",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      576
+     ],
+     "shape_preserving": true,
+     "scale_inv": 2.2274320738615115e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0636111887411992,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 6.807697374881781e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9893957782922209,
+    "Rhalf": 1.519138058162708,
+    "I2": 0.08776239097490207,
+    "corrNS_min": 0.1712883998717219
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.874354026120085,
+    "Rhalf": 0.6400239873189023,
+    "I2": 0.02206090047756638,
+    "corrNS_min": 0.41755166364367124
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 1.0746462636649847,
+     "Rhalf": 1.4791383553950608,
+     "I2": 0.03684691047261107,
+     "corrNS_min": -0.2301348458281286
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "additive": false,
+     "maxNS": 0.8553544032867008,
+     "Rhalf": 0.8246256526273898,
+     "I2": 0.06497968111954093,
+     "corrNS_min": 0.7132902949303189
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.7627988761646337,
+     "Rhalf": 0.31186668559385505,
+     "I2": 0.02033979238759621,
+     "corrNS_min": 0.7652433481147396
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9893957782922209,
+     "Rhalf": 1.519138058162708,
+     "I2": 0.08776239097490207,
+     "corrNS_min": 0.1712883998717219
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "hgnetv2_b0",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      1024,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.last_conv.0",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      1024,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.last_conv.1",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.last_conv.2",
+     "cls": "LearnableAffineBlock",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.1180411507168233,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.5971922115067111,
+    "Rhalf": 0.18471767676140466,
+    "I2": 0.034829302947105685,
+    "corrNS_min": 0.6146738737477812
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "head.last_conv.1",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 2.092911377593626e-15,
+     "Rhalf": 1.3247936511996696e-14,
+     "I2": 4.9308216064512505e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.last_conv.2",
+     "cls": "LearnableAffineBlock",
+     "additive": false,
+     "maxNS": 0.5971922115067109,
+     "Rhalf": 0.18471767676141257,
+     "I2": 0.034829302947105956,
+     "corrNS_min": 0.6146738737477789
+    },
+    {
+     "name": "head.dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.5971922115067111,
+     "Rhalf": 0.18471767676140466,
+     "I2": 0.034829302947105685,
+     "corrNS_min": 0.6146738737477812
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.last_conv.1(ReLU)"
+   ]
+  },
+  {
+   "model": "repghostnet_100",
+   "split": "D",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.011756405261489,
+    "Rhalf": 0.36854112846534814,
+    "I2": 0.03213931831431297,
+    "corrNS_min": 0.3729359264572232
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 3.5356592709084314e-15,
+     "Rhalf": 7.339390437613301e-15,
+     "I2": 4.2818851451892485e-15,
+     "corrNS_min": 0.9999999999999998
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(ReLU)"
+   ]
+  },
+  {
+   "model": "vitamin_small_224",
+   "split": "D",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      384
+     ],
+     "oshape": [
+      6,
+      384
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0126923540984325e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      384
+     ],
+     "oshape": [
+      6,
+      384
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      384
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9665780661623583,
+    "Rhalf": 1.8338942821822999,
+    "I2": 0.004478618256261021,
+    "corrNS_min": 0.7815719068764513
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 9.036332750060836e-14,
+    "Rhalf": 1.0367681865392758e-12,
+    "I2": 7.634891930175483e-14,
+    "corrNS_min": 0.9999999999999999
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 9.036332750060836e-14,
+     "Rhalf": 1.0367681865392758e-12,
+     "I2": 7.634891930175483e-14,
+     "corrNS_min": 0.9999999999999999
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9665780661623583,
+     "Rhalf": 1.8338942821822999,
+     "I2": 0.004478618256261021,
+     "corrNS_min": 0.7815719068764513
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "poolformer_s24",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 6.088450945588591e-10,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.5215937843851068,
+    "Rhalf": 0.16755809738018676,
+    "I2": 0.009588586051988616,
+    "corrNS_min": 0.5653232344432052
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 7.920099803428243e-15,
+    "Rhalf": 7.413221541771153e-15,
+    "I2": 4.350312750590266e-15,
+    "corrNS_min": 1.0
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 7.920099803428243e-15,
+     "Rhalf": 7.413221541771153e-15,
+     "I2": 4.350312750590266e-15,
+     "corrNS_min": 1.0
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "poolformerv2_s24",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 6.532868483831364e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9950065241462404,
+    "Rhalf": 1.3436433096479827,
+    "I2": 0.09101298216195258,
+    "corrNS_min": 0.14001384296666644
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 3.964308640547984e-15,
+    "Rhalf": 8.874708766146151e-15,
+    "I2": 4.937931139201697e-15,
+    "corrNS_min": 0.9999999999999999
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 3.964308640547984e-15,
+     "Rhalf": 8.874708766146151e-15,
+     "I2": 4.937931139201697e-15,
+     "corrNS_min": 0.9999999999999999
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "convformer_s36",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 2.2957395481966586e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      512,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      512
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc1",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      512
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 7.544550343055113e-09,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc.fc2",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.0652902676579534,
+    "Rhalf": 1.648523667122367,
+    "I2": 0.11132657166451465,
+    "corrNS_min": -0.6923043666590247
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.7833097073006022,
+    "Rhalf": 1.9113362505165459,
+    "I2": 0.022353968096332527,
+    "corrNS_min": 0.4516502931249416
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": false,
+     "maxNS": 1.278309893685315,
+     "Rhalf": 0.2894085485062773,
+     "I2": 0.0312589754522881,
+     "corrNS_min": -0.8411728232931803
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0652902676579534,
+     "Rhalf": 1.648523667122367,
+     "I2": 0.11132657166451465,
+     "corrNS_min": -0.6923043666590247
+    },
+    {
+     "name": "head.fc.act.relu",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 1.2030275486624502,
+     "Rhalf": 3.702335812235424,
+     "I2": 0.03170316137789311,
+     "corrNS_min": -0.979128505447731
+    },
+    {
+     "name": "head.fc.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 1.1450227411801903,
+     "Rhalf": 1.4078462466007724,
+     "I2": 0.06072193305213222,
+     "corrNS_min": -0.796639222970929
+    },
+    {
+     "name": "head.fc.head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0652902676579534,
+     "Rhalf": 1.648523667122367,
+     "I2": 0.11132657166451465,
+     "corrNS_min": -0.6923043666590247
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "inception_next_tiny",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc1",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0004798172783094,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.3791020519922363e-07,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc2",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.1944488655452485,
+    "Rhalf": 2.805000865084281,
+    "I2": 0.09226837599658912,
+    "corrNS_min": 0.17656897908837124
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.8998558064957975,
+    "Rhalf": 2.148484268066035,
+    "I2": 0.031004753761459954,
+    "corrNS_min": 0.35393413531970264
+   },
+   "delete_one": [
+    {
+     "name": "head.act",
+     "cls": "GELU",
+     "additive": false,
+     "maxNS": 0.6987374841120483,
+     "Rhalf": 0.8991401125662777,
+     "I2": 0.04363803250034212,
+     "corrNS_min": 0.9036142203529912
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.8998558064957975,
+     "Rhalf": 2.148484268066035,
+     "I2": 0.031004753761459954,
+     "corrNS_min": 0.35393413531970264
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.1944488655452485,
+     "Rhalf": 2.805000865084281,
+     "I2": 0.09226837599658912,
+     "corrNS_min": 0.17656897908837124
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "tiny_vit_11m_224",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      448,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 2.5103169854242833e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      448,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      448
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      448
+     ],
+     "oshape": [
+      6,
+      448
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      448
+     ],
+     "oshape": [
+      6,
+      448
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      448
+     ],
+     "oshape": [
+      6,
+      21841
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.2535482956748099,
+    "Rhalf": 1.426958496967106,
+    "I2": 0.15300536497528894,
+    "corrNS_min": -0.36058634568872144
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 7.372493700086314e-15,
+    "Rhalf": 9.17531808257314e-15,
+    "I2": 6.187885411930612e-15,
+    "corrNS_min": 1.0
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 7.372493700086314e-15,
+     "Rhalf": 9.17531808257314e-15,
+     "I2": 6.187885411930612e-15,
+     "corrNS_min": 1.0
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.2535482956748099,
+     "Rhalf": 1.426958496967106,
+     "I2": 0.15300536497528894,
+     "corrNS_min": -0.36058634568872144
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "tiny_vit_21m_224",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      576,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.1582168408551626e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      576,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      576
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      576
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      576
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      21841
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.0754893225047737,
+    "Rhalf": 1.5739415156906333,
+    "I2": 0.11576162507495691,
+    "corrNS_min": -0.3136406347924764
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 7.515278388162928e-15,
+    "Rhalf": 8.903030990827074e-15,
+    "I2": 5.744890062174812e-15,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 7.515278388162928e-15,
+     "Rhalf": 8.903030990827074e-15,
+     "I2": 5.744890062174812e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0754893225047737,
+     "Rhalf": 1.5739415156906333,
+     "I2": 0.11576162507495691,
+     "corrNS_min": -0.3136406347924764
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "davit_small",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.078485999234822e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.44637470356004005,
+    "Rhalf": 0.30930642892837723,
+    "I2": 0.01549746922695149,
+    "corrNS_min": 0.9436929260026359
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 4.305422386568394e-15,
+    "Rhalf": 8.094692032875519e-15,
+    "I2": 5.416219188819335e-15,
+    "corrNS_min": 0.9999999999999996
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm2d",
+     "additive": true,
+     "maxNS": 4.305422386568394e-15,
+     "Rhalf": 8.094692032875519e-15,
+     "I2": 5.416219188819335e-15,
+     "corrNS_min": 0.9999999999999996
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.44637470356004005,
+     "Rhalf": 0.30930642892837723,
+     "I2": 0.01549746922695149,
+     "corrNS_min": 0.9436929260026359
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm2d)"
+   ]
+  },
+  {
+   "model": "hiera_small_224",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 2.695838716602392e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8153950091177288,
+    "Rhalf": 0.41839376982078214,
+    "I2": 0.02161579180473012,
+    "corrNS_min": 0.4539922029212316
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 7.42332281564508e-15,
+    "Rhalf": 4.835315678412106e-15,
+    "I2": 3.9115708657619974e-15,
+    "corrNS_min": 0.9999999999999998
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 7.42332281564508e-15,
+     "Rhalf": 4.835315678412106e-15,
+     "I2": 3.9115708657619974e-15,
+     "corrNS_min": 0.9999999999999998
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8153950091177288,
+     "Rhalf": 0.41839376982078214,
+     "I2": 0.02161579180473012,
+     "corrNS_min": 0.4539922029212316
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "hiera_base_224",
+   "split": "A",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.2006858310637565e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.6136841763170996,
+    "Rhalf": 0.30544486098843304,
+    "I2": 0.02810652848983653,
+    "corrNS_min": 0.6307824041050686
+   },
+   "independent_norms": [
+    "head.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 6.505636511552847e-15,
+    "Rhalf": 3.3734223856320005e-15,
+    "I2": 3.000339993149629e-15,
+    "corrNS_min": 0.9999999999999997
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 6.505636511552847e-15,
+     "Rhalf": 3.3734223856320005e-15,
+     "I2": 3.000339993149629e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.6136841763170996,
+     "Rhalf": 0.30544486098843304,
+     "I2": 0.02810652848983653,
+     "corrNS_min": 0.6307824041050686
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.norm(LayerNorm)"
+   ]
+  },
+  {
+   "model": "volo_d1_224",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "DEGENERATE",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      197,
+      384
+     ],
+     "oshape": [
+      6,
+      197,
+      384
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      384
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "aux_head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      196,
+      384
+     ],
+     "oshape": [
+      6,
+      196,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.46933548005335596,
+    "Rhalf": 0.00160715639612441,
+    "I2": 0.0,
+    "corrNS_min": 0.3976868987228405
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.46933548005335596,
+     "Rhalf": 0.00160715639612441,
+     "I2": 0.0,
+     "corrNS_min": 0.3976868987228405
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "mambaout_femto",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      288
+     ],
+     "oshape": [
+      6,
+      288
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0045867216069617e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      288
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.1615771582630547,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.499649962087572e-05,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9960558730997452,
+    "Rhalf": 1.5669660913909143,
+    "I2": 0.07538795401752432,
+    "corrNS_min": -0.18349569927349899
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.7117102095713266,
+    "Rhalf": 0.3223327921534702,
+    "I2": 0.02084268766629616,
+    "corrNS_min": 0.9518595315944587
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.9993758145896249,
+     "Rhalf": 1.622105410248729,
+     "I2": 0.06708473252533677,
+     "corrNS_min": -0.5663383046461894
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "additive": false,
+     "maxNS": 0.9401755619537333,
+     "Rhalf": 1.1694876809681929,
+     "I2": 0.06546427081529878,
+     "corrNS_min": 0.4648842222839375
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.9040053239659385,
+     "Rhalf": 0.6816567605164913,
+     "I2": 0.03525601046901874,
+     "corrNS_min": 0.3029543788531597
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9960558730997452,
+     "Rhalf": 1.5669660913909143,
+     "I2": 0.07538795401752432,
+     "corrNS_min": -0.18349569927349899
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "mambaout_small",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      576
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.214858072728805e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      576
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0765443130667134,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 4.3563584897790035e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      2304
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2304
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.9837995544377895,
+    "Rhalf": 1.344978642974351,
+    "I2": 0.09527327722011866,
+    "corrNS_min": 0.33893844709313087
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.12880321816834486,
+    "Rhalf": 0.3776957453600482,
+    "I2": 0.007859102801171275,
+    "corrNS_min": 0.9856274863042004
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.7201991082016221,
+     "Rhalf": 0.6272943464992385,
+     "I2": 0.028050264146136965,
+     "corrNS_min": 0.7975836177590613
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "additive": false,
+     "maxNS": 0.7465451933057378,
+     "Rhalf": 0.6623501638292186,
+     "I2": 0.053786779432484486,
+     "corrNS_min": 0.7609647014374983
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.8022712392961892,
+     "Rhalf": 0.34287899782309655,
+     "I2": 0.020117138333226155,
+     "corrNS_min": 0.5715866455762125
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.9837995544377895,
+     "Rhalf": 1.344978642974351,
+     "I2": 0.09527327722011866,
+     "corrNS_min": 0.33893844709313087
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "mambaout_kobe",
+   "split": "A",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "leaves": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      288
+     ],
+     "oshape": [
+      6,
+      288
+     ],
+     "shape_preserving": true,
+     "scale_inv": 8.986465643240697e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.pre_logits.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      288
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.113427711319702,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 7.504052248875264e-06,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1152
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1152
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.002218621012252,
+    "Rhalf": 1.746900135619356,
+    "I2": 0.11000678048233502,
+    "corrNS_min": -0.29809620314424384
+   },
+   "independent_norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.8157117803559025,
+    "Rhalf": 0.25820065033444983,
+    "I2": 0.015744689941754396,
+    "corrNS_min": 0.9163330420171572
+   },
+   "delete_one": [
+    {
+     "name": "head.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 1.0674902421192394,
+     "Rhalf": 1.7668364288835332,
+     "I2": 0.06700715358651953,
+     "corrNS_min": -0.8882791432486805
+    },
+    {
+     "name": "head.pre_logits.act",
+     "cls": "GELU",
+     "additive": false,
+     "maxNS": 0.8962645726988867,
+     "Rhalf": 0.7288962227036709,
+     "I2": 0.07326661685207297,
+     "corrNS_min": 0.7418014333344795
+    },
+    {
+     "name": "head.pre_logits.norm",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.9564893746554676,
+     "Rhalf": 0.9330824688197749,
+     "I2": 0.04513881654809794,
+     "corrNS_min": 0.2976551846850364
+    },
+    {
+     "name": "head.head_dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.002218621012252,
+     "Rhalf": 1.746900135619356,
+     "I2": 0.11000678048233502,
+     "corrNS_min": -0.29809620314424384
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "efficientvit_b1",
+   "split": "B",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [
+    "head.classifier.1"
+   ],
+   "leaves": [
+    {
+     "name": "head.in_conv.dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      256,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      256,
+      7,
+      7
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.in_conv.conv",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      256,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.in_conv.norm",
+     "cls": "BatchNorm2d",
+     "ishape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.5600934035966751,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.in_conv.act",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.9782418361087271,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      1536,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      1536,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1536,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1536
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.classifier.0",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1536
+     ],
+     "oshape": [
+      6,
+      1600
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.classifier.1",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      1600
+     ],
+     "oshape": [
+      6,
+      1600
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.00020558873798491654,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head.classifier.2",
+     "cls": "Hardswish",
+     "ishape": [
+      6,
+      1600
+     ],
+     "oshape": [
+      6,
+      1600
+     ],
+     "shape_preserving": true,
+     "scale_inv": 0.8525838291853306,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.classifier.3",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      1600
+     ],
+     "oshape": [
+      6,
+      1600
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.classifier.4",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1600
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.0745191761335087,
+    "Rhalf": 1.3642106933187816,
+    "I2": 0.10197083017178672,
+    "corrNS_min": -0.3101193991682166
+   },
+   "independent_norms": [
+    "head.in_conv.norm",
+    "head.classifier.1"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": false,
+    "maxNS": 0.6750336957903782,
+    "Rhalf": 0.5675545384447328,
+    "I2": 0.01990970968187212,
+    "corrNS_min": 0.8220714841801552
+   },
+   "delete_one": [
+    {
+     "name": "head.in_conv.dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0745191761335087,
+     "Rhalf": 1.3642106933187816,
+     "I2": 0.10197083017178672,
+     "corrNS_min": -0.3101193991682166
+    },
+    {
+     "name": "head.in_conv.norm",
+     "cls": "BatchNorm2d",
+     "additive": false,
+     "maxNS": 0.890894523994272,
+     "Rhalf": 0.8746017357814239,
+     "I2": 0.08237267437587807,
+     "corrNS_min": 0.45460032120665295
+    },
+    {
+     "name": "head.in_conv.act",
+     "cls": "Hardswish",
+     "additive": false,
+     "maxNS": 0.7076647649987858,
+     "Rhalf": 0.7705988536455968,
+     "I2": 0.04422443641901875,
+     "corrNS_min": 0.8014567801548445
+    },
+    {
+     "name": "head.classifier.1",
+     "cls": "LayerNorm",
+     "additive": false,
+     "maxNS": 0.3643657565528304,
+     "Rhalf": 0.1527995061576111,
+     "I2": 0.008088275454272419,
+     "corrNS_min": 0.9299419782683948
+    },
+    {
+     "name": "head.classifier.2",
+     "cls": "Hardswish",
+     "additive": false,
+     "maxNS": 1.0381772404388223,
+     "Rhalf": 0.7623596987425931,
+     "I2": 0.07107022291196645,
+     "corrNS_min": 0.12287526943152233
+    },
+    {
+     "name": "head.classifier.3",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0745191761335087,
+     "Rhalf": 1.3642106933187816,
+     "I2": 0.10197083017178672,
+     "corrNS_min": -0.3101193991682166
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "fasternet_t0",
+   "split": "B",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      320,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      320,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act",
+     "cls": "GELU",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.1513177353645652,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.2876999117497012,
+    "Rhalf": 3.5866275804864327,
+    "I2": 0.068621051606497,
+    "corrNS_min": -0.17538554276507756
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act",
+     "cls": "GELU",
+     "additive": true,
+     "maxNS": 7.862069998741458e-15,
+     "Rhalf": 7.356260981044368e-14,
+     "I2": 1.4166611805594626e-14,
+     "corrNS_min": 0.9999999999999997
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act(GELU)"
+   ]
+  },
+  {
+   "model": "ghostnetv2_100",
+   "split": "B",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      960,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "conv_head",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      960,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      1280,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      1280
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "classifier",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      1280
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.0032715392060991,
+    "Rhalf": 0.2822937651123198,
+    "I2": 0.022663738453596892,
+    "corrNS_min": 0.5574735204218827
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "act2",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 1.9274612199057344e-15,
+     "Rhalf": 8.257814025690221e-15,
+     "I2": 5.193100814754864e-15,
+     "corrNS_min": 0.9999999999999998
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "act2(ReLU)"
+   ]
+  },
+  {
+   "model": "vgg19",
+   "split": "B",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "pre_logits.fc1",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      512,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.act1",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.fc2",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0098049016064903,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "pre_logits.act2",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      4096,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      4096
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      4096
+     ],
+     "oshape": [
+      6,
+      4096
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      4096
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      1000
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.0199684312179622,
+    "Rhalf": 0.5161320480333598,
+    "I2": 0.04144150344114294,
+    "corrNS_min": 0.24857044545926435
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "pre_logits.act1",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 0.08475227219627579,
+     "Rhalf": 0.17276520956295152,
+     "I2": 0.009174815503472508,
+     "corrNS_min": 0.997715509920836
+    },
+    {
+     "name": "pre_logits.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0199684312179622,
+     "Rhalf": 0.5161320480333598,
+     "I2": 0.04144150344114294,
+     "corrNS_min": 0.24857044545926435
+    },
+    {
+     "name": "pre_logits.fc2",
+     "cls": "Conv2d",
+     "additive": false,
+     "maxNS": 1.3332501132143195,
+     "Rhalf": 2.6512698235430645,
+     "I2": 0.062358227801518895,
+     "corrNS_min": -0.43147672873253945
+    },
+    {
+     "name": "pre_logits.act2",
+     "cls": "ReLU",
+     "additive": false,
+     "maxNS": 0.9974836520105774,
+     "Rhalf": 1.9479050577585548,
+     "I2": 0.05369526885609427,
+     "corrNS_min": 0.3887632828728723
+    },
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "additive": false,
+     "maxNS": 1.0199684312179622,
+     "Rhalf": 0.5161320480333598,
+     "I2": 0.04144150344114294,
+     "corrNS_min": 0.24857044545926435
+    },
+    {
+     "name": "head.drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.0199684312179622,
+     "Rhalf": 0.5161320480333598,
+     "I2": 0.04144150344114294,
+     "corrNS_min": 0.24857044545926435
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": []
+  },
+  {
+   "model": "hgnet_tiny",
+   "split": "B",
+   "gt_archived": "HARD-BLOCKED",
+   "verdict": "NONLIN-BLOCKED",
+   "norms_killed_archived": [],
+   "leaves": [
+    {
+     "name": "head.global_pool.pool",
+     "cls": "AdaptiveAvgPool2d",
+     "ishape": [
+      6,
+      768,
+      7,
+      7
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.global_pool.flatten",
+     "cls": "Identity",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.last_conv.0",
+     "cls": "Conv2d",
+     "ishape": [
+      6,
+      768,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.last_conv.1",
+     "cls": "ReLU",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.dropout",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.flatten",
+     "cls": "Flatten",
+     "ishape": [
+      6,
+      2048,
+      1,
+      1
+     ],
+     "oshape": [
+      6,
+      2048
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head.fc",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      2048
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 0.8568510588564843,
+    "Rhalf": 0.08641816839426786,
+    "I2": 0.0164733880467267,
+    "corrNS_min": 0.8867323335956863
+   },
+   "independent_norms": [],
+   "after_independent_norm_deletion": null,
+   "delete_one": [
+    {
+     "name": "head.last_conv.1",
+     "cls": "ReLU",
+     "additive": true,
+     "maxNS": 4.795232989738219e-15,
+     "Rhalf": 6.9326005510805625e-15,
+     "I2": 6.208263612156933e-15,
+     "corrNS_min": 0.9999999999999997
+    },
+    {
+     "name": "head.dropout",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 0.8568510588564843,
+     "Rhalf": 0.08641816839426786,
+     "I2": 0.0164733880467267,
+     "corrNS_min": 0.8867323335956863
+    }
+   ],
+   "gt_independent": "HARD-BLOCKED",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "head.last_conv.1(ReLU)"
+   ]
+  },
+  {
+   "model": "beit_base_patch16_224",
+   "split": "B",
+   "gt_archived": "NORM-ONLY",
+   "verdict": "NORM-BLOCKED",
+   "norms_killed_archived": [
+    "fc_norm"
+   ],
+   "leaves": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 6.850804808796777e-08,
+     "name_has_norm": true,
+     "norm_like": true
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      768
+     ],
+     "shape_preserving": true,
+     "scale_inv": 1.0,
+     "name_has_norm": false,
+     "norm_like": false
+    },
+    {
+     "name": "head",
+     "cls": "Linear",
+     "ishape": [
+      6,
+      768
+     ],
+     "oshape": [
+      6,
+      1000
+     ],
+     "shape_preserving": false,
+     "scale_inv": null,
+     "name_has_norm": false,
+     "norm_like": false
+    }
+   ],
+   "shipped": {
+    "additive": false,
+    "maxNS": 1.063558514375122,
+    "Rhalf": 1.0694821123515974,
+    "I2": 0.03207724421808029,
+    "corrNS_min": -0.1356095111502097
+   },
+   "independent_norms": [
+    "fc_norm"
+   ],
+   "after_independent_norm_deletion": {
+    "additive": true,
+    "maxNS": 3.547359295352045e-14,
+    "Rhalf": 3.343498119638505e-14,
+    "I2": 1.898447477101624e-14,
+    "corrNS_min": 0.9999999999999996
+   },
+   "delete_one": [
+    {
+     "name": "fc_norm",
+     "cls": "LayerNorm",
+     "additive": true,
+     "maxNS": 3.547359295352045e-14,
+     "Rhalf": 3.343498119638505e-14,
+     "I2": 1.898447477101624e-14,
+     "corrNS_min": 0.9999999999999996
+    },
+    {
+     "name": "head_drop",
+     "cls": "Dropout",
+     "additive": false,
+     "maxNS": 1.063558514375122,
+     "Rhalf": 1.0694821123515974,
+     "I2": 0.03207724421808029,
+     "corrNS_min": -0.1356095111502097
+    }
+   ],
+   "gt_independent": "NORM-ONLY",
+   "shipped_reproduces_fail": true,
+   "label_changed": false,
+   "single_deletions_reaching_additivity": [
+    "fc_norm(LayerNorm)"
+   ]
+  }
+ ]
+}

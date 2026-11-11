@@ -1,0 +1,18 @@
+[     2s] head H0 (global average pooling + linear (degenerate)) seed 1  n_train 5994  micro 32 x accum 1  steps/epoch 187  total 5610
+[   179s] epoch  1  loss 4.5261  train acc 0.1001  lr 9.97e-04/9.97e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   345s] epoch  2  loss 2.3837  train acc 0.4398  lr 9.89e-04/9.89e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   512s] epoch  3  loss 1.4817  train acc 0.6574  lr 9.76e-04/9.76e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   678s] epoch  4  loss 1.0492  train acc 0.7530  lr 9.57e-04/9.57e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[   842s] epoch  5  loss 0.7783  train acc 0.8217  lr 9.33e-04/9.33e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1005s] epoch  6  loss 0.6095  train acc 0.8636  lr 9.05e-04/9.05e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1167s] epoch  7  loss 0.4971  train acc 0.8907  lr 8.72e-04/8.72e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1345s] epoch  8  loss 0.4008  train acc 0.9193  lr 8.35e-04/8.35e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1592s] epoch  9  loss 0.3435  train acc 0.9325  lr 7.94e-04/7.94e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  1868s] epoch 10  loss 0.2857  train acc 0.9449  lr 7.50e-04/7.50e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2159s] epoch 11  loss 0.2492  train acc 0.9594  lr 7.03e-04/7.03e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2417s] epoch 12  loss 0.2185  train acc 0.9652  lr 6.55e-04/6.55e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2648s] epoch 13  loss 0.1932  train acc 0.9711  lr 6.04e-04/6.04e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  2881s] epoch 14  loss 0.1627  train acc 0.9804  lr 5.52e-04/5.52e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3088s] epoch 15  loss 0.1495  train acc 0.9813  lr 5.00e-04/5.00e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3233s] epoch 16  loss 0.1367  train acc 0.9858  lr 4.48e-04/4.48e-03  peak alloc 6.66 GiB reserved 6.77 GiB
+[  3432s] epoch 17  loss 0.1241  train acc 0.9866  lr 3.96e-04/3.96e-03  peak alloc 6.66 GiB reserved 6.77 GiB

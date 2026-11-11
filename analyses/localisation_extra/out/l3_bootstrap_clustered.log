@@ -1,0 +1,79 @@
+Task 3
+{
+ "n_boot": 2000,
+ "n_boot_mbav2": 1000,
+ "seed": 0,
+ "ci": "percentile 2.5 / 97.5",
+ "lines": {
+  "wlib_n_boot": 58,
+  "wlib_n_boot_mbav2": 59,
+  "wlib_seed": 60,
+  "wlib_boot_diff": [
+   526,
+   533
+  ],
+  "wlib_boot_mbav2_diff": [
+   546,
+   556
+  ],
+  "wlib_boot_mbav2_p_line": 554,
+  "wlib_boot_mbav2_floor_line": 556,
+  "wlib_maxboxacc_v2": [
+   495,
+   499
+  ],
+  "wlib_wilcoxon": [
+   559,
+   572
+  ],
+  "wlib_mcnemar": [
+   575,
+   583
+  ],
+  "wlib_holm": [
+   586,
+   596
+  ],
+  "w3_call_mbav2": 81,
+  "w3_call_boot_diff": [
+   89,
+   101,
+   111
+  ],
+  "w3_call_wilcoxon": [
+   91,
+   113
+  ],
+  "w3_call_mcnemar": 103,
+  "w3_holm": 123,
+  "w3_primary_const": 53
+ },
+ "n_primary_mbav2": 16,
+ "n_primary_mbav2_at_floor": 15,
+ "floor": 0.001,
+ "distinct_p_holm_mbav2": [
+  0.004,
+  0.008,
+  0.88
+ ],
+ "primary_rows_per_metric": {
+  "pointing_strict": 64,
+  "pointing_tol15": 64,
+  "peak_mask_iou": 32,
+  "MaxBoxAccV2": 16,
+  "best_iou": 16
+ },
+ "primary_tests": {
+  "pointing_strict|mcnemar": 64,
+  "pointing_tol15|mcnemar": 64,
+  "peak_mask_iou|wilcoxon": 32,
+  "MaxBoxAccV2|paired bootstrap": 16,
+  "best_iou|wilcoxon": 16
+ }
+}
+
+Task 4
+  n=192; changed: image-level permutation 2, record-level permutation 2, record->image permutation (clustering alone) 0, image-clustered bootstrap 2, Wilcoxon on image means 9; same rows image vs record: True
+  voc12seg resnet50 peak_mask_iou S_lse vs collapsed diff -0.0005 | wilcoxon p 0.005143 holm 0.005143 loss | rec-perm p 0.5645 holm 0.5645 tie | img-perm p 0.5695 holm 0.5695 tie | cboot p 0.594 holm 0.594 tie
+  coco17 vgg16gap peak_mask_iou N_lse vs center diff +0.0110 | wilcoxon p 0.05812 holm 0.05812 tie | rec-perm p 5e-05 holm 0.0002 win | img-perm p 5e-05 holm 0.0002 win | cboot p 0.0005 holm 0.002 win
+  -> <repo>\analyses/localisation_extra\out\l3_bootstrap_clustered.json

@@ -1,0 +1,26 @@
+hiera_huge_224                           cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 5.6e-02 eps2 1.2e-01 (NORM-ONLY) 13s
+hiera_tiny_224                           cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 6.2e-02 eps2 2.4e-02 (NORM-ONLY) 2s
+mixer_b16_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 3.3e-14 eps2 2.1e-13 (ADDITIVE) 2s
+gmixer_24_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.2e-14 eps2 8.5e-14 (ADDITIVE) 2s
+gmlp_s16_224                             cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 5.0e-14 eps2 1.2e-12 (ADDITIVE) 2s
+resmlp_12_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 9.9e-15 eps2 4.6e-14 (ADDITIVE) 2s
+hiera_small_224                          cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 4.2e-02 eps2 5.5e-02 (NORM-ONLY) 2s
+hiera_base_224                           cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 6.7e-02 eps2 5.3e-02 (NORM-ONLY) 3s
+sequencer2d_s                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.2e-13 eps2 1.8e-12 (ADDITIVE) 3s
+hiera_base_plus_224                      cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 5.1e-02 eps2 5.0e-02 (NORM-ONLY) 3s
+hiera_large_224                          cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 5.7e-02 eps2 8.6e-02 (NORM-ONLY) 6s
+hiera_small_abswin_256                   cpu      orig normalisation-blocked  aud normalisation-blocked  sound normalisation-blocked  | meas NORM-ONLY    eps1 1.7e-02 eps2 7.9e-03 (NORM-ONLY) 2s
+mixer_l16_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 6.4e-14 eps2 7.2e-13 (ADDITIVE) 5s
+repvgg_b0                                cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.0e+00 eps2 1.0e+00 (HARD-BLOCKED/unit ADDITIVE) 2s
+repvgg_b1                                cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 0.0e+00 eps2 4.9e-02 (HARD-BLOCKED/unit ADDITIVE) 3s
+repvgg_b1g4                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 0.0e+00 eps2 0.0e+00 (VACUOUS/unit ADDITIVE) 2s
+repvgg_b2                                cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 0.0e+00 eps2 1.0e+00 (HARD-BLOCKED/unit ADDITIVE) 3s
+repvgg_b2g4                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.0e+00 eps2 4.0e+00 (HARD-BLOCKED/unit ADDITIVE) 3s
+repvgg_b3                                cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.0e+00 eps2 9.1e+00 (HARD-BLOCKED/unit ADDITIVE) 4s
+repvgg_b3g4                              cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.0e+00 eps2 8.1e+00 (HARD-BLOCKED/unit ADDITIVE) 3s
+resmlp_24_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 8.2e-15 eps2 4.1e-14 (ADDITIVE) 2s
+resmlp_36_224                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.1e-14 eps2 6.4e-14 (ADDITIVE) 2s
+resmlp_big_24_224                        cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 3.0e-14 eps2 1.8e-13 (ADDITIVE) 11s
+sequencer2d_l                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 1.3e-13 eps2 1.2e-12 (ADDITIVE) 4s
+sequencer2d_m                            cpu      orig degenerate             aud degenerate             sound degenerate             | meas ADDITIVE     eps1 6.5e-14 eps2 9.8e-13 (ADDITIVE) 3s
+total 92 s

@@ -1,0 +1,578 @@
+{
+ "corrections": {
+  "coat": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny"
+  ],
+  "zepto": [
+   "convnext_zepto_rms",
+   "convnext_zepto_rms_ols"
+  ],
+  "volo": [
+   "volo_d1_224",
+   "volo_d1_384",
+   "volo_d2_224",
+   "volo_d2_384",
+   "volo_d3_224",
+   "volo_d3_448",
+   "volo_d4_224",
+   "volo_d4_448",
+   "volo_d5_224",
+   "volo_d5_448",
+   "volo_d5_512"
+  ]
+ },
+ "evidence": {
+  "coat_mini": {
+   "frozen": "IN-SCOPE",
+   "measured": "VACUOUS",
+   "spatial_mass": 0.0,
+   "n_active": 3,
+   "T": 1032
+  },
+  "coat_small": {
+   "frozen": "IN-SCOPE",
+   "measured": "VACUOUS",
+   "spatial_mass": 0.0,
+   "n_active": 3,
+   "T": 1032
+  },
+  "coat_tiny": {
+   "frozen": "IN-SCOPE",
+   "measured": "VACUOUS",
+   "spatial_mass": 0.0,
+   "n_active": 3,
+   "T": 1032
+  },
+  "convnext_zepto_rms": {
+   "frozen": "NONLIN-BLOCKED",
+   "measured": "NORM-ONLY",
+   "eps1": 0.2753963888456211,
+   "eps1_unit": 0.20527891686738015
+  },
+  "convnext_zepto_rms_ols": {
+   "frozen": "NONLIN-BLOCKED",
+   "measured": "NORM-ONLY",
+   "eps1": 0.42943425306542626,
+   "eps1_unit": 0.21946821341459852
+  },
+  "volo_family": {
+   "n_checkpoints": 11,
+   "checkpoints": [
+    "volo_d1_224",
+    "volo_d1_384",
+    "volo_d2_224",
+    "volo_d2_384",
+    "volo_d3_224",
+    "volo_d3_448",
+    "volo_d4_224",
+    "volo_d4_448",
+    "volo_d5_224",
+    "volo_d5_448",
+    "volo_d5_512"
+   ],
+   "frozen": "DEGENERATE",
+   "operator_level_variant": [
+    "AGG-BLOCKED"
+   ],
+   "volo_d1_224_measured": "HARD-BLOCKED",
+   "volo_d1_224_eps1": 0.46933548005335596,
+   "volo_d1_224_corrNS_min": 0.3976868987228405,
+   "volo_d1_224_n_active": 2,
+   "shared_trace": {
+    "agg": "global_pool=token",
+    "tail": [
+     [
+      "Dropout",
+      "AFFINE"
+     ],
+     [
+      "Linear",
+      "AFFINE"
+     ],
+     [
+      "Linear",
+      "AFFINE"
+     ]
+    ]
+   },
+   "other_archs_on_trace": []
+  }
+ },
+ "code_to_article": {
+  "IN-SCOPE": "degenerate",
+  "NORM-BLOCKED": "normalisation-blocked",
+  "NONLIN-BLOCKED": "nonlinearity-blocked",
+  "DEGENERATE": "class-token",
+  "AGG-BLOCKED": "aggregator-blocked"
+ },
+ "p1": {
+  "n_population": 899,
+  "n_classified": 895,
+  "n_test_models": 13,
+  "test_models": [
+   "test_byobnet",
+   "test_convnext",
+   "test_convnext2",
+   "test_convnext3",
+   "test_efficientnet",
+   "test_efficientnet_evos",
+   "test_efficientnet_gn",
+   "test_efficientnet_ln",
+   "test_nfnet",
+   "test_resnet",
+   "test_vit",
+   "test_vit2",
+   "test_vit3"
+  ],
+  "frozen": {
+   "n": 895,
+   "counts": {
+    "IN-SCOPE": 532,
+    "NORM-BLOCKED": 103,
+    "NONLIN-BLOCKED": 118,
+    "DEGENERATE": 142,
+    "AGG-BLOCKED": 0
+   },
+   "shares": {
+    "IN-SCOPE": 0.5944134078212291,
+    "NORM-BLOCKED": 0.11508379888268157,
+    "NONLIN-BLOCKED": 0.1318435754189944,
+    "DEGENERATE": 0.15865921787709497,
+    "AGG-BLOCKED": 0.0
+   },
+   "counts_paper": {
+    "degenerate": 532,
+    "normalisation-blocked": 103,
+    "nonlinearity-blocked": 118,
+    "class-token": 142,
+    "aggregator-blocked": 0
+   },
+   "shares_paper": {
+    "degenerate": 0.5944134078212291,
+    "normalisation-blocked": 0.11508379888268157,
+    "nonlinearity-blocked": 0.1318435754189944,
+    "class-token": 0.15865921787709497,
+    "aggregator-blocked": 0.0
+   },
+   "traces": {
+    "n": 43,
+    "by_verdict": {
+     "IN-SCOPE": 15,
+     "NORM-BLOCKED": 4,
+     "NONLIN-BLOCKED": 19,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 0
+    },
+    "by_verdict_paper": {
+     "degenerate": 15,
+     "normalisation-blocked": 4,
+     "nonlinearity-blocked": 19,
+     "class-token": 5,
+     "aggregator-blocked": 0
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "frozen_without_test_models": {
+   "n": 882,
+   "counts": {
+    "IN-SCOPE": 525,
+    "NORM-BLOCKED": 99,
+    "NONLIN-BLOCKED": 117,
+    "DEGENERATE": 141,
+    "AGG-BLOCKED": 0
+   },
+   "shares": {
+    "IN-SCOPE": 0.5952380952380952,
+    "NORM-BLOCKED": 0.11224489795918367,
+    "NONLIN-BLOCKED": 0.1326530612244898,
+    "DEGENERATE": 0.1598639455782313,
+    "AGG-BLOCKED": 0.0
+   },
+   "counts_paper": {
+    "degenerate": 525,
+    "normalisation-blocked": 99,
+    "nonlinearity-blocked": 117,
+    "class-token": 141,
+    "aggregator-blocked": 0
+   },
+   "shares_paper": {
+    "degenerate": 0.5952380952380952,
+    "normalisation-blocked": 0.11224489795918367,
+    "nonlinearity-blocked": 0.1326530612244898,
+    "class-token": 0.1598639455782313,
+    "aggregator-blocked": 0.0
+   },
+   "traces": {
+    "n": 42,
+    "by_verdict": {
+     "IN-SCOPE": 15,
+     "NORM-BLOCKED": 4,
+     "NONLIN-BLOCKED": 18,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 0
+    },
+    "by_verdict_paper": {
+     "degenerate": 15,
+     "normalisation-blocked": 4,
+     "nonlinearity-blocked": 18,
+     "class-token": 5,
+     "aggregator-blocked": 0
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "audited": {
+   "n": 895,
+   "counts": {
+    "IN-SCOPE": 529,
+    "NORM-BLOCKED": 105,
+    "NONLIN-BLOCKED": 116,
+    "DEGENERATE": 134,
+    "AGG-BLOCKED": 11
+   },
+   "shares": {
+    "IN-SCOPE": 0.5910614525139665,
+    "NORM-BLOCKED": 0.11731843575418995,
+    "NONLIN-BLOCKED": 0.12960893854748604,
+    "DEGENERATE": 0.14972067039106146,
+    "AGG-BLOCKED": 0.012290502793296089
+   },
+   "counts_paper": {
+    "degenerate": 529,
+    "normalisation-blocked": 105,
+    "nonlinearity-blocked": 116,
+    "class-token": 134,
+    "aggregator-blocked": 11
+   },
+   "shares_paper": {
+    "degenerate": 0.5910614525139665,
+    "normalisation-blocked": 0.11731843575418995,
+    "nonlinearity-blocked": 0.12960893854748604,
+    "class-token": 0.14972067039106146,
+    "aggregator-blocked": 0.012290502793296089
+   },
+   "traces": {
+    "n": 43,
+    "by_verdict": {
+     "IN-SCOPE": 14,
+     "NORM-BLOCKED": 5,
+     "NONLIN-BLOCKED": 18,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 1
+    },
+    "by_verdict_paper": {
+     "degenerate": 14,
+     "normalisation-blocked": 5,
+     "nonlinearity-blocked": 18,
+     "class-token": 5,
+     "aggregator-blocked": 1
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "audited_without_test_models": {
+   "n": 882,
+   "counts": {
+    "IN-SCOPE": 522,
+    "NORM-BLOCKED": 101,
+    "NONLIN-BLOCKED": 115,
+    "DEGENERATE": 133,
+    "AGG-BLOCKED": 11
+   },
+   "shares": {
+    "IN-SCOPE": 0.5918367346938775,
+    "NORM-BLOCKED": 0.1145124716553288,
+    "NONLIN-BLOCKED": 0.13038548752834467,
+    "DEGENERATE": 0.15079365079365079,
+    "AGG-BLOCKED": 0.012471655328798186
+   },
+   "counts_paper": {
+    "degenerate": 522,
+    "normalisation-blocked": 101,
+    "nonlinearity-blocked": 115,
+    "class-token": 133,
+    "aggregator-blocked": 11
+   },
+   "shares_paper": {
+    "degenerate": 0.5918367346938775,
+    "normalisation-blocked": 0.1145124716553288,
+    "nonlinearity-blocked": 0.13038548752834467,
+    "class-token": 0.15079365079365079,
+    "aggregator-blocked": 0.012471655328798186
+   },
+   "traces": {
+    "n": 42,
+    "by_verdict": {
+     "IN-SCOPE": 14,
+     "NORM-BLOCKED": 5,
+     "NONLIN-BLOCKED": 17,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 1
+    },
+    "by_verdict_paper": {
+     "degenerate": 14,
+     "normalisation-blocked": 5,
+     "nonlinearity-blocked": 17,
+     "class-token": 5,
+     "aggregator-blocked": 1
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "changed": [
+   "coat_mini:IN-SCOPE->DEGENERATE",
+   "coat_small:IN-SCOPE->DEGENERATE",
+   "coat_tiny:IN-SCOPE->DEGENERATE",
+   "convnext_zepto_rms:NONLIN-BLOCKED->NORM-BLOCKED",
+   "convnext_zepto_rms_ols:NONLIN-BLOCKED->NORM-BLOCKED",
+   "volo_d1_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d1_384:DEGENERATE->AGG-BLOCKED",
+   "volo_d2_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d2_384:DEGENERATE->AGG-BLOCKED",
+   "volo_d3_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d3_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d4_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d4_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_512:DEGENERATE->AGG-BLOCKED"
+  ]
+ },
+ "p2": {
+  "n_population": 905,
+  "n_classified": 901,
+  "n_test_models": 13,
+  "test_models": [
+   "test_byobnet",
+   "test_convnext",
+   "test_convnext2",
+   "test_convnext3",
+   "test_efficientnet",
+   "test_efficientnet_evos",
+   "test_efficientnet_gn",
+   "test_efficientnet_ln",
+   "test_nfnet",
+   "test_resnet",
+   "test_vit",
+   "test_vit2",
+   "test_vit3"
+  ],
+  "frozen": {
+   "n": 901,
+   "counts": {
+    "IN-SCOPE": 533,
+    "NORM-BLOCKED": 106,
+    "NONLIN-BLOCKED": 119,
+    "DEGENERATE": 143,
+    "AGG-BLOCKED": 0
+   },
+   "shares": {
+    "IN-SCOPE": 0.5915649278579356,
+    "NORM-BLOCKED": 0.11764705882352941,
+    "NONLIN-BLOCKED": 0.1320754716981132,
+    "DEGENERATE": 0.15871254162042175,
+    "AGG-BLOCKED": 0.0
+   },
+   "counts_paper": {
+    "degenerate": 533,
+    "normalisation-blocked": 106,
+    "nonlinearity-blocked": 119,
+    "class-token": 143,
+    "aggregator-blocked": 0
+   },
+   "shares_paper": {
+    "degenerate": 0.5915649278579356,
+    "normalisation-blocked": 0.11764705882352941,
+    "nonlinearity-blocked": 0.1320754716981132,
+    "class-token": 0.15871254162042175,
+    "aggregator-blocked": 0.0
+   },
+   "traces": {
+    "n": 45,
+    "by_verdict": {
+     "IN-SCOPE": 16,
+     "NORM-BLOCKED": 4,
+     "NONLIN-BLOCKED": 20,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 0
+    },
+    "by_verdict_paper": {
+     "degenerate": 16,
+     "normalisation-blocked": 4,
+     "nonlinearity-blocked": 20,
+     "class-token": 5,
+     "aggregator-blocked": 0
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "frozen_without_test_models": {
+   "n": 888,
+   "counts": {
+    "IN-SCOPE": 526,
+    "NORM-BLOCKED": 102,
+    "NONLIN-BLOCKED": 118,
+    "DEGENERATE": 142,
+    "AGG-BLOCKED": 0
+   },
+   "shares": {
+    "IN-SCOPE": 0.5923423423423423,
+    "NORM-BLOCKED": 0.11486486486486487,
+    "NONLIN-BLOCKED": 0.13288288288288289,
+    "DEGENERATE": 0.15990990990990991,
+    "AGG-BLOCKED": 0.0
+   },
+   "counts_paper": {
+    "degenerate": 526,
+    "normalisation-blocked": 102,
+    "nonlinearity-blocked": 118,
+    "class-token": 142,
+    "aggregator-blocked": 0
+   },
+   "shares_paper": {
+    "degenerate": 0.5923423423423423,
+    "normalisation-blocked": 0.11486486486486487,
+    "nonlinearity-blocked": 0.13288288288288289,
+    "class-token": 0.15990990990990991,
+    "aggregator-blocked": 0.0
+   },
+   "traces": {
+    "n": 44,
+    "by_verdict": {
+     "IN-SCOPE": 16,
+     "NORM-BLOCKED": 4,
+     "NONLIN-BLOCKED": 19,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 0
+    },
+    "by_verdict_paper": {
+     "degenerate": 16,
+     "normalisation-blocked": 4,
+     "nonlinearity-blocked": 19,
+     "class-token": 5,
+     "aggregator-blocked": 0
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "audited": {
+   "n": 901,
+   "counts": {
+    "IN-SCOPE": 530,
+    "NORM-BLOCKED": 108,
+    "NONLIN-BLOCKED": 117,
+    "DEGENERATE": 135,
+    "AGG-BLOCKED": 11
+   },
+   "shares": {
+    "IN-SCOPE": 0.5882352941176471,
+    "NORM-BLOCKED": 0.11986681465038845,
+    "NONLIN-BLOCKED": 0.12985571587125416,
+    "DEGENERATE": 0.14983351831298558,
+    "AGG-BLOCKED": 0.01220865704772475
+   },
+   "counts_paper": {
+    "degenerate": 530,
+    "normalisation-blocked": 108,
+    "nonlinearity-blocked": 117,
+    "class-token": 135,
+    "aggregator-blocked": 11
+   },
+   "shares_paper": {
+    "degenerate": 0.5882352941176471,
+    "normalisation-blocked": 0.11986681465038845,
+    "nonlinearity-blocked": 0.12985571587125416,
+    "class-token": 0.14983351831298558,
+    "aggregator-blocked": 0.01220865704772475
+   },
+   "traces": {
+    "n": 45,
+    "by_verdict": {
+     "IN-SCOPE": 15,
+     "NORM-BLOCKED": 5,
+     "NONLIN-BLOCKED": 19,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 1
+    },
+    "by_verdict_paper": {
+     "degenerate": 15,
+     "normalisation-blocked": 5,
+     "nonlinearity-blocked": 19,
+     "class-token": 5,
+     "aggregator-blocked": 1
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "audited_without_test_models": {
+   "n": 888,
+   "counts": {
+    "IN-SCOPE": 523,
+    "NORM-BLOCKED": 104,
+    "NONLIN-BLOCKED": 116,
+    "DEGENERATE": 134,
+    "AGG-BLOCKED": 11
+   },
+   "shares": {
+    "IN-SCOPE": 0.588963963963964,
+    "NORM-BLOCKED": 0.11711711711711711,
+    "NONLIN-BLOCKED": 0.13063063063063063,
+    "DEGENERATE": 0.15090090090090091,
+    "AGG-BLOCKED": 0.012387387387387387
+   },
+   "counts_paper": {
+    "degenerate": 523,
+    "normalisation-blocked": 104,
+    "nonlinearity-blocked": 116,
+    "class-token": 134,
+    "aggregator-blocked": 11
+   },
+   "shares_paper": {
+    "degenerate": 0.588963963963964,
+    "normalisation-blocked": 0.11711711711711711,
+    "nonlinearity-blocked": 0.13063063063063063,
+    "class-token": 0.15090090090090091,
+    "aggregator-blocked": 0.012387387387387387
+   },
+   "traces": {
+    "n": 44,
+    "by_verdict": {
+     "IN-SCOPE": 15,
+     "NORM-BLOCKED": 5,
+     "NONLIN-BLOCKED": 18,
+     "DEGENERATE": 5,
+     "AGG-BLOCKED": 1
+    },
+    "by_verdict_paper": {
+     "degenerate": 15,
+     "normalisation-blocked": 5,
+     "nonlinearity-blocked": 18,
+     "class-token": 5,
+     "aggregator-blocked": 1
+    },
+    "n_traces_with_mixed_verdict": 0
+   }
+  },
+  "changed": [
+   "coat_mini:IN-SCOPE->DEGENERATE",
+   "coat_small:IN-SCOPE->DEGENERATE",
+   "coat_tiny:IN-SCOPE->DEGENERATE",
+   "convnext_zepto_rms:NONLIN-BLOCKED->NORM-BLOCKED",
+   "convnext_zepto_rms_ols:NONLIN-BLOCKED->NORM-BLOCKED",
+   "volo_d1_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d1_384:DEGENERATE->AGG-BLOCKED",
+   "volo_d2_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d2_384:DEGENERATE->AGG-BLOCKED",
+   "volo_d3_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d3_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d4_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d4_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_224:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_448:DEGENERATE->AGG-BLOCKED",
+   "volo_d5_512:DEGENERATE->AGG-BLOCKED"
+  ]
+ }
+}

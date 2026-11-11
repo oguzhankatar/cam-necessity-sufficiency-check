@@ -1,0 +1,2548 @@
+[
+ {
+  "model": "resnet50",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 2.436685202495915e-16,
+  "dev_nonorm": 2.436685202495915e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "resnet18",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.1340571641560526e-16,
+  "dev_nonorm": 3.1340571641560526e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "wide_resnet50_2",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 2.1790537368825728e-16,
+  "dev_nonorm": 2.1790537368825728e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "resnext50_32x4d",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.335000285335389e-16,
+  "dev_nonorm": 3.335000285335389e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "regnety_032",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.9356831721144825e-16,
+  "dev_nonorm": 1.9356831721144825e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "regnetx_032",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 4.563146072236789e-16,
+  "dev_nonorm": 4.563146072236789e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "densenet121",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 2.1946677976512944e-16,
+  "dev_nonorm": 2.1946677976512944e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "vgg16",
+  "agg": "DENSE",
+  "agg_name": "pre_logits.fc1(Conv2d)",
+  "post": [
+   [
+    "pre_logits.act1",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "pre_logits.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "pre_logits.fc2",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "pre_logits.act2",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "head.global_pool.pool",
+    "AdaptiveAvgPool2d",
+    "AFFINE"
+   ],
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "pre_logits.act1(ReLU)",
+  "n_norm": 0,
+  "n_nonlin": 2,
+  "dev_shipped": 0.08427108931842123,
+  "dev_nonorm": 0.08427108931842123,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "inception_v3",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.5669615245212163e-16,
+  "dev_nonorm": 1.5669615245212163e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "inception_v4",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "last_linear",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.848013357741325e-16,
+  "dev_nonorm": 3.848013357741325e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "xception41",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.172058857446373e-16,
+  "dev_nonorm": 1.172058857446373e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "dpn68",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 4.707008677863826e-16,
+  "dev_nonorm": 4.707008677863826e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "res2net50_26w_4s",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.9810377697518784e-16,
+  "dev_nonorm": 1.9810377697518784e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "convnext_tiny",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.138707403454581,
+  "dev_nonorm": 2.0064000678821018e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "convnext_base",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.142550029837991,
+  "dev_nonorm": 7.382137165801942e-17,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "convnextv2_tiny",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.14510948621911843,
+  "dev_nonorm": 1.5339669931514623e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "efficientnet_b0",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.6190651437568797e-16,
+  "dev_nonorm": 1.6190651437568797e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "tf_efficientnetv2_s",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.850251657357176e-16,
+  "dev_nonorm": 3.850251657357176e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "mobilenetv3_large_100",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "norm_head",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "Hardswish",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(Hardswish)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.10636344633567948,
+  "dev_nonorm": 0.10636344633567948,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "mobilenetv3_small_100",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "norm_head",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "Hardswish",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(Hardswish)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.3167865700819216,
+  "dev_nonorm": 0.3167865700819216,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "mobilenetv4_conv_small",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "norm_head.drop",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "norm_head.act",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "act2",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "norm_head.act(ReLU)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.564762039897431,
+  "dev_nonorm": 0.564762039897431,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "lcnet_050",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "norm_head",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "Hardswish",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(Hardswish)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.12745658111136948,
+  "dev_nonorm": 0.12745658111136948,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "tinynet_a",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.753610754433494e-16,
+  "dev_nonorm": 1.753610754433494e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "mnasnet_100",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8985423967501637e-16,
+  "dev_nonorm": 1.8985423967501637e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "ghostnet_100",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(ReLU)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.18187452754141986,
+  "dev_nonorm": 0.18187452754141986,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "hardcorenas_a",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "norm_head",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "Hardswish",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(Hardswish)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.19070013017393397,
+  "dev_nonorm": 0.19070013017393397,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "repvgg_a2",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.5582804289745856e-16,
+  "dev_nonorm": 1.5582804289745856e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "mobilevit_s",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 4.917576605095814e-16,
+  "dev_nonorm": 4.917576605095814e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "mobilevitv2_050",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 2.519689727732129e-16,
+  "dev_nonorm": 2.519689727732129e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "fastvit_t8",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.296256876607996e-16,
+  "dev_nonorm": 3.296256876607996e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "efficientformer_l1",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head_dist",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.4956854436832722e-16,
+  "dev_nonorm": 1.4956854436832722e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "efficientformerv2_s0",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head_dist",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.6094057870397453e-16,
+  "dev_nonorm": 1.6094057870397453e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "levit_128",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "head.bn",
+    "BatchNorm1d",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.linear",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head_dist.bn",
+    "BatchNorm1d",
+    "AFFINE"
+   ],
+   [
+    "head_dist.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head_dist.linear",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.5550664163327658e-16,
+  "dev_nonorm": 1.5550664163327658e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "tiny_vit_5m_224",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.3136175753367746,
+  "dev_nonorm": 3.573662718824291e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "edgenext_small",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.307250411080845,
+  "dev_nonorm": 2.366619221321042e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "vit_base_patch16_224",
+  "agg": "TOKEN",
+  "agg_name": "functional(global_pool=token)",
+  "post": [
+   [
+    "fc_norm",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "DEGENERATE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8832814115981004e-16,
+  "dev_nonorm": 1.8832814115981004e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "deit3_small_patch16_224",
+  "agg": "TOKEN",
+  "agg_name": "functional(global_pool=token)",
+  "post": [
+   [
+    "fc_norm",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "DEGENERATE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.5878979734551505e-16,
+  "dev_nonorm": 1.5878979734551505e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "vit_betwixt_patch16_reg4_gap_256",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.03072795288483114,
+  "dev_nonorm": 2.1637564236267778e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "vit_base_patch16_rope_reg1_gap_256",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.06946494642843319,
+  "dev_nonorm": 2.084861454627314e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "eva02_tiny_patch14_336",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.35038045589594385,
+  "dev_nonorm": 1.7242867779136177e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "beitv2_base_patch16_224",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.16135414503383624,
+  "dev_nonorm": 1.8435668393280124e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "naflexvit_base_patch16_gap",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.08984639150482622,
+  "dev_nonorm": 1.7709051172197283e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "swin_tiny_patch4_window7_224",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(FastAdaptiveAvgPool)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8530439928676926e-16,
+  "dev_nonorm": 1.8530439928676926e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "swinv2_tiny_window8_256",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(FastAdaptiveAvgPool)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.8618168060115884e-16,
+  "dev_nonorm": 3.8618168060115884e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "maxvit_tiny_tf_224",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits.act",
+    "Tanh",
+    "NONLINEAR"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "head.pre_logits.act(Tanh)",
+  "n_norm": 1,
+  "n_nonlin": 1,
+  "dev_shipped": 0.32872591132371104,
+  "dev_nonorm": 0.31104162753456366,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "coatnet_0_rw_224",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 2.018488763151839e-16,
+  "dev_nonorm": 2.018488763151839e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "davit_tiny",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.11784676227636068,
+  "dev_nonorm": 2.157664397437148e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "caformer_s18",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc.fc1",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.fc.act.relu",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "head.fc.norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head.fc.head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc.fc2",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "head.fc.act.relu(ReLU)",
+  "n_norm": 2,
+  "n_nonlin": 1,
+  "dev_shipped": 0.4167542807345186,
+  "dev_nonorm": 0.4729105232740459,
+  "norms_killed": [
+   "head.norm",
+   "head.fc.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "poolformer_s12",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.14586669274671193,
+  "dev_nonorm": 1.889719973042994e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "poolformerv2_s12",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.3041406488661497,
+  "dev_nonorm": 1.2351503517378348e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "convformer_s18",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc.fc1",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.fc.act.relu",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "head.fc.norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head.fc.head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc.fc2",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "head.fc.act.relu(ReLU)",
+  "n_norm": 2,
+  "n_nonlin": 1,
+  "dev_shipped": 0.4535275096155705,
+  "dev_nonorm": 0.5944133704562303,
+  "norms_killed": [
+   "head.norm",
+   "head.fc.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "pvt_v2_b0",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 3.635540524880489e-16,
+  "dev_nonorm": 3.635540524880489e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "twins_svt_small",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.7832738774664417e-16,
+  "dev_nonorm": 1.7832738774664417e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "pit_s_224",
+  "agg": "TOKEN",
+  "agg_name": "functional(global_pool=token)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "DEGENERATE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.93600317688838e-16,
+  "dev_nonorm": 1.93600317688838e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "cait_xxs24_224",
+  "agg": "TOKEN",
+  "agg_name": "functional(global_pool=token)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "DEGENERATE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8563014892588417e-16,
+  "dev_nonorm": 1.8563014892588417e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "crossvit_9_240",
+  "agg": "TOKEN",
+  "agg_name": "functional(global_pool=token)",
+  "post": [
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.0",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.1",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "DEGENERATE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "error": "TypeError: unsupported operand type(s) for -: 'list' and 'list'",
+  "tb": "<repo>\\scripts\\scope\\s4_decide.py\", line 205, in <module>\n    d0, d1, killed = numeric(m, x, [q[0] for q in st['post']])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>\\scripts\\scope\\s4_decide.py\", line 166, in numeric\n    d0, _ = slib.seg_dev(lambda v: m.forward_head(v), f[0:1], f[1:2])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<python-env>\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 116, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>\\scripts\\scope\\slib.py\", line 53, in seg_dev\n    z = torch.stack([fwd(fa + l * (fb - fa))[0] for l in LAM])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>\\scripts\\scope\\slib.py\", line 53, in <listcomp>\n    z = torch.stack([fwd(fa + l * (fb - fa))[0] for l in LAM])\n                                   ~~~^~~~\nTypeError: unsupported operand type(s) for -: 'list' and 'list'\n"
+ },
+ {
+  "model": "nest_tiny_jx",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.9518506130339462e-16,
+  "dev_nonorm": 1.9518506130339462e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "hiera_tiny_224",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=None)",
+  "post": [
+   [
+    "head.norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.13596653935115838,
+  "dev_nonorm": 1.2529059285734933e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "focalnet_tiny_srf",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8659017021438805e-16,
+  "dev_nonorm": 1.8659017021438805e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "gcvit_tiny",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.8530049388936984e-16,
+  "dev_nonorm": 1.8530049388936984e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "nextvit_small",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Identity",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "IN-SCOPE",
+  "blocker": null,
+  "n_norm": 0,
+  "n_nonlin": 0,
+  "dev_shipped": 1.2163245810448557e-16,
+  "dev_nonorm": 1.2163245810448557e-16,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "AFFINE-SHIPPED",
+  "agree": true
+ },
+ {
+  "model": "rdnet_tiny",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.norm",
+    "LayerNorm2d",
+    "NORM"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "head.norm(LayerNorm2d)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.09002406833601104,
+  "dev_nonorm": 1.2026301486195918e-16,
+  "norms_killed": [
+   "head.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ },
+ {
+  "model": "mambaout_tiny",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=None)",
+  "post": [
+   [
+    "head.norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head.pre_logits.fc",
+    "Linear",
+    "AFFINE"
+   ],
+   [
+    "head.pre_logits.act",
+    "GELU",
+    "NONLINEAR"
+   ],
+   [
+    "head.pre_logits.norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head.head_dropout",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "head.pre_logits.act(GELU)",
+  "n_norm": 2,
+  "n_nonlin": 1,
+  "dev_shipped": 0.4146048020464355,
+  "dev_nonorm": 0.3282663894900544,
+  "norms_killed": [
+   "head.norm",
+   "head.pre_logits.norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "hgnetv2_b0",
+  "agg": "MEAN",
+  "agg_name": "head.global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "head.global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "head.last_conv.0",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "head.last_conv.1",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "head.last_conv.2",
+    "LearnableAffineBlock",
+    "AFFINE"
+   ],
+   [
+    "head.dropout",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head.flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "head.fc",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "head.last_conv.1(ReLU)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.14795018803962698,
+  "dev_nonorm": 0.14795018803962698,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "repghostnet_100",
+  "agg": "MEAN",
+  "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+  "post": [
+   [
+    "global_pool.flatten",
+    "Identity",
+    "AFFINE"
+   ],
+   [
+    "conv_head",
+    "Conv2d",
+    "AFFINE"
+   ],
+   [
+    "act2",
+    "ReLU",
+    "NONLINEAR"
+   ],
+   [
+    "flatten",
+    "Flatten",
+    "AFFINE"
+   ],
+   [
+    "classifier",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NONLIN-BLOCKED",
+  "blocker": "act2(ReLU)",
+  "n_norm": 0,
+  "n_nonlin": 1,
+  "dev_shipped": 0.23374143501633415,
+  "dev_nonorm": 0.23374143501633415,
+  "norms_killed": [],
+  "dtype": "torch.float64",
+  "numeric": "HARD-BLOCKED",
+  "agree": true
+ },
+ {
+  "model": "vitamin_small_224",
+  "agg": "MEAN",
+  "agg_name": "functional(global_pool=avg)",
+  "post": [
+   [
+    "fc_norm",
+    "LayerNorm",
+    "NORM"
+   ],
+   [
+    "head_drop",
+    "Dropout",
+    "AFFINE"
+   ],
+   [
+    "head",
+    "Linear",
+    "AFFINE"
+   ]
+  ],
+  "verdict": "NORM-BLOCKED",
+  "blocker": "fc_norm(LayerNorm)",
+  "n_norm": 1,
+  "n_nonlin": 0,
+  "dev_shipped": 0.1970825773883117,
+  "dev_nonorm": 4.0294962495013333e-16,
+  "norms_killed": [
+   "fc_norm"
+  ],
+  "dtype": "torch.float64",
+  "numeric": "NORM-ONLY",
+  "agree": true
+ }
+]

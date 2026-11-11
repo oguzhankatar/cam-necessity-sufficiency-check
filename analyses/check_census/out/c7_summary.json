@@ -1,0 +1,449 @@
+{
+ "dev13": {
+  "n": 13,
+  "cheapest_edit_counts": {
+   "poollast": 5,
+   "delact": 3,
+   "linact": 3,
+   "delboth": 2
+  },
+  "cheapest_cost_min": {
+   "model": "maxvit_tiny_tf_224",
+   "edit": "delboth",
+   "pts": -0.06399999999999739
+  },
+  "cheapest_cost_max": {
+   "model": "lcnet_050",
+   "edit": "linact",
+   "pts": -18.519999999999996
+  },
+  "cheapest_cost_median": -4.790000000000005,
+  "delact_alone_not_additive": [
+   "maxvit_tiny_tf_224",
+   "caformer_s18",
+   "convformer_s18",
+   "mambaout_tiny"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true,
+  "per_model": [
+   [
+    "mobilenetv3_large_100",
+    "poollast",
+    -3.388,
+    true,
+    []
+   ],
+   [
+    "mobilenetv3_small_100",
+    "poollast",
+    -7.532,
+    true,
+    []
+   ],
+   [
+    "mobilenetv4_conv_small",
+    "delact",
+    -6.384,
+    true,
+    []
+   ],
+   [
+    "lcnet_050",
+    "linact",
+    -18.52,
+    true,
+    []
+   ],
+   [
+    "ghostnet_100",
+    "delact",
+    -3.8,
+    true,
+    []
+   ],
+   [
+    "repghostnet_100",
+    "delact",
+    -4.79,
+    true,
+    []
+   ],
+   [
+    "hardcorenas_a",
+    "poollast",
+    -7.488,
+    true,
+    []
+   ],
+   [
+    "hgnetv2_b0",
+    "linact",
+    -11.354,
+    true,
+    []
+   ],
+   [
+    "maxvit_tiny_tf_224",
+    "delboth",
+    -0.064,
+    false,
+    [
+     "head.norm"
+    ]
+   ],
+   [
+    "caformer_s18",
+    "poollast",
+    -3.692,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "convformer_s18",
+    "poollast",
+    -3.15,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "mambaout_tiny",
+    "delboth",
+    -3.276,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "vgg16",
+    "linact",
+    -16.268,
+    true,
+    []
+   ]
+  ]
+ },
+ "heldout": {
+  "n": 8,
+  "cheapest_edit_counts": {
+   "poollast": 3,
+   "delboth": 3,
+   "linact": 1,
+   "delact": 1
+  },
+  "cheapest_cost_min": {
+   "model": "hgnet_tiny",
+   "edit": "poollast",
+   "pts": -0.9800000000000031
+  },
+  "cheapest_cost_max": {
+   "model": "mambaout_femto",
+   "edit": "poollast",
+   "pts": -13.626000000000005
+  },
+  "cheapest_cost_median": -2.563000000000004,
+  "delact_alone_not_additive": [
+   "convformer_s36",
+   "inception_next_tiny",
+   "mambaout_femto",
+   "mambaout_small",
+   "mambaout_kobe"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true,
+  "per_model": [
+   [
+    "convformer_s36",
+    "poollast",
+    -2.426,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "inception_next_tiny",
+    "delboth",
+    -2.442,
+    false,
+    [
+     "head.norm"
+    ]
+   ],
+   [
+    "mambaout_femto",
+    "poollast",
+    -13.626,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "mambaout_small",
+    "delboth",
+    -2.212,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "mambaout_kobe",
+    "delboth",
+    -11.184,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "fasternet_t0",
+    "linact",
+    -8.578,
+    true,
+    []
+   ],
+   [
+    "ghostnetv2_100",
+    "delact",
+    -2.684,
+    true,
+    []
+   ],
+   [
+    "hgnet_tiny",
+    "poollast",
+    -0.98,
+    true,
+    []
+   ]
+  ]
+ },
+ "all": {
+  "n": 21,
+  "cheapest_edit_counts": {
+   "poollast": 8,
+   "delact": 4,
+   "linact": 4,
+   "delboth": 5
+  },
+  "cheapest_cost_min": {
+   "model": "maxvit_tiny_tf_224",
+   "edit": "delboth",
+   "pts": -0.06399999999999739
+  },
+  "cheapest_cost_max": {
+   "model": "lcnet_050",
+   "edit": "linact",
+   "pts": -18.519999999999996
+  },
+  "cheapest_cost_median": -3.7999999999999923,
+  "delact_alone_not_additive": [
+   "maxvit_tiny_tf_224",
+   "caformer_s18",
+   "convformer_s18",
+   "mambaout_tiny",
+   "convformer_s36",
+   "inception_next_tiny",
+   "mambaout_femto",
+   "mambaout_small",
+   "mambaout_kobe"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true,
+  "per_model": [
+   [
+    "mobilenetv3_large_100",
+    "poollast",
+    -3.388,
+    true,
+    []
+   ],
+   [
+    "mobilenetv3_small_100",
+    "poollast",
+    -7.532,
+    true,
+    []
+   ],
+   [
+    "mobilenetv4_conv_small",
+    "delact",
+    -6.384,
+    true,
+    []
+   ],
+   [
+    "lcnet_050",
+    "linact",
+    -18.52,
+    true,
+    []
+   ],
+   [
+    "ghostnet_100",
+    "delact",
+    -3.8,
+    true,
+    []
+   ],
+   [
+    "repghostnet_100",
+    "delact",
+    -4.79,
+    true,
+    []
+   ],
+   [
+    "hardcorenas_a",
+    "poollast",
+    -7.488,
+    true,
+    []
+   ],
+   [
+    "hgnetv2_b0",
+    "linact",
+    -11.354,
+    true,
+    []
+   ],
+   [
+    "maxvit_tiny_tf_224",
+    "delboth",
+    -0.064,
+    false,
+    [
+     "head.norm"
+    ]
+   ],
+   [
+    "caformer_s18",
+    "poollast",
+    -3.692,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "convformer_s18",
+    "poollast",
+    -3.15,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "mambaout_tiny",
+    "delboth",
+    -3.276,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "vgg16",
+    "linact",
+    -16.268,
+    true,
+    []
+   ],
+   [
+    "convformer_s36",
+    "poollast",
+    -2.426,
+    false,
+    [
+     "head.norm",
+     "head.fc.norm"
+    ]
+   ],
+   [
+    "inception_next_tiny",
+    "delboth",
+    -2.442,
+    false,
+    [
+     "head.norm"
+    ]
+   ],
+   [
+    "mambaout_femto",
+    "poollast",
+    -13.626,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "mambaout_small",
+    "delboth",
+    -2.212,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "mambaout_kobe",
+    "delboth",
+    -11.184,
+    false,
+    [
+     "head.norm",
+     "head.pre_logits.norm"
+    ]
+   ],
+   [
+    "fasternet_t0",
+    "linact",
+    -8.578,
+    true,
+    []
+   ],
+   [
+    "ghostnetv2_100",
+    "delact",
+    -2.684,
+    true,
+    []
+   ],
+   [
+    "hgnet_tiny",
+    "poollast",
+    -0.98,
+    true,
+    []
+   ]
+  ]
+ },
+ "errors": [
+  [
+   "efficientvit_b1",
+   "RuntimeError: Given groups=1, weight of size [1536, 256, 1, 1], expected input[2, 1536, 1, 1] to have 256 channels, but "
+  ]
+ ],
+ "h4_y_equals_cheapest": true
+}

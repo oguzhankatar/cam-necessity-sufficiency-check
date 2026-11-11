@@ -1,0 +1,36 @@
+check_model() audited verdict on the 32 constructed heads of a3_probes.py (timm 1.0.27, torch 2.6.0+cu124, float64, CPU)
+
+P01 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | mean as a module (AdaptiveAvgPool2d) -> Flatten -> Linear
+P02 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | mean as a tensor op x.mean((2,3)) -> Linear, no declared pool
+P03 check aggregator-blocked     audited aggregator-blocked     rules -                                measured HARD-BLOCKED agree | max pool as a module (AdaptiveMaxPool2d) -> Linear
+P04 check aggregator-blocked     audited aggregator-blocked     rules -                                measured HARD-BLOCKED agree | max pool as timm SelectAdaptivePool2d(pool_type='max') -> Linear
+P05 check degenerate             audited aggregator-blocked     rules max-over-tokens rule             measured HARD-BLOCKED agree | max as a tensor op x.amax((2,3)) -> Linear, no declared pool
+P06 check aggregator-blocked     audited aggregator-blocked     rules -                                measured HARD-BLOCKED agree | max as a tensor op, model declares global_pool='max'
+P07 check degenerate             audited degenerate             rules -                                measured HARD-BLOCKED DISAGREE | attention pool module without MLP (timm AttentionPoolLatent, mlp=None) -> Linear; global_pool='map'
+P08 check nonlinearity-blocked   audited nonlinearity-blocked   rules -                                measured HARD-BLOCKED agree (wrong cause) | attention pool + LayerNorm + MLP (timm AttentionPoolLatent as in SigLIP 'map') -> Linear
+P09 check degenerate             audited degenerate             rules -                                measured HARD-BLOCKED DISAGREE | attention pool written as tensor ops (Linear k, v; softmax over cells) -> Linear, no declared pool
+P10 check nonlinearity-blocked   audited nonlinearity-blocked   rules -                                measured HARD-BLOCKED agree (wrong cause) | attention pool (tensor ops) followed by an MLP (Linear-GELU-Linear)
+P11 check degenerate             audited degenerate             rules -                                measured VACUOUS      DISAGREE | stack of 3 class tokens reduced by Conv1d(3,1,1) -> Linear (CoaT head)
+P12 check degenerate             audited degenerate             rules -                                measured VACUOUS      DISAGREE | stack of 3 class tokens reduced by Linear(3,1) over the token axis -> Linear
+P13 check class-token            audited class-token            rules -                                measured VACUOUS      agree | single class token x[:, 0] -> Linear, global_pool='token'
+P14 check normalisation-blocked  audited normalisation-blocked  rules -                                measured NORM-ONLY    agree | LayerNorm after the mean (AdaptiveAvgPool2d -> LayerNorm -> Linear)
+P15 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | LayerNorm before the mean, per cell (LayerNorm2d -> AdaptiveAvgPool2d -> Linear)
+P16 check normalisation-blocked  audited normalisation-blocked  rules -                                measured ADDITIVE     DISAGREE | LayerNorm before the mean, per token, mean as a tensor op (LayerNorm -> x.mean(1) -> Linear)
+P17 check normalisation-blocked  audited normalisation-blocked  rules -                                measured NORM-ONLY    agree | RMSNorm after the mean (timm RmsNorm)
+P18 check normalisation-blocked  audited normalisation-blocked  rules -                                measured NORM-ONLY    agree | RMSNorm after the mean (torch nn.RMSNorm)
+P19 check nonlinearity-blocked   audited normalisation-blocked  rules unlisted-normalisation rule      measured NORM-ONLY    agree | SimpleNorm2d after the mean (ConvNeXt-Zepto-RMS head: pool -> SimpleNorm2d -> Linear)
+P20 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | per-cell MLP before the mean (Conv1x1-GELU-Conv1x1 -> AdaptiveAvgPool2d -> Linear)
+P21 check nonlinearity-blocked   audited nonlinearity-blocked   rules -                                measured ADDITIVE     DISAGREE | per-token MLP before a tensor-op mean (Linear-GELU-Linear -> x.mean(1) -> Linear)
+P22 check aggregator-blocked     audited aggregator-blocked     rules -                                measured HARD-BLOCKED agree | GeM pooling as a module (p = 3) -> Linear
+P23 check degenerate             audited degenerate             rules -                                measured HARD-BLOCKED DISAGREE | GeM pooling as tensor ops -> Linear, no declared pool
+P24 check aggregator-blocked     audited aggregator-blocked     rules -                                measured HARD-BLOCKED agree | mixed avg+max concat as timm SelectAdaptivePool2d('catavgmax') -> Linear
+P25 check degenerate             audited aggregator-blocked     rules max-over-tokens rule             measured HARD-BLOCKED agree | mixed avg+max concat as tensor ops -> Linear, no declared pool
+P26 check degenerate             audited aggregator-blocked     rules max-over-tokens rule             measured HARD-BLOCKED agree | per-cell class scores (Conv1x1) pooled by log-sum-exp over cells (tensor op), T = 1
+P27 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | linear cell mixing before the mean (Conv3x3, no activation -> AdaptiveAvgPool2d -> Linear)
+P28 check degenerate             audited degenerate             rules -                                measured HARD-BLOCKED DISAGREE | nonlinear cell mixing before the mean (Conv3x3 -> ReLU -> AdaptiveAvgPool2d -> Linear)
+P29 check degenerate             audited degenerate             rules -                                measured HARD-BLOCKED DISAGREE | self-attention over cells before the mean (nn.MultiheadAttention -> AdaptiveAvgPool2d -> Linear)
+P30 check nonlinearity-blocked   audited nonlinearity-blocked   rules -                                measured HARD-BLOCKED agree | MLP tail (AdaptiveAvgPool2d -> Linear -> GELU -> Linear)
+P31 check degenerate             audited degenerate             rules -                                measured ADDITIVE     agree | BatchNorm1d (inference) after the mean -> Linear
+P32 check nonlinearity-blocked   audited nonlinearity-blocked   rules -                                measured ADDITIVE     DISAGREE | ReLU in the tail that is never crossed on the reachable set (Linear bias +50 -> ReLU -> Linear)
+
+{"n": 32, "agree_check": 18, "agree_check_stored": 18, "frozen_code_reproduced": true, "agree_audited": 22, "agree_audited_with_reason": 20, "repaired": ["P05", "P19", "P25", "P26"], "broken": [], "still_wrong": ["P07", "P09", "P11", "P12", "P16", "P21", "P23", "P28", "P29", "P32"], "right_label_wrong_reason": ["P08", "P10"], "rules_fired": {"P05": ["max-over-tokens rule"], "P19": ["unlisted-normalisation rule"], "P25": ["max-over-tokens rule"], "P26": ["max-over-tokens rule"]}, "timm": "1.0.27", "torch": "2.6.0+cu124"}

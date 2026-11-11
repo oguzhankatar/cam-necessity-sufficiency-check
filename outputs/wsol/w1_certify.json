@@ -1,0 +1,277 @@
+{
+ "env": {
+  "torch": "2.6.0+cu124",
+  "timm": "1.0.27"
+ },
+ "images": [
+  7,
+  4211,
+  15123,
+  3007,
+  40555,
+  21001
+ ],
+ "note": "shipped ImageNet-1k weights, zero refit",
+ "resnet50": {
+  "timm": "resnet50.tv_in1k",
+  "pred_classes": [
+   0,
+   84,
+   300,
+   52,
+   811,
+   420
+  ],
+  "frozen_rule": {
+   "verdict": "IN-SCOPE",
+   "agg": "MEAN",
+   "agg_name": "global_pool.pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "global_pool.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "fc",
+     "Linear",
+     "AFFINE"
+    ]
+   ]
+  },
+  "shipped_certificate": {
+   "tag": "shipped:resnet50",
+   "maxNS": 6.742924984054975e-15,
+   "Rhalf": 9.074434984229627e-15,
+   "I2": 5.63959055174038e-15,
+   "corrNS_recorded_never_used": 0.9999999999999998,
+   "n_active": 49,
+   "T": 49,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  },
+  "grid": [
+   7,
+   7
+  ],
+  "T": 49,
+  "C": 2048,
+  "npfx": 0,
+  "head_certificates": {
+   "gap": {
+    "tag": "resnet50:gap",
+    "maxNS": 6.388034195420505e-15,
+    "Rhalf": 5.550431628341573e-15,
+    "I2": 2.6469235927016484e-15,
+    "corrNS_recorded_never_used": 0.9999999999999999,
+    "n_active": 49,
+    "T": 49,
+    "n_pairs": 3,
+    "ADDITIVE": true
+   },
+   "lse_tau1": {
+    "tag": "resnet50:lse_tau1",
+    "maxNS": 0.9584360463720967,
+    "Rhalf": 0.5922137472298977,
+    "I2": 0.16232426551877313,
+    "corrNS_recorded_never_used": 0.30180269314391456,
+    "n_active": 8,
+    "T": 49,
+    "n_pairs": 3,
+    "ADDITIVE": false
+   }
+  },
+  "scale_checks": {
+   "cell1x1": {
+    "gap": {
+     "closed_vs_literal_N": 6.0759355431222135e-15,
+     "closed_vs_literal_S": 1.4553139025442427e-15,
+     "maxNS_literal": 5.821255610176971e-15,
+     "corr_literal": 0.9999999999999999,
+     "n_units": 49
+    },
+    "lse_tau1": {
+     "closed_vs_literal_N": 3.333789938692327e-16,
+     "closed_vs_literal_S": 1.8135817266486257e-15,
+     "maxNS_literal": 0.930241897685022,
+     "corr_literal": 0.30180269314391456,
+     "n_units": 49
+    }
+   },
+   "block3x3": {
+    "gap": {
+     "closed_vs_literal_N": 1.2867499212282926e-15,
+     "closed_vs_literal_S": 8.042187007676829e-16,
+     "maxNS_literal": 1.105800713555564e-15,
+     "corr_literal": 0.9999999999999997,
+     "n_units": 49
+    },
+    "lse_tau1": {
+     "closed_vs_literal_N": 2.7918290354725873e-15,
+     "closed_vs_literal_S": 7.338522036099373e-15,
+     "maxNS_literal": 0.9272458653858786,
+     "corr_literal": 0.504500911045958,
+     "n_units": 49
+    }
+   }
+  },
+  "gradcam_pairwise_max_rel_diff": {
+   "gap_vs_lse_tau1": 1.3938757164521362e-16
+  }
+ },
+ "vitb16": {
+  "timm": "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+  "pred_classes": [
+   0,
+   84,
+   300,
+   52,
+   811,
+   420
+  ],
+  "frozen_rule": {
+   "verdict": "DEGENERATE",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "post": [
+    [
+     "fc_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ]
+  },
+  "shipped_certificate": {
+   "tag": "shipped:vitb16",
+   "maxNS": 0.0,
+   "Rhalf": 0.0,
+   "I2": 0.0,
+   "corrNS_recorded_never_used": 0.9999999999999999,
+   "n_active": 1,
+   "T": 197,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  },
+  "grid": [
+   14,
+   14
+  ],
+  "T": 196,
+  "C": 768,
+  "npfx": 1,
+  "ln_relocation": {
+   "available": true,
+   "ln": "LayerNorm"
+  },
+  "head_certificates": {
+   "gap": {
+    "tag": "vitb16:gap",
+    "maxNS": 5.1507794652198616e-14,
+    "Rhalf": 2.0097849381554756e-14,
+    "I2": 1.113652630672058e-14,
+    "corrNS_recorded_never_used": 0.9999999999999998,
+    "n_active": 196,
+    "T": 196,
+    "n_pairs": 3,
+    "ADDITIVE": true
+   },
+   "lse_tau1": {
+    "tag": "vitb16:lse_tau1",
+    "maxNS": 0.9960852666666971,
+    "Rhalf": 0.2788664294594077,
+    "I2": 0.003004535783425448,
+    "corrNS_recorded_never_used": 0.7597084502148477,
+    "n_active": 196,
+    "T": 196,
+    "n_pairs": 3,
+    "ADDITIVE": false
+   },
+   "lnpost": {
+    "tag": "vitb16:lnpost",
+    "maxNS": 0.6582249449719618,
+    "Rhalf": 0.3029882580664095,
+    "I2": 0.008758327967261358,
+    "corrNS_recorded_never_used": 0.4854237691445388,
+    "n_active": 196,
+    "T": 196,
+    "n_pairs": 3,
+    "ADDITIVE": false
+   }
+  },
+  "scale_checks": {
+   "cell1x1": {
+    "gap": {
+     "closed_vs_literal_N": 2.8101499670453902e-14,
+     "closed_vs_literal_S": 6.681475446121907e-15,
+     "maxNS_literal": 2.829801365416337e-14,
+     "corr_literal": 1.0,
+     "n_units": 196
+    },
+    "lse_tau1": {
+     "closed_vs_literal_N": 4.3127940011065336e-16,
+     "closed_vs_literal_S": 3.2037898293934247e-15,
+     "maxNS_literal": 0.9960852666666971,
+     "corr_literal": 0.785889519334047,
+     "n_units": 196
+    },
+    "lnpost": {
+     "closed_vs_literal_N": 1.5847008016398047e-13,
+     "closed_vs_literal_S": 3.961752004099512e-14,
+     "maxNS_literal": 0.6582249449719618,
+     "corr_literal": 0.4854237691445388,
+     "n_units": 196
+    }
+   },
+   "block3x3": {
+    "gap": {
+     "closed_vs_literal_N": 3.882247965562657e-15,
+     "closed_vs_literal_S": 2.3293487793375944e-15,
+     "maxNS_literal": 3.1057983724501262e-15,
+     "corr_literal": 0.9999999999999997,
+     "n_units": 196
+    },
+    "lse_tau1": {
+     "closed_vs_literal_N": 3.6081198660967154e-16,
+     "closed_vs_literal_S": 1.7525153635326903e-15,
+     "maxNS_literal": 0.9859821252983194,
+     "corr_literal": 0.9276506744631557,
+     "n_units": 196
+    },
+    "lnpost": {
+     "closed_vs_literal_N": 1.956096216883161e-14,
+     "closed_vs_literal_S": 3.3342549151417516e-15,
+     "maxNS_literal": 0.5335498214223516,
+     "corr_literal": 0.8259586064802398,
+     "n_units": 196
+    }
+   }
+  },
+  "gradcam_pairwise_max_rel_diff": {
+   "gap_vs_lse_tau1": 2.420565230885389e-16,
+   "gap_vs_lnpost": 0.8805291023857655,
+   "lse_tau1_vs_lnpost": 0.8805291023857655
+  }
+ },
+ "vgg16_shipped": {
+  "timm": "vgg16.tv_in1k",
+  "frozen_rule": {
+   "verdict": "NONLIN-BLOCKED",
+   "agg": "DENSE",
+   "agg_name": "pre_logits.fc1(Conv2d)",
+   "blocker": "pre_logits.act1(ReLU)"
+  },
+  "note": "timm vgg16 has no average pool: forward_head starts with Conv2d(512,4096,k=7).  The WSOL literature uses VGG16-GAP, i.e. the conv trunk + a fitted GAP head; that is what this round builds, and it is certified in the per-dataset runs."
+ }
+}

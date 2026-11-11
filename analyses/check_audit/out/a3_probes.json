@@ -1,0 +1,1251 @@
+{
+ "summary": {
+  "n": 32,
+  "agree": 18,
+  "agree_with_reason": 16,
+  "agree_v2b": 20,
+  "v2b_disagree": [
+   "P07",
+   "P08",
+   "P09",
+   "P11",
+   "P12",
+   "P16",
+   "P19",
+   "P21",
+   "P23",
+   "P28",
+   "P29",
+   "P32"
+  ],
+  "false_degenerate": [
+   "P05",
+   "P07",
+   "P09",
+   "P11",
+   "P12",
+   "P23",
+   "P25",
+   "P26",
+   "P28",
+   "P29"
+  ],
+  "missed_degenerate": [
+   "P16",
+   "P21",
+   "P32"
+  ],
+  "disagree": [
+   "P05",
+   "P07",
+   "P09",
+   "P11",
+   "P12",
+   "P16",
+   "P19",
+   "P21",
+   "P23",
+   "P25",
+   "P26",
+   "P28",
+   "P29",
+   "P32"
+  ],
+  "right_label_wrong_reason": [
+   "P08",
+   "P10"
+  ]
+ },
+ "rows": [
+  {
+   "id": "P01",
+   "probe": "mean as a module (AdaptiveAvgPool2d) -> Flatten -> Linear",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "flat",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.8933686315814e-15,
+   "eps2": 4.872639135276814e-15,
+   "eps3": 1.4076847583635396e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P02",
+   "probe": "mean as a tensor op x.mean((2,3)) -> Linear, no declared pool",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.8933686315814e-15,
+   "eps2": 4.872639135276814e-15,
+   "eps3": 1.4076847583635396e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P03",
+   "probe": "max pool as a module (AdaptiveMaxPool2d) -> Linear",
+   "design": "aggregator-blocked",
+   "frozen": "AGG-BLOCKED",
+   "frozen_paper": "aggregator-blocked",
+   "agg": "OTHER",
+   "agg_name": "pool(AdaptiveMaxPool2d)",
+   "blocker": "pool(AdaptiveMaxPool2d)",
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.9985618639301493,
+   "eps2": 1.14727352370273,
+   "eps3": 0.03973139233801787,
+   "spatial_mass": 1.0,
+   "n_active": 29,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P04",
+   "probe": "max pool as timm SelectAdaptivePool2d(pool_type='max') -> Linear",
+   "design": "aggregator-blocked",
+   "frozen": "AGG-BLOCKED",
+   "frozen_paper": "aggregator-blocked",
+   "agg": "OTHER",
+   "agg_name": "global_pool.pool(AdaptiveMaxPool2d)",
+   "blocker": "global_pool.pool(AdaptiveMaxPool2d)",
+   "post": [
+    [
+     "global_pool.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.9985618639301493,
+   "eps2": 1.14727352370273,
+   "eps3": 0.03973139233801787,
+   "spatial_mass": 1.0,
+   "n_active": 29,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P05",
+   "probe": "max as a tensor op x.amax((2,3)) -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.9985618639301493,
+   "eps2": 1.14727352370273,
+   "eps3": 0.03973139233801787,
+   "spatial_mass": 1.0,
+   "n_active": 29,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P06",
+   "probe": "max as a tensor op, model declares global_pool='max'",
+   "design": "aggregator-blocked",
+   "frozen": "AGG-BLOCKED",
+   "frozen_paper": "aggregator-blocked",
+   "agg": "OTHER",
+   "agg_name": "functional(global_pool=max)",
+   "blocker": "functional(global_pool=max)",
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.9985618639301493,
+   "eps2": 1.14727352370273,
+   "eps3": 0.03973139233801787,
+   "spatial_mass": 1.0,
+   "n_active": 29,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P07",
+   "probe": "attention pool module without MLP (timm AttentionPoolLatent, mlp=None) -> Linear; global_pool='map'",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=map)",
+   "blocker": null,
+   "post": [
+    [
+     "attn_pool.q",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.kv",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.q_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.k_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.proj",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.proj_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.033546976053280296,
+   "eps2": 0.010283060806217853,
+   "eps3": 0.0028299511704677565,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "DEGENERATE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P08",
+   "probe": "attention pool + LayerNorm + MLP (timm AttentionPoolLatent as in SigLIP 'map') -> Linear",
+   "design": "aggregator-blocked",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=map)",
+   "blocker": "attn_pool.mlp.act(GELU)",
+   "post": [
+    [
+     "attn_pool.q",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.kv",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.q_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.k_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.proj",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.proj_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.norm",
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "attn_pool.mlp.fc1",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.mlp.act",
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "attn_pool.mlp.drop1",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.mlp.norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.mlp.fc2",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "attn_pool.mlp.drop2",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.30954586738998796,
+   "eps2": 0.08948908114151956,
+   "eps3": 0.017455489405249217,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": {
+    "eps1": 0.03925320108029013,
+    "eps2": 0.010601817362098595,
+    "eps3": 0.0029862327964547634
+   },
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": false,
+   "v2b": "DEGENERATE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P09",
+   "probe": "attention pool written as tensor ops (Linear k, v; softmax over cells) -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "k",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "v",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.24844690290860622,
+   "eps2": 0.0749597522497791,
+   "eps3": 0.015654516083515285,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P10",
+   "probe": "attention pool (tensor ops) followed by an MLP (Linear-GELU-Linear)",
+   "design": "aggregator-blocked",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "act(GELU)",
+   "post": [
+    [
+     "k",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "v",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "fc1",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "act",
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.21542711646469057,
+   "eps2": 0.09982070476866904,
+   "eps3": 0.01872815666296578,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": false,
+   "v2b": "NONLIN-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P11",
+   "probe": "stack of 3 class tokens reduced by Conv1d(3,1,1) -> Linear (CoaT head)",
+   "design": "class-token",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "DENSE",
+   "agg_name": "aggregate(Conv1d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 3.718338686559613e-16,
+   "eps2": 2.662285011416611e-16,
+   "eps3": 9.122984744374068e-18,
+   "spatial_mass": 0.0,
+   "n_active": 3,
+   "T": 52,
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "measured_paper": "class-token",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P12",
+   "probe": "stack of 3 class tokens reduced by Linear(3,1) over the token axis -> Linear",
+   "design": "class-token",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "mix",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 7.436677373119223e-16,
+   "eps2": 2.4381366336481765e-16,
+   "eps3": 1.824596948874814e-17,
+   "spatial_mass": 0.0,
+   "n_active": 3,
+   "T": 52,
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "measured_paper": "class-token",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P13",
+   "probe": "single class token x[:, 0] -> Linear, global_pool='token'",
+   "design": "class-token",
+   "frozen": "DEGENERATE",
+   "frozen_paper": "class-token",
+   "agg": "TOKEN",
+   "agg_name": "functional(global_pool=token)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.0,
+   "eps2": 0.0,
+   "eps3": 0.0,
+   "spatial_mass": 0.0,
+   "n_active": 1,
+   "T": 52,
+   "nonorm": null,
+   "measured": "VACUOUS",
+   "measured_paper": "class-token",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "DEGENERATE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P14",
+   "probe": "LayerNorm after the mean (AdaptiveAvgPool2d -> LayerNorm -> Linear)",
+   "design": "normalisation-blocked",
+   "frozen": "NORM-BLOCKED",
+   "frozen_paper": "normalisation-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "norm(LayerNorm)",
+   "post": [
+    [
+     "norm",
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.607847377213094,
+   "eps2": 0.37927729168810603,
+   "eps3": 0.11066066504989053,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": {
+    "eps1": 1.8933686315814e-15,
+    "eps2": 4.872639135276814e-15,
+    "eps3": 1.4076847583635396e-15
+   },
+   "measured": "NORM-ONLY",
+   "measured_paper": "normalisation-blocked",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "NORM-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P15",
+   "probe": "LayerNorm before the mean, per cell (LayerNorm2d -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 2.00728219770509e-15,
+   "eps2": 1.988690240041922e-15,
+   "eps3": 1.5385108859111309e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P16",
+   "probe": "LayerNorm before the mean, per token, mean as a tensor op (LayerNorm -> x.mean(1) -> Linear)",
+   "design": "degenerate",
+   "frozen": "NORM-BLOCKED",
+   "frozen_paper": "normalisation-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "norm_pre(LayerNorm)",
+   "post": [
+    [
+     "norm_pre",
+     "LayerNorm",
+     "NORM"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.820492971403291e-15,
+   "eps2": 7.785354714757055e-15,
+   "eps3": 1.3323873552550814e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "NORM-BLOCKED",
+   "agree_v2b": false
+  },
+  {
+   "id": "P17",
+   "probe": "RMSNorm after the mean (timm RmsNorm)",
+   "design": "normalisation-blocked",
+   "frozen": "NORM-BLOCKED",
+   "frozen_paper": "normalisation-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "norm(RmsNorm)",
+   "post": [
+    [
+     "norm",
+     "RmsNorm",
+     "NORM"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.6482415330453856,
+   "eps2": 0.3688996331040401,
+   "eps3": 0.09537124876570689,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": {
+    "eps1": 1.8933686315814e-15,
+    "eps2": 4.872639135276814e-15,
+    "eps3": 1.4076847583635396e-15
+   },
+   "measured": "NORM-ONLY",
+   "measured_paper": "normalisation-blocked",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "NORM-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P18",
+   "probe": "RMSNorm after the mean (torch nn.RMSNorm)",
+   "design": "normalisation-blocked",
+   "frozen": "NORM-BLOCKED",
+   "frozen_paper": "normalisation-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "norm(RMSNorm)",
+   "post": [
+    [
+     "norm",
+     "RMSNorm",
+     "NORM"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.6482924369281932,
+   "eps2": 0.3689304469310455,
+   "eps3": 0.09537805963231741,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": {
+    "eps1": 1.8933686315814e-15,
+    "eps2": 4.872639135276814e-15,
+    "eps3": 1.4076847583635396e-15
+   },
+   "measured": "NORM-ONLY",
+   "measured_paper": "normalisation-blocked",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "NORM-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P19",
+   "probe": "SimpleNorm2d after the mean (ConvNeXt-Zepto-RMS head: pool -> SimpleNorm2d -> Linear)",
+   "design": "normalisation-blocked",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "norm(SimpleNorm2d)",
+   "post": [
+    [
+     "norm",
+     "SimpleNorm2d",
+     "NONLINEAR"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.5234725509425852,
+   "eps2": 0.36640343660866204,
+   "eps3": 0.1000995475516553,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": {
+    "eps1": 1.8933686315814e-15,
+    "eps2": 4.872639135276814e-15,
+    "eps3": 1.4076847583635396e-15
+   },
+   "measured": "NORM-ONLY",
+   "measured_paper": "normalisation-blocked",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "NONLIN-BLOCKED",
+   "agree_v2b": false
+  },
+  {
+   "id": "P20",
+   "probe": "per-cell MLP before the mean (Conv1x1-GELU-Conv1x1 -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.1603086491029727e-14,
+   "eps2": 6.04284749063915e-14,
+   "eps3": 9.575169329131531e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P21",
+   "probe": "per-token MLP before a tensor-op mean (Linear-GELU-Linear -> x.mean(1) -> Linear)",
+   "design": "degenerate",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": "act(GELU)",
+   "post": [
+    [
+     "fc1",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "act",
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "fc2",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.1950382692236564e-14,
+   "eps2": 5.4971763927312604e-14,
+   "eps3": 1.0463019186809338e-14,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "NONLIN-BLOCKED",
+   "agree_v2b": false
+  },
+  {
+   "id": "P22",
+   "probe": "GeM pooling as a module (p = 3) -> Linear",
+   "design": "aggregator-blocked",
+   "frozen": "AGG-BLOCKED",
+   "frozen_paper": "aggregator-blocked",
+   "agg": "OTHER",
+   "agg_name": "pool(GeM)",
+   "blocker": "pool(GeM)",
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.526876861620689,
+   "eps2": 0.24793053246050367,
+   "eps3": 0.03422259418784734,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P23",
+   "probe": "GeM pooling as tensor ops -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.526876861620689,
+   "eps2": 0.24793053246050367,
+   "eps3": 0.03422259418784734,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P24",
+   "probe": "mixed avg+max concat as timm SelectAdaptivePool2d('catavgmax') -> Linear",
+   "design": "aggregator-blocked",
+   "frozen": "AGG-BLOCKED",
+   "frozen_paper": "aggregator-blocked",
+   "agg": "OTHER",
+   "agg_name": "global_pool.pool(AdaptiveCatAvgMaxPool2d)",
+   "blocker": "global_pool.pool(AdaptiveCatAvgMaxPool2d)",
+   "post": [
+    [
+     "global_pool.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.6783604049697788,
+   "eps2": 0.6156180601026372,
+   "eps3": 0.05090334325219838,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P25",
+   "probe": "mixed avg+max concat as tensor ops -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.6783604049697788,
+   "eps2": 0.6156180601026372,
+   "eps3": 0.05090334325219838,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P26",
+   "probe": "per-cell class scores (Conv1x1) pooled by log-sum-exp over cells (tensor op), T = 1",
+   "design": "aggregator-blocked",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "functional(global_pool=None)",
+   "blocker": null,
+   "post": [
+    [
+     "score",
+     "Conv2d",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.13386627419992914,
+   "eps2": 0.06757560877111508,
+   "eps3": 0.009899373360702828,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "AGG-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P27",
+   "probe": "linear cell mixing before the mean (Conv3x3, no activation -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 5.052800135308463e-15,
+   "eps2": 1.3039738124221671e-14,
+   "eps3": 3.2574432814726954e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P28",
+   "probe": "nonlinear cell mixing before the mean (Conv3x3 -> ReLU -> AdaptiveAvgPool2d -> Linear)",
+   "design": "nonlinearity-blocked (before the aggregator)",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.116191944266628,
+   "eps2": 0.8827122840068591,
+   "eps3": 0.058225294339007916,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P29",
+   "probe": "self-attention over cells before the mean (nn.MultiheadAttention -> AdaptiveAvgPool2d -> Linear)",
+   "design": "nonlinearity-blocked (before the aggregator)",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.20178066158314023,
+   "eps2": 0.08992440953205702,
+   "eps3": 0.013413490204905265,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": false
+  },
+  {
+   "id": "P30",
+   "probe": "MLP tail (AdaptiveAvgPool2d -> Linear -> GELU -> Linear)",
+   "design": "nonlinearity-blocked",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "act(GELU)",
+   "post": [
+    [
+     "fc1",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "act",
+     "GELU",
+     "NONLINEAR"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 0.20330767188429433,
+   "eps2": 0.06556406800867032,
+   "eps3": 0.016987745041745703,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "HARD-BLOCKED",
+   "measured_paper": "blocked (hard)",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "NONLIN-BLOCKED",
+   "agree_v2b": true
+  },
+  {
+   "id": "P31",
+   "probe": "BatchNorm1d (inference) after the mean -> Linear",
+   "design": "degenerate",
+   "frozen": "IN-SCOPE",
+   "frozen_paper": "degenerate",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": null,
+   "post": [
+    [
+     "bn",
+     "BatchNorm1d",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.50451374323014e-14,
+   "eps2": 5.553449074558933e-14,
+   "eps3": 7.279729346923277e-15,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": true,
+   "reason_ok": true,
+   "v2b": "IN-SCOPE",
+   "agree_v2b": true
+  },
+  {
+   "id": "P32",
+   "probe": "ReLU in the tail that is never crossed on the reachable set (Linear bias +50 -> ReLU -> Linear)",
+   "design": "degenerate on the reachable set (inactive nonlinearity)",
+   "frozen": "NONLIN-BLOCKED",
+   "frozen_paper": "nonlinearity-blocked",
+   "agg": "MEAN",
+   "agg_name": "pool(AdaptiveAvgPool2d)",
+   "blocker": "act(ReLU)",
+   "post": [
+    [
+     "fc1",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "act",
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "eps1": 1.090969252093505e-12,
+   "eps2": 2.023215602918349e-12,
+   "eps3": 6.98468443942569e-13,
+   "spatial_mass": 1.0,
+   "n_active": 49,
+   "T": 49,
+   "nonorm": null,
+   "measured": "ADDITIVE",
+   "measured_paper": "degenerate",
+   "agree": false,
+   "reason_ok": false,
+   "v2b": "NONLIN-BLOCKED",
+   "agree_v2b": false
+  }
+ ]
+}

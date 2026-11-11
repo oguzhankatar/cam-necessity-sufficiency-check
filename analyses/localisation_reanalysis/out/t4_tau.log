@@ -1,0 +1,136 @@
+identity checks: {'cub': {'collapsed_identical_across_tau_runs': True, 'meancell_collapsed_equals_plain_cam': True}, 'voc12seg': {'collapsed_identical_across_tau_runs': True, 'meancell_collapsed_equals_plain_cam': True}}
+
+dataset   tau    basis     metric          map     sep-coll        lo        hi sig  
+w2_cub_resnet50_tau-8.json  tau=-8 basis=bank  cert sep(1-corr)=0.6007 maxNS=0.989 n_pairs=3  mtime 2026-09-23 21:34:42
+   MaxBoxAccV2     N_lse  0.2653 vs 0.5295  -0.2642 [-0.2733,-0.2561] loss
+   MaxBoxAccV2     S_lse  0.2509 vs 0.5295  -0.2786 [-0.2887,-0.2710] loss
+   best IoU        N_lse  0.4766 vs 0.6608  -0.1842 [-0.1886,-0.1801] loss
+   best IoU        S_lse  0.3576 vs 0.6608  -0.3032 [-0.3071,-0.2995] loss
+   pointing, strict N_lse  0.4864 vs 0.9650  -0.4786 [-0.4912,-0.4653] loss
+   pointing, strict S_lse  0.5740 vs 0.9650  -0.3909 [-0.4044,-0.3780] loss
+   pointing, 15 px N_lse  0.5970 vs 0.9952  -0.3982 [-0.4108,-0.3854] loss
+   pointing, 15 px S_lse  0.7207 vs 0.9952  -0.2744 [-0.2865,-0.2625] loss
+   tally vs collapsed: {'loss': 8}
+w2_cub_resnet50_tau-2.json  tau=-2 basis=bank  cert sep(1-corr)=0.4787 maxNS=0.982 n_pairs=3  mtime 2026-09-23 21:43:42
+   MaxBoxAccV2     N_lse  0.3555 vs 0.5295  -0.1740 [-0.1828,-0.1657] loss
+   MaxBoxAccV2     S_lse  0.2509 vs 0.5295  -0.2786 [-0.2887,-0.2710] loss
+   best IoU        N_lse  0.5341 vs 0.6608  -0.1267 [-0.1306,-0.1226] loss
+   best IoU        S_lse  0.3598 vs 0.6608  -0.3010 [-0.3049,-0.2971] loss
+   pointing, strict N_lse  0.6650 vs 0.9650  -0.3000 [-0.3124,-0.2872] loss
+   pointing, strict S_lse  0.5758 vs 0.9650  -0.3892 [-0.4028,-0.3764] loss
+   pointing, 15 px N_lse  0.8095 vs 0.9952  -0.1857 [-0.1952,-0.1754] loss
+   pointing, 15 px S_lse  0.7230 vs 0.9952  -0.2722 [-0.2843,-0.2610] loss
+   tally vs collapsed: {'loss': 8}
+w2_cub_resnet50.json  tau=1 basis=bank  cert sep(1-corr)=0.6354 maxNS=0.962 n_pairs=3  mtime 2026-09-23 19:22:19
+   MaxBoxAccV2     N_lse  0.2509 vs 0.5295  -0.2786 [-0.2887,-0.2710] loss
+   MaxBoxAccV2     S_lse  0.5645 vs 0.5295  +0.0350 [+0.0270,+0.0415] win
+   best IoU        N_lse  0.3516 vs 0.6608  -0.3092 [-0.3131,-0.3054] loss
+   best IoU        S_lse  0.6466 vs 0.6608  -0.0142 [-0.0164,-0.0119] loss
+   pointing, strict N_lse  0.9581 vs 0.9650  -0.0069 [-0.0110,-0.0028] loss
+   pointing, strict S_lse  0.9600 vs 0.9650  -0.0050 [-0.0091,-0.0009] loss
+   pointing, 15 px N_lse  0.9924 vs 0.9952  -0.0028 [-0.0047,-0.0009] loss
+   pointing, 15 px S_lse  0.9934 vs 0.9952  -0.0017 [-0.0036,+0.0000] tie
+   tally vs collapsed: {'loss': 6, 'win': 1, 'tie': 1}
+w2_cub_resnet50_tau2.json  tau=2 basis=bank  cert sep(1-corr)=0.6359 maxNS=0.978 n_pairs=3  mtime 2026-09-23 21:51:51
+   MaxBoxAccV2     N_lse  0.2509 vs 0.5295  -0.2786 [-0.2887,-0.2710] loss
+   MaxBoxAccV2     S_lse  0.5632 vs 0.5295  +0.0337 [+0.0259,+0.0407] win
+   best IoU        N_lse  0.3494 vs 0.6608  -0.3114 [-0.3154,-0.3076] loss
+   best IoU        S_lse  0.6468 vs 0.6608  -0.0140 [-0.0163,-0.0118] loss
+   pointing, strict N_lse  0.9567 vs 0.9650  -0.0083 [-0.0126,-0.0040] loss
+   pointing, strict S_lse  0.9600 vs 0.9650  -0.0050 [-0.0091,-0.0009] loss
+   pointing, 15 px N_lse  0.9919 vs 0.9952  -0.0033 [-0.0054,-0.0014] loss
+   pointing, 15 px S_lse  0.9934 vs 0.9952  -0.0017 [-0.0036,+0.0000] tie
+   tally vs collapsed: {'loss': 6, 'win': 1, 'tie': 1}
+w2_cub_resnet50_tau8.json  tau=8 basis=bank  cert sep(1-corr)=0.6360 maxNS=0.992 n_pairs=3  mtime 2026-09-23 22:00:11
+   MaxBoxAccV2     N_lse  0.2509 vs 0.5295  -0.2786 [-0.2887,-0.2710] loss
+   MaxBoxAccV2     S_lse  0.3103 vs 0.5295  -0.2192 [-0.2285,-0.2109] loss
+   best IoU        N_lse  0.3481 vs 0.6608  -0.3127 [-0.3167,-0.3089] loss
+   best IoU        S_lse  0.4928 vs 0.6608  -0.1680 [-0.1730,-0.1626] loss
+   pointing, strict N_lse  0.9548 vs 0.9650  -0.0102 [-0.0147,-0.0057] loss
+   pointing, strict S_lse  0.5040 vs 0.9650  -0.4610 [-0.4741,-0.4480] loss
+   pointing, 15 px N_lse  0.9905 vs 0.9952  -0.0047 [-0.0069,-0.0024] loss
+   pointing, 15 px S_lse  0.5375 vs 0.9952  -0.4577 [-0.4705,-0.4448] loss
+   tally vs collapsed: {'loss': 8}
+w2_cub_resnet50_meancell.json  tau=1 basis=meancell  cert sep(1-corr)=0.6354 maxNS=0.962 n_pairs=3  mtime 2026-09-23 21:19:00
+   MaxBoxAccV2     N_lse  0.2509 vs 0.5039  -0.2529 [-0.2631,-0.2441] loss
+   MaxBoxAccV2     S_lse  0.5752 vs 0.5039  +0.0713 [+0.0646,+0.0778] win
+   best IoU        N_lse  0.3516 vs 0.6598  -0.3083 [-0.3127,-0.3041] loss
+   best IoU        S_lse  0.6615 vs 0.6598  +0.0017 [+0.0013,+0.0020] win
+   pointing, strict N_lse  0.9594 vs 0.9600  -0.0005 [-0.0017,+0.0007] tie
+   pointing, strict S_lse  0.9600 vs 0.9600  +0.0000 [+0.0000,+0.0000] tie
+   pointing, 15 px N_lse  0.9934 vs 0.9934  +0.0000 [+0.0000,+0.0000] tie
+   pointing, 15 px S_lse  0.9934 vs 0.9934  +0.0000 [+0.0000,+0.0000] tie
+   tally vs collapsed: {'loss': 2, 'win': 2, 'tie': 4}
+w2_voc12seg_resnet50_tau-8.json  tau=-8 basis=bank  cert sep(1-corr)=0.8566 maxNS=0.990 n_pairs=3  mtime 2026-09-23 21:21:23
+   pointing, strict N_lse  0.2259 vs 0.6591  -0.4332 [-0.4569,-0.4075] loss
+   pointing, strict S_lse  0.1998 vs 0.6591  -0.4592 [-0.4821,-0.4355] loss
+   pointing, 15 px N_lse  0.4304 vs 0.9054  -0.4751 [-0.4970,-0.4523] loss
+   pointing, 15 px S_lse  0.3978 vs 0.9054  -0.5077 [-0.5291,-0.4839] loss
+   peak-mask IoU   N_lse  0.2066 vs 0.4790  -0.2724 [-0.2800,-0.2648] loss
+   peak-mask IoU   S_lse  0.1978 vs 0.4790  -0.2811 [-0.2889,-0.2735] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.168, 'S_lse': 0.161, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'loss': 6}
+w2_voc12seg_resnet50_tau-2.json  tau=-2 basis=bank  cert sep(1-corr)=0.5838 maxNS=0.961 n_pairs=3  mtime 2026-09-23 21:22:30
+   pointing, strict N_lse  0.2329 vs 0.6591  -0.4262 [-0.4499,-0.3996] loss
+   pointing, strict S_lse  0.1938 vs 0.6591  -0.4653 [-0.4881,-0.4415] loss
+   pointing, 15 px N_lse  0.4411 vs 0.9054  -0.4644 [-0.4867,-0.4415] loss
+   pointing, 15 px S_lse  0.3903 vs 0.9054  -0.5151 [-0.5366,-0.4914] loss
+   peak-mask IoU   N_lse  0.2077 vs 0.4790  -0.2713 [-0.2789,-0.2637] loss
+   peak-mask IoU   S_lse  0.1989 vs 0.4790  -0.2801 [-0.2878,-0.2726] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1683, 'S_lse': 0.1598, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'loss': 6}
+w2_voc12seg_resnet50_tau-0.5.json  tau=-0.5 basis=bank  cert sep(1-corr)=0.1544 maxNS=0.871 n_pairs=3  mtime 2026-09-23 21:23:37
+   pointing, strict N_lse  0.2375 vs 0.6591  -0.4215 [-0.4457,-0.3954] loss
+   pointing, strict S_lse  0.2268 vs 0.6591  -0.4322 [-0.4551,-0.4075] loss
+   pointing, 15 px N_lse  0.4462 vs 0.9054  -0.4592 [-0.4811,-0.4364] loss
+   pointing, 15 px S_lse  0.4471 vs 0.9054  -0.4583 [-0.4807,-0.4350] loss
+   peak-mask IoU   N_lse  0.2220 vs 0.4790  -0.2570 [-0.2647,-0.2495] loss
+   peak-mask IoU   S_lse  0.2189 vs 0.4790  -0.2600 [-0.2677,-0.2524] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1709, 'S_lse': 0.1581, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'loss': 6}
+w2_voc12seg_resnet50_tau0.5.json  tau=0.5 basis=bank  cert sep(1-corr)=0.0337 maxNS=0.749 n_pairs=3  mtime 2026-09-23 21:24:43
+   pointing, strict N_lse  0.6646 vs 0.6591  +0.0056 [-0.0042,+0.0154] tie
+   pointing, strict S_lse  0.6707 vs 0.6591  +0.0116 [+0.0028,+0.0210] win
+   pointing, 15 px N_lse  0.9106 vs 0.9054  +0.0051 [-0.0009,+0.0112] tie
+   pointing, 15 px S_lse  0.9101 vs 0.9054  +0.0047 [-0.0014,+0.0107] tie
+   peak-mask IoU   N_lse  0.2763 vs 0.4790  -0.2026 [-0.2099,-0.1955] loss
+   peak-mask IoU   S_lse  0.4769 vs 0.4790  -0.0021 [-0.0037,-0.0003] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1776, 'S_lse': 0.439, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'tie': 3, 'win': 1, 'loss': 2}
+w2_voc12seg_resnet50.json  tau=1 basis=bank  cert sep(1-corr)=0.1911 maxNS=0.835 n_pairs=3  mtime 2026-09-23 20:07:17
+   pointing, strict N_lse  0.6670 vs 0.6591  +0.0079 [-0.0019,+0.0182] tie
+   pointing, strict S_lse  0.6712 vs 0.6591  +0.0121 [+0.0028,+0.0214] win
+   pointing, 15 px N_lse  0.9082 vs 0.9054  +0.0028 [-0.0033,+0.0084] tie
+   pointing, 15 px S_lse  0.9106 vs 0.9054  +0.0051 [-0.0009,+0.0112] tie
+   peak-mask IoU   N_lse  0.2622 vs 0.4790  -0.2167 [-0.2241,-0.2095] loss
+   peak-mask IoU   S_lse  0.4785 vs 0.4790  -0.0005 [-0.0021,+0.0012] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1773, 'S_lse': 0.4508, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'tie': 3, 'win': 1, 'loss': 2}
+w2_voc12seg_resnet50_tau2.json  tau=2 basis=bank  cert sep(1-corr)=0.4265 maxNS=0.874 n_pairs=3  mtime 2026-09-23 21:25:49
+   pointing, strict N_lse  0.6660 vs 0.6591  +0.0070 [-0.0033,+0.0177] tie
+   pointing, strict S_lse  0.6712 vs 0.6591  +0.0121 [+0.0028,+0.0214] win
+   pointing, 15 px N_lse  0.9041 vs 0.9054  -0.0014 [-0.0075,+0.0047] tie
+   pointing, 15 px S_lse  0.9106 vs 0.9054  +0.0051 [-0.0009,+0.0112] tie
+   peak-mask IoU   N_lse  0.2572 vs 0.4790  -0.2218 [-0.2292,-0.2145] loss
+   peak-mask IoU   S_lse  0.4788 vs 0.4790  -0.0002 [-0.0018,+0.0015] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1763, 'S_lse': 0.4532, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'tie': 3, 'win': 1, 'loss': 2}
+w2_voc12seg_resnet50_tau8.json  tau=8 basis=bank  cert sep(1-corr)=0.8531 maxNS=0.964 n_pairs=3  mtime 2026-09-23 21:26:52
+   pointing, strict N_lse  0.6595 vs 0.6591  +0.0005 [-0.0107,+0.0116] tie
+   pointing, strict S_lse  0.4425 vs 0.6591  -0.2166 [-0.2361,-0.1975] loss
+   pointing, 15 px N_lse  0.8933 vs 0.9054  -0.0121 [-0.0196,-0.0047] loss
+   pointing, 15 px S_lse  0.6143 vs 0.9054  -0.2911 [-0.3121,-0.2711] loss
+   peak-mask IoU   N_lse  0.2539 vs 0.4790  -0.2250 [-0.2326,-0.2176] loss
+   peak-mask IoU   S_lse  0.3762 vs 0.4790  -0.1028 [-0.1105,-0.0950] loss
+   PxAP {'collapsed': 0.4642, 'N_lse': 0.1768, 'S_lse': 0.3273, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'tie': 1, 'loss': 5}
+w2_voc12seg_resnet50_meancell.json  tau=1 basis=meancell  cert sep(1-corr)=0.1911 maxNS=0.835 n_pairs=3  mtime 2026-09-23 21:20:17
+   pointing, strict N_lse  0.6735 vs 0.6712  +0.0023 [-0.0028,+0.0079] tie
+   pointing, strict S_lse  0.6716 vs 0.6712  +0.0005 [+0.0000,+0.0014] tie
+   pointing, 15 px N_lse  0.9129 vs 0.9106  +0.0023 [+0.0000,+0.0051] tie
+   pointing, 15 px S_lse  0.9110 vs 0.9106  +0.0005 [+0.0000,+0.0014] tie
+   peak-mask IoU   N_lse  0.2674 vs 0.4880  -0.2206 [-0.2279,-0.2135] loss
+   peak-mask IoU   S_lse  0.4865 vs 0.4880  -0.0015 [-0.0021,-0.0010] loss
+   PxAP {'collapsed': 0.4872, 'N_lse': 0.2246, 'S_lse': 0.5831, 'cam': 0.4872, 'center': 0.321}
+   tally vs collapsed: {'tie': 4, 'loss': 2}
+  -> <repo>\analyses/localisation_reanalysis\out\t4_tau.json

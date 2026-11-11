@@ -1,0 +1,216 @@
+{
+ "n": 984,
+ "overall": {
+  "avgbox_lopo": 0.39735772357723576,
+  "avgbox_cf5": 0.3851626016260163,
+  "cam": 0.19004065040650406
+ },
+ "check_overall": {
+  "t6_lopo": {
+   "mean": 0.39735772357723576,
+   "lo": 0.366869918699187,
+   "hi": 0.42784552845528456,
+   "n": 984
+  },
+  "t6_cf5": {
+   "mean": 0.3851626016260163,
+   "lo": 0.3556910569105691,
+   "hi": 0.41565040650406504,
+   "n": 984
+  },
+  "t6_cam": {
+   "mean": 0.19004065040650406,
+   "lo": 0.16565040650406504,
+   "hi": 0.21443089430894308,
+   "n": 984
+  }
+ },
+ "per_finding": {
+  "Atelectasis": {
+   "n": 180,
+   "gt_frac": 0.03195784173044217,
+   "avgbox_cf5": 0.17777777777777778,
+   "avgbox_lopo": 0.18888888888888888,
+   "cam": 0.09444444444444444,
+   "best_model_map": "N_lse-8.0_1x1",
+   "best_model_ties": [
+    "N_lse-8.0_1x1"
+   ],
+   "best_model_hit": 0.12222222222222222,
+   "center": 0.05555555555555555,
+   "random": 0.011111111111111112,
+   "actnorm": 0.08333333333333333,
+   "gradcam_gap": 0.09444444444444444,
+   "collapsed_1x1": 0.09444444444444444,
+   "check_t6_lopo": 0.18888888888888888,
+   "check_t6_cam": 0.09444444444444444,
+   "check_n": 180,
+   "best_of_18": "N_lse-8.0_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.17777777777777778
+  },
+  "Cardiomegaly": {
+   "n": 146,
+   "gt_frac": 0.17576978351272016,
+   "avgbox_cf5": 1.0,
+   "avgbox_lopo": 1.0,
+   "cam": 0.6986301369863014,
+   "best_model_map": "N_lse-8.0_1x1",
+   "best_model_ties": [
+    "N_lse-8.0_1x1"
+   ],
+   "best_model_hit": 0.910958904109589,
+   "center": 0.9726027397260274,
+   "random": 0.1643835616438356,
+   "actnorm": 0.8493150684931506,
+   "gradcam_gap": 0.6712328767123288,
+   "collapsed_1x1": 0.8493150684931506,
+   "check_t6_lopo": 1.0,
+   "check_t6_cam": 0.6986301369863014,
+   "check_n": 146,
+   "best_of_18": "center",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 1.0
+  },
+  "Effusion": {
+   "n": 153,
+   "gt_frac": 0.06868346296852074,
+   "avgbox_cf5": 0.27450980392156865,
+   "avgbox_lopo": 0.3333333333333333,
+   "cam": 0.06535947712418301,
+   "best_model_map": "S_lse-8.0_1x1",
+   "best_model_ties": [
+    "S_lse-8.0_1x1"
+   ],
+   "best_model_hit": 0.10457516339869281,
+   "center": 0.026143790849673203,
+   "random": 0.0392156862745098,
+   "actnorm": 0.0784313725490196,
+   "gradcam_gap": 0.06535947712418301,
+   "collapsed_1x1": 0.0392156862745098,
+   "check_t6_lopo": 0.3333333333333333,
+   "check_t6_cam": 0.06535947712418301,
+   "check_n": 153,
+   "best_of_18": "S_lse-8.0_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.27450980392156865
+  },
+  "Infiltration": {
+   "n": 123,
+   "gt_frac": 0.09670269594118136,
+   "avgbox_cf5": 0.45528455284552843,
+   "avgbox_lopo": 0.45528455284552843,
+   "cam": 0.2601626016260163,
+   "best_model_map": "N_lse-8.0_1x1",
+   "best_model_ties": [
+    "N_lse-8.0_1x1"
+   ],
+   "best_model_hit": 0.35772357723577236,
+   "center": 0.22764227642276422,
+   "random": 0.08943089430894309,
+   "actnorm": 0.2764227642276423,
+   "gradcam_gap": 0.25203252032520324,
+   "collapsed_1x1": 0.24390243902439024,
+   "check_t6_lopo": 0.45528455284552843,
+   "check_t6_cam": 0.2601626016260163,
+   "check_n": 123,
+   "best_of_18": "N_lse-8.0_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.45528455284552843
+  },
+  "Mass": {
+   "n": 85,
+   "gt_frac": 0.042469097013805523,
+   "avgbox_cf5": 0.2823529411764706,
+   "avgbox_lopo": 0.2823529411764706,
+   "cam": 0.17647058823529413,
+   "best_model_map": "collapsedS_1x1",
+   "best_model_ties": [
+    "collapsedS_1x1",
+    "collapsed_1x1"
+   ],
+   "best_model_hit": 0.25882352941176473,
+   "center": 0.10588235294117647,
+   "random": 0.047058823529411764,
+   "actnorm": 0.2235294117647059,
+   "gradcam_gap": 0.17647058823529413,
+   "collapsed_1x1": 0.25882352941176473,
+   "check_t6_lopo": 0.2823529411764706,
+   "check_t6_cam": 0.17647058823529413,
+   "check_n": 85,
+   "best_of_18": "collapsedS_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.2823529411764706
+  },
+  "Nodule": {
+   "n": 79,
+   "gt_frac": 0.0052430634041591324,
+   "avgbox_cf5": 0.05063291139240506,
+   "avgbox_lopo": 0.012658227848101266,
+   "cam": 0.02531645569620253,
+   "best_model_map": "N_lse-8.0_1x1",
+   "best_model_ties": [
+    "N_lse-8.0_1x1"
+   ],
+   "best_model_hit": 0.0379746835443038,
+   "center": 0.0,
+   "random": 0.012658227848101266,
+   "actnorm": 0.0,
+   "gradcam_gap": 0.012658227848101266,
+   "collapsed_1x1": 0.0,
+   "check_t6_lopo": 0.012658227848101266,
+   "check_t6_cam": 0.02531645569620253,
+   "check_n": 79,
+   "best_of_18": "N_lse-8.0_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.05063291139240506
+  },
+  "Pneumonia": {
+   "n": 120,
+   "gt_frac": 0.09432447783801019,
+   "avgbox_cf5": 0.38333333333333336,
+   "avgbox_lopo": 0.4166666666666667,
+   "cam": 0.016666666666666666,
+   "best_model_map": "N_lse-8.0_3x3",
+   "best_model_ties": [
+    "N_lse-8.0_3x3"
+   ],
+   "best_model_hit": 0.2833333333333333,
+   "center": 0.14166666666666666,
+   "random": 0.08333333333333333,
+   "actnorm": 0.23333333333333334,
+   "gradcam_gap": 0.016666666666666666,
+   "collapsed_1x1": 0.16666666666666666,
+   "check_t6_lopo": 0.4166666666666667,
+   "check_t6_cam": 0.016666666666666666,
+   "check_n": 120,
+   "best_of_18": "N_lse-8.0_3x3",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.38333333333333336
+  },
+  "Pneumothorax": {
+   "n": 98,
+   "gt_frac": 0.05219911625364431,
+   "avgbox_cf5": 0.29591836734693877,
+   "avgbox_lopo": 0.29591836734693877,
+   "cam": 0.07142857142857142,
+   "best_model_map": "N_lse8.0_1x1",
+   "best_model_ties": [
+    "N_lse8.0_1x1",
+    "S_lse8.0_3x3"
+   ],
+   "best_model_hit": 0.07142857142857142,
+   "center": 0.01020408163265306,
+   "random": 0.04081632653061224,
+   "actnorm": 0.04081632653061224,
+   "gradcam_gap": 0.02040816326530612,
+   "collapsed_1x1": 0.04081632653061224,
+   "check_t6_lopo": 0.29591836734693877,
+   "check_t6_cam": 0.07142857142857142,
+   "check_n": 98,
+   "best_of_18": "N_lse8.0_1x1",
+   "best_of_all": "avgbox_cf5",
+   "best_of_all_value": 0.29591836734693877
+  }
+ }
+}

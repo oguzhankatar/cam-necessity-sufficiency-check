@@ -1,0 +1,64 @@
+== module_class
+  n_distinct_all           33
+  commonest_all            27
+  n_distinct_dev           23
+  n_distinct_heldout       27
+  n_heldout_seen_in_dev    71
+  n_heldout_novel          11
+  n_novel_traces           10
+  novel: ['inception_next_tiny', 'volo_d1_224', 'resnetv2_50', 'repvit_m1_0', 'efficientvit_b1', 'efficientvit_m1', 'starnet_s1', 'shvit_s1', 'fasternet_t0', 'dla34', 'hgnet_tiny']
+  4-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 77}, 'seen': {'n': 71, 'rule': 71, 'rule_v2b': 71, 'majority': 51, 'nearest_trace': 71}, 'novel': {'n': 11, 'rule': 10, 'rule_v2b': 11, 'majority': 6, 'nearest_trace': 6}, 'heldout_minus_vacuous': {'n': 76, 'rule': 75, 'rule_v2b': 76, 'majority': 57, 'nearest_trace': 71}}
+  3-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 77}, 'seen': {'n': 71, 'rule': 71, 'rule_v2b': 71, 'majority': 51, 'nearest_trace': 71}, 'novel': {'n': 11, 'rule': 10, 'rule_v2b': 11, 'majority': 6, 'nearest_trace': 6}, 'dev': {'n': 65, 'rule': 65, 'rule_v2b': 65, 'majority': 32, 'nearest_trace': 65}}
+  per-trace: 26/27 traces all-agree; novel 9/10; majority 12/27 (novel 5); nearest 22/27
+  gt conflicts seen-vs-dev: []
+     {'model': 'inception_next_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'volo_d1_224', 'verdict': 'DEGENERATE', 'gt': 'HARD-BLOCKED', 'agree': False, 'nearest': 'ADDITIVE'}
+     {'model': 'resnetv2_50', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'repvit_m1_0', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'efficientvit_b1', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'efficientvit_m1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'starnet_s1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'shvit_s1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'fasternet_t0', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'dla34', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'hgnet_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+== agg_category
+  n_distinct_all           33
+  commonest_all            27
+  n_distinct_dev           23
+  n_distinct_heldout       27
+  n_heldout_seen_in_dev    71
+  n_heldout_novel          11
+  n_novel_traces           10
+  novel: ['inception_next_tiny', 'volo_d1_224', 'resnetv2_50', 'repvit_m1_0', 'efficientvit_b1', 'efficientvit_m1', 'starnet_s1', 'shvit_s1', 'fasternet_t0', 'dla34', 'hgnet_tiny']
+  4-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 77}, 'seen': {'n': 71, 'rule': 71, 'rule_v2b': 71, 'majority': 51, 'nearest_trace': 71}, 'novel': {'n': 11, 'rule': 10, 'rule_v2b': 11, 'majority': 6, 'nearest_trace': 6}, 'heldout_minus_vacuous': {'n': 76, 'rule': 75, 'rule_v2b': 76, 'majority': 57, 'nearest_trace': 71}}
+  3-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 77}, 'seen': {'n': 71, 'rule': 71, 'rule_v2b': 71, 'majority': 51, 'nearest_trace': 71}, 'novel': {'n': 11, 'rule': 10, 'rule_v2b': 11, 'majority': 6, 'nearest_trace': 6}, 'dev': {'n': 65, 'rule': 65, 'rule_v2b': 65, 'majority': 32, 'nearest_trace': 65}}
+  per-trace: 26/27 traces all-agree; novel 9/10; majority 12/27 (novel 5); nearest 22/27
+  gt conflicts seen-vs-dev: []
+     {'model': 'inception_next_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'volo_d1_224', 'verdict': 'DEGENERATE', 'gt': 'HARD-BLOCKED', 'agree': False, 'nearest': 'ADDITIVE'}
+     {'model': 'resnetv2_50', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'repvit_m1_0', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'efficientvit_b1', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'efficientvit_m1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'starnet_s1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'shvit_s1', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'fasternet_t0', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'dla34', 'verdict': 'IN-SCOPE', 'gt': 'ADDITIVE', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'hgnet_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+== kinds_only
+  n_distinct_all           22
+  commonest_all            35
+  n_distinct_dev           19
+  n_distinct_heldout       17
+  n_heldout_seen_in_dev    79
+  n_heldout_novel          3
+  n_novel_traces           3
+  novel: ['inception_next_tiny', 'efficientvit_b1', 'hgnet_tiny']
+  4-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 78}, 'seen': {'n': 79, 'rule': 78, 'rule_v2b': 79, 'majority': 57, 'nearest_trace': 78}, 'novel': {'n': 3, 'rule': 3, 'rule_v2b': 3, 'majority': 0, 'nearest_trace': 0}, 'heldout_minus_vacuous': {'n': 76, 'rule': 75, 'rule_v2b': 76, 'majority': 57, 'nearest_trace': 72}}
+  3-way {'all_heldout': {'n': 82, 'rule': 81, 'rule_v2b': 82, 'majority': 57, 'nearest_trace': 78}, 'seen': {'n': 79, 'rule': 78, 'rule_v2b': 79, 'majority': 57, 'nearest_trace': 78}, 'novel': {'n': 3, 'rule': 3, 'rule_v2b': 3, 'majority': 0, 'nearest_trace': 0}, 'dev': {'n': 65, 'rule': 65, 'rule_v2b': 65, 'majority': 32, 'nearest_trace': 65}}
+  per-trace: 16/17 traces all-agree; novel 3/3; majority 4/17 (novel 0); nearest 13/17
+  gt conflicts seen-vs-dev: [('volo_d1_224', 'HARD-BLOCKED', ['VACUOUS', 'VACUOUS'])]
+     {'model': 'inception_next_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'efficientvit_b1', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}
+     {'model': 'hgnet_tiny', 'verdict': 'NONLIN-BLOCKED', 'gt': 'HARD-BLOCKED', 'agree': True, 'nearest': 'ADDITIVE'}

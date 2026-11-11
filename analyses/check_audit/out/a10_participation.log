@@ -1,0 +1,66 @@
+Effective number of cells (participation ratio on |m|), N vs S, per run and arm
+
+wsol coco17_resnet50              aggregator     tau     1  T 196  N_eff    5.067  S_eff   20.348  more spread: sufficiency
+wsol coco17_resnet50              aggregator_b3  tau     1  T 196  N_eff   18.534  S_eff   42.595  more spread: sufficiency
+wsol coco17_vgg16gap              aggregator     tau     1  T 196  N_eff    4.696  S_eff   11.667  more spread: sufficiency
+wsol coco17_vgg16gap              aggregator_b3  tau     1  T 196  N_eff   20.471  S_eff   39.264  more spread: sufficiency
+wsol coco17_vitb16                aggregator     tau     1  T 196  N_eff   22.992  S_eff   61.412  more spread: sufficiency
+wsol coco17_vitb16                aggregator_b3  tau     1  T 196  N_eff   55.905  S_eff  113.661  more spread: sufficiency
+wsol coco17_vitb16                relocation     tau     1  T 196  N_eff  122.081  S_eff  135.801  more spread: sufficiency
+wsol coco17_vitb16                relocation_b3  tau     1  T 196  N_eff  130.731  S_eff  150.387  more spread: sufficiency
+wsol cub_resnet50                 aggregator     tau     1  T 196  N_eff    1.603  S_eff   29.305  more spread: sufficiency
+wsol cub_resnet50                 aggregator_b3  tau     1  T 196  N_eff    7.789  S_eff   31.043  more spread: sufficiency
+wsol cub_resnet50_meancell        aggregator     tau     1  T 196  N_eff    1.167  S_eff   71.986  more spread: sufficiency
+wsol cub_resnet50_meancell        aggregator_b3  tau     1  T 196  N_eff    6.985  S_eff   40.076  more spread: sufficiency
+wsol cub_resnet50_tau-2           aggregator     tau    -2  T 196  N_eff   61.726  S_eff    5.731  more spread: necessity
+wsol cub_resnet50_tau-2           aggregator_b3  tau    -2  T 196  N_eff   73.487  S_eff   19.473  more spread: necessity
+wsol cub_resnet50_tau-8           aggregator     tau    -8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol cub_resnet50_tau-8           aggregator_b3  tau    -8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol cub_resnet50_tau2            aggregator     tau     2  T 196  N_eff    1.511  S_eff   29.759  more spread: sufficiency
+wsol cub_resnet50_tau2            aggregator_b3  tau     2  T 196  N_eff    7.540  S_eff   40.587  more spread: sufficiency
+wsol cub_resnet50_tau8            aggregator     tau     8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol cub_resnet50_tau8            aggregator_b3  tau     8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol cub_vgg16gap                 aggregator     tau     1  T 196  N_eff    1.666  S_eff   11.316  more spread: sufficiency
+wsol cub_vgg16gap                 aggregator_b3  tau     1  T 196  N_eff    9.346  S_eff   25.498  more spread: sufficiency
+wsol cub_vitb16                   aggregator     tau     1  T 196  N_eff   13.471  S_eff  161.123  more spread: sufficiency
+wsol cub_vitb16                   aggregator_b3  tau     1  T 196  N_eff   49.735  S_eff  189.223  more spread: sufficiency
+wsol cub_vitb16                   relocation     tau     1  T 196  N_eff  172.767  S_eff  177.300  more spread: sufficiency
+wsol cub_vitb16                   relocation_b3  tau     1  T 196  N_eff  176.890  S_eff  180.924  more spread: sufficiency
+wsol voc12_resnet50               aggregator     tau     1  T 196  N_eff    7.031  S_eff   31.238  more spread: sufficiency
+wsol voc12_resnet50               aggregator_b3  tau     1  T 196  N_eff   16.814  S_eff   38.505  more spread: sufficiency
+wsol voc12_vgg16gap               aggregator     tau     1  T 196  N_eff    5.769  S_eff   17.979  more spread: sufficiency
+wsol voc12_vgg16gap               aggregator_b3  tau     1  T 196  N_eff   17.881  S_eff   35.885  more spread: sufficiency
+wsol voc12_vitb16                 aggregator     tau     1  T 196  N_eff   15.588  S_eff   98.083  more spread: sufficiency
+wsol voc12_vitb16                 aggregator_b3  tau     1  T 196  N_eff   40.642  S_eff  137.204  more spread: sufficiency
+wsol voc12_vitb16                 relocation     tau     1  T 196  N_eff  126.681  S_eff  142.610  more spread: sufficiency
+wsol voc12_vitb16                 relocation_b3  tau     1  T 196  N_eff  137.375  S_eff  155.638  more spread: sufficiency
+wsol voc12seg_resnet50            aggregator     tau     1  T 196  N_eff    6.349  S_eff   30.794  more spread: sufficiency
+wsol voc12seg_resnet50            aggregator_b3  tau     1  T 196  N_eff   15.875  S_eff   38.342  more spread: sufficiency
+wsol voc12seg_resnet50_meancell   aggregator     tau     1  T 196  N_eff    1.317  S_eff   44.094  more spread: sufficiency
+wsol voc12seg_resnet50_meancell   aggregator_b3  tau     1  T 196  N_eff    8.096  S_eff   44.424  more spread: sufficiency
+wsol voc12seg_resnet50_tau-0.5    aggregator     tau  -0.5  T 196  N_eff   44.807  S_eff   24.603  more spread: necessity
+wsol voc12seg_resnet50_tau-0.5    aggregator_b3  tau  -0.5  T 196  N_eff   96.606  S_eff   64.931  more spread: necessity
+wsol voc12seg_resnet50_tau-2      aggregator     tau    -2  T 196  N_eff   35.929  S_eff    7.086  more spread: necessity
+wsol voc12seg_resnet50_tau-2      aggregator_b3  tau    -2  T 196  N_eff   59.701  S_eff   38.894  more spread: necessity
+wsol voc12seg_resnet50_tau-8      aggregator     tau    -8  T 196  N_eff   35.291  S_eff    6.409  more spread: necessity
+wsol voc12seg_resnet50_tau-8      aggregator_b3  tau    -8  T 196  N_eff   50.908  S_eff   22.887  more spread: necessity
+wsol voc12seg_resnet50_tau0.5     aggregator     tau   0.5  T 196  N_eff    6.679  S_eff   29.709  more spread: sufficiency
+wsol voc12seg_resnet50_tau0.5     aggregator_b3  tau   0.5  T 196  N_eff   20.188  S_eff   46.953  more spread: sufficiency
+wsol voc12seg_resnet50_tau2       aggregator     tau     2  T 196  N_eff    6.235  S_eff   31.131  more spread: sufficiency
+wsol voc12seg_resnet50_tau2       aggregator_b3  tau     2  T 196  N_eff   14.973  S_eff   38.805  more spread: sufficiency
+wsol voc12seg_resnet50_tau8       aggregator     tau     8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol voc12seg_resnet50_tau8       aggregator_b3  tau     8  T 196  N_eff      nan  S_eff      nan  more spread: non-finite
+wsol voc12seg_vgg16gap            aggregator     tau     1  T 196  N_eff    5.084  S_eff   17.686  more spread: sufficiency
+wsol voc12seg_vgg16gap            aggregator_b3  tau     1  T 196  N_eff   16.877  S_eff   35.281  more spread: sufficiency
+wsol voc12seg_vitb16              aggregator     tau     1  T 196  N_eff   14.339  S_eff  101.869  more spread: sufficiency
+wsol voc12seg_vitb16              aggregator_b3  tau     1  T 196  N_eff   38.450  S_eff  139.383  more spread: sufficiency
+wsol voc12seg_vitb16              relocation     tau     1  T 196  N_eff  127.352  S_eff  144.401  more spread: sufficiency
+wsol voc12seg_vitb16              relocation_b3  tau     1  T 196  N_eff  138.546  S_eff  156.874  more spread: sufficiency
+medical aggregator T=8.0 1x1       T 49  n 984  N_eff    7.366  S_eff    8.298  more spread: sufficiency  non-finite {'N': 0, 'S': 0}  zero {'N': 0, 'S': 0}
+medical aggregator T=8.0 3x3       T 49  n 984  N_eff   18.480  S_eff   23.212  more spread: sufficiency  non-finite {'N': 0, 'S': 0}  zero {'N': 0, 'S': 0}
+medical aggregator T=-8.0 1x1      T 49  n 984  N_eff   15.114  S_eff    6.045  more spread: necessity  non-finite {'N': 0, 'S': 0}  zero {'N': 0, 'S': 0}
+medical aggregator T=-8.0 3x3      T 49  n 984  N_eff   30.717  S_eff   18.059  more spread: necessity  non-finite {'N': 0, 'S': 0}  zero {'N': 0, 'S': 0}
+
+non-finite WSOL concentration: {"cub_resnet50_tau-8": {"tau": -8.0, "maps": ["N_lse", "N_lse_b3", "S_lse", "S_lse_b3"]}, "cub_resnet50_tau8": {"tau": 8.0, "maps": ["N_lse", "N_lse_b3", "S_lse", "S_lse_b3"]}, "voc12seg_resnet50_tau8": {"tau": 8.0, "maps": ["N_lse", "N_lse_b3", "S_lse", "S_lse_b3"]}}
+non-finite medical maps: {}
+ns_lse underflow demo: {"exp_underflow_limit": 744.4400719213812, "cases": {"tau=8": {"score_gap": 93.98555908007438, "N_finite_A_dominated": false, "S_finite_A_dominated": true, "N_finite_B_dominated": true, "S_finite_B_dominated": false}, "tau=-8": {"score_gap": 93.98555908007438, "N_finite_A_dominated": false, "S_finite_A_dominated": true, "N_finite_B_dominated": true, "S_finite_B_dominated": false}}, "note": "ns_lse: M = max(tau*a, tau*beta); Sa = sum exp(tau*a - M) and Sb likewise. When the other map holds the maximum by more than the exp underflow limit, every term underflows to 0 and np.log(Sa) / np.log(Sb) is -inf (EA and EB are guarded by np.finfo.tiny, Sa and Sb are not). One such record makes the per-record mean of the concentration NaN."}

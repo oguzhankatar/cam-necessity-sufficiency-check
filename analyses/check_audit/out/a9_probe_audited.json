@@ -1,0 +1,569 @@
+{
+ "summary": {
+  "n": 32,
+  "agree_check": 18,
+  "agree_check_stored": 18,
+  "frozen_code_reproduced": true,
+  "agree_audited": 22,
+  "agree_audited_with_reason": 20,
+  "repaired": [
+   "P05",
+   "P19",
+   "P25",
+   "P26"
+  ],
+  "broken": [],
+  "still_wrong": [
+   "P07",
+   "P09",
+   "P11",
+   "P12",
+   "P16",
+   "P21",
+   "P23",
+   "P28",
+   "P29",
+   "P32"
+  ],
+  "right_label_wrong_reason": [
+   "P08",
+   "P10"
+  ],
+  "rules_fired": {
+   "P05": [
+    "max-over-tokens rule"
+   ],
+   "P19": [
+    "unlisted-normalisation rule"
+   ],
+   "P25": [
+    "max-over-tokens rule"
+   ],
+   "P26": [
+    "max-over-tokens rule"
+   ]
+  },
+  "timm": "1.0.27",
+  "torch": "2.6.0+cu124"
+ },
+ "rows": [
+  {
+   "id": "P01",
+   "probe": "mean as a module (AdaptiveAvgPool2d) -> Flatten -> Linear",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P02",
+   "probe": "mean as a tensor op x.mean((2,3)) -> Linear, no declared pool",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P03",
+   "probe": "max pool as a module (AdaptiveMaxPool2d) -> Linear",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "aggregator-blocked",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "AGG-BLOCKED",
+   "frozen_code_now": "AGG-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P04",
+   "probe": "max pool as timm SelectAdaptivePool2d(pool_type='max') -> Linear",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "aggregator-blocked",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "AGG-BLOCKED",
+   "frozen_code_now": "AGG-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P05",
+   "probe": "max as a tensor op x.amax((2,3)) -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [
+    "max-over-tokens rule"
+   ],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P06",
+   "probe": "max as a tensor op, model declares global_pool='max'",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "aggregator-blocked",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "AGG-BLOCKED",
+   "frozen_code_now": "AGG-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=max)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P07",
+   "probe": "attention pool module without MLP (timm AttentionPoolLatent, mlp=None) -> Linear; global_pool='map'",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=map)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P08",
+   "probe": "attention pool + LayerNorm + MLP (timm AttentionPoolLatent as in SigLIP 'map') -> Linear",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "nonlinearity-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=map)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P09",
+   "probe": "attention pool written as tensor ops (Linear k, v; softmax over cells) -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P10",
+   "probe": "attention pool (tensor ops) followed by an MLP (Linear-GELU-Linear)",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "nonlinearity-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P11",
+   "probe": "stack of 3 class tokens reduced by Conv1d(3,1,1) -> Linear (CoaT head)",
+   "design": "class-token",
+   "measured": "VACUOUS",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "the aggregator is a dense layer (aggregate(Conv1d)); check that the axis it reduces is the spatial one."
+   ]
+  },
+  {
+   "id": "P12",
+   "probe": "stack of 3 class tokens reduced by Linear(3,1) over the token axis -> Linear",
+   "design": "class-token",
+   "measured": "VACUOUS",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P13",
+   "probe": "single class token x[:, 0] -> Linear, global_pool='token'",
+   "design": "class-token",
+   "measured": "VACUOUS",
+   "verdict_check": "class-token",
+   "verdict": "class-token",
+   "rules_fired": [],
+   "frozen_code_stored": "DEGENERATE",
+   "frozen_code_now": "DEGENERATE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=token)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P14",
+   "probe": "LayerNorm after the mean (AdaptiveAvgPool2d -> LayerNorm -> Linear)",
+   "design": "normalisation-blocked",
+   "measured": "NORM-ONLY",
+   "verdict_check": "normalisation-blocked",
+   "verdict": "normalisation-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NORM-BLOCKED",
+   "frozen_code_now": "NORM-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P15",
+   "probe": "LayerNorm before the mean, per cell (LayerNorm2d -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P16",
+   "probe": "LayerNorm before the mean, per token, mean as a tensor op (LayerNorm -> x.mean(1) -> Linear)",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "normalisation-blocked",
+   "verdict": "normalisation-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NORM-BLOCKED",
+   "frozen_code_now": "NORM-BLOCKED",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P17",
+   "probe": "RMSNorm after the mean (timm RmsNorm)",
+   "design": "normalisation-blocked",
+   "measured": "NORM-ONLY",
+   "verdict_check": "normalisation-blocked",
+   "verdict": "normalisation-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NORM-BLOCKED",
+   "frozen_code_now": "NORM-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P18",
+   "probe": "RMSNorm after the mean (torch nn.RMSNorm)",
+   "design": "normalisation-blocked",
+   "measured": "NORM-ONLY",
+   "verdict_check": "normalisation-blocked",
+   "verdict": "normalisation-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NORM-BLOCKED",
+   "frozen_code_now": "NORM-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P19",
+   "probe": "SimpleNorm2d after the mean (ConvNeXt-Zepto-RMS head: pool -> SimpleNorm2d -> Linear)",
+   "design": "normalisation-blocked",
+   "measured": "NORM-ONLY",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "normalisation-blocked",
+   "rules_fired": [
+    "unlisted-normalisation rule"
+   ],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": false,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P20",
+   "probe": "per-cell MLP before the mean (Conv1x1-GELU-Conv1x1 -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P21",
+   "probe": "per-token MLP before a tensor-op mean (Linear-GELU-Linear -> x.mean(1) -> Linear)",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "nonlinearity-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P22",
+   "probe": "GeM pooling as a module (p = 3) -> Linear",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "aggregator-blocked",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "AGG-BLOCKED",
+   "frozen_code_now": "AGG-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P23",
+   "probe": "GeM pooling as tensor ops -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P24",
+   "probe": "mixed avg+max concat as timm SelectAdaptivePool2d('catavgmax') -> Linear",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "aggregator-blocked",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "AGG-BLOCKED",
+   "frozen_code_now": "AGG-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P25",
+   "probe": "mixed avg+max concat as tensor ops -> Linear, no declared pool",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [
+    "max-over-tokens rule"
+   ],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P26",
+   "probe": "per-cell class scores (Conv1x1) pooled by log-sum-exp over cells (tensor op), T = 1",
+   "design": "aggregator-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "aggregator-blocked",
+   "rules_fired": [
+    "max-over-tokens rule"
+   ],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=None)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ]
+  },
+  {
+   "id": "P27",
+   "probe": "linear cell mixing before the mean (Conv3x3, no activation -> AdaptiveAvgPool2d -> Linear)",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P28",
+   "probe": "nonlinear cell mixing before the mean (Conv3x3 -> ReLU -> AdaptiveAvgPool2d -> Linear)",
+   "design": "nonlinearity-blocked (before the aggregator)",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": []
+  },
+  {
+   "id": "P29",
+   "probe": "self-attention over cells before the mean (nn.MultiheadAttention -> AdaptiveAvgPool2d -> Linear)",
+   "design": "nonlinearity-blocked (before the aggregator)",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": []
+  },
+  {
+   "id": "P30",
+   "probe": "MLP tail (AdaptiveAvgPool2d -> Linear -> GELU -> Linear)",
+   "design": "nonlinearity-blocked",
+   "measured": "HARD-BLOCKED",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "nonlinearity-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P31",
+   "probe": "BatchNorm1d (inference) after the mean -> Linear",
+   "design": "degenerate",
+   "measured": "ADDITIVE",
+   "verdict_check": "degenerate",
+   "verdict": "degenerate",
+   "rules_fired": [],
+   "frozen_code_stored": "IN-SCOPE",
+   "frozen_code_now": "IN-SCOPE",
+   "agree_check": true,
+   "agree_audited": true,
+   "reason_ok_audited": true,
+   "notes": []
+  },
+  {
+   "id": "P32",
+   "probe": "ReLU in the tail that is never crossed on the reachable set (Linear bias +50 -> ReLU -> Linear)",
+   "design": "degenerate on the reachable set (inactive nonlinearity)",
+   "measured": "ADDITIVE",
+   "verdict_check": "nonlinearity-blocked",
+   "verdict": "nonlinearity-blocked",
+   "rules_fired": [],
+   "frozen_code_stored": "NONLIN-BLOCKED",
+   "frozen_code_now": "NONLIN-BLOCKED",
+   "agree_check": false,
+   "agree_audited": false,
+   "reason_ok_audited": false,
+   "notes": []
+  }
+ ]
+}

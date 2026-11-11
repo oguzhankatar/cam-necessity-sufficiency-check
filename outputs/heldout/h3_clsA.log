@@ -1,0 +1,14 @@
+=== PART A: head site, literal fp64 loop ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+vit_base_patch16_224                 T=197  pfx=1 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00
+deit3_small_patch16_224              T=197  pfx=1 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00
+cait_xxs24_224                       T=197  pfx=0 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00
+pit_s_224                            T=1    pfx=0 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00
+crossvit_9_240                       SKIP forward_features returned list
+convit_tiny                          T=197  pfx=0 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00
+xcit_tiny_12_p16_224                 T=197  pfx=0 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+1.000000e+00
+tnt_s_patch16_224                    T=197  pfx=1 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00
+vit_small_patch16_224                T=197  pfx=1 nact=1    additive=True  vacuous=True  maxNS=0.00e+00 Rh=0.00e+00 tele_all=+1.000000 tele_spatial=+0.000000e+00
+vit_betwixt_patch16_reg4_gap_256     T=260  pfx=4 nact=256  additive=False vacuous=False maxNS=7.26e-01 Rh=1.43e-01 tele_all=+0.809776 tele_spatial=+8.097756e-01
+vit_medium_patch16_reg4_gap_256      T=260  pfx=4 nact=256  additive=False vacuous=False maxNS=7.00e-01 Rh=1.01e-01 tele_all=+0.882259 tele_spatial=+8.822586e-01
+  -> <repo>\outputs\heldout\h3_cls_A.json

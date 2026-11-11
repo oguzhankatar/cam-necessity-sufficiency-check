@@ -1,0 +1,86 @@
+{
+ "tau+1_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 8.992806499463768e-15,
+  "max_normalised_diff_S": 4.996003610813204e-16,
+  "frac_cells_below_1em12_of_max_N": 0.3711734693877551
+ },
+ "tau+1_3x3": {
+  "argmax_agree_N": 0.9955357142857143,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 0.29471910422163144,
+  "max_normalised_diff_S": 0.9381887690150744,
+  "frac_cells_below_1em12_of_max_N": 0.1826712827988338
+ },
+ "tau-1_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 2.1094237467877974e-15,
+  "max_normalised_diff_S": 3.219646771412954e-15,
+  "frac_cells_below_1em12_of_max_N": 0.0
+ },
+ "tau-1_3x3": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 3.459357800217333e-11,
+  "max_normalised_diff_S": 6.683542608243442e-14,
+  "frac_cells_below_1em12_of_max_N": 0.0
+ },
+ "tau+2_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 1.4099832412739488e-14,
+  "max_normalised_diff_S": 5.551115123125783e-16,
+  "frac_cells_below_1em12_of_max_N": 0.6937864431486879
+ },
+ "tau+2_3x3": {
+  "argmax_agree_N": 0.9419642857142857,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 0.6640373821187882,
+  "max_normalised_diff_S": 0.9372205685968316,
+  "frac_cells_below_1em12_of_max_N": 0.40934766763848396
+ },
+ "tau-2_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 1.942890293094024e-15,
+  "max_normalised_diff_S": 3.6637359812630166e-15,
+  "frac_cells_below_1em12_of_max_N": 0.0
+ },
+ "tau-2_3x3": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 0.008220745045154298,
+  "max_normalised_diff_S": 3.4951589400478156e-09,
+  "frac_cells_below_1em12_of_max_N": 0.0
+ },
+ "tau+8_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 6.106226635438361e-14,
+  "max_normalised_diff_S": 4.440892098500626e-16,
+  "frac_cells_below_1em12_of_max_N": 0.9394132653061226
+ },
+ "tau+8_3x3": {
+  "argmax_agree_N": 0.38392857142857145,
+  "argmax_agree_S": 0.9866071428571429,
+  "max_normalised_diff_N": 0.8907927082114664,
+  "max_normalised_diff_S": 0.9458522963242583,
+  "frac_cells_below_1em12_of_max_N": 0.7206632653061226
+ },
+ "tau-8_1x1": {
+  "argmax_agree_N": 1.0,
+  "argmax_agree_S": 1.0,
+  "max_normalised_diff_N": 2.6645352591003757e-15,
+  "max_normalised_diff_S": 2.220446049250313e-15,
+  "frac_cells_below_1em12_of_max_N": 0.0041909620991253645
+ },
+ "tau-8_3x3": {
+  "argmax_agree_N": 0.9508928571428571,
+  "argmax_agree_S": 0.9241071428571429,
+  "max_normalised_diff_N": 0.9397382562062696,
+  "max_normalised_diff_S": 0.9404529824176766,
+  "frac_cells_below_1em12_of_max_N": 0.0028243440233236155
+ }
+}

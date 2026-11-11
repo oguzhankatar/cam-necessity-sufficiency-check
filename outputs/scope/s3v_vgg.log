@@ -1,0 +1,10 @@
+[vgg16] aggregator = Conv2d(512, 4096, kernel_size=(7, 7), stride=(1, 1))
+  linact per-channel R2 = {'pre_logits.act1': 0.3873, 'pre_logits.act2': 0.3828}
+  [shipped] maxNS=7.99e-01 Rhalf=2.05e-01 I2=3.98e-02 corrNS>=0.317558 ADDITIVE=False
+  [delact ] maxNS=1.61e-14 Rhalf=1.46e-14 I2=8.25e-15 corrNS>=1.000000 ADDITIVE=True
+  [linact ] maxNS=1.19e-14 Rhalf=1.91e-14 I2=1.08e-14 corrNS>=1.000000 ADDITIVE=True
+   acc  12800/50000  shipped=0.7424 delact=0.3725 linact=0.5875
+   acc  25600/50000  shipped=0.7158 delact=0.3385 linact=0.5516
+   acc  38400/50000  shipped=0.6884 delact=0.3205 linact=0.5228
+  shipped:0.6768(+0.00)  delact:0.3161(-36.07)  linact:0.5142(-16.27)
+  -> <repo>\outputs\scope\s3v_vgg16.json

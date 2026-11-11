@@ -1,0 +1,20 @@
+== p1: 895 classified of 899
+  frozen                     {'IN-SCOPE': 532, 'NORM-BLOCKED': 103, 'NONLIN-BLOCKED': 118, 'DEGENERATE': 142, 'AGG-BLOCKED': 0}  degenerate share 0.5944  w/o test models [525, 882]  traces {'n': 43, 'by_verdict': {'IN-SCOPE': 15, 'NORM-BLOCKED': 4, 'NONLIN-BLOCKED': 19, 'DEGENERATE': 5, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  coat_corrected             {'IN-SCOPE': 529, 'NORM-BLOCKED': 103, 'NONLIN-BLOCKED': 118, 'DEGENERATE': 145, 'AGG-BLOCKED': 0}  degenerate share 0.5911  w/o test models [522, 882]  traces {'n': 43, 'by_verdict': {'IN-SCOPE': 14, 'NORM-BLOCKED': 4, 'NONLIN-BLOCKED': 19, 'DEGENERATE': 6, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  coat_and_zepto_corrected   {'IN-SCOPE': 529, 'NORM-BLOCKED': 105, 'NONLIN-BLOCKED': 116, 'DEGENERATE': 145, 'AGG-BLOCKED': 0}  degenerate share 0.5911  w/o test models [522, 882]  traces {'n': 43, 'by_verdict': {'IN-SCOPE': 14, 'NORM-BLOCKED': 5, 'NONLIN-BLOCKED': 18, 'DEGENERATE': 6, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  DENSE aggregator archs: ['coat_mini', 'coat_small', 'coat_tiny', 'vgg11', 'vgg11_bn', 'vgg13', 'vgg13_bn', 'vgg16', 'vgg16_bn', 'vgg19', 'vgg19_bn']
+  declared-pool branch: 267 verdicts {'NORM-BLOCKED': 52, 'DEGENERATE': 142, 'IN-SCOPE': 62, 'NONLIN-BLOCKED': 11}; degenerate 62 by string {'avg': 62}; v2b on those {'IN-SCOPE': 62}; aten {'MEAN': 62}
+  degenerate on declared branch without an avg string: []
+  declared strings over the branch: {'avg': 107, 'token': 142, 'None': 17, 'map': 1}
+  string x verdict: {'avg|NORM-BLOCKED': 45, 'token|DEGENERATE': 142, 'avg|IN-SCOPE': 62, 'None|NORM-BLOCKED': 7, 'None|NONLIN-BLOCKED': 10, 'map|NONLIN-BLOCKED': 1}
+  v1 -> v2b on the branch: {'NORM-BLOCKED->NORM-BLOCKED': 52, 'DEGENERATE->DEGENERATE': 120, 'DEGENERATE->IN-SCOPE': 11, 'IN-SCOPE->IN-SCOPE': 62, 'NONLIN-BLOCKED->NONLIN-BLOCKED': 10, 'NONLIN-BLOCKED->DEGENERATE': 1, 'DEGENERATE->AGG-BLOCKED': 11}
+== p2: 901 classified of 905
+  frozen                     {'IN-SCOPE': 533, 'NORM-BLOCKED': 106, 'NONLIN-BLOCKED': 119, 'DEGENERATE': 143, 'AGG-BLOCKED': 0}  degenerate share 0.5916  w/o test models [526, 888]  traces {'n': 45, 'by_verdict': {'IN-SCOPE': 16, 'NORM-BLOCKED': 4, 'NONLIN-BLOCKED': 20, 'DEGENERATE': 5, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  coat_corrected             {'IN-SCOPE': 530, 'NORM-BLOCKED': 106, 'NONLIN-BLOCKED': 119, 'DEGENERATE': 146, 'AGG-BLOCKED': 0}  degenerate share 0.5882  w/o test models [523, 888]  traces {'n': 45, 'by_verdict': {'IN-SCOPE': 15, 'NORM-BLOCKED': 4, 'NONLIN-BLOCKED': 20, 'DEGENERATE': 6, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  coat_and_zepto_corrected   {'IN-SCOPE': 530, 'NORM-BLOCKED': 108, 'NONLIN-BLOCKED': 117, 'DEGENERATE': 146, 'AGG-BLOCKED': 0}  degenerate share 0.5882  w/o test models [523, 888]  traces {'n': 45, 'by_verdict': {'IN-SCOPE': 15, 'NORM-BLOCKED': 5, 'NONLIN-BLOCKED': 19, 'DEGENERATE': 6, 'AGG-BLOCKED': 0}, 'n_traces_with_mixed_verdict': 0}
+  DENSE aggregator archs: ['coat_mini', 'coat_small', 'coat_tiny', 'vgg11', 'vgg11_bn', 'vgg13', 'vgg13_bn', 'vgg16', 'vgg16_bn', 'vgg19', 'vgg19_bn']
+  declared-pool branch: 270 verdicts {'NORM-BLOCKED': 52, 'DEGENERATE': 143, 'IN-SCOPE': 63, 'NONLIN-BLOCKED': 12}; degenerate 63 by string {'avg': 63}; v2b on those {'IN-SCOPE': 63}; aten {'MEAN': 63}
+  degenerate on declared branch without an avg string: []
+  declared strings over the branch: {'avg': 108, 'token': 143, 'None': 17, 'map': 2}
+  string x verdict: {'avg|NORM-BLOCKED': 45, 'token|DEGENERATE': 143, 'avg|IN-SCOPE': 63, 'None|NORM-BLOCKED': 7, 'None|NONLIN-BLOCKED': 10, 'map|NONLIN-BLOCKED': 2}
+  v1 -> v2b on the branch: {'NORM-BLOCKED->NORM-BLOCKED': 52, 'DEGENERATE->DEGENERATE': 121, 'DEGENERATE->IN-SCOPE': 11, 'IN-SCOPE->IN-SCOPE': 63, 'NONLIN-BLOCKED->NONLIN-BLOCKED': 10, 'NONLIN-BLOCKED->DEGENERATE': 2, 'DEGENERATE->AGG-BLOCKED': 11}

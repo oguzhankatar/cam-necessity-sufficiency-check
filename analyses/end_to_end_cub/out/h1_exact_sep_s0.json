@@ -1,0 +1,13 @@
+{
+ "seed": 0,
+ "n_test": 5794,
+ "separation": {
+  "sep1_pearson": 0.4313304843025921,
+  "sep1_spearman": 0.0,
+  "sep8_pearson": 0.4659838734510592,
+  "sep8_spearman": 0.16889850054670347
+ },
+ "max_rel_diff_vs_wlib_ns_lse": 1.4891215287824717e-14,
+ "N_tie_share_exact": 0.0,
+ "N_tie_share_wlib": 0.08161933439236929
+}

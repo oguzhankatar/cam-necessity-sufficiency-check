@@ -1,0 +1,3 @@
+== nih_m6 n=984 best=collapsed_1x1 ceiling=0.816
+   max |dev| from archive 0.09858
+wrote <repo>\analyses/medical_baselines\out\t6_score_nih_m6.json

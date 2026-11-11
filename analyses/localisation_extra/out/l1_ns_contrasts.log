@@ -1,0 +1,103 @@
+reproduction vs w3_stats.json: {'n_primary': 192, 'n_ns': 48, 'max_abs_diff_primary': 0.0, 'max_abs_p_primary': 0.0, 'max_abs_pholm_primary': 0.0, 'max_abs_diff_ns': 0.0, 'max_abs_p_ns': 0.0}
+
+Task 1: 48 within-model N-vs-S contrasts (aggregator 36, relocation 12)
+  Holm, EXT family (primary + N-vs-S, 5/10)
+    aggregator|maxloc    N better  0  S better  9  no difference 15  (n=24)
+    aggregator|extent    N better  0  S better 12  no difference  0  (n=12)
+    aggregator|all       N better  0  S better 21  no difference 15  (n=36)
+    relocation|maxloc    N better  2  S better  6  no difference  0  (n=8)
+    relocation|extent    N better  1  S better  3  no difference  0  (n=4)
+    relocation|all       N better  3  S better  9  no difference  0  (n=12)
+    all|maxloc           N better  2  S better 15  no difference 15  (n=32)
+    all|extent           N better  1  S better 15  no difference  0  (n=16)
+    all|all              N better  3  S better 30  no difference 15  (n=48)
+  Holm, N-vs-S-only family (1/2)
+    aggregator|maxloc    N better  1  S better 14  no difference  9  (n=24)
+    aggregator|extent    N better  0  S better 12  no difference  0  (n=12)
+    aggregator|all       N better  1  S better 26  no difference  9  (n=36)
+    relocation|maxloc    N better  2  S better  6  no difference  0  (n=8)
+    relocation|extent    N better  1  S better  3  no difference  0  (n=4)
+    relocation|all       N better  3  S better  9  no difference  0  (n=12)
+    all|maxloc           N better  3  S better 20  no difference  9  (n=32)
+    all|extent           N better  1  S better 15  no difference  0  (n=16)
+    all|all              N better  4  S better 35  no difference  9  (n=48)
+  raw P < 0.05 (no Holm)
+    aggregator|maxloc    N better  1  S better 14  no difference  9  (n=24)
+    aggregator|extent    N better  0  S better 12  no difference  0  (n=12)
+    aggregator|all       N better  1  S better 26  no difference  9  (n=36)
+    relocation|maxloc    N better  2  S better  6  no difference  0  (n=8)
+    relocation|extent    N better  1  S better  3  no difference  0  (n=4)
+    relocation|all       N better  3  S better  9  no difference  0  (n=12)
+    all|maxloc           N better  3  S better 20  no difference  9  (n=32)
+    all|extent           N better  1  S better 15  no difference  0  (n=16)
+    all|all              N better  4  S better 35  no difference  9  (n=48)
+  verdicts differing EXT vs NS-only family: 6; EXT vs raw: 6
+  primary verdicts changed by enlarging the family to EXT: 0
+  by arm x backbone x class (EXT):
+    aggregator|resnet50|extent       {'S better': 4}
+    aggregator|resnet50|maxloc       {'S better': 3, 'no difference': 5}
+    aggregator|vgg16gap|extent       {'S better': 4}
+    aggregator|vgg16gap|maxloc       {'S better': 3, 'no difference': 5}
+    aggregator|vitb16|extent         {'S better': 4}
+    aggregator|vitb16|maxloc         {'no difference': 5, 'S better': 3}
+    relocation|vitb16|extent         {'S better': 3, 'N better': 1}
+    relocation|vitb16|maxloc         {'S better': 6, 'N better': 2}
+
+  all N-vs-S rows:
+    cub      resnet50 MaxBoxAccV2     N_lse  N 0.2509 S 0.5645 d -0.3136 [-0.3232, -0.3054] paired bootstrap p 0.001 holm_ext 0.005 holm_ns 0.001  S better
+    cub      resnet50 best_iou        N_lse  N 0.3516 S 0.6466 d -0.2950 [-0.2995, -0.2906] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    cub      resnet50 pointing_strict N_lse  N 0.9581 S 0.9600 d -0.0019 [-0.0035, -0.0003] mcnemar  p 0.0266 holm_ext 0.0361 holm_ns 0.0266  S better
+    cub      resnet50 pointing_tol15  N_lse  N 0.9924 S 0.9934 d -0.0010 [-0.0019, -0.0003] mcnemar  p 0.0312 holm_ext 0.0625 holm_ns 0.0312  no difference  [CI disagrees]
+    cub      vgg16gap MaxBoxAccV2     N_lse  N 0.2509 S 0.3786 d -0.1277 [-0.1374, -0.1182] paired bootstrap p 0.001 holm_ext 0.005 holm_ns 0.001  S better
+    cub      vgg16gap best_iou        N_lse  N 0.3496 S 0.5650 d -0.2154 [-0.2204, -0.2105] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    cub      vgg16gap pointing_strict N_lse  N 0.9767 S 0.9786 d -0.0019 [-0.0031, -0.0007] mcnemar  p 0.00739 holm_ext 0.0222 holm_ns 0.00739  S better
+    cub      vgg16gap pointing_tol15  N_lse  N 0.9865 S 0.9877 d -0.0012 [-0.0022, -0.0003] mcnemar  p 0.0391 holm_ext 0.117 holm_ns 0.0391  no difference  [CI disagrees]
+    cub      vitb16   MaxBoxAccV2     N_lse  N 0.2691 S 0.3235 d -0.0544 [-0.0621, -0.0495] paired bootstrap p 0.001 holm_ext 0.01 holm_ns 0.002  S better
+    cub      vitb16   MaxBoxAccV2     N_ln   N 0.3996 S 0.4769 d -0.0774 [-0.0855, -0.0706] paired bootstrap p 0.001 holm_ext 0.01 holm_ns 0.002  S better
+    cub      vitb16   best_iou        N_lse  N 0.4511 S 0.5476 d -0.0965 [-0.0995, -0.0934] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    cub      vitb16   best_iou        N_ln   N 0.5970 S 0.6376 d -0.0406 [-0.0437, -0.0373] wilcoxon p 1.1e-118 holm_ext 4.4e-118 holm_ns 1.1e-118  S better
+    cub      vitb16   pointing_strict N_lse  N 0.4537 S 0.4534 d +0.0003 [-0.0035, +0.0041] mcnemar  p 0.933 holm_ext 0.933 holm_ns 0.933  no difference
+    cub      vitb16   pointing_strict N_ln   N 0.6545 S 0.7478 d -0.0934 [-0.1061, -0.0809] mcnemar  p 1.14e-45 holm_ext 4.57e-45 holm_ns 2.29e-45  S better
+    cub      vitb16   pointing_tol15  N_lse  N 0.5853 S 0.5851 d +0.0002 [-0.0040, +0.0041] mcnemar  p 1 holm_ext 1 holm_ns 1  no difference
+    cub      vitb16   pointing_tol15  N_ln   N 0.7654 S 0.8386 d -0.0732 [-0.0842, -0.0623] mcnemar  p 2.9e-36 holm_ext 1.16e-35 holm_ns 5.81e-36  S better
+    voc12    resnet50 pointing_strict N_lse  N 0.8398 S 0.8434 d -0.0036 [-0.0056, -0.0016] mcnemar  p 0.00111 holm_ext 0.00222 holm_ns 0.00111  S better
+    voc12    resnet50 pointing_tol15  N_lse  N 0.9163 S 0.9194 d -0.0030 [-0.0051, -0.0010] mcnemar  p 0.00501 holm_ext 0.015 holm_ns 0.00501  S better
+    voc12    vgg16gap pointing_strict N_lse  N 0.8093 S 0.8145 d -0.0052 [-0.0073, -0.0032] mcnemar  p 1.25e-06 holm_ext 3.75e-06 holm_ns 1.25e-06  S better
+    voc12    vgg16gap pointing_tol15  N_lse  N 0.8945 S 0.8967 d -0.0021 [-0.0040, -0.0004] mcnemar  p 0.0295 holm_ext 0.0885 holm_ns 0.0295  no difference  [CI disagrees]
+    voc12    vitb16   pointing_strict N_lse  N 0.6990 S 0.7093 d -0.0104 [-0.0138, -0.0071] mcnemar  p 1.68e-09 holm_ext 3.36e-09 holm_ns 1.68e-09  S better
+    voc12    vitb16   pointing_strict N_ln   N 0.7072 S 0.7311 d -0.0239 [-0.0305, -0.0178] mcnemar  p 9.58e-14 holm_ext 3.83e-13 holm_ns 1.92e-13  S better
+    voc12    vitb16   pointing_tol15  N_lse  N 0.8234 S 0.8385 d -0.0151 [-0.0184, -0.0121] mcnemar  p 1.47e-21 holm_ext 8.84e-21 holm_ns 2.95e-21  S better
+    voc12    vitb16   pointing_tol15  N_ln   N 0.8285 S 0.8476 d -0.0191 [-0.0244, -0.0141] mcnemar  p 1.75e-13 holm_ext 5.71e-13 holm_ns 1.75e-13  S better
+    voc12seg resnet50 pointing_strict N_lse  N 0.6670 S 0.6712 d -0.0042 [-0.0102, +0.0023] mcnemar  p 0.243 holm_ext 0.291 holm_ns 0.243  no difference
+    voc12seg resnet50 pointing_tol15  N_lse  N 0.9082 S 0.9106 d -0.0023 [-0.0070, +0.0019] mcnemar  p 0.405 holm_ext 0.81 holm_ns 0.405  no difference
+    voc12seg resnet50 peak_mask_iou   N_lse  N 0.2622 S 0.4785 d -0.2162 [-0.2236, -0.2091] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    voc12seg vgg16gap pointing_strict N_lse  N 0.6642 S 0.6702 d -0.0061 [-0.0130, +0.0005] mcnemar  p 0.105 holm_ext 0.314 holm_ns 0.105  no difference
+    voc12seg vgg16gap pointing_tol15  N_lse  N 0.8887 S 0.8915 d -0.0028 [-0.0065, +0.0009] mcnemar  p 0.21 holm_ext 0.63 holm_ns 0.21  no difference
+    voc12seg vgg16gap peak_mask_iou   N_lse  N 0.2603 S 0.4478 d -0.1875 [-0.1946, -0.1806] wilcoxon p 4.3e-300 holm_ext 1.72e-299 holm_ns 4.3e-300  S better
+    voc12seg vitb16   pointing_strict N_lse  N 0.5207 S 0.5291 d -0.0084 [-0.0158, -0.0014] mcnemar  p 0.0356 holm_ext 0.107 holm_ns 0.0356  no difference  [CI disagrees]
+    voc12seg vitb16   pointing_strict N_ln   N 0.5268 S 0.5571 d -0.0303 [-0.0447, -0.0154] mcnemar  p 5.25e-05 holm_ext 0.000262 holm_ns 0.000105  S better
+    voc12seg vitb16   pointing_tol15  N_lse  N 0.7885 S 0.8062 d -0.0177 [-0.0252, -0.0107] mcnemar  p 7.56e-07 holm_ext 3.02e-06 holm_ns 7.56e-07  S better
+    voc12seg vitb16   pointing_tol15  N_ln   N 0.7857 S 0.8272 d -0.0415 [-0.0536, -0.0303] mcnemar  p 5.54e-12 holm_ext 3.33e-11 holm_ns 1.11e-11  S better
+    voc12seg vitb16   peak_mask_iou   N_lse  N 0.2777 S 0.4317 d -0.1540 [-0.1613, -0.1468] wilcoxon p 8.56e-278 holm_ext 8.56e-277 holm_ns 1.71e-277  S better
+    voc12seg vitb16   peak_mask_iou   N_ln   N 0.4261 S 0.4375 d -0.0114 [-0.0145, -0.0083] wilcoxon p 0.000581 holm_ext 0.000581 holm_ns 0.000581  S better
+    coco17   resnet50 pointing_strict N_lse  N 0.4368 S 0.4338 d +0.0030 [+0.0004, +0.0056] mcnemar  p 0.0315 holm_ext 0.0946 holm_ns 0.0315  no difference  [CI disagrees]
+    coco17   resnet50 pointing_tol15  N_lse  N 0.7085 S 0.7100 d -0.0015 [-0.0033, +0.0003] mcnemar  p 0.144 holm_ext 0.432 holm_ns 0.144  no difference
+    coco17   resnet50 peak_mask_iou   N_lse  N 0.1956 S 0.2903 d -0.0947 [-0.0979, -0.0918] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    coco17   vgg16gap pointing_strict N_lse  N 0.4175 S 0.4219 d -0.0044 [-0.0069, -0.0018] mcnemar  p 0.0016 holm_ext 0.0048 holm_ns 0.0016  S better
+    coco17   vgg16gap pointing_tol15  N_lse  N 0.6495 S 0.6498 d -0.0003 [-0.0018, +0.0012] mcnemar  p 0.86 holm_ext 1 holm_ns 0.86  no difference
+    coco17   vgg16gap peak_mask_iou   N_lse  N 0.1847 S 0.2611 d -0.0765 [-0.0794, -0.0735] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    coco17   vitb16   pointing_strict N_lse  N 0.3656 S 0.3687 d -0.0031 [-0.0064, +0.0003] mcnemar  p 0.0845 holm_ext 0.169 holm_ns 0.0845  no difference
+    coco17   vitb16   pointing_strict N_ln   N 0.3728 S 0.3603 d +0.0125 [+0.0068, +0.0185] mcnemar  p 4.5e-05 holm_ext 0.00018 holm_ns 8.99e-05  N better
+    coco17   vitb16   pointing_tol15  N_lse  N 0.5953 S 0.5990 d -0.0037 [-0.0068, -0.0005] mcnemar  p 0.026 holm_ext 0.0519 holm_ns 0.026  no difference  [CI disagrees]
+    coco17   vitb16   pointing_tol15  N_ln   N 0.5775 S 0.5687 d +0.0087 [+0.0026, +0.0149] mcnemar  p 0.00596 holm_ext 0.0179 holm_ns 0.0119  N better
+    coco17   vitb16   peak_mask_iou   N_lse  N 0.2101 S 0.2666 d -0.0565 [-0.0592, -0.0541] wilcoxon p 0 holm_ext 0 holm_ns 0  S better
+    coco17   vitb16   peak_mask_iou   N_ln   N 0.2647 S 0.2634 d +0.0012 [+0.0003, +0.0022] wilcoxon p 2.55e-17 holm_ext 2.55e-17 holm_ns 2.55e-17  N better
+
+Task 5: primary contrasts whose Holm verdict and unadjusted CI disagree: 3 of 192
+    cub      vgg16gap pointing_strict N_lse  vs collapsed d -0.0041 [-0.0079, -0.0005] mcnemar          p 0.04164 p_holm 0.08328 -> no difference
+    voc12seg resnet50 peak_mask_iou   S_lse  vs collapsed d -0.0005 [-0.0021, +0.0012] wilcoxon         p 0.005143 p_holm 0.005143 -> worse
+    coco17   vgg16gap peak_mask_iou   N_lse  vs center    d +0.0110 [+0.0071, +0.0149] wilcoxon         p 0.05812 p_holm 0.05812 -> no difference
+  N-vs-S rows with the same disagreement (EXT Holm): 6 of 48
+  -> <repo>\analyses/localisation_extra\out\l1_ns_contrasts.json
+  -> <repo>\analyses/localisation_extra\out\tab_l1_ns_contrasts.tex
+  -> <repo>\analyses/localisation_extra\out\tab_l1_ns_tally.tex

@@ -1,0 +1,9 @@
+RSNA cached (3884, 224, 224)
+  xrv map 0/1385 1s
+  xrv map 250/1385 157s
+  xrv map 500/1385 296s
+  xrv map 750/1385 429s
+  xrv map 1000/1385 571s
+  xrv map 1250/1385 726s
+xrv AUC 0.89172 (archived 0.89172); max |hit - archived| 1.44e-03
+wrote maps maps_rsna_xrv.npz 1385

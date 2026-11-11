@@ -1,0 +1,99 @@
+{
+ "dev13": {
+  "n": 13,
+  "cheapest_edit_counts": {
+   "poollast": 5,
+   "delact": 3,
+   "linact": 3,
+   "delboth": 2
+  },
+  "cheapest_cost_min": {
+   "model": "maxvit_tiny_tf_224",
+   "edit": "delboth",
+   "pts": -0.06399999999999739
+  },
+  "cheapest_cost_max": {
+   "model": "lcnet_050",
+   "edit": "linact",
+   "pts": -18.519999999999996
+  },
+  "cheapest_cost_median": -4.790000000000005,
+  "delact_alone_not_additive": [
+   "maxvit_tiny_tf_224",
+   "caformer_s18",
+   "convformer_s18",
+   "mambaout_tiny"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true
+ },
+ "heldout": {
+  "n": 8,
+  "cheapest_edit_counts": {
+   "poollast": 3,
+   "delboth": 3,
+   "linact": 1,
+   "delact": 1
+  },
+  "cheapest_cost_min": {
+   "model": "hgnet_tiny",
+   "edit": "poollast",
+   "pts": -0.9800000000000031
+  },
+  "cheapest_cost_max": {
+   "model": "mambaout_femto",
+   "edit": "poollast",
+   "pts": -13.626000000000005
+  },
+  "cheapest_cost_median": -2.563000000000004,
+  "delact_alone_not_additive": [
+   "convformer_s36",
+   "inception_next_tiny",
+   "mambaout_femto",
+   "mambaout_small",
+   "mambaout_kobe"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true
+ },
+ "all": {
+  "n": 21,
+  "cheapest_edit_counts": {
+   "poollast": 8,
+   "delact": 4,
+   "linact": 4,
+   "delboth": 5
+  },
+  "cheapest_cost_min": {
+   "model": "maxvit_tiny_tf_224",
+   "edit": "delboth",
+   "pts": -0.06399999999999739
+  },
+  "cheapest_cost_max": {
+   "model": "lcnet_050",
+   "edit": "linact",
+   "pts": -18.519999999999996
+  },
+  "cheapest_cost_median": -3.7999999999999923,
+  "delact_alone_not_additive": [
+   "maxvit_tiny_tf_224",
+   "caformer_s18",
+   "convformer_s18",
+   "mambaout_tiny",
+   "convformer_s36",
+   "inception_next_tiny",
+   "mambaout_femto",
+   "mambaout_small",
+   "mambaout_kobe"
+  ],
+  "delact_fail_all_have_norm": true,
+  "delact_ok_all_normfree": true
+ },
+ "errors": [
+  [
+   "efficientvit_b1",
+   "RuntimeError: Given groups=1, weight of size [1536, 256, 1, 1], expected input[2, 1536, 1, 1] to have 256 channels, but "
+  ]
+ ],
+ "h4_y_equals_cheapest": true
+}

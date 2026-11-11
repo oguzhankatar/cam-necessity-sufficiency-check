@@ -1,0 +1,37 @@
+seed 2  n=2450 train=1715 val=735 classes=[1752, 490, 208]
+init: torchvision resnet50-0676ba61.pth (fc re-initialised)
+  ep0 val acc 0.5986
+  ep1 val acc 0.6844
+  ep2 val acc 0.7293
+  ep3 val acc 0.6639
+  ep4 val acc 0.7143
+  ep5 val acc 0.7537
+  ep6 val acc 0.7347
+  ep7 val acc 0.7646
+  ep8 val acc 0.7605
+  ep9 val acc 0.7891
+  ep10 val acc 0.7905
+  ep11 val acc 0.7850
+saved checkpoint <repo>\analyses/isic_three_seeds\checkpoints\isic_r50_k3_seed2.pt
+model ready 791s; peak GPU alloc 2.96 GB, reserved 3.25 GB
+AUC {'nevus': 0.8388896928475815, 'melanoma': 0.8315814298227882, 'seborrheic_keratosis': 0.9409412723475781, 'macro': 0.870470798339316, 'accuracy': 0.7850340136054422}
+maps 0/735 2s
+maps 100/735 235s
+maps 200/735 452s
+maps 300/735 657s
+maps 400/735 824s
+maps 500/735 1030s
+maps 600/735 1235s
+maps 700/735 1441s
+collapsed_1x1 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 9.339335210011843e-15, 'median_rel_abs_diff': 3.0738815333989704e-15}
+collapsed_3x3 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 2.5047968417350145e-15, 'median_rel_abs_diff': 6.427059607634727e-16}
+N_lse8.0_1x1 {'frac_exact_zero_fd': 0.02712758572816882, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 2.1036784578407066e-13, 'median_rel_abs_diff': 8.73488988217852e-15}
+N_lse8.0_3x3 {'frac_exact_zero_fd': 0.011661807580174927, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 8.048585135595694e-14, 'median_rel_abs_diff': 2.6570429328885035e-15}
+N_lse-8.0_1x1 {'frac_exact_zero_fd': 0.008774121893655422, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 6.147827897799186e-14, 'median_rel_abs_diff': 6.828720961899281e-16}
+N_lse-8.0_3x3 {'frac_exact_zero_fd': 0.001971400805220047, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 0.9891156462585035, 'max_rel_abs_diff': 5.976422930606318e-14, 'median_rel_abs_diff': 6.236924425739138e-16}
+S_lse8.0_1x1 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 8.750242278329388e-15, 'median_rel_abs_diff': 3.284547176545825e-16}
+S_lse8.0_3x3 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 0.9972789115646259, 'max_rel_abs_diff': 2.4801910008651674e-15, 'median_rel_abs_diff': 4.0895891305783307e-16}
+S_lse-8.0_1x1 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 2.859239469818243e-14, 'median_rel_abs_diff': 7.439089989477617e-15}
+S_lse-8.0_3x3 {'frac_exact_zero_fd': 0.0, 'frac_exact_zero_cf': 0.0, 'argmax_agree': 1.0, 'max_rel_abs_diff': 6.709838637724463e-15, 'median_rel_abs_diff': 5.3490422581995696e-15}
+PRIMARY H1_lse8.0_1x1_dice  FD -0.0439 [-0.0600, -0.0275] P=5.75e-07 | CF -0.0416 [-0.0549, -0.0285] P=8.71e-08
+wrote <repo>\analyses/isic_three_seeds\out\k3_seed2.json

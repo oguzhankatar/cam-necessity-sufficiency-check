@@ -1,0 +1,5 @@
+<python-env>\Lib\site-packages\scipy\stats\_wilcoxon.py:181: RuntimeWarning: invalid value encountered in scalar divide
+  z = (r_plus - mn) / se
+== rsna_xrv n=1385 best=S_lse-8.0_1x1 ceiling=0.969
+   max |dev| from archive 0.001444
+wrote <repo>\analyses/medical_baselines\out\t6_score_rsna_xrv.json

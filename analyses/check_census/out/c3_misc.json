@@ -1,0 +1,1934 @@
+{
+ "task3_separation_blocked": {
+  "rows": [
+   {
+    "model": "rdnet_tiny",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.029563130380607205,
+    "one_minus_corr_mean": 0.014673341275170504,
+    "maxNS": 0.38463402407100955,
+    "Rhalf": 0.5652994672390481,
+    "I2": 0.03492228172390905
+   },
+   {
+    "model": "lcnet_050",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.30243078479380936,
+    "one_minus_corr_mean": 0.16696850951989273,
+    "maxNS": 0.436192631719542,
+    "Rhalf": 0.10738668089975882,
+    "I2": 0.03346490889239371
+   },
+   {
+    "model": "davit_small",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.05630707399736412,
+    "one_minus_corr_mean": 0.04094770893196198,
+    "maxNS": 0.44637470356004005,
+    "Rhalf": 0.30930642892837723,
+    "I2": 0.01549746922695149
+   },
+   {
+    "model": "volo_d1_224",
+    "split": "heldout",
+    "verdict": "DEGENERATE",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.6023131012771594,
+    "one_minus_corr_mean": 0.5372098848103704,
+    "maxNS": 0.46933548005335596,
+    "Rhalf": 0.00160715639612441,
+    "I2": 0.0
+   },
+   {
+    "model": "poolformer_s24",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.4346767655567948,
+    "one_minus_corr_mean": 0.19811922461322728,
+    "maxNS": 0.5215937843851068,
+    "Rhalf": 0.16755809738018676,
+    "I2": 0.009588586051988616
+   },
+   {
+    "model": "hgnetv2_b0",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.38532612625221885,
+    "one_minus_corr_mean": 0.3004652399373491,
+    "maxNS": 0.5971922115067111,
+    "Rhalf": 0.18471767676140466,
+    "I2": 0.034829302947105685
+   },
+   {
+    "model": "hiera_base_224",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.3692175958949314,
+    "one_minus_corr_mean": 0.31059718575550743,
+    "maxNS": 0.6136841763170996,
+    "Rhalf": 0.30544486098843304,
+    "I2": 0.02810652848983653
+   },
+   {
+    "model": "davit_tiny",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.0760802335966726,
+    "one_minus_corr_mean": 0.04933498692791927,
+    "maxNS": 0.6333067051842506,
+    "Rhalf": 0.640060892224612,
+    "I2": 0.04521098322928451
+   },
+   {
+    "model": "convnext_tiny",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.054756591507021835,
+    "one_minus_corr_mean": 0.05057878805208171,
+    "maxNS": 0.6407147566988348,
+    "Rhalf": 0.6225559177611888,
+    "I2": 0.035827736288015055
+   },
+   {
+    "model": "hardcorenas_a",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.3590818797647052,
+    "one_minus_corr_mean": 0.2871633349104533,
+    "maxNS": 0.7053800436147746,
+    "Rhalf": 0.23959500356601787,
+    "I2": 0.04473747745233948
+   },
+   {
+    "model": "vit_betwixt_patch16_reg4_gap_256",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.619724196287722,
+    "one_minus_corr_mean": 0.49960946556638264,
+    "maxNS": 0.7264157159193563,
+    "Rhalf": 0.2337620450645175,
+    "I2": 0.002265191300845422
+   },
+   {
+    "model": "vit_base_patch16_rope_reg1_gap_256",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.39747511517542466,
+    "one_minus_corr_mean": 0.34279971480506244,
+    "maxNS": 0.7633303963982423,
+    "Rhalf": 0.3931786118789633,
+    "I2": 0.00367307249632911
+   },
+   {
+    "model": "beitv2_base_patch16_224",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.24965960847095314,
+    "one_minus_corr_mean": 0.20219673976843344,
+    "maxNS": 0.7686914999566536,
+    "Rhalf": 0.6217456398348981,
+    "I2": 0.010040869021587679
+   },
+   {
+    "model": "ghostnet_100",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.36894804843864193,
+    "one_minus_corr_mean": 0.26215152832490995,
+    "maxNS": 0.8076523489484781,
+    "Rhalf": 0.23197869280928285,
+    "I2": 0.023440460104849438
+   },
+   {
+    "model": "convnext_base",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.26268097010424085,
+    "one_minus_corr_mean": 0.19373253158641557,
+    "maxNS": 0.815212707223047,
+    "Rhalf": 0.5878271491648901,
+    "I2": 0.06155038053907763
+   },
+   {
+    "model": "hiera_small_224",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.5460077970787685,
+    "one_minus_corr_mean": 0.4167421537710133,
+    "maxNS": 0.8153950091177288,
+    "Rhalf": 0.41839376982078214,
+    "I2": 0.02161579180473012
+   },
+   {
+    "model": "naflexvit_base_patch16_gap",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.6254846073321932,
+    "one_minus_corr_mean": 0.49229020983088334,
+    "maxNS": 0.8329349618433171,
+    "Rhalf": 0.3965950505096558,
+    "I2": 0.0023052001332992205
+   },
+   {
+    "model": "poolformer_s12",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.47383421352407984,
+    "one_minus_corr_mean": 0.22134720701769128,
+    "maxNS": 0.8419382739939087,
+    "Rhalf": 0.2877022000283835,
+    "I2": 0.01236936343312842
+   },
+   {
+    "model": "mobilenetv3_large_100",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.28695440166290365,
+    "one_minus_corr_mean": 0.2153163572888458,
+    "maxNS": 0.8504389595462264,
+    "Rhalf": 0.2080200536571203,
+    "I2": 0.014837197397930678
+   },
+   {
+    "model": "convnextv2_tiny",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.2633340986318293,
+    "one_minus_corr_mean": 0.18480076686343017,
+    "maxNS": 0.853387857312731,
+    "Rhalf": 0.6597889053391554,
+    "I2": 0.0748876245632487
+   },
+   {
+    "model": "hgnet_tiny",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.11326766640431374,
+    "one_minus_corr_mean": 0.05800531683404664,
+    "maxNS": 0.8568510588564843,
+    "Rhalf": 0.08641816839426786,
+    "I2": 0.0164733880467267
+   },
+   {
+    "model": "hiera_tiny_224",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.6081074715352229,
+    "one_minus_corr_mean": 0.4647654604712773,
+    "maxNS": 0.8633722377541543,
+    "Rhalf": 0.39671429648242196,
+    "I2": 0.01922163998495404
+   },
+   {
+    "model": "vgg16",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.36320803746099706,
+    "one_minus_corr_mean": 0.2893561181308968,
+    "maxNS": 0.8941266002258947,
+    "Rhalf": 0.10584515835338677,
+    "I2": 0.07698896245666291
+   },
+   {
+    "model": "mobilenetv3_small_100",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.6456208382812985,
+    "one_minus_corr_mean": 0.4165916368328161,
+    "maxNS": 0.8998695424045049,
+    "Rhalf": 0.9725456873437333,
+    "I2": 0.058157371330192296
+   },
+   {
+    "model": "maxvit_tiny_tf_224",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.5083507505439944,
+    "one_minus_corr_mean": 0.4039400316860995,
+    "maxNS": 0.9465018506025962,
+    "Rhalf": 0.6910210239749629,
+    "I2": 0.042110701449298835
+   },
+   {
+    "model": "vitamin_small_224",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.21842809312354872,
+    "one_minus_corr_mean": 0.15504351732075328,
+    "maxNS": 0.9665780661623583,
+    "Rhalf": 1.8338942821822999,
+    "I2": 0.004478618256261021
+   },
+   {
+    "model": "mambaout_small",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.6610615529068691,
+    "one_minus_corr_mean": 0.35724724070817915,
+    "maxNS": 0.9837995544377895,
+    "Rhalf": 1.344978642974351,
+    "I2": 0.09527327722011866
+   },
+   {
+    "model": "eva02_tiny_patch14_336",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.5350350966303462,
+    "one_minus_corr_mean": 0.3357256048271502,
+    "maxNS": 0.9890377536209333,
+    "Rhalf": 0.9009346681079712,
+    "I2": 0.013961383813996829
+   },
+   {
+    "model": "mambaout_tiny",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.8287116001282782,
+    "one_minus_corr_mean": 0.567425291017218,
+    "maxNS": 0.9893957782922209,
+    "Rhalf": 1.519138058162708,
+    "I2": 0.08776239097490207
+   },
+   {
+    "model": "edgenext_small",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.9515131003650956,
+    "one_minus_corr_mean": 0.6518431914534151,
+    "maxNS": 0.9916014905224108,
+    "Rhalf": 0.9091874123983663,
+    "I2": 0.04140641228641726
+   },
+   {
+    "model": "poolformerv2_s24",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 0.8599861570333336,
+    "one_minus_corr_mean": 0.5374914839589022,
+    "maxNS": 0.9950065241462404,
+    "Rhalf": 1.3436433096479827,
+    "I2": 0.09101298216195258
+   },
+   {
+    "model": "mambaout_femto",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.183495699273499,
+    "one_minus_corr_mean": 0.7717464351880007,
+    "maxNS": 0.9960558730997452,
+    "Rhalf": 1.5669660913909143,
+    "I2": 0.07538795401752432
+   },
+   {
+    "model": "mambaout_kobe",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.2980962031442438,
+    "one_minus_corr_mean": 0.6792956877895582,
+    "maxNS": 1.002218621012252,
+    "Rhalf": 1.746900135619356,
+    "I2": 0.11000678048233502
+   },
+   {
+    "model": "ghostnetv2_100",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.4425264795781173,
+    "one_minus_corr_mean": 0.22904446366425868,
+    "maxNS": 1.0032715392060991,
+    "Rhalf": 0.2822937651123198,
+    "I2": 0.022663738453596892
+   },
+   {
+    "model": "repghostnet_100",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.6270640735427768,
+    "one_minus_corr_mean": 0.26904242395747335,
+    "maxNS": 1.011756405261489,
+    "Rhalf": 0.36854112846534814,
+    "I2": 0.03213931831431297
+   },
+   {
+    "model": "vgg19",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.7514295545407357,
+    "one_minus_corr_mean": 0.4283699475221311,
+    "maxNS": 1.0199684312179622,
+    "Rhalf": 0.5161320480333598,
+    "I2": 0.04144150344114294
+   },
+   {
+    "model": "poolformerv2_s12",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 1.4955088448052907,
+    "one_minus_corr_mean": 0.7249129958180704,
+    "maxNS": 1.026463571276601,
+    "Rhalf": 1.3098798352952727,
+    "I2": 0.0595670455489975
+   },
+   {
+    "model": "convformer_s18",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.8380879783990185,
+    "one_minus_corr_mean": 0.8691684821413331,
+    "maxNS": 1.038150763322908,
+    "Rhalf": 2.2620636388738276,
+    "I2": 0.11736942737116517
+   },
+   {
+    "model": "caformer_s18",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.395508837892431,
+    "one_minus_corr_mean": 0.9412289536086957,
+    "maxNS": 1.042274913888609,
+    "Rhalf": 1.9341950718126737,
+    "I2": 0.05976077361283942
+   },
+   {
+    "model": "beit_base_patch16_224",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 1.1356095111502098,
+    "one_minus_corr_mean": 0.7929009745584814,
+    "maxNS": 1.063558514375122,
+    "Rhalf": 1.0694821123515974,
+    "I2": 0.03207724421808029
+   },
+   {
+    "model": "convformer_s36",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.6923043666590247,
+    "one_minus_corr_mean": 1.6367101624639546,
+    "maxNS": 1.0652902676579534,
+    "Rhalf": 1.648523667122367,
+    "I2": 0.11132657166451465
+   },
+   {
+    "model": "efficientvit_b1",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.3101193991682165,
+    "one_minus_corr_mean": 0.8495770702661741,
+    "maxNS": 1.0745191761335087,
+    "Rhalf": 1.3642106933187816,
+    "I2": 0.10197083017178672
+   },
+   {
+    "model": "tiny_vit_21m_224",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 1.3136406347924763,
+    "one_minus_corr_mean": 0.5915199239660505,
+    "maxNS": 1.0754893225047737,
+    "Rhalf": 1.5739415156906333,
+    "I2": 0.11576162507495691
+   },
+   {
+    "model": "mobilenetv4_conv_small",
+    "split": "dev",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.0177304038819377,
+    "one_minus_corr_mean": 0.8806143749457799,
+    "maxNS": 1.1246665406362268,
+    "Rhalf": 1.839411313277893,
+    "I2": 0.1180958679798844
+   },
+   {
+    "model": "tiny_vit_5m_224",
+    "split": "dev",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 1.4791266611608171,
+    "one_minus_corr_mean": 0.5803700673436762,
+    "maxNS": 1.1509935318577122,
+    "Rhalf": 1.4035676938070678,
+    "I2": 0.09271077271155662
+   },
+   {
+    "model": "inception_next_tiny",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 0.8234310209116288,
+    "one_minus_corr_mean": 0.659117176889142,
+    "maxNS": 1.1944488655452485,
+    "Rhalf": 2.805000865084281,
+    "I2": 0.09226837599658912
+   },
+   {
+    "model": "tiny_vit_11m_224",
+    "split": "heldout",
+    "verdict": "NORM-BLOCKED",
+    "gt": "NORM-ONLY",
+    "one_minus_corr_min": 1.3605863456887215,
+    "one_minus_corr_mean": 0.6072017901363314,
+    "maxNS": 1.2535482956748099,
+    "Rhalf": 1.426958496967106,
+    "I2": 0.15300536497528894
+   },
+   {
+    "model": "fasternet_t0",
+    "split": "heldout",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "one_minus_corr_min": 1.1753855427650777,
+    "one_minus_corr_mean": 0.6946724026187623,
+    "maxNS": 1.2876999117497012,
+    "Rhalf": 3.5866275804864327,
+    "I2": 0.068621051606497
+   }
+  ],
+  "all": {
+   "one_minus_corr_min": {
+    "n": 48,
+    "min": 0.029563130380607205,
+    "median": 0.6052102864061912,
+    "max": 1.8380879783990185
+   },
+   "one_minus_corr_mean": {
+    "n": 48,
+    "min": 0.014673341275170504,
+    "median": 0.4102658342594578,
+    "max": 1.6367101624639546
+   },
+   "maxNS": {
+    "n": 48,
+    "min": 0.38463402407100955,
+    "median": 0.9231856965035505,
+    "max": 1.2876999117497012
+   },
+   "Rhalf": {
+    "n": 48,
+    "min": 0.00160715639612441,
+    "median": 0.6313084049929004,
+    "max": 3.5866275804864327
+   },
+   "I2": {
+    "n": 48,
+    "min": 0.0,
+    "median": 0.0414239578637801,
+    "max": 0.15300536497528894
+   },
+   "argmin_maxNS": "rdnet_tiny",
+   "argmin_1mcorr_mean": "rdnet_tiny"
+  },
+  "dev": {
+   "one_minus_corr_min": {
+    "n": 29,
+    "min": 0.029563130380607205,
+    "median": 0.47383421352407984,
+    "max": 1.8380879783990185
+   },
+   "one_minus_corr_mean": {
+    "n": 29,
+    "min": 0.014673341275170504,
+    "median": 0.3004652399373491,
+    "max": 0.9412289536086957
+   },
+   "maxNS": {
+    "n": 29,
+    "min": 0.38463402407100955,
+    "median": 0.853387857312731,
+    "max": 1.1509935318577122
+   },
+   "Rhalf": {
+    "n": 29,
+    "min": 0.10584515835338677,
+    "median": 0.6217456398348981,
+    "max": 2.2620636388738276
+   },
+   "I2": {
+    "n": 29,
+    "min": 0.002265191300845422,
+    "median": 0.035827736288015055,
+    "max": 0.1180958679798844
+   },
+   "argmin_maxNS": "rdnet_tiny",
+   "argmin_1mcorr_mean": "rdnet_tiny"
+  },
+  "heldout": {
+   "one_minus_corr_min": {
+    "n": 19,
+    "min": 0.05630707399736412,
+    "median": 0.8234310209116288,
+    "max": 1.6923043666590247
+   },
+   "one_minus_corr_mean": {
+    "n": 19,
+    "min": 0.04094770893196198,
+    "median": 0.5374914839589022,
+    "max": 1.6367101624639546
+   },
+   "maxNS": {
+    "n": 19,
+    "min": 0.44637470356004005,
+    "median": 1.002218621012252,
+    "max": 1.2876999117497012
+   },
+   "Rhalf": {
+    "n": 19,
+    "min": 0.00160715639612441,
+    "median": 1.3436433096479827,
+    "max": 3.5866275804864327
+   },
+   "I2": {
+    "n": 19,
+    "min": 0.0,
+    "median": 0.068621051606497,
+    "max": 0.15300536497528894
+   },
+   "argmin_maxNS": "davit_small",
+   "argmin_1mcorr_mean": "davit_small"
+  },
+  "NORM-ONLY": {
+   "one_minus_corr_min": {
+    "n": 24,
+    "min": 0.029563130380607205,
+    "median": 0.504434655077213,
+    "max": 1.4955088448052907
+   },
+   "one_minus_corr_mean": {
+    "n": 24,
+    "min": 0.014673341275170504,
+    "median": 0.3392626598161063,
+    "max": 0.7929009745584814
+   },
+   "maxNS": {
+    "n": 24,
+    "min": 0.38463402407100955,
+    "median": 0.8374366179186129,
+    "max": 1.2535482956748099
+   },
+   "Rhalf": {
+    "n": 24,
+    "min": 0.16755809738018676,
+    "median": 0.6221507787980434,
+    "max": 1.8338942821822999
+   },
+   "I2": {
+    "n": 24,
+    "min": 0.002265191300845422,
+    "median": 0.03009188635395841,
+    "max": 0.15300536497528894
+   },
+   "argmin_maxNS": "rdnet_tiny",
+   "argmin_1mcorr_mean": "rdnet_tiny"
+  },
+  "HARD-BLOCKED": {
+   "one_minus_corr_min": {
+    "n": 24,
+    "min": 0.11326766640431374,
+    "median": 0.6533411955940838,
+    "max": 1.8380879783990185
+   },
+   "one_minus_corr_mean": {
+    "n": 24,
+    "min": 0.05800531683404664,
+    "median": 0.4224807921774736,
+    "max": 1.6367101624639546
+   },
+   "maxNS": {
+    "n": 24,
+    "min": 0.436192631719542,
+    "median": 0.992725825695983,
+    "max": 1.2876999117497012
+   },
+   "Rhalf": {
+    "n": 24,
+    "min": 0.00160715639612441,
+    "median": 0.8317833556593481,
+    "max": 3.5866275804864327
+   },
+   "I2": {
+    "n": 24,
+    "min": 0.0,
+    "median": 0.058959072471515855,
+    "max": 0.1180958679798844
+   },
+   "argmin_maxNS": "lcnet_050",
+   "argmin_1mcorr_mean": "hgnet_tiny"
+  },
+  "heldout_NORM-ONLY": {
+   "one_minus_corr_min": {
+    "n": 8,
+    "min": 0.05630707399736412,
+    "median": 0.702996977056051,
+    "max": 1.3605863456887215
+   },
+   "one_minus_corr_mean": {
+    "n": 8,
+    "min": 0.04094770893196198,
+    "median": 0.47711681886495777,
+    "max": 0.7929009745584814
+   },
+   "maxNS": {
+    "n": 8,
+    "min": 0.44637470356004005,
+    "median": 0.9052007666319846,
+    "max": 1.2535482956748099
+   },
+   "Rhalf": {
+    "n": 8,
+    "min": 0.16755809738018676,
+    "median": 0.7439379410861897,
+    "max": 1.5739415156906333
+   },
+   "I2": {
+    "n": 8,
+    "min": 0.009588586051988616,
+    "median": 0.03009188635395841,
+    "max": 0.15300536497528894
+   },
+   "argmin_maxNS": "davit_small",
+   "argmin_1mcorr_mean": "davit_small"
+  },
+  "heldout_HARD-BLOCKED": {
+   "one_minus_corr_min": {
+    "n": 11,
+    "min": 0.11326766640431374,
+    "median": 0.8234310209116288,
+    "max": 1.6923043666590247
+   },
+   "one_minus_corr_mean": {
+    "n": 11,
+    "min": 0.05800531683404664,
+    "median": 0.659117176889142,
+    "max": 1.6367101624639546
+   },
+   "maxNS": {
+    "n": 11,
+    "min": 0.46933548005335596,
+    "median": 1.0032715392060991,
+    "max": 1.2876999117497012
+   },
+   "Rhalf": {
+    "n": 11,
+    "min": 0.00160715639612441,
+    "median": 1.3642106933187816,
+    "max": 3.5866275804864327
+   },
+   "I2": {
+    "n": 11,
+    "min": 0.0,
+    "median": 0.07538795401752432,
+    "max": 0.11132657166451465
+   },
+   "argmin_maxNS": "volo_d1_224",
+   "argmin_1mcorr_mean": "hgnet_tiny"
+  }
+ },
+ "task8_residuals_89": {
+  "n": 89,
+  "maxNS": {
+   "max": 4.4275215317930665e-14,
+   "model": "mixer_b16_224"
+  },
+  "Rhalf": {
+   "max": 8.094249993337201e-14,
+   "model": "convmixer_768_32"
+  },
+  "I2": {
+   "max": 4.167660648535517e-14,
+   "model": "convmixer_768_32"
+  },
+  "any_of_three": {
+   "max": 8.094249993337201e-14,
+   "model": "convmixer_768_32"
+  },
+  "verify_numbers_quantity_seg_d0_d1_perm_dev": {
+   "max": 4.815209504296822e-16,
+   "model": "hrnet_w18_small"
+  },
+  "vacuous_n": 10,
+  "vacuous_max_any": 0.0,
+  "smallest_maxNS_among_failing": {
+   "value": 0.38463402407100955,
+   "model": "rdnet_tiny"
+  },
+  "n_in_gap_1e-12_to_1e-4": 0
+ },
+ "task4_provenance": {
+  "frozen_rule_sha_raw": "a07131d7c558f058721784993c03e134923e09a88ccada8779bca5b5413a6cc7",
+  "frozen_rule_sha_crlf_to_lf": "b4caf08e85ee7049ab39acd5dbf40dfa85b8d15964dd5442cbcecf05188893e0",
+  "frozen_rule_recorded": "b4caf08e85ee7049ab39acd5dbf40dfa85b8d15964dd5442cbcecf05188893e0",
+  "frozen_rule_has_crlf": true,
+  "frozen_rule_match_raw": false,
+  "frozen_rule_match_lf": true,
+  "s4_decide_match": true,
+  "slib_match": true,
+  "s4_decide_has_crlf": true,
+  "slib_has_crlf": false,
+  "block_hashes_match": 10,
+  "n_blocks": 10,
+  "file_mtimes_local": {
+   "scripts/scope/slib.py": "2026-09-23 15:11:39",
+   "scripts/scope/s4_decide.py": "2026-09-23 15:39:19",
+   "outputs/scope/s4_decide.json": "2026-09-23 15:40:06",
+   "scripts/heldout/h0_freeze.py": "2026-09-23 16:46:19",
+   "scripts/heldout/frozen_rule.py": "2026-09-23 18:07:48",
+   "outputs/heldout/h0_freeze.json": "2026-09-23 18:07:48",
+   "outputs/heldout/h2_diagnose.json": "2026-09-23 17:06:06",
+   "scripts/heldout/rule_v2.py": "2026-09-23 17:07:34",
+   "scripts/heldout/h1_run.py": "2026-09-23 17:08:18",
+   "scripts/heldout/hlib.py": "2026-09-23 17:16:19",
+   "outputs/heldout/h1_D.json": "2026-09-23 17:18:16",
+   "outputs/heldout/h1_B.json": "2026-09-23 17:27:19",
+   "outputs/heldout/h1_A.json": "2026-09-23 17:28:49"
+  },
+  "h1_run_rule_v2_lines": [
+   [
+    25,
+    "import rule_v2 as R2"
+   ],
+   [
+    54,
+    "st = R2.structural_v2(m, f)          # calls frozen_rule.structural first"
+   ]
+  ],
+  "crossvit": {
+   "error": "ValueError: forward_features returned list",
+   "v1": "DEGENERATE",
+   "v2a": "DEGENERATE",
+   "v2b": "IN-SCOPE",
+   "v2b_agg": "MEAN"
+  },
+  "volo": {
+   "v1": "DEGENERATE",
+   "v2a": "AGG-BLOCKED",
+   "v2b": "AGG-BLOCKED",
+   "gt": "HARD-BLOCKED",
+   "agg_name": "functional(global_pool=token)",
+   "maxNS": 0.46933548005335596,
+   "Rhalf": 0.00160715639612441,
+   "I2": 0.0,
+   "corrNS_min": 0.3976868987228405,
+   "n_active": 2,
+   "spatial_mass": 1.0,
+   "module_pool": false
+  },
+  "repair_changes_v1_to_v2b": [
+   [
+    "crossvit_9_240",
+    "D",
+    "DEGENERATE",
+    "IN-SCOPE"
+   ],
+   [
+    "volo_d1_224",
+    "A",
+    "DEGENERATE",
+    "AGG-BLOCKED"
+   ]
+  ],
+  "repair_changes_v1_to_v2a": [
+   [
+    "volo_d1_224",
+    "A",
+    "DEGENERATE",
+    "AGG-BLOCKED"
+   ]
+  ],
+  "counts": {
+   "dev_listed": 66,
+   "dev_measured": 65,
+   "heldout": 82,
+   "A": 49,
+   "B": 33
+  },
+  "verdicts_v1_all148": {
+   "IN-SCOPE": 89,
+   "NONLIN-BLOCKED": 23,
+   "NORM-BLOCKED": 24,
+   "DEGENERATE": 12
+  },
+  "verdicts_v1_dev66": {
+   "IN-SCOPE": 32,
+   "NONLIN-BLOCKED": 13,
+   "NORM-BLOCKED": 16,
+   "DEGENERATE": 5
+  },
+  "module_pool_false": 46,
+  "module_pool_false_heldout": 28,
+  "agree": {
+   "dev": 65,
+   "heldout": 81
+  },
+  "class_token_verdicts": [
+   [
+    "vit_base_patch16_224",
+    "D",
+    "VACUOUS"
+   ],
+   [
+    "deit3_small_patch16_224",
+    "D",
+    "VACUOUS"
+   ],
+   [
+    "pit_s_224",
+    "D",
+    "VACUOUS"
+   ],
+   [
+    "cait_xxs24_224",
+    "D",
+    "VACUOUS"
+   ],
+   [
+    "crossvit_9_240",
+    "D",
+    null
+   ],
+   [
+    "volo_d1_224",
+    "A",
+    "HARD-BLOCKED"
+   ],
+   [
+    "xcit_tiny_12_p16_224",
+    "B",
+    "VACUOUS"
+   ],
+   [
+    "convit_tiny",
+    "B",
+    "VACUOUS"
+   ],
+   [
+    "tnt_s_patch16_224",
+    "B",
+    "VACUOUS"
+   ],
+   [
+    "coat_lite_tiny",
+    "B",
+    "VACUOUS"
+   ],
+   [
+    "flexivit_small",
+    "B",
+    "VACUOUS"
+   ],
+   [
+    "vit_small_patch16_224",
+    "B",
+    "VACUOUS"
+   ]
+  ],
+  "names_D_equals_scope_names": true
+ },
+ "task7_prices": [
+  {
+   "source": "s3_edits",
+   "model": "mobilenetv3_large_100",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.72502,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -3.388000000000002,
+     "maxNS": 2.2152879857082485e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -6.801999999999997,
+     "maxNS": 5.163456175426566e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -6.769999999999998,
+     "maxNS": 4.092345858588734e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -3.388000000000002,
+   "delact_alone_additive": true,
+   "delact_cost": -6.801999999999997,
+   "h4_price_y": -3.388000000000002,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "s3_edits",
+   "model": "mobilenetv3_small_100",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.64374,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -7.531999999999995,
+     "maxNS": 4.706010354363531e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -12.412,
+     "maxNS": 4.765381088798348e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -13.047999999999993,
+     "maxNS": 3.6483847951214336e-15,
+     "corrNS_mean": 0.9999999999999998
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -7.531999999999995,
+   "delact_alone_additive": true,
+   "delact_cost": -12.412,
+   "h4_price_y": -7.531999999999995,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "s3_edits",
+   "model": "mobilenetv4_conv_small",
+   "acts": [
+    "norm_head.act"
+   ],
+   "norms": [],
+   "shipped_acc": 0.70464,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -8.618000000000004,
+     "maxNS": 1.0323789861642208e-14,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -6.384,
+     "maxNS": 3.2367361880244597e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -7.694000000000001,
+     "maxNS": 4.153700042892194e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "delact",
+   "best_cost_pts": -6.384,
+   "delact_alone_additive": true,
+   "delact_cost": -6.384,
+   "h4_price_y": -6.384,
+   "flag": null
+  },
+  {
+   "source": "s3_edits",
+   "model": "lcnet_050",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.59956,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -20.216,
+     "maxNS": 3.2759085912003543e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -20.648,
+     "maxNS": 4.557934484741014e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -18.519999999999996,
+     "maxNS": 7.005313290807641e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "linact",
+   "best_cost_pts": -18.519999999999996,
+   "delact_alone_additive": true,
+   "delact_cost": -20.648,
+   "h4_price_y": -18.519999999999996,
+   "flag": "cheapest reaching edit replaces the activation by its fitted affine part"
+  },
+  {
+   "source": "s3_edits",
+   "model": "ghostnet_100",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.70102,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -5.069999999999997,
+     "maxNS": 3.898175678652578e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -3.7999999999999923,
+     "maxNS": 3.3555230803665355e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -5.196000000000001,
+     "maxNS": 4.041629171607388e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "delact",
+   "best_cost_pts": -3.7999999999999923,
+   "delact_alone_additive": true,
+   "delact_cost": -3.7999999999999923,
+   "h4_price_y": -3.7999999999999923,
+   "flag": null
+  },
+  {
+   "source": "s3_edits",
+   "model": "repghostnet_100",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.70208,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -5.742000000000003,
+     "maxNS": 2.7776009828957268e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -4.790000000000005,
+     "maxNS": 3.3507284935972915e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -6.376000000000004,
+     "maxNS": 2.2761331437908226e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "delact",
+   "best_cost_pts": -4.790000000000005,
+   "delact_alone_additive": true,
+   "delact_cost": -4.790000000000005,
+   "h4_price_y": -4.790000000000005,
+   "flag": null
+  },
+  {
+   "source": "s3_edits",
+   "model": "hardcorenas_a",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.72642,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -7.487999999999994,
+     "maxNS": 2.8007538224135074e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -9.501999999999999,
+     "maxNS": 3.735068601227567e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -10.62599999999999,
+     "maxNS": 2.913804537039739e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -7.487999999999994,
+   "delact_alone_additive": true,
+   "delact_cost": -9.501999999999999,
+   "h4_price_y": -7.487999999999994,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "s3_edits",
+   "model": "hgnetv2_b0",
+   "acts": [
+    "head.last_conv.1"
+   ],
+   "norms": [],
+   "shipped_acc": 0.75506,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -16.896,
+     "maxNS": 2.174566587925106e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -12.947999999999993,
+     "maxNS": 4.351842029940791e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -11.353999999999997,
+     "maxNS": 3.3699727464125483e-15,
+     "corrNS_mean": 0.9999999999999999
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "linact",
+   "best_cost_pts": -11.353999999999997,
+   "delact_alone_additive": true,
+   "delact_cost": -12.947999999999993,
+   "h4_price_y": -11.353999999999997,
+   "flag": "cheapest reaching edit replaces the activation by its fitted affine part"
+  },
+  {
+   "source": "s3_edits",
+   "model": "maxvit_tiny_tf_224",
+   "acts": [
+    "head.pre_logits.act"
+   ],
+   "norms": [
+    "head.norm"
+   ],
+   "shipped_acc": 0.79984,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -0.7739999999999969,
+     "maxNS": 8.805683636790133e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -0.07000000000000339,
+     "maxNS": 0.9005334357100925,
+     "corrNS_mean": 0.7773064533498465
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -1.4539999999999997,
+     "maxNS": 1.0694417443747701,
+     "corrNS_mean": 0.519425051244295
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -0.06399999999999739,
+     "maxNS": 6.418942140115526e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.043999999999999595,
+     "maxNS": 0.8982807338706402,
+     "corrNS_mean": 0.7775283153866672
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "delboth",
+   "best_cost_pts": -0.06399999999999739,
+   "delact_alone_additive": false,
+   "delact_cost": -0.07000000000000339,
+   "h4_price_y": -0.06399999999999739,
+   "flag": "cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False"
+  },
+  {
+   "source": "s3_edits",
+   "model": "caformer_s18",
+   "acts": [
+    "head.fc.act.relu"
+   ],
+   "norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "shipped_acc": 0.80868,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -3.6919999999999953,
+     "maxNS": 8.861664874718022e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -4.405999999999999,
+     "maxNS": 1.6642114492939528,
+     "corrNS_mean": -0.3838098006650067
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -77.764,
+     "maxNS": 1.7797862655455035,
+     "corrNS_mean": 0.2602298450827599
+    },
+    "delboth": {
+     "additive": false,
+     "dacc_pts": -80.862,
+     "maxNS": 1.0846073939965906,
+     "corrNS_mean": 0.4398055408385776
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.009999999999998899,
+     "maxNS": 0.9584704516530052,
+     "corrNS_mean": 0.579332633412584
+    }
+   },
+   "reaching": [
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -3.6919999999999953,
+   "delact_alone_additive": false,
+   "delact_cost": -4.405999999999999,
+   "h4_price_y": -3.6919999999999953,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "s3_edits",
+   "model": "convformer_s18",
+   "acts": [
+    "head.fc.act.relu"
+   ],
+   "norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "shipped_acc": 0.80204,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -3.1499999999999972,
+     "maxNS": 6.4762524274458205e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -6.959999999999999,
+     "maxNS": 1.6285000496516115,
+     "corrNS_mean": -0.692129937838303
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -51.181999999999995,
+     "maxNS": 1.7939763015864552,
+     "corrNS_mean": -0.09693011903284085
+    },
+    "delboth": {
+     "additive": false,
+     "dacc_pts": -80.18799999999999,
+     "maxNS": 1.1480217594997784,
+     "corrNS_mean": 0.5053235978530284
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.039999999999995595,
+     "maxNS": 1.046095466921844,
+     "corrNS_mean": 0.4839744134840619
+    }
+   },
+   "reaching": [
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -3.1499999999999972,
+   "delact_alone_additive": false,
+   "delact_cost": -6.959999999999999,
+   "h4_price_y": -3.1499999999999972,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "s3_edits",
+   "model": "mambaout_tiny",
+   "acts": [
+    "head.pre_logits.act"
+   ],
+   "norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "shipped_acc": 0.79486,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -9.786000000000005,
+     "maxNS": 4.938456864785436e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -9.094000000000001,
+     "maxNS": 0.9768150528756293,
+     "corrNS_mean": 0.6096172996334258
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -6.735999999999997,
+     "maxNS": 1.3891394746015076,
+     "corrNS_mean": 0.4223391599885226
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -3.276000000000001,
+     "maxNS": 8.592022631169773e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.7900000000000018,
+     "maxNS": 1.3051752458377401,
+     "corrNS_mean": 0.21651407980744908
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "delboth",
+   "best_cost_pts": -3.276000000000001,
+   "delact_alone_additive": false,
+   "delact_cost": -9.094000000000001,
+   "h4_price_y": -3.276000000000001,
+   "flag": "cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False"
+  },
+  {
+   "source": "s3v_vgg16",
+   "model": "vgg16",
+   "acts": [
+    "pre_logits.act1",
+    "pre_logits.act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.67684,
+   "edits": {
+    "delact": {
+     "additive": true,
+     "dacc_pts": -36.071999999999996,
+     "maxNS": 1.6108438163197058e-14,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -16.268000000000004,
+     "maxNS": 1.1946131369204497e-14,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact"
+   ],
+   "best_edit": "linact",
+   "best_cost_pts": -16.268000000000004,
+   "delact_alone_additive": true,
+   "delact_cost": -36.071999999999996,
+   "h4_price_y": -16.268000000000004,
+   "flag": "cheapest reaching edit replaces the activation by its fitted affine part"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "convformer_s36",
+   "acts": [
+    "head.fc.act.relu"
+   ],
+   "norms": [
+    "head.norm",
+    "head.fc.norm"
+   ],
+   "shipped_acc": 0.8131,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -2.426000000000006,
+     "maxNS": 7.297373704787326e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -5.256000000000006,
+     "maxNS": 1.559947158053463,
+     "corrNS_mean": -0.8678490527615741
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -50.218,
+     "maxNS": 1.7774196768598092,
+     "corrNS_mean": -0.313443372881989
+    },
+    "delboth": {
+     "additive": false,
+     "dacc_pts": -81.30000000000001,
+     "maxNS": 1.3582475904061562,
+     "corrNS_mean": 0.2354036957642957
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": 0.056000000000000494,
+     "maxNS": 1.1033946611065482,
+     "corrNS_mean": 0.6540223754831165
+    }
+   },
+   "reaching": [
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -2.426000000000006,
+   "delact_alone_additive": false,
+   "delact_cost": -5.256000000000006,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "inception_next_tiny",
+   "acts": [
+    "head.act"
+   ],
+   "norms": [
+    "head.norm"
+   ],
+   "shipped_acc": 0.7848,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -9.632000000000007,
+     "maxNS": 3.551846118634889e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -1.5860000000000096,
+     "maxNS": 0.8453585586990684,
+     "corrNS_mean": 0.9155253922835253
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -0.5180000000000073,
+     "maxNS": 0.893808255268258,
+     "corrNS_mean": 0.881022710605516
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -2.442000000000011,
+     "maxNS": 6.737592073299794e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.6760000000000099,
+     "maxNS": 0.7239661668313253,
+     "corrNS_mean": 0.9127275372675481
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "delboth",
+   "best_cost_pts": -2.442000000000011,
+   "delact_alone_additive": false,
+   "delact_cost": -1.5860000000000096,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "mambaout_femto",
+   "acts": [
+    "head.pre_logits.act"
+   ],
+   "norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "shipped_acc": 0.75704,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -13.626000000000005,
+     "maxNS": 3.825384346982041e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -13.420000000000009,
+     "maxNS": 0.9433096957512062,
+     "corrNS_mean": 0.7045167621821471
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -1.9480000000000053,
+     "maxNS": 0.8579327657940593,
+     "corrNS_mean": 0.92536340591447
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -28.306000000000004,
+     "maxNS": 8.279610835737115e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -2.5600000000000067,
+     "maxNS": 1.1649514590433259,
+     "corrNS_mean": 0.44119400554399346
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -13.626000000000005,
+   "delact_alone_additive": false,
+   "delact_cost": -13.420000000000009,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "mambaout_small",
+   "acts": [
+    "head.pre_logits.act"
+   ],
+   "norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "shipped_acc": 0.80974,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -5.657999999999996,
+     "maxNS": 6.931273488364581e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -2.9040000000000066,
+     "maxNS": 1.0083433561740707,
+     "corrNS_mean": 0.7511495182743685
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -78.908,
+     "maxNS": 0.7123128839777557,
+     "corrNS_mean": 0.9173691746849026
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -2.212000000000003,
+     "maxNS": 8.301864133551684e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -0.11200000000000099,
+     "maxNS": 0.9635752284105735,
+     "corrNS_mean": 0.6267038235354149
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "delboth",
+   "best_cost_pts": -2.212000000000003,
+   "delact_alone_additive": false,
+   "delact_cost": -2.9040000000000066,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "mambaout_kobe",
+   "acts": [
+    "head.pre_logits.act"
+   ],
+   "norms": [
+    "head.norm",
+    "head.pre_logits.norm"
+   ],
+   "shipped_acc": 0.76972,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -12.156,
+     "maxNS": 4.186993240688168e-15,
+     "corrNS_mean": 1.0
+    },
+    "delact": {
+     "additive": false,
+     "dacc_pts": -9.34999999999999,
+     "maxNS": 0.9583172050660673,
+     "corrNS_mean": 0.7947191954775301
+    },
+    "delnorm": {
+     "additive": false,
+     "dacc_pts": -1.195999999999997,
+     "maxNS": 0.9225166925726724,
+     "corrNS_mean": 0.906061322171916
+    },
+    "delboth": {
+     "additive": true,
+     "dacc_pts": -11.183999999999994,
+     "maxNS": 4.2017178740316775e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "linact": {
+     "additive": false,
+     "dacc_pts": -1.7899999999999916,
+     "maxNS": 1.0021034196721852,
+     "corrNS_mean": 0.7364005702463172
+    }
+   },
+   "reaching": [
+    "delboth",
+    "poollast"
+   ],
+   "best_edit": "delboth",
+   "best_cost_pts": -11.183999999999994,
+   "delact_alone_additive": false,
+   "delact_cost": -9.34999999999999,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "efficientvit_b1",
+   "error": "RuntimeError: Given groups=1, weight of size [1536, 256, 1, 1], expected input[2, 1536, 1, 1] to have 256 channels, but got 1536 channels instead"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "fasternet_t0",
+   "acts": [
+    "act"
+   ],
+   "norms": [],
+   "shipped_acc": 0.67168,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -55.30600000000001,
+     "maxNS": 5.6137309080544486e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -60.058000000000014,
+     "maxNS": 7.287337235100317e-15,
+     "corrNS_mean": 1.0
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -8.578000000000008,
+     "maxNS": 4.122797292360998e-15,
+     "corrNS_mean": 0.9999999999999999
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "linact",
+   "best_cost_pts": -8.578000000000008,
+   "delact_alone_additive": true,
+   "delact_cost": -60.058000000000014,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit replaces the activation by its fitted affine part"
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "ghostnetv2_100",
+   "acts": [
+    "act2"
+   ],
+   "norms": [],
+   "shipped_acc": 0.72214,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -3.6479999999999957,
+     "maxNS": 2.612795396392819e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -2.6839999999999975,
+     "maxNS": 4.843056791653369e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -3.3619999999999983,
+     "maxNS": 5.8681112883870796e-15,
+     "corrNS_mean": 0.9999999999999999
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "delact",
+   "best_cost_pts": -2.6839999999999975,
+   "delact_alone_additive": true,
+   "delact_cost": -2.6839999999999975,
+   "h4_price_y": null,
+   "flag": null
+  },
+  {
+   "source": "h5_edits_heldout",
+   "model": "hgnet_tiny",
+   "acts": [
+    "head.last_conv.1"
+   ],
+   "norms": [],
+   "shipped_acc": 0.7628,
+   "edits": {
+    "poollast": {
+     "additive": true,
+     "dacc_pts": -0.9800000000000031,
+     "maxNS": 2.0009320709834725e-15,
+     "corrNS_mean": 0.9999999999999999
+    },
+    "delact": {
+     "additive": true,
+     "dacc_pts": -4.092000000000007,
+     "maxNS": 4.309372148943299e-15,
+     "corrNS_mean": 0.9999999999999998
+    },
+    "linact": {
+     "additive": true,
+     "dacc_pts": -13.704000000000004,
+     "maxNS": 4.16734009713398e-15,
+     "corrNS_mean": 1.0
+    }
+   },
+   "reaching": [
+    "delact",
+    "linact",
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "best_cost_pts": -0.9800000000000031,
+   "delact_alone_additive": true,
+   "delact_cost": -4.092000000000007,
+   "h4_price_y": null,
+   "flag": "cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "n_box_eval_images": 5823,
+ "n_seg_eval_images": 1449,
+ "n_overlap_images": 1122,
+ "seg_subset_of_box": false,
+ "n_seg_not_in_box": 327,
+ "frac_seg_in_box": 0.7743271221532091,
+ "frac_box_eval_shared": 0.19268418341061308,
+ "n_box_records": 8856,
+ "n_seg_records": 2147,
+ "n_overlap_records": 1604,
+ "seg_records_subset": false,
+ "n_fit_images": 5717,
+ "same_fit_split": true,
+ "n_seg_eval_in_fit": 0,
+ "n_box_eval_in_fit": 0,
+ "same_bank_all_bank_basis_runs": true,
+ "n_seg_eval_outside_main_trainval": 327,
+ "n_main_trainval": 11540,
+ "seg_not_in_box_by_year": {
+  "2007": 321,
+  "2008": 6
+ }
+}
+  w2_voc12_resnet50.json         n_eval 5823  n_records 8856  n_fit 5717  match True
+  w2_voc12_vgg16gap.json         n_eval 5823  n_records 8856  n_fit 5717  match True
+  w2_voc12_vitb16.json           n_eval 5823  n_records 8856  n_fit 5717  match True
+  w2_voc12seg_resnet50.json      n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_meancell.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau-0.5.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau-2.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau-8.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau0.5.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau2.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_resnet50_tau8.json n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_vgg16gap.json      n_eval 1449  n_records 2147  n_fit 5717  match True
+  w2_voc12seg_vitb16.json        n_eval 1449  n_records 2147  n_fit 5717  match True
+  -> <repo>\analyses/localisation_extra\out\l8_voc_overlap.json

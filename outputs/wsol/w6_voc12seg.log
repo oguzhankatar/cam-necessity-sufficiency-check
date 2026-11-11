@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[     3s] voc12seg / vitb16 pre-norm control: fit=5717 eval=1449 K=20
+[    37s] fitted `none` head, final train loss 0.2780
+[    38s] certificate collapsed_pre: ADDITIVE=True maxNS=1.61e-14 Rhalf=1.41e-13 I2=1.29e-14
+[    38s] evaluation over 1449 images
+[    38s]   24/1449 images
+[    46s]   984/1449 images
+  -> <repo>\outputs\wsol\w6_prenorm_voc12seg.json
+[    51s] classification {'mAP': 0.9082726850226273}
+[    51s] collapsed_pre      pointing_strict=0.5575 pointing_tol15=0.8361 PxAP=0.4098 peak_mask_iou=0.4436
+[    51s] collapsed_pre_b3   pointing_strict=0.6688 pointing_tol15=0.8477 PxAP=0.5010 peak_mask_iou=0.4760
+[    51s] cam_pre            pointing_strict=0.5738 pointing_tol15=0.8486 PxAP=0.4191 peak_mask_iou=0.4616

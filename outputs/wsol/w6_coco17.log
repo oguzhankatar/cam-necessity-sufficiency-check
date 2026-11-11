@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+loading annotations into memory...
+Done (t=0.31s)
+creating index...
+index created!
+[     3s] coco17 / vitb16 pre-norm control: fit=2476 eval=2476 K=80
+[    20s] fitted `none` head, final train loss 0.3972
+[    22s] certificate collapsed_pre: ADDITIVE=True maxNS=1.88e-14 Rhalf=2.11e-14 I2=1.70e-14
+[    22s] evaluation over 2476 images
+[    22s]   24/2476 images
+[    33s]   984/2476 images
+[    44s]   1944/2476 images
+  -> <repo>\outputs\wsol\w6_prenorm_coco17.json
+[    51s] classification {'mAP': 0.6903723904448074}
+[    51s] collapsed_pre      pointing_strict=0.3780 pointing_tol15=0.5983 PxAP=0.2231 peak_mask_iou=0.2688
+[    51s] collapsed_pre_b3   pointing_strict=0.4116 pointing_tol15=0.6069 PxAP=0.2520 peak_mask_iou=0.2835
+[    51s] cam_pre            pointing_strict=0.3857 pointing_tol15=0.6088 PxAP=0.2269 peak_mask_iou=0.2758

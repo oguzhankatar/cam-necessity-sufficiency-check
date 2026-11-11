@@ -1,0 +1,22 @@
+[     2s] H3_s0  ckpt steps 5610  n_test 5794
+[     3s] references: fit-split indices [472, 1369, 2154, 2406, 3992, 5106, 5263, 5728]
+[    13s]   check img 0 ref 0: |N_cf-N_lit|/s 5.66e-14 |S_cf-S_lit|/s 9.43e-15 |N_lit-S_lit|/s 6.29e-01 (abs 4.74e-01) rho 0.584427
+[    13s]   check img 0 ref 1: |N_cf-N_lit|/s 5.77e-14 |S_cf-S_lit|/s 1.80e-14 |N_lit-S_lit|/s 5.92e-01 (abs 4.37e-01) rho 0.663037
+[    15s]   check img 1 ref 0: |N_cf-N_lit|/s 7.78e-14 |S_cf-S_lit|/s 8.43e-15 |N_lit-S_lit|/s 6.85e-01 (abs 4.69e-01) rho 0.493913
+[    16s]   check img 1 ref 1: |N_cf-N_lit|/s 8.82e-14 |S_cf-S_lit|/s 1.58e-14 |N_lit-S_lit|/s 6.42e-01 (abs 4.14e-01) rho 0.705751
+[    17s]   check img 2 ref 0: |N_cf-N_lit|/s 8.14e-14 |S_cf-S_lit|/s 9.39e-15 |N_lit-S_lit|/s 8.84e-01 (abs 5.02e-01) rho 0.564953
+[    18s]   check img 2 ref 1: |N_cf-N_lit|/s 8.23e-14 |S_cf-S_lit|/s 2.14e-14 |N_lit-S_lit|/s 8.73e-01 (abs 4.90e-01) rho 0.695521
+[    86s]   640 / 5794
+[   154s]   1280 / 5794
+[   222s]   1920 / 5794
+[   291s]   2560 / 5794
+[   359s]   3200 / 5794
+[   428s]   3840 / 5794
+[   496s]   4480 / 5794
+[   565s]   5120 / 5794
+[   634s]   5760 / 5794
+[   638s] top-1 0.8217 (float64 head 0.8217, max logit err 6.76e-06)
+[   638s] separation {"sep1_pearson": 0.2389610641824038, "sep1_spearman": 0.35100241111861863, "sep8_pearson": 0.19497656202541425, "sep8_spearman": 0.36931186558211887}
+[   638s] N          {"MaxBoxAccV2": 0.42124036359452305, "per_delta": {"0.3": 0.812219537452537, "0.5": 0.38004832585433207, "0.7": 0.07145322747670003}, "pointing_strict": 0.9844666896789782, "pointing_tol15": 0.9958577839143942, "best_iou": 0.5916799306869507}
+[   638s] S          {"MaxBoxAccV2": 0.6133931653434588, "per_delta": {"0.3": 0.9537452537107353, "0.5": 0.7000345184673801, "0.7": 0.18639972385226097}, "pointing_strict": 0.9984466689678978, "pointing_tol15": 0.9994822229892992, "best_iou": 0.6740767955780029}
+[   638s] worst check {"N_closed_vs_literal_rel": 8.816129034461908e-14, "S_closed_vs_literal_rel": 2.1369198043701992e-14, "N_vs_S_literal_rel": 0.8839103823335902, "N_vs_S_literal_abs": 0.5017598154848351}

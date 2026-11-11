@@ -1,0 +1,100 @@
+[beitv2_base_patch16_224] family=Beit shipped=post C=768 input=224
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8659 pre=0.8627 none=0.8658
+   acc  25600/50000  post=0.8489 pre=0.8456 none=0.8489
+   acc  38400/50000  post=0.8382 pre=0.8346 none=0.8372
+  top-1 (50000): post=0.8312  pre=0.8278  none=0.8301
+  post  corrNS=+0.61177243 [0.324389,0.868484]  maxNS=1.32e+00 Rhalf=9.09e-01 I2=1.19e-02 sumN/dz=0.649852  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=4.09e-14 Rhalf=3.02e-14 I2=1.85e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=4.42e-14 Rhalf=5.37e-14 I2=2.80e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: none
+  -> <repo>\outputs\scope\s5_reverify.json
+[convnext_tiny] family=ConvNeXt shipped=post C=768 input=224
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8355 pre=0.7984 none=0.8342
+   acc  25600/50000  post=0.8150 pre=0.7772 none=0.8109
+   acc  38400/50000  post=0.7980 pre=0.7593 none=0.7917
+  top-1 (50000): post=0.7891  pre=0.7501  none=0.7831
+  post  corrNS=+0.88268679 [0.620485,0.992818]  maxNS=8.71e-01 Rhalf=8.46e-01 I2=7.41e-02 sumN/dz=0.319675  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=9.08e-15 Rhalf=1.20e-14 I2=5.67e-15 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=8.16e-15 Rhalf=1.23e-14 I2=6.81e-15 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.882687 outside published CI [0.843216,0.875965]
+  -> <repo>\outputs\scope\s5_reverify.json
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[eva02_tiny_patch14_336] family=Eva shipped=post C=192 input=336
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8166 pre=0.8116 none=0.8161
+   acc  25600/50000  post=0.7990 pre=0.7923 none=0.7977
+   acc  38400/50000  post=0.7828 pre=0.7764 none=0.7813
+  top-1 (50000): post=0.7745  pre=0.7674  none=0.7729
+  post  corrNS=+0.55474643 [-0.508414,0.927967]  maxNS=1.10e+00 Rhalf=1.23e+00 I2=2.85e-02 sumN/dz=0.156818  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=2.39e-13 Rhalf=1.24e-13 I2=7.16e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=1.01e-13 Rhalf=1.09e-13 I2=7.11e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.554746 outside published CI [0.375273,0.449213]
+  -> <repo>\outputs\scope\s5_reverify.json
+[naflexvit_base_patch16_gap] family=NaFlexVit shipped=post C=768 input=384
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8407 pre=0.8391 none=0.8321
+   acc  25600/50000  post=0.8223 pre=0.8211 none=0.8141
+   acc  38400/50000  post=0.8074 pre=0.8060 none=0.7988
+  top-1 (50000): post=0.7988  pre=0.7979  none=0.7907
+  post  corrNS=+0.50953071 [0.196668,0.819330]  maxNS=9.67e-01 Rhalf=7.19e-01 I2=6.34e-03 sumN/dz=0.524595  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=1.26e-13 Rhalf=1.23e-13 I2=6.23e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=1.11e-13 Rhalf=1.39e-13 I2=7.14e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: none
+  -> <repo>\outputs\scope\s5_reverify.json
+[swin_tiny_patch4_window7_224] family=SwinTransformer shipped=pre C=768 input=224
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8236 pre=0.8255 none=0.7969
+   acc  25600/50000  post=0.8035 pre=0.8045 none=0.7677
+   acc  38400/50000  post=0.7839 pre=0.7850 none=0.7424
+  top-1 (50000): post=0.7749  pre=0.7758  none=0.7345
+  post  corrNS=+0.84531875 [0.666325,0.942412]  maxNS=8.65e-01 Rhalf=7.26e-01 I2=2.88e-02 sumN/dz=1.186242  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=8.22e-15 Rhalf=1.09e-14 I2=6.20e-15 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=1.07e-14 Rhalf=1.04e-14 I2=6.09e-15 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.845319 outside published CI [0.858294,0.876356]
+  -> <repo>\outputs\scope\s5_reverify.json
+[vit_base_patch16_rope_reg1_gap_256] family=Eva shipped=post C=768 input=256
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8482 pre=0.8473 none=0.8467
+   acc  25600/50000  post=0.8287 pre=0.8272 none=0.8271
+   acc  38400/50000  post=0.8146 pre=0.8130 none=0.8137
+  top-1 (50000): post=0.8071  pre=0.8059  none=0.8068
+  post  corrNS=+0.64978197 [0.431147,0.920030]  maxNS=9.18e-01 Rhalf=7.07e-01 I2=2.17e-02 sumN/dz=0.605890  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=6.11e-14 Rhalf=3.84e-14 I2=2.34e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=3.90e-14 Rhalf=6.88e-14 I2=3.19e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.649782 outside published CI [0.612399,0.645217]
+  -> <repo>\outputs\scope\s5_reverify.json
+[vit_betwixt_patch16_reg4_gap_256] family=VisionTransformer shipped=post C=640 input=256
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8494 pre=0.8471 none=0.8497
+   acc  25600/50000  post=0.8313 pre=0.8276 none=0.8314
+   acc  38400/50000  post=0.8175 pre=0.8137 none=0.8174
+  top-1 (50000): post=0.8092  pre=0.8057  none=0.8097
+  post  corrNS=+0.52528856 [0.139047,0.917730]  maxNS=9.97e-01 Rhalf=1.04e+00 I2=2.75e-02 sumN/dz=0.516301  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=6.04e-14 Rhalf=4.56e-14 I2=2.67e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=5.55e-14 Rhalf=4.61e-14 I2=2.53e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.525289 outside published CI [0.470201,0.517993]
+  -> <repo>\outputs\scope\s5_reverify.json
+[vit_little_patch16_reg4_gap_256] family=VisionTransformer shipped=post C=320 input=256
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8407 pre=0.8326 none=0.8387
+   acc  25600/50000  post=0.8225 pre=0.8131 none=0.8187
+   acc  38400/50000  post=0.8064 pre=0.7976 none=0.8029
+  top-1 (50000): post=0.7991  pre=0.7911  none=0.7948
+  post  corrNS=+0.68331031 [0.455229,0.885608]  maxNS=8.92e-01 Rhalf=8.42e-01 I2=1.58e-02 sumN/dz=0.605290  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=6.20e-14 Rhalf=1.14e-13 I2=4.85e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=3.80e-14 Rhalf=6.01e-14 I2=3.53e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.683310 outside published CI [0.645874,0.673585]
+  -> <repo>\outputs\scope\s5_reverify.json
+[vit_medium_patch16_reg4_gap_256] family=VisionTransformer shipped=post C=512 input=256
+  compose rel err 0.00e+00 PASS
+   acc  12800/50000  post=0.8490 pre=0.8468 none=0.8489
+   acc  25600/50000  post=0.8316 pre=0.8274 none=0.8311
+   acc  38400/50000  post=0.8181 pre=0.8138 none=0.8172
+  top-1 (50000): post=0.8106  pre=0.8061  none=0.8096
+  post  corrNS=+0.68481921 [0.436558,0.880177]  maxNS=8.68e-01 Rhalf=7.21e-01 I2=1.74e-02 sumN/dz=0.479449  ADDITIVE=False
+  pre   corrNS=+1.00000000 [1.000000,1.000000]  maxNS=6.03e-14 Rhalf=3.84e-14 I2=2.22e-14 sumN/dz=1.000000  ADDITIVE=True
+  none  corrNS=+1.00000000 [1.000000,1.000000]  maxNS=3.44e-14 Rhalf=4.10e-14 I2=2.27e-14 sumN/dz=1.000000  ADDITIVE=True
+  DIFF vs probe25 JSON: corrNS_post 0.684819 outside published CI [0.637750,0.665798]
+  -> <repo>\outputs\scope\s5_reverify.json

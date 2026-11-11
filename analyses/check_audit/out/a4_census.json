@@ -1,0 +1,306 @@
+{
+ "p1": {
+  "n_classified": 895,
+  "n_population": 899,
+  "dense_aggregator_archs": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny",
+   "vgg11",
+   "vgg11_bn",
+   "vgg13",
+   "vgg13_bn",
+   "vgg16",
+   "vgg16_bn",
+   "vgg19",
+   "vgg19_bn"
+  ],
+  "coat_in_population": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny"
+  ],
+  "frozen": {
+   "IN-SCOPE": 532,
+   "NORM-BLOCKED": 103,
+   "NONLIN-BLOCKED": 118,
+   "DEGENERATE": 142,
+   "AGG-BLOCKED": 0
+  },
+  "frozen_share": {
+   "IN-SCOPE": 0.5944134078212291,
+   "NORM-BLOCKED": 0.11508379888268157,
+   "NONLIN-BLOCKED": 0.1318435754189944,
+   "DEGENERATE": 0.15865921787709497,
+   "AGG-BLOCKED": 0.0
+  },
+  "frozen_degenerate_without_test_models": [
+   525,
+   882
+  ],
+  "frozen_traces": {
+   "n": 43,
+   "by_verdict": {
+    "IN-SCOPE": 15,
+    "NORM-BLOCKED": 4,
+    "NONLIN-BLOCKED": 19,
+    "DEGENERATE": 5,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "coat_corrected": {
+   "IN-SCOPE": 529,
+   "NORM-BLOCKED": 103,
+   "NONLIN-BLOCKED": 118,
+   "DEGENERATE": 145,
+   "AGG-BLOCKED": 0
+  },
+  "coat_corrected_share": {
+   "IN-SCOPE": 0.5910614525139665,
+   "NORM-BLOCKED": 0.11508379888268157,
+   "NONLIN-BLOCKED": 0.1318435754189944,
+   "DEGENERATE": 0.16201117318435754,
+   "AGG-BLOCKED": 0.0
+  },
+  "coat_corrected_degenerate_without_test_models": [
+   522,
+   882
+  ],
+  "coat_corrected_traces": {
+   "n": 43,
+   "by_verdict": {
+    "IN-SCOPE": 14,
+    "NORM-BLOCKED": 4,
+    "NONLIN-BLOCKED": 19,
+    "DEGENERATE": 6,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "coat_and_zepto_corrected": {
+   "IN-SCOPE": 529,
+   "NORM-BLOCKED": 105,
+   "NONLIN-BLOCKED": 116,
+   "DEGENERATE": 145,
+   "AGG-BLOCKED": 0
+  },
+  "coat_and_zepto_corrected_share": {
+   "IN-SCOPE": 0.5910614525139665,
+   "NORM-BLOCKED": 0.11731843575418995,
+   "NONLIN-BLOCKED": 0.12960893854748604,
+   "DEGENERATE": 0.16201117318435754,
+   "AGG-BLOCKED": 0.0
+  },
+  "coat_and_zepto_corrected_degenerate_without_test_models": [
+   522,
+   882
+  ],
+  "coat_and_zepto_corrected_traces": {
+   "n": 43,
+   "by_verdict": {
+    "IN-SCOPE": 14,
+    "NORM-BLOCKED": 5,
+    "NONLIN-BLOCKED": 18,
+    "DEGENERATE": 6,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "declared_branch_total": 267,
+  "declared_branch_by_verdict": {
+   "NORM-BLOCKED": 52,
+   "DEGENERATE": 142,
+   "IN-SCOPE": 62,
+   "NONLIN-BLOCKED": 11
+  },
+  "declared_branch_degenerate": 62,
+  "declared_branch_degenerate_by_declared_string": {
+   "avg": 62
+  },
+  "declared_branch_degenerate_v2b": {
+   "IN-SCOPE": 62
+  },
+  "declared_branch_degenerate_aten": {
+   "MEAN": 62
+  },
+  "declared_branch_degenerate_archs_no_avg_string": [],
+  "declared_branch_by_string": {
+   "avg": 107,
+   "token": 142,
+   "None": 17,
+   "map": 1
+  },
+  "declared_branch_string_x_verdict": {
+   "avg|NORM-BLOCKED": 45,
+   "token|DEGENERATE": 142,
+   "avg|IN-SCOPE": 62,
+   "None|NORM-BLOCKED": 7,
+   "None|NONLIN-BLOCKED": 10,
+   "map|NONLIN-BLOCKED": 1
+  },
+  "declared_branch_v2b_x_v1": {
+   "NORM-BLOCKED->NORM-BLOCKED": 52,
+   "DEGENERATE->DEGENERATE": 120,
+   "DEGENERATE->IN-SCOPE": 11,
+   "IN-SCOPE->IN-SCOPE": 62,
+   "NONLIN-BLOCKED->NONLIN-BLOCKED": 10,
+   "NONLIN-BLOCKED->DEGENERATE": 1,
+   "DEGENERATE->AGG-BLOCKED": 11
+  },
+  "n_test_models": 13,
+  "test_models_degenerate": 7
+ },
+ "p2": {
+  "n_classified": 901,
+  "n_population": 905,
+  "dense_aggregator_archs": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny",
+   "vgg11",
+   "vgg11_bn",
+   "vgg13",
+   "vgg13_bn",
+   "vgg16",
+   "vgg16_bn",
+   "vgg19",
+   "vgg19_bn"
+  ],
+  "coat_in_population": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny"
+  ],
+  "frozen": {
+   "IN-SCOPE": 533,
+   "NORM-BLOCKED": 106,
+   "NONLIN-BLOCKED": 119,
+   "DEGENERATE": 143,
+   "AGG-BLOCKED": 0
+  },
+  "frozen_share": {
+   "IN-SCOPE": 0.5915649278579356,
+   "NORM-BLOCKED": 0.11764705882352941,
+   "NONLIN-BLOCKED": 0.1320754716981132,
+   "DEGENERATE": 0.15871254162042175,
+   "AGG-BLOCKED": 0.0
+  },
+  "frozen_degenerate_without_test_models": [
+   526,
+   888
+  ],
+  "frozen_traces": {
+   "n": 45,
+   "by_verdict": {
+    "IN-SCOPE": 16,
+    "NORM-BLOCKED": 4,
+    "NONLIN-BLOCKED": 20,
+    "DEGENERATE": 5,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "coat_corrected": {
+   "IN-SCOPE": 530,
+   "NORM-BLOCKED": 106,
+   "NONLIN-BLOCKED": 119,
+   "DEGENERATE": 146,
+   "AGG-BLOCKED": 0
+  },
+  "coat_corrected_share": {
+   "IN-SCOPE": 0.5882352941176471,
+   "NORM-BLOCKED": 0.11764705882352941,
+   "NONLIN-BLOCKED": 0.1320754716981132,
+   "DEGENERATE": 0.16204217536071033,
+   "AGG-BLOCKED": 0.0
+  },
+  "coat_corrected_degenerate_without_test_models": [
+   523,
+   888
+  ],
+  "coat_corrected_traces": {
+   "n": 45,
+   "by_verdict": {
+    "IN-SCOPE": 15,
+    "NORM-BLOCKED": 4,
+    "NONLIN-BLOCKED": 20,
+    "DEGENERATE": 6,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "coat_and_zepto_corrected": {
+   "IN-SCOPE": 530,
+   "NORM-BLOCKED": 108,
+   "NONLIN-BLOCKED": 117,
+   "DEGENERATE": 146,
+   "AGG-BLOCKED": 0
+  },
+  "coat_and_zepto_corrected_share": {
+   "IN-SCOPE": 0.5882352941176471,
+   "NORM-BLOCKED": 0.11986681465038845,
+   "NONLIN-BLOCKED": 0.12985571587125416,
+   "DEGENERATE": 0.16204217536071033,
+   "AGG-BLOCKED": 0.0
+  },
+  "coat_and_zepto_corrected_degenerate_without_test_models": [
+   523,
+   888
+  ],
+  "coat_and_zepto_corrected_traces": {
+   "n": 45,
+   "by_verdict": {
+    "IN-SCOPE": 15,
+    "NORM-BLOCKED": 5,
+    "NONLIN-BLOCKED": 19,
+    "DEGENERATE": 6,
+    "AGG-BLOCKED": 0
+   },
+   "n_traces_with_mixed_verdict": 0
+  },
+  "declared_branch_total": 270,
+  "declared_branch_by_verdict": {
+   "NORM-BLOCKED": 52,
+   "DEGENERATE": 143,
+   "IN-SCOPE": 63,
+   "NONLIN-BLOCKED": 12
+  },
+  "declared_branch_degenerate": 63,
+  "declared_branch_degenerate_by_declared_string": {
+   "avg": 63
+  },
+  "declared_branch_degenerate_v2b": {
+   "IN-SCOPE": 63
+  },
+  "declared_branch_degenerate_aten": {
+   "MEAN": 63
+  },
+  "declared_branch_degenerate_archs_no_avg_string": [],
+  "declared_branch_by_string": {
+   "avg": 108,
+   "token": 143,
+   "None": 17,
+   "map": 2
+  },
+  "declared_branch_string_x_verdict": {
+   "avg|NORM-BLOCKED": 45,
+   "token|DEGENERATE": 143,
+   "avg|IN-SCOPE": 63,
+   "None|NORM-BLOCKED": 7,
+   "None|NONLIN-BLOCKED": 10,
+   "map|NONLIN-BLOCKED": 2
+  },
+  "declared_branch_v2b_x_v1": {
+   "NORM-BLOCKED->NORM-BLOCKED": 52,
+   "DEGENERATE->DEGENERATE": 121,
+   "DEGENERATE->IN-SCOPE": 11,
+   "IN-SCOPE->IN-SCOPE": 63,
+   "NONLIN-BLOCKED->NONLIN-BLOCKED": 10,
+   "NONLIN-BLOCKED->DEGENERATE": 2,
+   "DEGENERATE->AGG-BLOCKED": 11
+  },
+  "n_test_models": 13,
+  "test_models_degenerate": 7
+ }
+}

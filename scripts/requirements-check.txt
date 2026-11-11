@@ -1,0 +1,9 @@
+# Minimal CPU-only requirements for checking the claims without the full run environment:
+# scripts/check_model.py, scripts/check_conservative.py, scripts/heldout/frozen_rule.py and
+# scripts/verify_numbers.py. Requires Python >= 3.10. check_conservative.py --torchvision also
+# needs torchvision.
+#   pip install -r scripts/requirements-check.txt
+# (a CPU-only torch wheel: pip install torch --index-url https://download.pytorch.org/whl/cpu)
+torch>=2.0
+timm>=1.0.27
+numpy

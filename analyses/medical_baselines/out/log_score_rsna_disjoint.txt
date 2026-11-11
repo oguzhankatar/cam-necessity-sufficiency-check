@@ -1,0 +1,2 @@
+== rsna_disjoint n=1385 best=collapsed_3x3 ceiling=0.969
+wrote <repo>\analyses/medical_baselines\out\t6_score_rsna_disjoint.json

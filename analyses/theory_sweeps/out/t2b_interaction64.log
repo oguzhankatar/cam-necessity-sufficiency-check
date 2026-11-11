@@ -1,0 +1,30 @@
+<repo>\analyses/theory_sweeps\scripts\theory_sweeps_lib.py:50: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:209.)
+  t = torch.from_numpy(np.ascontiguousarray(F)).to(dev)
+gap_fc   acc=0.9906 1-corr=0 Rhalf=2.901e-15 I2=3.227e-15 | f32: Rhalf=2.00705323758241e-06 I2=2.3911006839701563e-06
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+gap_mlp  acc=0.9916 1-corr=0.04859 Rhalf=0.2778 I2=0.01057 | f32: Rhalf=0.27780978200866635 I2=0.010571126501114728
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+ln_gap   acc=0.9888 1-corr=0 Rhalf=4.223e-15 I2=5.615e-15 | f32: Rhalf=4.122919284396984e-06 I2=4.77218447751208e-06
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+tok_mlp  acc=0.9913 1-corr=0 Rhalf=4.111e-15 I2=4.624e-15 | f32: Rhalf=4.066464794129211e-06 I2=4.908858492235089e-06
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+ln_post  acc=0.9903 1-corr=0.1551 Rhalf=0.6766 I2=0.0434 | f32: Rhalf=None I2=None
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse0.25  acc=0.9911 1-corr=0.06667 Rhalf=0.2639 I2=0.01088 | f32: Rhalf=0.26393379534905154 I2=0.010879647082118835
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse0.5   acc=0.9896 1-corr=0.2539 Rhalf=0.3104 I2=0.01129 | f32: Rhalf=0.3103574431604809 I2=0.011302439557564666
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse1.0   acc=0.9875 1-corr=0.436 Rhalf=0.3462 I2=0.01068 | f32: Rhalf=0.3461645022034645 I2=0.010702291676693676
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse2.0   acc=0.9857 1-corr=0.5411 Rhalf=0.3754 I2=0.009659 | f32: Rhalf=0.37541709064195555 I2=0.009684744105680407
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse4.0   acc=0.9860 1-corr=0.5879 Rhalf=0.4058 I2=0.009026 | f32: Rhalf=0.40577076965322095 I2=0.009075352198716679
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+lse8.0   acc=0.9850 1-corr=0.6047 Rhalf=0.4272 I2=0.009046 | f32: Rhalf=0.42718658601451254 I2=0.009114341505267513
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+maxpool  acc=0.9865 1-corr=0.6276 Rhalf=0.4488 I2=0.01061 | f32: Rhalf=0.44883242021832204 I2=0.01077264706438462
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+attn     acc=0.9875 1-corr=0.5073 Rhalf=0.6109 I2=0.03108 | f32: Rhalf=0.6108768355204828 I2=0.031080974324140698
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json
+bilin    acc=0.9918 1-corr=0.6261 Rhalf=0.9699 I2=0.1404 | f32: Rhalf=0.9698756097091569 I2=0.14043795824464825
+wrote <repo>\analyses/theory_sweeps\out\t2b_interaction64.json

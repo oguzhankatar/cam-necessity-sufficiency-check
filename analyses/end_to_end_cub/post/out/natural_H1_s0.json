@@ -1,0 +1,43 @@
+{
+ "head": "H1",
+ "seed": 0,
+ "n_test": 5794,
+ "maps": [
+  "cam",
+  "gradcam"
+ ],
+ "post_hoc": true,
+ "checks": {
+  "gradcam_vs_closed_form_rel": 4.60730558079995e-15,
+  "head64_logit_vs_float32_abs": 9.492953985557051e-06
+ },
+ "all_zero_maps": {
+  "cam": 0,
+  "gradcam": 3
+ },
+ "per_map": {
+  "cam": {
+   "MaxBoxAccV2": 0.5050627085490738,
+   "per_delta": {
+    "0.3": 0.8779772178115292,
+    "0.5": 0.5141525716258198,
+    "0.7": 0.12305833620987228
+   },
+   "pointing_strict": 0.9929237141870901,
+   "pointing_tol15": 0.9967207455988955,
+   "best_iou": 0.6484584212303162
+  },
+  "gradcam": {
+   "MaxBoxAccV2": 0.5445863536992291,
+   "per_delta": {
+    "0.3": 0.917155678287884,
+    "0.5": 0.5759406282361064,
+    "0.7": 0.14066275457369692
+   },
+   "pointing_strict": 0.9925785295132896,
+   "pointing_tol15": 0.9963755609250949,
+   "best_iou": 0.6293883919715881
+  }
+ },
+ "precision": "backbone float32 (TF32 off); maps and Grad-CAM float64"
+}

@@ -1,0 +1,114 @@
+reproduction of the 192 primary contrasts: max |diff| 0.00e+00, max |p_holm| 0.00e+00
+vs collapsed {'win': 39, 'loss': 26, 'tie': 31, 'n': 96}  vs centre {'win': 68, 'loss': 24, 'tie': 4, 'n': 96}
+
+Task 1 -- wins vs collapsed by arm x metric
+  relocation {'MaxBoxAccV2': 2, 'best IoU': 2, 'pointing, strict': 6, 'pointing, 15 px': 5, 'peak-mask IoU': 4}
+  aggregator {'MaxBoxAccV2': 1, 'best IoU': 1, 'pointing, strict': 10, 'pointing, 15 px': 6, 'peak-mask IoU': 2}
+  losses: {'aggregator': {'MaxBoxAccV2': 5, 'best IoU': 5, 'pointing, strict': 2, 'pointing, 15 px': 3, 'peak-mask IoU': 10}, 'relocation': {'pointing, 15 px': 1}}
+   ('aggregator', 'loss') {'extent': 20, 'maxloc': 5}
+   ('aggregator', 'tie') {'maxloc': 27}
+   ('aggregator', 'win') {'extent': 4, 'maxloc': 16}
+   ('relocation', 'loss') {'maxloc': 1}
+   ('relocation', 'tie') {'maxloc': 4}
+   ('relocation', 'win') {'extent': 8, 'maxloc': 11}
+  bk ('aggregator', 'resnet50', 'extent') {'loss': 7, 'win': 1}
+  bk ('aggregator', 'resnet50', 'maxloc') {'loss': 3, 'tie': 11, 'win': 2}
+  bk ('aggregator', 'vgg16gap', 'extent') {'loss': 8}
+  bk ('aggregator', 'vgg16gap', 'maxloc') {'tie': 13, 'loss': 2, 'win': 1}
+  bk ('aggregator', 'vitb16', 'extent') {'loss': 5, 'win': 3}
+  bk ('aggregator', 'vitb16', 'maxloc') {'win': 13, 'tie': 3}
+  bk ('relocation', 'vitb16', 'extent') {'win': 8}
+  bk ('relocation', 'vitb16', 'maxloc') {'win': 11, 'tie': 4, 'loss': 1}
+  half ('aggregator', 'necessity', 'extent') {'loss': 12}
+  half ('aggregator', 'necessity', 'maxloc') {'loss': 3, 'tie': 16, 'win': 5}
+  half ('aggregator', 'sufficiency', 'extent') {'win': 4, 'loss': 8}
+  half ('aggregator', 'sufficiency', 'maxloc') {'loss': 2, 'tie': 11, 'win': 11}
+  half ('relocation', 'necessity', 'extent') {'win': 4}
+  half ('relocation', 'necessity', 'maxloc') {'win': 5, 'tie': 3}
+  half ('relocation', 'sufficiency', 'extent') {'win': 4}
+  half ('relocation', 'sufficiency', 'maxloc') {'win': 6, 'tie': 1, 'loss': 1}
+  extent wins:
+    cub      vitb16   MaxBoxAccV2    S_ln   +0.1433 [+0.1357, +0.1511] p_holm=0.008
+    cub      vitb16   best IoU       S_ln   +0.0970 [+0.0937, +0.1003] p_holm=0
+    cub      vitb16   MaxBoxAccV2    N_ln   +0.0659 [+0.0592, +0.0713] p_holm=0.008
+    cub      vitb16   best IoU       N_ln   +0.0565 [+0.0536, +0.0594] p_holm=7.7e-292
+    cub      resnet50 MaxBoxAccV2    S_lse  +0.0350 [+0.0270, +0.0415] p_holm=0.004
+    voc12seg vitb16   peak-mask IoU  S_ln   +0.0268 [+0.0235, +0.0301] p_holm=1.6e-55
+    voc12seg vitb16   peak-mask IoU  S_lse  +0.0210 [+0.0188, +0.0232] p_holm=1.8e-61
+    voc12seg vitb16   peak-mask IoU  N_ln   +0.0154 [+0.0129, +0.0179] p_holm=1.7e-34
+    coco17   vitb16   peak-mask IoU  S_lse  +0.0107 [+0.0098, +0.0117] p_holm=2.3e-79
+    coco17   vitb16   peak-mask IoU  N_ln   +0.0088 [+0.0077, +0.0098] p_holm=6.7e-56
+    coco17   vitb16   peak-mask IoU  S_ln   +0.0075 [+0.0062, +0.0088] p_holm=5.4e-18
+    cub      vitb16   best IoU       S_lse  +0.0071 [+0.0049, +0.0094] p_holm=3.3e-08
+  largest win: cub vitb16 pointing_strict S_ln +0.3259
+
+Task 2 -- vs plain CAM (family {N,S}x{cam,centre}): {'win': 18, 'loss': 33, 'tie': 45, 'n': 96}
+   sensitivity, family of cam rows only: {'win': 18, 'loss': 33, 'tie': 45}
+  relocation all      vs collapsed n=24 win 19 loss  1 tie  4  (extent: win 8 loss 0)  median diff +0.0273
+  relocation all      vs cam       n=24 win 13 loss  6 tie  5  (extent: win 5 loss 2)  median diff +0.0079
+  relocation vitb16   vs collapsed n=24 win 19 loss  1 tie  4  (extent: win 8 loss 0)  median diff +0.0273
+  relocation vitb16   vs cam       n=24 win 13 loss  6 tie  5  (extent: win 5 loss 2)  median diff +0.0079
+  aggregator all      vs collapsed n=72 win 20 loss 25 tie 27  (extent: win 4 loss 20)  median diff +0.0003
+  aggregator all      vs cam       n=72 win  5 loss 27 tie 40  (extent: win 3 loss 19)  median diff -0.0017
+  aggregator resnet50 vs collapsed n=24 win  3 loss 10 tie 11  (extent: win 1 loss 7)  median diff -0.0001
+  aggregator resnet50 vs cam       n=24 win  2 loss  9 tie 13  (extent: win 1 loss 7)  median diff -0.0017
+  aggregator vgg16gap vs collapsed n=24 win  1 loss 10 tie 13  (extent: win 0 loss 8)  median diff -0.0036
+  aggregator vgg16gap vs cam       n=24 win  1 loss 10 tie 13  (extent: win 0 loss 7)  median diff -0.0023
+  aggregator vitb16   vs collapsed n=24 win 16 loss  5 tie  3  (extent: win 3 loss 5)  median diff +0.0133
+  aggregator vitb16   vs cam       n=24 win  2 loss  8 tie 14  (extent: win 2 loss 5)  median diff -0.0009
+  verdict transitions (arm, vs collapsed -> vs cam):
+     ('aggregator', 'loss', 'loss') 19
+     ('aggregator', 'loss', 'tie') 6
+     ('aggregator', 'tie', 'loss') 7
+     ('aggregator', 'tie', 'tie') 18
+     ('aggregator', 'tie', 'win') 2
+     ('aggregator', 'win', 'loss') 1
+     ('aggregator', 'win', 'tie') 16
+     ('aggregator', 'win', 'win') 3
+     ('relocation', 'loss', 'loss') 1
+     ('relocation', 'tie', 'loss') 2
+     ('relocation', 'tie', 'tie') 2
+     ('relocation', 'win', 'loss') 3
+     ('relocation', 'win', 'tie') 3
+     ('relocation', 'win', 'win') 13
+
+  collapsed - cam per cell (Holm over the metrics of the cell):
+    cub      resnet50 MaxBoxAccV2     coll 0.5295 cam 0.5039 diff +0.0257 [+0.0210,+0.0318] p=0.001 win
+    cub      resnet50 best IoU        coll 0.6608 cam 0.6598 diff +0.0010 [-0.0012,+0.0031] p=0.097 tie
+    cub      resnet50 pointing, strict coll 0.9650 cam 0.9600 diff +0.0050 [+0.0009,+0.0091] p=0.018 tie
+    cub      resnet50 pointing, 15 px coll 0.9952 cam 0.9934 diff +0.0017 [-0.0000,+0.0036] p=0.087 tie
+    cub      vgg16gap MaxBoxAccV2     coll 0.4054 cam 0.3723 diff +0.0330 [+0.0269,+0.0373] p=0.001 win
+    cub      vgg16gap best IoU        coll 0.6243 cam 0.6284 diff -0.0041 [-0.0072,-0.0011] p=7.5e-05 loss
+    cub      vgg16gap pointing, strict coll 0.9808 cam 0.9788 diff +0.0021 [-0.0014,+0.0055] p=0.31 tie
+    cub      vgg16gap pointing, 15 px coll 0.9917 cam 0.9877 diff +0.0040 [+0.0014,+0.0069] p=0.0095 win
+    cub      vitb16   MaxBoxAccV2     coll 0.3337 cam 0.3415 diff -0.0078 [-0.0121,-0.0034] p=0.001 loss
+    cub      vitb16   best IoU        coll 0.5406 cam 0.5465 diff -0.0059 [-0.0081,-0.0037] p=1.5e-05 loss
+    cub      vitb16   pointing, strict coll 0.4220 cam 0.4539 diff -0.0319 [-0.0435,-0.0205] p=4.9e-08 loss
+    cub      vitb16   pointing, 15 px coll 0.5644 cam 0.5851 diff -0.0207 [-0.0323,-0.0086] p=0.00066 loss
+    voc12    resnet50 pointing, strict coll 0.8368 cam 0.8432 diff -0.0063 [-0.0097,-0.0030] p=0.00027 loss
+    voc12    resnet50 pointing, 15 px coll 0.9177 cam 0.9196 diff -0.0019 [-0.0049,+0.0008] p=0.19 tie
+    voc12    vgg16gap pointing, strict coll 0.8089 cam 0.8147 diff -0.0058 [-0.0090,-0.0026] p=0.00078 loss
+    voc12    vgg16gap pointing, 15 px coll 0.8957 cam 0.8974 diff -0.0017 [-0.0044,+0.0010] p=0.25 tie
+    voc12    vitb16   pointing, strict coll 0.6834 cam 0.7092 diff -0.0259 [-0.0316,-0.0198] p=6.8e-17 loss
+    voc12    vitb16   pointing, 15 px coll 0.8199 cam 0.8390 diff -0.0191 [-0.0241,-0.0141] p=6.4e-14 loss
+    voc12seg resnet50 pointing, strict coll 0.6591 cam 0.6712 diff -0.0121 [-0.0214,-0.0028] p=0.01 loss
+    voc12seg resnet50 pointing, 15 px coll 0.9054 cam 0.9106 diff -0.0051 [-0.0116,+0.0009] p=0.12 tie
+    voc12seg resnet50 peak-mask IoU   coll 0.4790 cam 0.4880 diff -0.0091 [-0.0105,-0.0076] p=3.6e-39 loss
+    voc12seg vgg16gap pointing, strict coll 0.6646 cam 0.6712 diff -0.0065 [-0.0158,+0.0028] p=0.19 tie
+    voc12seg vgg16gap pointing, 15 px coll 0.8919 cam 0.8929 diff -0.0009 [-0.0070,+0.0056] p=0.89 tie
+    voc12seg vgg16gap peak-mask IoU   coll 0.4569 cam 0.4706 diff -0.0137 [-0.0153,-0.0120] p=4.2e-63 loss
+    voc12seg vitb16   pointing, strict coll 0.5105 cam 0.5300 diff -0.0196 [-0.0331,-0.0056] p=0.0047 loss
+    voc12seg vitb16   pointing, 15 px coll 0.7848 cam 0.8072 diff -0.0224 [-0.0331,-0.0121] p=4.1e-05 loss
+    voc12seg vitb16   peak-mask IoU   coll 0.4107 cam 0.4304 diff -0.0197 [-0.0218,-0.0177] p=8.8e-74 loss
+    coco17   resnet50 pointing, strict coll 0.4332 cam 0.4333 diff -0.0001 [-0.0057,+0.0055] p=1 tie
+    coco17   resnet50 pointing, 15 px coll 0.7083 cam 0.7100 diff -0.0018 [-0.0064,+0.0029] p=0.5 tie
+    coco17   resnet50 peak-mask IoU   coll 0.2937 cam 0.2979 diff -0.0042 [-0.0048,-0.0036] p=2.5e-47 loss
+    coco17   vgg16gap pointing, strict coll 0.4217 cam 0.4199 diff +0.0018 [-0.0029,+0.0064] p=0.48 tie
+    coco17   vgg16gap pointing, 15 px coll 0.6491 cam 0.6494 diff -0.0003 [-0.0048,+0.0041] p=0.95 tie
+    coco17   vgg16gap peak-mask IoU   coll 0.2772 cam 0.2819 diff -0.0048 [-0.0053,-0.0042] p=3.8e-70 loss
+    coco17   vitb16   pointing, strict coll 0.3540 cam 0.3690 diff -0.0150 [-0.0215,-0.0086] p=9.7e-06 loss
+    coco17   vitb16   pointing, 15 px coll 0.5835 cam 0.5989 diff -0.0154 [-0.0218,-0.0087] p=6.6e-06 loss
+    coco17   vitb16   peak-mask IoU   coll 0.2559 cam 0.2646 diff -0.0087 [-0.0094,-0.0079] p=7.3e-119 loss
+  collapsed vs cam tally: Counter({'loss': 20, 'tie': 13, 'win': 3})
+  by backbone: {'resnet50': {'win': 1, 'tie': 7, 'loss': 4}, 'vgg16gap': {'win': 2, 'loss': 4, 'tie': 6}, 'vitb16': {'loss': 12}}
+  -> <repo>\analyses/localisation_reanalysis\out\t1_t2_contrasts.json

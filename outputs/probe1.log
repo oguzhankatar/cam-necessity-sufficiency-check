@@ -1,0 +1,15 @@
+gap_fc    linear-agg    acc=0.9906  I2=0.0000  Rhalf=0.0000  corrNS=+1.0000  sumS=1.004 sumST=1.038 int=+0.0334 minS=-0.0003 (10s)
+gap_mlp   post-pool-nl  acc=0.9916  I2=0.0106  Rhalf=0.2778  corrNS=+0.9514  sumS=1.006 sumST=1.008 int=+0.0017 minS=+0.0010 (9s)
+ln_gap    pre-pool-nl   acc=0.9888  I2=0.0000  Rhalf=0.0000  corrNS=+1.0000  sumS=1.011 sumST=1.062 int=+0.0517 minS=-0.0035 (11s)
+tok_mlp   pre-pool-nl   acc=0.9913  I2=0.0000  Rhalf=0.0000  corrNS=+1.0000  sumS=0.992 sumST=0.988 int=-0.0038 minS=+0.0004 (12s)
+lse0.25   nonlin-agg    acc=0.9911  I2=0.0109  Rhalf=0.2639  corrNS=+0.9333  sumS=0.937 sumST=0.944 int=+0.0067 minS=-0.0032 (10s)
+lse0.5    nonlin-agg    acc=0.9896  I2=0.0113  Rhalf=0.3104  corrNS=+0.7461  sumS=0.945 sumST=0.940 int=-0.0052 minS=-0.0043 (10s)
+lse1.0    nonlin-agg    acc=0.9875  I2=0.0107  Rhalf=0.3462  corrNS=+0.5640  sumS=0.957 sumST=0.946 int=-0.0106 minS=-0.0046 (10s)
+lse2.0    nonlin-agg    acc=0.9857  I2=0.0097  Rhalf=0.3754  corrNS=+0.4589  sumS=0.964 sumST=0.953 int=-0.0109 minS=-0.0032 (10s)
+lse4.0    nonlin-agg    acc=0.9860  I2=0.0091  Rhalf=0.4058  corrNS=+0.4121  sumS=0.968 sumST=0.957 int=-0.0117 minS=-0.0037 (10s)
+lse8.0    nonlin-agg    acc=0.9850  I2=0.0091  Rhalf=0.4272  corrNS=+0.3953  sumS=0.974 sumST=0.960 int=-0.0134 minS=-0.0038 (10s)
+maxpool   nonlin-agg    acc=0.9865  I2=0.0108  Rhalf=0.4488  corrNS=+0.3724  sumS=0.975 sumST=0.964 int=-0.0105 minS=-0.0055 (9s)
+attn      nonlin-agg    acc=0.9875  I2=0.0311  Rhalf=0.6109  corrNS=+0.4927  sumS=0.927 sumST=0.993 int=+0.0654 minS=-0.0024 (13s)
+bilin     nonlin-agg    acc=0.9918  I2=0.1404  Rhalf=0.9699  corrNS=+0.3739  sumS=1.069 sumST=1.002 int=-0.0674 minS=+0.0071 (11s)
+
+wrote outputs/probe1_aggregator.json

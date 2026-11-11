@@ -1,0 +1,15 @@
+{
+ "cub": {
+  "n": 5794,
+  "gt_box_area_fraction_mean": 0.3419602307329778,
+  "whole_image_box": 0.2509492578529513,
+  "whole_image_box_mean_iou": 0.3419357522407601,
+  "best_fixed_centred_box": 0.5392359912553216,
+  "best_fixed_centred_box_side_fraction": 0.6399999999999998,
+  "deltas": [
+   0.3,
+   0.5,
+   0.7
+  ]
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "xrv_version": "1.5.4",
+ "sklearn_version": "1.8.0",
+ "nih": {
+  "n_images_in_xrv_dataset": 112120,
+  "n_patients": 30805,
+  "n_xrv_train_images": 89864,
+  "n_xrv_heldout_images": 22256,
+  "boxed_images": 880,
+  "boxed_in_xrv_train": 716,
+  "boxed_in_xrv_heldout": 164,
+  "boxed_not_in_xrv_dataset": 0,
+  "boxed_patients": 726,
+  "test5720_in_xrv_train": 4606,
+  "test5720_in_xrv_heldout": 1114,
+  "test5720_n": 5720,
+  "train7000_in_xrv_heldout": 1445,
+  "official_test_list_in_xrv_train": 20374,
+  "official_test_list_n": 25596,
+  "boxed_all_in_official_test": true
+ },
+ "rsna": {
+  "n_images_in_xrv_dataset": 26684,
+  "n_patients": 26684,
+  "n_xrv_train_patients": 21347,
+  "n_xrv_heldout_patients": 5337,
+  "local_dicoms": 3884,
+  "eval_positive": 1385,
+  "eval_in_xrv_train": 1102,
+  "eval_in_xrv_heldout": 283,
+  "eval_not_in_xrv_dataset": 0,
+  "local_all_in_xrv_train": 3091,
+  "local_all_in_xrv_heldout": 793,
+  "stage2_train_label_patients": 26684
+ }
+}

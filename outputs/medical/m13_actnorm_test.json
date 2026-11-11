@@ -1,0 +1,401 @@
+{
+ "note": "exact McNemar, activation magnitude against every other map, Holm-corrected across the comparisons; the same items, ground truth and estimator as m4",
+ "all_findings": {
+  "tag": "all findings",
+  "n_items": 984,
+  "excluded": [],
+  "actnorm_hit": 0.23983739837398374,
+  "n_model_derived": 15,
+  "n_below_point_estimate": 15,
+  "n_below_significant": 8,
+  "rows": [
+   {
+    "other": "N_lse-8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.23170731707317074,
+    "diff": 0.008130081300812997,
+    "a_only": 79,
+    "b_only": 71,
+    "p_mcnemar": 0.5677754876753279,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsedS_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.2266260162601626,
+    "diff": 0.01321138211382114,
+    "a_only": 77,
+    "b_only": 64,
+    "p_mcnemar": 0.3122129316569944,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsedS_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.2266260162601626,
+    "diff": 0.01321138211382114,
+    "a_only": 80,
+    "b_only": 67,
+    "p_mcnemar": 0.3223076486087749,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsed_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.2266260162601626,
+    "diff": 0.01321138211382114,
+    "a_only": 77,
+    "b_only": 64,
+    "p_mcnemar": 0.3122129316569944,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsed_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.2266260162601626,
+    "diff": 0.01321138211382114,
+    "a_only": 80,
+    "b_only": 67,
+    "p_mcnemar": 0.3223076486087749,
+    "p_holm": 1.0
+   },
+   {
+    "other": "N_lse-8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.22459349593495934,
+    "diff": 0.015243902439024404,
+    "a_only": 95,
+    "b_only": 80,
+    "p_mcnemar": 0.28989252377520636,
+    "p_holm": 1.0
+   },
+   {
+    "other": "S_lse-8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.21443089430894308,
+    "diff": 0.025406504065040664,
+    "a_only": 80,
+    "b_only": 55,
+    "p_mcnemar": 0.038471500325522066,
+    "p_holm": 0.2693005022786545
+   },
+   {
+    "other": "center",
+    "model_derived": false,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.21443089430894308,
+    "diff": 0.025406504065040664,
+    "a_only": 73,
+    "b_only": 48,
+    "p_mcnemar": 0.02870319917373699,
+    "p_holm": 0.2296255933898959
+   },
+   {
+    "other": "S_lse8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.18597560975609756,
+    "diff": 0.05386178861788618,
+    "a_only": 101,
+    "b_only": 48,
+    "p_mcnemar": 1.6866982204962583e-05,
+    "p_holm": 0.00015180283984466325
+   },
+   {
+    "other": "S_lse-8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.1839430894308943,
+    "diff": 0.055894308943089444,
+    "a_only": 100,
+    "b_only": 45,
+    "p_mcnemar": 5.723174164619122e-06,
+    "p_holm": 5.723174164619122e-05
+   },
+   {
+    "other": "gradcam_gap",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.17886178861788618,
+    "diff": 0.06097560975609756,
+    "a_only": 105,
+    "b_only": 45,
+    "p_mcnemar": 1.0588547527634479e-06,
+    "p_holm": 1.3765111785924822e-05
+   },
+   {
+    "other": "gradcam_lse-8.0",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.17886178861788618,
+    "diff": 0.06097560975609756,
+    "a_only": 105,
+    "b_only": 45,
+    "p_mcnemar": 1.0588547527634479e-06,
+    "p_holm": 1.3765111785924822e-05
+   },
+   {
+    "other": "gradcam_lse8.0",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.17886178861788618,
+    "diff": 0.06097560975609756,
+    "a_only": 105,
+    "b_only": 45,
+    "p_mcnemar": 1.0588547527634479e-06,
+    "p_holm": 1.3765111785924822e-05
+   },
+   {
+    "other": "N_lse8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.15040650406504066,
+    "diff": 0.08943089430894308,
+    "a_only": 125,
+    "b_only": 37,
+    "p_mcnemar": 2.2853465958084967e-12,
+    "p_holm": 3.1994852341318955e-11
+   },
+   {
+    "other": "N_lse8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.13617886178861788,
+    "diff": 0.10365853658536586,
+    "a_only": 146,
+    "b_only": 44,
+    "p_mcnemar": 5.6083504267957344e-14,
+    "p_holm": 8.412525640193602e-13
+   },
+   {
+    "other": "S_lse8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.11382113821138211,
+    "diff": 0.12601626016260165,
+    "a_only": 171,
+    "b_only": 47,
+    "p_mcnemar": 9.61315253372038e-18,
+    "p_holm": 1.5381044053952608e-16
+   },
+   {
+    "other": "random",
+    "model_derived": false,
+    "actnorm": 0.23983739837398374,
+    "other_rate": 0.06300813008130081,
+    "diff": 0.17682926829268292,
+    "a_only": 198,
+    "b_only": 24,
+    "p_mcnemar": 3.072670925031481e-35,
+    "p_holm": 5.223540572553518e-34
+   }
+  ]
+ },
+ "no_cardiomegaly": {
+  "tag": "cardiomegaly excluded",
+  "n_items": 838,
+  "excluded": [
+   "Cardiomegaly"
+  ],
+  "actnorm_hit": 0.13365155131264916,
+  "n_model_derived": 15,
+  "n_below_point_estimate": 15,
+  "n_below_significant": 8,
+  "rows": [
+   {
+    "other": "collapsedS_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.12649164677804295,
+    "diff": 0.007159904534606215,
+    "a_only": 62,
+    "b_only": 56,
+    "p_mcnemar": 0.6454967635578226,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsed_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.12649164677804295,
+    "diff": 0.007159904534606215,
+    "a_only": 62,
+    "b_only": 56,
+    "p_mcnemar": 0.6454967635578226,
+    "p_holm": 1.0
+   },
+   {
+    "other": "N_lse-8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.11813842482100238,
+    "diff": 0.015513126491646781,
+    "a_only": 78,
+    "b_only": 65,
+    "p_mcnemar": 0.315624897443341,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsedS_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.11813842482100238,
+    "diff": 0.015513126491646781,
+    "a_only": 64,
+    "b_only": 51,
+    "p_mcnemar": 0.2630539575429354,
+    "p_holm": 1.0
+   },
+   {
+    "other": "collapsed_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.11813842482100238,
+    "diff": 0.015513126491646781,
+    "a_only": 64,
+    "b_only": 51,
+    "p_mcnemar": 0.2630539575429354,
+    "p_holm": 1.0
+   },
+   {
+    "other": "N_lse-8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.11336515513126491,
+    "diff": 0.020286396181384253,
+    "a_only": 72,
+    "b_only": 55,
+    "p_mcnemar": 0.15540010008390495,
+    "p_holm": 0.9324006005034298
+   },
+   {
+    "other": "S_lse8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09904534606205251,
+    "diff": 0.034606205250596656,
+    "a_only": 72,
+    "b_only": 43,
+    "p_mcnemar": 0.008735108684333146,
+    "p_holm": 0.06114576079033202
+   },
+   {
+    "other": "S_lse-8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.0954653937947494,
+    "diff": 0.03818615751789976,
+    "a_only": 71,
+    "b_only": 39,
+    "p_mcnemar": 0.002943638859345198,
+    "p_holm": 0.02662017450107404
+   },
+   {
+    "other": "N_lse8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09427207637231504,
+    "diff": 0.03937947494033413,
+    "a_only": 76,
+    "b_only": 43,
+    "p_mcnemar": 0.003183184448217662,
+    "p_holm": 0.02662017450107404
+   },
+   {
+    "other": "S_lse8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09307875894988067,
+    "diff": 0.04057279236276849,
+    "a_only": 78,
+    "b_only": 44,
+    "p_mcnemar": 0.002662017450107404,
+    "p_holm": 0.02662017450107404
+   },
+   {
+    "other": "gradcam_gap",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09307875894988067,
+    "diff": 0.04057279236276849,
+    "a_only": 74,
+    "b_only": 40,
+    "p_mcnemar": 0.001866718227316894,
+    "p_holm": 0.024267336955119623
+   },
+   {
+    "other": "gradcam_lse-8.0",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09307875894988067,
+    "diff": 0.04057279236276849,
+    "a_only": 74,
+    "b_only": 40,
+    "p_mcnemar": 0.001866718227316894,
+    "p_holm": 0.024267336955119623
+   },
+   {
+    "other": "gradcam_lse8.0",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.09307875894988067,
+    "diff": 0.04057279236276849,
+    "a_only": 74,
+    "b_only": 40,
+    "p_mcnemar": 0.001866718227316894,
+    "p_holm": 0.024267336955119623
+   },
+   {
+    "other": "N_lse8.0_3x3",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.08233890214797136,
+    "diff": 0.0513126491646778,
+    "a_only": 78,
+    "b_only": 35,
+    "p_mcnemar": 6.445381010320707e-05,
+    "p_holm": 0.0009023533414448989
+   },
+   {
+    "other": "center",
+    "model_derived": false,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.08233890214797136,
+    "diff": 0.0513126491646778,
+    "a_only": 69,
+    "b_only": 26,
+    "p_mcnemar": 1.182808848491514e-05,
+    "p_holm": 0.00017742132727372712
+   },
+   {
+    "other": "S_lse-8.0_1x1",
+    "model_derived": true,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.060859188544152745,
+    "diff": 0.07279236276849642,
+    "a_only": 90,
+    "b_only": 29,
+    "p_mcnemar": 1.8572197619267014e-08,
+    "p_holm": 2.9715516190827223e-07
+   },
+   {
+    "other": "random",
+    "model_derived": false,
+    "actnorm": 0.13365155131264916,
+    "other_rate": 0.045346062052505964,
+    "diff": 0.0883054892601432,
+    "a_only": 95,
+    "b_only": 21,
+    "p_mcnemar": 1.972638273199072e-12,
+    "p_holm": 3.3534850644384225e-11
+   }
+  ]
+ }
+}

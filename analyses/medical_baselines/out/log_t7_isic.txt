@@ -1,0 +1,16 @@
+collapsed_1x1    cross-tuned 0.444 (q {'fold0': 0.15, 'fold1': 0.15}) oracle 0.444 q=.20 0.442
+collapsed_3x3    cross-tuned 0.468 (q {'fold0': 0.2, 'fold1': 0.2}) oracle 0.468 q=.20 0.468
+N_lse8.0_1x1     cross-tuned 0.324 (q {'fold0': 0.05, 'fold1': 0.05}) oracle 0.324 q=.20 0.228
+N_lse-8.0_1x1    cross-tuned 0.406 (q {'fold0': 0.3, 'fold1': 0.4}) oracle 0.407 q=.20 0.370
+S_lse8.0_1x1     cross-tuned 0.454 (q {'fold0': 0.15, 'fold1': 0.2}) oracle 0.455 q=.20 0.454
+S_lse-8.0_1x1    cross-tuned 0.298 (q {'fold0': 0.6, 'fold1': 0.6}) oracle 0.298 q=.20 0.272
+N_lse8.0_3x3     cross-tuned 0.410 (q {'fold0': 0.15, 'fold1': 0.2}) oracle 0.413 q=.20 0.413
+N_lse-8.0_3x3    cross-tuned 0.415 (q {'fold0': 0.2, 'fold1': 0.25}) oracle 0.416 q=.20 0.416
+S_lse8.0_3x3     cross-tuned 0.432 (q {'fold0': 0.2, 'fold1': 0.25}) oracle 0.433 q=.20 0.433
+S_lse-8.0_3x3    cross-tuned 0.409 (q {'fold0': 0.25, 'fold1': 0.3}) oracle 0.410 q=.20 0.391
+cam              cross-tuned 0.455 (q {'fold0': 0.15, 'fold1': 0.2}) oracle 0.456 q=.20 0.456
+gradcam_gap      cross-tuned 0.461 (q {'fold0': 0.15, 'fold1': 0.2}) oracle 0.463 q=.20 0.463
+actnorm          cross-tuned 0.488 (q {'fold0': 0.15, 'fold1': 0.15}) oracle 0.488 q=.20 0.483
+center           cross-tuned 0.530 (q {'fold0': 0.2, 'fold1': 0.2}) oracle 0.530 q=.20 0.530
+random           cross-tuned 0.255 (q {'fold0': 0.6, 'fold1': 0.6}) oracle 0.255 q=.20 0.143
+wrote <repo>\analyses/medical_baselines\out\t7_isic_dice.json

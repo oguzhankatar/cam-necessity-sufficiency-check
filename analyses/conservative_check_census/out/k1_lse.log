@@ -1,0 +1,13 @@
+Channel-wise vs score-then-pool pooling, ResNet-50 layer4 (64 images, 49 cells, float64)
+rho = Spearman(N, S) over the 49 cells; exact = exact algebra evaluated stably; literal = per-cell loop on logits
+
+ch-LSE   T=1  exact: rho mean 0.6489 min 0.0355 (tied values 0) | literal: rho mean 0.6489 min 0.0355 (tied values 0) | max |literal - exact| / scale 6.6e-15
+ch-LSE   T=4  exact: rho mean 0.3421 min -0.3621 (tied values 0) | literal: rho mean 0.3421 min -0.3621 (tied values 0) | max |literal - exact| / scale 4.1e-15
+ch-LSE   T=8  exact: rho mean 0.3262 min -0.3960 (tied values 0) | literal: rho mean 0.3262 min -0.3960 (tied values 0) | max |literal - exact| / scale 4.6e-15
+ch-GeM   p=1  exact: rho mean 1.0000 min 1.0000 (tied values 0) | literal: rho mean 1.0000 min 1.0000 (tied values 0) | max |literal - exact| / scale 3.0e-14
+ch-GeM   p=3  exact: rho mean 0.6540 min -0.0855 (tied values 0) | literal: rho mean 0.6540 min -0.0855 (tied values 0) | max |literal - exact| / scale 2.0e-08
+ch-GeM   p=4  exact: rho mean 0.5516 min -0.2334 (tied values 0) | literal: rho mean 0.5516 min -0.2334 (tied values 0) | max |literal - exact| / scale 5.5e-08
+ch-GeM   p=8  exact: rho mean 0.4004 min -0.3177 (tied values 0) | literal: rho mean 0.4004 min -0.3177 (tied values 0) | max |literal - exact| / scale 8.2e-06
+stp-LSE  T=1  exact: rho mean 1.0000 min 1.0000 (tied values 0) | literal: rho mean 0.9365 min 0.5254 (tied values 905) | max |literal - exact| / scale 1.8e-15
+stp-LSE  T=4  exact: rho mean 1.0000 min 1.0000 (tied values 0) | literal: rho mean 0.5141 min 0.2449 (tied values 2913) | max |literal - exact| / scale 1.3e-15
+stp-LSE  T=8  exact: rho mean 1.0000 min 1.0000 (tied values 1) | literal: rho mean 0.3664 min 0.2449 (tied values 3285) | max |literal - exact| / scale 1.8e-15

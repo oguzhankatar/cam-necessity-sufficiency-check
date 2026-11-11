@@ -1,0 +1,164 @@
+[
+ {
+  "model": "mobilenetv3_large_100",
+  "family": "MobileNetV3",
+  "T": 49,
+  "C": 960,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.723875,
+    "acc_linfit": 0.677025,
+    "dacc_pts": -4.685,
+    "argmax_agree": 0.833725
+   }
+  },
+  "secs": 62.156267166137695
+ },
+ {
+  "model": "mobilenetv4_conv_small",
+  "family": "MobileNetV3",
+  "T": 49,
+  "C": 960,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.7043,
+    "acc_linfit": 0.6508,
+    "dacc_pts": -5.35,
+    "argmax_agree": 0.81275
+   }
+  },
+  "secs": 41.38460445404053
+ },
+ {
+  "model": "ghostnet_100",
+  "family": "GhostNet",
+  "T": 49,
+  "C": 960,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.7,
+    "acc_linfit": 0.659325,
+    "dacc_pts": -4.0675,
+    "argmax_agree": 0.832375
+   }
+  },
+  "secs": 42.56921362876892
+ },
+ {
+  "model": "hgnetv2_b0",
+  "family": "HighPerfGpuNet",
+  "T": 49,
+  "C": 1024,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.7549,
+    "acc_linfit": 0.684825,
+    "dacc_pts": -7.0075,
+    "argmax_agree": 0.809025
+   }
+  },
+  "secs": 48.29572820663452
+ },
+ {
+  "model": "maxvit_tiny_tf_224",
+  "family": "MaxxVit",
+  "T": 49,
+  "C": 512,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.79945,
+    "acc_linfit": 0.7951,
+    "dacc_pts": -0.435,
+    "argmax_agree": 0.964275
+   }
+  },
+  "secs": 132.3013460636139
+ },
+ {
+  "model": "caformer_s18",
+  "family": "MetaFormer",
+  "T": 49,
+  "C": 512,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.8083,
+    "acc_linfit": 0.796525,
+    "dacc_pts": -1.1775,
+    "argmax_agree": 0.933225
+   }
+  },
+  "secs": 83.00327396392822
+ },
+ {
+  "model": "convformer_s18",
+  "family": "MetaFormer",
+  "T": 49,
+  "C": 512,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.801425,
+    "acc_linfit": 0.791325,
+    "dacc_pts": -1.01,
+    "argmax_agree": 0.92805
+   }
+  },
+  "secs": 74.50517582893372
+ },
+ {
+  "model": "mambaout_tiny",
+  "family": "MambaOut",
+  "T": 49,
+  "C": 576,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.79445,
+    "acc_linfit": 0.775825,
+    "dacc_pts": -1.8625,
+    "argmax_agree": 0.903225
+   }
+  },
+  "secs": 76.33807277679443
+ },
+ {
+  "model": "convnext_tiny",
+  "family": "ConvNeXt",
+  "T": 49,
+  "C": 768,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.809675,
+    "acc_linfit": 0.80835,
+    "dacc_pts": -0.1325,
+    "argmax_agree": 0.98675
+   }
+  },
+  "secs": 64.63939499855042
+ }
+]

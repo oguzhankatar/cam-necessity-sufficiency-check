@@ -1,0 +1,91 @@
+{
+ "dataset": "coco17",
+ "backbone": "vitb16_prenorm_none",
+ "ordering": "none",
+ "n_eval": 2476,
+ "n_records": 7339,
+ "certificate": {
+  "collapsed_pre": {
+   "tag": "collapsed_pre",
+   "maxNS": 1.8821895090852267e-14,
+   "Rhalf": 2.1146083167652886e-14,
+   "I2": 1.699297366585764e-14,
+   "corrNS_recorded_never_used": 0.9999999999999998,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  }
+ },
+ "maps": [
+  "collapsed_pre",
+  "collapsed_pre_b3",
+  "cam_pre"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "note": "GAP over the PRE-norm tokens with no LayerNorm at all (the project `none` ordering).  Additive, so N == S and there is a single map.  This isolates the feature change from the necessity/sufficiency split.",
+ "classification": {
+  "mAP": 0.6903723904448074
+ },
+ "per_map": {
+  "collapsed_pre": {
+   "pointing_strict": [
+    0.37798065131489306,
+    0.3674853522278239,
+    0.38901757732661124
+   ],
+   "pointing_tol15": [
+    0.5983103965117863,
+    0.5872734705000682,
+    0.6097595040196212
+   ],
+   "PxAP": 0.2231272265790963,
+   "peak_mask_iou": [
+    0.26875439500328047,
+    0.26350031607145064,
+    0.2745190221499339
+   ]
+  },
+  "collapsed_pre_b3": {
+   "pointing_strict": [
+    0.4116364627333424,
+    0.4005961302629786,
+    0.42240087205341326
+   ],
+   "pointing_tol15": [
+    0.6068946722986783,
+    0.5965390380160784,
+    0.6173899713857474
+   ],
+   "PxAP": 0.2520104082976494,
+   "peak_mask_iou": [
+    0.283512123133533,
+    0.2777292979191374,
+    0.2895716603772171
+   ]
+  },
+  "cam_pre": {
+   "pointing_strict": [
+    0.3857473770268429,
+    0.37498296770677203,
+    0.39624267611391195
+   ],
+   "pointing_tol15": [
+    0.6088022891402098,
+    0.5979016214743152,
+    0.6202479901893991
+   ],
+   "PxAP": 0.22691152216115337,
+   "peak_mask_iou": [
+    0.27584078796771305,
+    0.27029758788904706,
+    0.28162769389459125
+   ]
+  }
+ },
+ "per_record_saved": [
+  "cam_pre",
+  "collapsed_pre",
+  "collapsed_pre_b3"
+ ]
+}

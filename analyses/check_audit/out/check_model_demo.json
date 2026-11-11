@@ -1,0 +1,337 @@
+{
+ "rows": {
+  "coat_tiny": {
+   "verdict": "class-token",
+   "verdict_check": "degenerate",
+   "rules_fired": [
+    "class-token-stack rule"
+   ],
+   "warnings": [
+    "class-token-stack rule fired: forward_features returned 3 token sequences and the layer taken as the aggregator (aggregate(Conv1d)) reduces a stack of their 3 class tokens, not the spatial cells (CoaT pattern); audited verdict class-token, the check returned degenerate."
+   ],
+   "blocking_op": null,
+   "raw_code": "IN-SCOPE",
+   "aggregator": {
+    "op": "aggregate(Conv1d)",
+    "category": "DENSE"
+   },
+   "tail": [
+    [
+     "head_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": false,
+   "notes": [
+    "forward_features returned a list of 3 tensors (several token sequences); the reduced axis may be a stack of class tokens rather than spatial cells (the class-token-stack rule covers the CoaT form).",
+    "the aggregator is a dense layer (aggregate(Conv1d)); check that the axis it reduces is the spatial one."
+   ],
+   "python_warnings": [
+    "class-token-stack rule fired: forward_features returned 3 token sequences and the layer taken as the aggregator (aggregate(Conv1d)) reduces a stack of their 3 class tokens, not the spatial cells (CoaT pattern); audited verdict class-token, the check returned degenerate."
+   ]
+  },
+  "volo_d1_224": {
+   "verdict": "aggregator-blocked",
+   "verdict_check": "class-token",
+   "rules_fired": [
+    "max-over-tokens rule"
+   ],
+   "warnings": [
+    "max-over-tokens rule fired: forward_head contains a non-linear reduction over the cell/token axis (aten.max.dim, [(1, 196, 1000)] -> [(1, 1000)]) that the module-level check does not see (VOLO pattern); audited verdict aggregator-blocked, the check returned class-token."
+   ],
+   "blocking_op": "aten.max.dim",
+   "raw_code": "DEGENERATE",
+   "aggregator": {
+    "op": "functional(global_pool=token)",
+    "category": "TOKEN"
+   },
+   "tail": [
+    [
+     "head_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "aux_head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=token)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ],
+   "python_warnings": [
+    "max-over-tokens rule fired: forward_head contains a non-linear reduction over the cell/token axis (aten.max.dim, [(1, 196, 1000)] -> [(1, 1000)]) that the module-level check does not see (VOLO pattern); audited verdict aggregator-blocked, the check returned class-token."
+   ]
+  },
+  "convnext_zepto_rms": {
+   "verdict": "normalisation-blocked",
+   "verdict_check": "nonlinearity-blocked",
+   "rules_fired": [
+    "unlisted-normalisation rule"
+   ],
+   "warnings": [
+    "unlisted-normalisation rule fired: the operation(s) the check labelled nonlinear (head.norm(SimpleNorm2d)) are normalisation modules missing from its tables (SimpleNorm/RMS pattern); audited verdict normalisation-blocked, the check returned nonlinearity-blocked."
+   ],
+   "blocking_op": "head.norm(SimpleNorm2d)",
+   "raw_code": "NONLIN-BLOCKED",
+   "aggregator": {
+    "op": "head.global_pool.pool(AdaptiveAvgPool2d)",
+    "category": "MEAN"
+   },
+   "tail": [
+    [
+     "head.global_pool.flatten",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head.norm",
+     "SimpleNorm2d",
+     "NONLINEAR"
+    ],
+    [
+     "head.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head.pre_logits",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head.drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head.fc",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": false,
+   "notes": [],
+   "python_warnings": [
+    "unlisted-normalisation rule fired: the operation(s) the check labelled nonlinear (head.norm(SimpleNorm2d)) are normalisation modules missing from its tables (SimpleNorm/RMS pattern); audited verdict normalisation-blocked, the check returned nonlinearity-blocked."
+   ]
+  },
+  "resnet50": {
+   "verdict": "degenerate",
+   "verdict_check": "degenerate",
+   "rules_fired": [],
+   "warnings": [],
+   "blocking_op": null,
+   "raw_code": "IN-SCOPE",
+   "aggregator": {
+    "op": "global_pool.pool(AdaptiveAvgPool2d)",
+    "category": "MEAN"
+   },
+   "tail": [
+    [
+     "global_pool.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "fc",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": false,
+   "notes": [],
+   "python_warnings": []
+  },
+  "convnext_tiny": {
+   "verdict": "normalisation-blocked",
+   "verdict_check": "normalisation-blocked",
+   "rules_fired": [],
+   "warnings": [],
+   "blocking_op": "head.norm(LayerNorm2d)",
+   "raw_code": "NORM-BLOCKED",
+   "aggregator": {
+    "op": "head.global_pool.pool(AdaptiveAvgPool2d)",
+    "category": "MEAN"
+   },
+   "tail": [
+    [
+     "head.global_pool.flatten",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head.norm",
+     "LayerNorm2d",
+     "NORM"
+    ],
+    [
+     "head.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head.pre_logits",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head.drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head.fc",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": false,
+   "notes": [],
+   "python_warnings": []
+  },
+  "vit_base_patch16_224": {
+   "verdict": "class-token",
+   "verdict_check": "class-token",
+   "rules_fired": [],
+   "warnings": [],
+   "blocking_op": null,
+   "raw_code": "DEGENERATE",
+   "aggregator": {
+    "op": "functional(global_pool=token)",
+    "category": "TOKEN"
+   },
+   "tail": [
+    [
+     "fc_norm",
+     "Identity",
+     "AFFINE"
+    ],
+    [
+     "head_drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head",
+     "Linear",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": true,
+   "notes": [
+    "no module reduced the cells; the aggregator was read from the declared pool type (functional(global_pool=token)). An aggregation written as a tensor expression in forward_head is inspected only through the max-over-tokens rule."
+   ],
+   "python_warnings": []
+  },
+  "vgg11": {
+   "verdict": "nonlinearity-blocked",
+   "verdict_check": "nonlinearity-blocked",
+   "rules_fired": [],
+   "warnings": [],
+   "blocking_op": "pre_logits.act1(ReLU)",
+   "raw_code": "NONLIN-BLOCKED",
+   "aggregator": {
+    "op": "pre_logits.fc1(Conv2d)",
+    "category": "DENSE"
+   },
+   "tail": [
+    [
+     "pre_logits.act1",
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "pre_logits.drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "pre_logits.fc2",
+     "Conv2d",
+     "AFFINE"
+    ],
+    [
+     "pre_logits.act2",
+     "ReLU",
+     "NONLINEAR"
+    ],
+    [
+     "head.global_pool.pool",
+     "AdaptiveAvgPool2d",
+     "AFFINE"
+    ],
+    [
+     "head.global_pool.flatten",
+     "Flatten",
+     "AFFINE"
+    ],
+    [
+     "head.drop",
+     "Dropout",
+     "AFFINE"
+    ],
+    [
+     "head.fc",
+     "Linear",
+     "AFFINE"
+    ],
+    [
+     "head.flatten",
+     "Identity",
+     "AFFINE"
+    ]
+   ],
+   "declared_pool_branch": false,
+   "notes": [
+    "the aggregator is a dense layer (pre_logits.fc1(Conv2d)); check that the axis it reduces is the spatial one."
+   ],
+   "python_warnings": []
+  }
+ },
+ "footprint": {
+  "max_over_tokens": [
+   "volo_d1_224",
+   "volo_d1_384",
+   "volo_d2_224",
+   "volo_d2_384",
+   "volo_d3_224",
+   "volo_d3_448",
+   "volo_d4_224",
+   "volo_d4_448",
+   "volo_d5_224",
+   "volo_d5_448",
+   "volo_d5_512"
+  ],
+  "unlisted_normalisation": [
+   "convnext_zepto_rms",
+   "convnext_zepto_rms_ols"
+  ],
+  "dense_aggregator": [
+   "coat_mini",
+   "coat_small",
+   "coat_tiny",
+   "vgg11",
+   "vgg11_bn",
+   "vgg13",
+   "vgg13_bn",
+   "vgg16",
+   "vgg16_bn",
+   "vgg19",
+   "vgg19_bn"
+  ]
+ }
+}

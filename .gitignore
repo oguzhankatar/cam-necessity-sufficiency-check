@@ -1,0 +1,14 @@
+# datasets fetched by the scripts and files written by a local run
+data/*
+!data/README.md
+!data/nih/
+__pycache__/
+*.pyc
+checkpoints/
+analyses/medical_extra/cache/
+# per-record arrays distributed as release assets (unpacked into these folders)
+analyses/end_to_end_cub/out/per_image/
+analyses/end_to_end_cub/post/out/per_image/
+outputs/wsol/curve_*.npy
+# LaTeX table rows written by some analysis scripts
+*.tex

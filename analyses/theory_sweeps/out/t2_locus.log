@@ -1,0 +1,28 @@
+gap_fc   acc=0.9906 sep cell=0 3x3=0 half=0 | eps1 cell=7.5e-15 3x3=7.99e-16 half=4.81e-16 | nonadd half=3e-15 | scale sep 1.0:0 0.5:0 0.25:0 0.1:0 0.05:0 0.02:0 0.01:1.11e-16  (18s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+ln_gap   acc=0.9888 sep cell=0 3x3=0 half=0 | eps1 cell=1.16e-14 3x3=1.28e-15 half=7.67e-16 | nonadd half=4.27e-15 | scale sep 1.0:0 0.5:0 0.25:0 0.1:0 0.05:0 0.02:0 0.01:0  (20s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+tok_mlp  acc=0.9913 sep cell=0 3x3=0 half=0 | eps1 cell=7.37e-15 3x3=8.34e-16 half=5.75e-16 | nonadd half=4.07e-15 | scale sep 1.0:0 0.5:0 0.25:0 0.1:0 0.05:0 0.02:0 0.01:0  (73s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+gap_mlp  acc=0.9916 sep cell=0.04859 3x3=0.02235 half=0.002307 | eps1 cell=0.296 3x3=0.232 half=0.163 | nonadd half=0.277 | scale sep 1.0:0.0577 0.5:0.0667 0.25:0.0309 0.1:0.00392 0.05:0.000892 0.02:0.000136 0.01:3.34e-05  (13s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+ln_post  acc=0.9903 sep cell=0.1551 3x3=0.08053 half=0.01689 | eps1 cell=0.602 3x3=0.433 half=0.369 | nonadd half=0.682 | scale sep 1.0:0.146 0.5:0.093 0.25:0.0361 0.1:0.00679 0.05:0.00175 0.02:0.000284 0.01:7.14e-05  (10s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse0.25  acc=0.9911 sep cell=0.06667 3x3=0.1188 half=0.06237 | eps1 cell=0.841 3x3=0.665 half=0.636 | nonadd half=0.261 | scale sep 1.0:0.0679 0.5:0.0236 0.25:0.006 0.1:0.000968 0.05:0.000247 0.02:4.04e-05 0.01:1.02e-05  (26s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse0.5   acc=0.9896 sep cell=0.2539 3x3=0.2461 half=0.1412 | eps1 cell=0.89 3x3=0.797 half=0.785 | nonadd half=0.303 | scale sep 1.0:0.26 0.5:0.134 0.25:0.0405 0.1:0.00615 0.05:0.0015 0.02:0.000239 0.01:5.98e-05  (25s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse1.0   acc=0.9875 sep cell=0.436 3x3=0.3467 half=0.231 | eps1 cell=0.906 3x3=0.866 half=0.863 | nonadd half=0.34 | scale sep 1.0:0.447 0.5:0.294 0.25:0.12 0.1:0.0197 0.05:0.00469 0.02:0.000735 0.01:0.000183  (20s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse2.0   acc=0.9857 sep cell=0.5411 3x3=0.4049 half=0.309 | eps1 cell=0.91 3x3=0.897 half=0.894 | nonadd half=0.371 | scale sep 1.0:0.556 0.5:0.411 0.25:0.211 0.1:0.0468 0.05:0.0122 0.02:0.00193 0.01:0.000479  (21s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse4.0   acc=0.9860 sep cell=0.5879 3x3=0.4321 half=0.3589 | eps1 cell=0.916 3x3=0.908 half=0.908 | nonadd half=0.405 | scale sep 1.0:0.603 0.5:0.466 0.25:0.268 0.1:0.0757 0.05:0.0228 0.02:0.0038 0.01:0.000957  (23s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+lse8.0   acc=0.9850 sep cell=0.6047 3x3=0.4407 half=0.3855 | eps1 cell=0.916 3x3=0.912 half=0.913 | nonadd half=0.428 | scale sep 1.0:0.62 0.5:0.488 0.25:0.295 0.1:0.0978 0.05:0.0372 0.02:0.00855 0.01:0.00241  (23s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+maxpool  acc=0.9865 sep cell=0.6276 3x3=0.4515 half=0.3986 | eps1 cell=0.914 3x3=0.913 half=0.913 | nonadd half=0.45 | scale sep 1.0:0.645 0.5:0.516 0.25:0.332 0.1:0.14 0.05:0.078 0.02:0.0373 0.01:0.0175  (15s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+attn     acc=0.9875 sep cell=0.5073 3x3=0.3022 half=0.1197 | eps1 cell=0.841 3x3=0.656 half=0.565 | nonadd half=0.601 | scale sep 1.0:0.544 0.5:0.174 0.25:0.032 0.1:0.00476 0.05:0.00117 0.02:0.000185 0.01:4.63e-05  (58s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json
+bilin    acc=0.9918 sep cell=0.6261 3x3=0.298 half=0.1485 | eps1 cell=0.965 3x3=0.736 half=0.623 | nonadd half=0.963 | scale sep 1.0:0.673 0.5:0.708 0.25:0.701 0.1:0.395 0.05:0.181 0.02:0.0328 0.01:0.0156  (36s)
+wrote <repo>\analyses/theory_sweeps\out\t2_locus.json

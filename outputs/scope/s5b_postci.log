@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+beitv2_base_patch16_224              mine=+0.601576 [+0.574376,+0.629149] (n=96, per-image +0.313..+0.998)  published=+0.621423 [+0.606848,+0.635781] (n=256)  delta=-0.0198  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+convnext_tiny                        mine=+0.873457 [+0.846064,+0.897327] (n=96, per-image +0.258..+0.997)  published=+0.860431 [+0.843216,+0.875965] (n=256)  delta=+0.0130  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+eva02_tiny_patch14_336               mine=+0.545455 [+0.483898,+0.604545] (n=96, per-image -0.558..+0.950)  published=+0.412669 [+0.375273,+0.449213] (n=256)  delta=+0.1328  DISJOINT=True
+  -> <repo>\outputs\scope\s5b_postci.json
+naflexvit_base_patch16_gap           mine=+0.514762 [+0.481716,+0.549040] (n=96, per-image +0.166..+0.977)  published=+0.492364 [+0.474542,+0.511432] (n=256)  delta=+0.0224  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+swin_tiny_patch4_window7_224         mine=+0.867066 [+0.854201,+0.879381] (n=96, per-image +0.625..+1.000)  published=+0.867597 [+0.858294,+0.876356] (n=256)  delta=-0.0005  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+vit_base_patch16_rope_reg1_gap_256   mine=+0.627368 [+0.600454,+0.655973] (n=96, per-image +0.222..+0.982)  published=+0.628641 [+0.612399,+0.645217] (n=256)  delta=-0.0013  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+vit_betwixt_patch16_reg4_gap_256     mine=+0.509650 [+0.470085,+0.551156] (n=96, per-image +0.024..+0.962)  published=+0.493761 [+0.470201,+0.517993] (n=256)  delta=+0.0159  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+vit_little_patch16_reg4_gap_256      mine=+0.667574 [+0.641379,+0.694485] (n=96, per-image +0.236..+0.992)  published=+0.659407 [+0.645874,+0.673585] (n=256)  delta=+0.0082  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+vit_medium_patch16_reg4_gap_256      mine=+0.668139 [+0.643180,+0.692649] (n=96, per-image +0.315..+0.994)  published=+0.651403 [+0.637750,+0.665798] (n=256)  delta=+0.0167  DISJOINT=False
+  -> <repo>\outputs\scope\s5b_postci.json
+
+CI-disjoint with the published value: 1/9 -> ['eva02_tiny_patch14_336']

@@ -1,0 +1,5 @@
+loaded 5794 images x 48 maps  [2s]
+curves done [576s]
+verification: max |MBA raw - stored| 0.000e+00, max curve diff 0.000e+00
+stored raw contrasts reproduced (15): max abs err 0.000e+00, Holm P identical True
+done [669s]

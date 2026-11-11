@@ -1,0 +1,12 @@
+##### coco17 resnet50 start 00:31:52
+exit 0 00:35:19
+[   204s] reproduction: {"pt_collapsed_agree": 1.0, "iou_collapsed_maxabs": 0.0, "pt_N_lse_agree": 1.0, "iou_N_lse_maxabs": 0.0, "pt_S_lse_agree": 1.0, "iou_S_lse_maxabs": 0.0, "pt_center_agree": 1.0, "iou_center_maxabs": 0.0}
+[   204s] classification: {"gap": {"mAP": 0.620459063612749}, "lse_reused": {"mAP": 0.588557669243638}, "lse_refit": {"mAP": 0.6589671753536008}}
+[   204s] eval-record separation (1-corr): {"lse": {"n": 7339, "mean_sep": 0.47474345036681737, "median_sep": 0.49369519196627565, "q25": 0.31589776062056657, "q75": 0.626759939025266}, "rf": {"n": 7339, "mean_sep": 0.1333681493750176, "median_sep": 0.0032672420056371054, "q25": 0.0002551541664953527, "q75": 0.1178082645008296}}
+[   204s] saved coco17_resnet50
+##### voc12 resnet50 start 00:35:19
+exit 0 00:43:42
+[   498s] reproduction: {"pt_collapsed_agree": 1.0, "pt_N_lse_agree": 1.0, "pt_S_lse_agree": 1.0, "pt_center_agree": 1.0}
+[   498s] classification: {"gap": {"mAP": 0.8791814379360616}, "lse_reused": {"mAP": 0.8585626194785501}, "lse_refit": {"mAP": 0.8939884536541346}}
+[   498s] eval-record separation (1-corr): {"lse": {"n": 8856, "mean_sep": 0.6865832846472378, "median_sep": 0.6690151454287084, "q25": 0.5640987885184395, "q75": 0.772305001611361}, "rf": {"n": 8856, "mean_sep": 0.24360051537496988, "median_sep": 0.09724304660040217, "q25": 0.01198432330475993, "q75": 0.4152436448850434}}
+[   498s] saved voc12_resnet50

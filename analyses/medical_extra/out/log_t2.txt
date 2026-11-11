@@ -1,0 +1,14 @@
+﻿nih_m4         M n=984 1x1 hit -0.0427 [-0.0630, -0.0224] P=6.55e-05 | orig-run mean diff {'1x1_hit': -0.0427, '1x1_ap': -0.0644, '1x1_iou': -0.0469}
+nih_m10        P n=984 1x1 hit +0.0102 [-0.0132, +0.0335] P=0.444 | orig-run mean diff {'1x1_hit': 0.0102, '1x1_ap': -0.0264}
+nih_m6         P n=984 1x1 hit -0.0600 [-0.0864, -0.0335] P=9.69e-06 | orig-run mean diff {'1x1_hit': -0.0925, '1x1_ap': -0.0402}
+rsna_xrv       R n=1385 1x1 hit +0.0448 [+0.0217, +0.0671] P=0.000145 | orig-run mean diff {'1x1_hit': 0.044, '1x1_ap': -0.0648}
+rsna_disjoint  D n=1385 1x1 hit +0.0816 [+0.0570, +0.1069] P=3.97e-10 | orig-run mean diff {}
+isic           P n=735 1x1 hit -0.2912 [-0.3306, -0.2531] P=4.08e-44 | orig-run mean diff {'1x1_hit': -0.2612, '1x1_dice': -0.1019, '1x1_ap': -0.31}
+               1x1 dice -0.1467 [-0.1646, -0.1287] P=2.02e-43
+held-out rsna_xrv 283 {'stored_maps_1x1_hit': '+0.0424 [-0.0106, +0.0954] P=0.162', 'stored_maps_3x3_hit': '-0.1908 [-0.2438, -0.1413] P=2.73e-12', 'closed_form_1x1_hit': '+0.0424 [-0.0106, +0.0954] P=0.162', 'closed_form_3x3_hit': '-0.1908 [-0.2438, -0.1413] P=2.73e-12'}
+held-out nih_m4 182 {'stored_maps_1x1_hit': '-0.0714 [-0.1154, -0.0330] P=0.000977', 'stored_maps_3x3_hit': '+0.0000 [-0.0440, +0.0440] P=1', 'closed_form_1x1_hit': '-0.0714 [-0.1154, -0.0330] P=0.000977', 'closed_form_3x3_hit': '+0.0000 [-0.0440, +0.0440] P=1'}
+CF t1_nih_cf.json:closed_form -0.0427 [-0.0630, -0.0224] P=6.55e-05 
+CF t1_rsna_cf.json:closed_form +0.0448 [+0.0217, +0.0671] P=0.000145 
+CF t1_isic_cf.json:replicate_r4_closed_form -0.2898 [-0.3252, -0.2544] P=2.3e-51 -0.0560 [-0.0669, -0.0450] P=8.74e-28
+CF t1_isic_cf.json:replicate_r4_fd -0.2898 [-0.3252, -0.2544] P=2.3e-51 -0.0560 [-0.0669, -0.0450] P=8.72e-28
+wrote <repo>\analyses/medical_extra\out\t2_sminus8.json

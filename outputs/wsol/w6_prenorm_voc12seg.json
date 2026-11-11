@@ -1,0 +1,91 @@
+{
+ "dataset": "voc12seg",
+ "backbone": "vitb16_prenorm_none",
+ "ordering": "none",
+ "n_eval": 1449,
+ "n_records": 2147,
+ "certificate": {
+  "collapsed_pre": {
+   "tag": "collapsed_pre",
+   "maxNS": 1.606281369411271e-14,
+   "Rhalf": 1.4053467519668827e-13,
+   "I2": 1.292077117319831e-14,
+   "corrNS_recorded_never_used": 0.9999999999999999,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  }
+ },
+ "maps": [
+  "collapsed_pre",
+  "collapsed_pre_b3",
+  "cam_pre"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "note": "GAP over the PRE-norm tokens with no LayerNorm at all (the project `none` ordering).  Additive, so N == S and there is a single map.  This isolates the feature change from the necessity/sufficiency split.",
+ "classification": {
+  "mAP": 0.9082726850226273
+ },
+ "per_map": {
+  "collapsed_pre": {
+   "pointing_strict": [
+    0.5575221238938053,
+    0.536096879366558,
+    0.5780158360503027
+   ],
+   "pointing_tol15": [
+    0.8360503027480205,
+    0.8202142524452725,
+    0.850500698649278
+   ],
+   "PxAP": 0.40981518268432565,
+   "peak_mask_iou": [
+    0.4436002236427487,
+    0.43307861735610964,
+    0.4537481282915569
+   ]
+  },
+  "collapsed_pre_b3": {
+   "pointing_strict": [
+    0.6688402421984164,
+    0.6492780624126688,
+    0.6884024219841639
+   ],
+   "pointing_tol15": [
+    0.847694457382394,
+    0.832324173265021,
+    0.8621332091290173
+   ],
+   "PxAP": 0.5010236249480626,
+   "peak_mask_iou": [
+    0.4759721964351803,
+    0.46534025841462906,
+    0.4867015845925657
+   ]
+  },
+  "cam_pre": {
+   "pointing_strict": [
+    0.5738239403819283,
+    0.5528644620400559,
+    0.5943176525384257
+   ],
+   "pointing_tol15": [
+    0.848625989753144,
+    0.8332557056357709,
+    0.8635305076851421
+   ],
+   "PxAP": 0.41913327156412106,
+   "peak_mask_iou": [
+    0.4615693696992643,
+    0.4510433234874374,
+    0.4715085082577036
+   ]
+  }
+ },
+ "per_record_saved": [
+  "cam_pre",
+  "collapsed_pre",
+  "collapsed_pre_b3"
+ ]
+}

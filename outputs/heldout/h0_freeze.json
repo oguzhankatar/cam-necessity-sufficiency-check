@@ -1,0 +1,69 @@
+{
+ "dst": "<repo>\\scripts\\heldout\\frozen_rule.py",
+ "sha256_frozen_file": "b4caf08e85ee7049ab39acd5dbf40dfa85b8d15964dd5442cbcecf05188893e0",
+ "sha256_s4_decide": "c90bd635c3a87c84a7d129915fc403b370e2225f2f6b96dd84842d2dbdcabe94",
+ "sha256_slib": "f38885e19913d123b9a4f7459ebe05b8cda3e6d8d257c05cd0258337a26b7047",
+ "n_blocks": 10,
+ "blocks": [
+  {
+   "src": "slib.py",
+   "name": "NORMISH",
+   "nlines": 2,
+   "sha256": "f1673a423f769b6019ce13325d3aa2fa729b62b9aca1358d3b64a30424b268a4"
+  },
+  {
+   "src": "slib.py",
+   "name": "ACTISH",
+   "nlines": 4,
+   "sha256": "b0a2366ddf7af15b17e524589fe6b8b6189a28796eee783f427486e1b39a6355"
+  },
+  {
+   "src": "slib.py",
+   "name": "is_norm",
+   "nlines": 4,
+   "sha256": "0eb24aec16aae51e3c105db81138d67a8803c68122eff2b40afcdb31ccdaaf42"
+  },
+  {
+   "src": "slib.py",
+   "name": "is_act",
+   "nlines": 2,
+   "sha256": "922ecba4f9ff739bd2a91cb44c143815ae6ccbad13a94fa18e646081280f7bec"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "AFFINE_CLS",
+   "nlines": 2,
+   "sha256": "d6458c479316b545f6a9560d2ea880fef8bf12bad4a14978635f156ae8bf6c81"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "POOL_AVG",
+   "nlines": 2,
+   "sha256": "3a07e7218db26499a6a2174ff1cbc222d6ae009c66aaff4124d0e495f02919c0"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "cells_of",
+   "nlines": 8,
+   "sha256": "4b553eb46771a876dd9946671781482241788056648524136530d28e281b6a6e"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "trace_head",
+   "nlines": 18,
+   "sha256": "4b24a8c7f6d73cf4c4710809f4c9fa47e953d5677f7233bc58b986bdfc1ee140"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "kind",
+   "nlines": 9,
+   "sha256": "4492dcbc41a9e6ff6c944953c8a211dbdbe09b31ec99c7ddceeaa75bd8b8bf2e"
+  },
+  {
+   "src": "s4_decide.py",
+   "name": "structural",
+   "nlines": 53,
+   "sha256": "7f71a04055396f6343e3bc7569e87e440defc8508a4a927c2b2c4c47effc8f4a"
+  }
+ ]
+}

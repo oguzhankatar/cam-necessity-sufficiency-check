@@ -1,0 +1,55 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[beitv2_base_patch16_224] shipped=post T=196 C=768
+  post  bank=+0.620318  zeros=+0.790988  dsmean=+0.740202  gauss=+0.628452  sameclass=+0.962624  blur=+0.999619  shuffle=+0.998154  bank_s0.5=+0.882589  bank_s0.25=+0.973287  bank_s0.1=+0.995991  bank_s0.05=+0.999012  bank_s0.01=+0.999961
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.6203 .. 0.9996 (range 0.3793); shuffle 0.9982; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[convnext_tiny] shipped=post T=49 C=768
+  post  bank=+0.869624  zeros=+0.838731  dsmean=+0.896483  gauss=+0.872666  sameclass=+0.881459  blur=+0.997324  shuffle=+0.989892  bank_s0.5=+0.871140  bank_s0.25=+0.956719  bank_s0.1=+0.994205  bank_s0.05=+0.998706  bank_s0.01=+0.999953
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.8387 .. 0.9973 (range 0.1586); shuffle 0.9899; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[eva02_tiny_patch14_336] shipped=post T=576 C=192
+  post  bank=+0.569667  zeros=+0.665746  dsmean=+0.627113  gauss=+0.622712  sameclass=+0.743142  blur=+0.999970  shuffle=+0.999894  bank_s0.5=+0.759652  bank_s0.25=+0.919911  bank_s0.1=+0.981093  bank_s0.05=+0.994655  bank_s0.01=+0.999773
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.5697 .. 1.0000 (range 0.4303); shuffle 0.9999; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[naflexvit_base_patch16_gap] shipped=post T=576 C=768
+  post  bank=+0.462730  zeros=+0.670405  dsmean=+0.587403  gauss=+0.484240  sameclass=+0.736784  blur=+0.999982  shuffle=+0.999959  bank_s0.5=+0.753437  bank_s0.25=+0.934792  bank_s0.1=+0.989788  bank_s0.05=+0.997504  bank_s0.01=+0.999902
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.4627 .. 1.0000 (range 0.5373); shuffle 1.0000; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[swin_tiny_patch4_window7_224] shipped=pre T=49 C=768
+  post  bank=+0.855957  zeros=+0.970474  dsmean=+0.936239  gauss=+0.907143  sameclass=+0.999228  blur=+0.999941  shuffle=+0.999800  bank_s0.5=+0.973744  bank_s0.25=+0.994376  bank_s0.1=+0.999180  bank_s0.05=+0.999802  bank_s0.01=+0.999992
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.8560 .. 0.9999 (range 0.1440); shuffle 0.9998; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[vit_base_patch16_rope_reg1_gap_256] shipped=post T=256 C=768
+  post  bank=+0.623650  zeros=+0.808503  dsmean=+0.823270  gauss=+0.645482  sameclass=+0.865157  blur=+0.999852  shuffle=+0.999638  bank_s0.5=+0.816658  bank_s0.25=+0.950686  bank_s0.1=+0.992340  bank_s0.05=+0.998119  bank_s0.01=+0.999926
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.6236 .. 0.9999 (range 0.3762); shuffle 0.9996; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[vit_betwixt_patch16_reg4_gap_256] shipped=post T=256 C=640
+  post  bank=+0.588119  zeros=+0.746283  dsmean=+0.720604  gauss=+0.557491  sameclass=+0.786016  blur=+0.999811  shuffle=+0.999610  bank_s0.5=+0.806973  bank_s0.25=+0.951737  bank_s0.1=+0.992638  bank_s0.05=+0.998161  bank_s0.01=+0.999926
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.5575 .. 0.9998 (range 0.4423); shuffle 0.9996; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[vit_little_patch16_reg4_gap_256] shipped=post T=256 C=320
+  post  bank=+0.676510  zeros=+0.782231  dsmean=+0.819420  gauss=+0.688736  sameclass=+0.861141  blur=+0.999427  shuffle=+0.998904  bank_s0.5=+0.847843  bank_s0.25=+0.951195  bank_s0.1=+0.991271  bank_s0.05=+0.997744  bank_s0.01=+0.999908
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.6765 .. 0.9994 (range 0.3229); shuffle 0.9989; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json
+[vit_medium_patch16_reg4_gap_256] shipped=post T=256 C=512
+  post  bank=+0.693524  zeros=+0.819958  dsmean=+0.798586  gauss=+0.671076  sameclass=+0.819366  blur=+0.999789  shuffle=+0.999538  bank_s0.5=+0.851164  bank_s0.25=+0.955885  bank_s0.1=+0.992531  bank_s0.05=+0.998109  bank_s0.01=+0.999924
+  pre   bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  none  bank=+1.000000*  zeros=+1.000000*  dsmean=+1.000000*  gauss=+1.000000*  sameclass=+1.000000*  blur=+1.000000*  shuffle=+1.000000*  bank_s0.5=+1.000000*  bank_s0.25=+1.000000*  bank_s0.1=+1.000000*  bank_s0.05=+1.000000*  bank_s0.01=+1.000000*
+  post over the 6 standard baselines: 0.6711 .. 0.9998 (range 0.3287); shuffle 0.9995; pre all-pass=True none all-pass=True
+  -> <repo>\outputs\scope\s6_baseline.json

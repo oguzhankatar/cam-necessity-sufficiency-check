@@ -1,0 +1,4 @@
+NIH test 5720 train 7000
+paper pp mean AUC 0.66754 (m1 0.66754) | xrv pp 0.66775 | held-out: paper 0.6675 xrv 0.6678
+wrote <repo>\analyses/medical_baselines\out\t6_nih_auc.json
+m10 replicate mean AUC {'gap': 0.6920891026609304, 'lse8.0': 0.6496384523601899, 'lse-8.0': 0.6681195443588691} archived {'gap': 0.6920850361854589, 'lse8.0': 0.6496660795681726, 'lse-8.0': 0.6681436635580108}

@@ -1,0 +1,37 @@
+mean                                   score-then-pool max|a-w/N|=8.67e-19 rel=2.20e-16 shift=7.70e-15 |GC-CAM|=1.98e-15 move=2.55e-15 rho=1.0
+lse T=-8                               score-then-pool max|a-w/N|=4.68e-17 rel=6.51e-15 shift=3.99e-15 |GC-CAM|=1.07e-14 move=2.43e-15 rho=1.0
+lse T=-1                               score-then-pool max|a-w/N|=1.04e-17 rel=1.08e-15 shift=7.55e-15 |GC-CAM|=3.08e-14 move=2.11e-15 rho=1.0
+lse T=-0.25                            score-then-pool max|a-w/N|=6.94e-18 rel=8.50e-16 shift=1.47e-14 |GC-CAM|=6.17e-15 move=6.04e-15 rho=1.0
+lse T=+0.25                            score-then-pool max|a-w/N|=7.81e-18 rel=1.21e-15 shift=5.43e-15 |GC-CAM|=3.49e-15 move=1.11e-15 rho=1.0
+lse T=+1                               score-then-pool max|a-w/N|=2.78e-17 rel=5.24e-15 shift=1.92e-14 |GC-CAM|=5.28e-15 move=4.77e-15 rho=1.0
+lse T=+8                               score-then-pool max|a-w/N|=2.37e-16 rel=4.47e-14 shift=3.73e-15 |GC-CAM|=4.48e-14 move=1.55e-15 rho=1.0
+top-1 of 49                            score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=4.08e-15 |GC-CAM|=3.68e-14 move=1.44e-15 rho=1.0
+bottom-1 of 49                         score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=4.16e-15 |GC-CAM|=1.59e-14 move=2.16e-15 rho=1.0
+top-2 of 49                            score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=3.06e-15 |GC-CAM|=2.31e-15 move=2.44e-15 rho=1.0
+bottom-2 of 49                         score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=3.11e-15 |GC-CAM|=6.24e-15 move=6.3e-15 rho=1.0
+top-4 of 49                            score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=2.54e-15 |GC-CAM|=2.85e-14 move=1.05e-15 rho=1.0
+bottom-4 of 49                         score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=2.14e-15 |GC-CAM|=6.73e-14 move=2e-15 rho=1.0
+top-8 of 49                            score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=3.42e-15 |GC-CAM|=1.64e-15 move=2.22e-15 rho=1.0
+bottom-8 of 49                         score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=2.01e-15 |GC-CAM|=3.28e-14 move=2.22e-15 rho=1.0
+top-16 of 49                           score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=3.89e-15 |GC-CAM|=1.59e-14 move=8.88e-16 rho=1.0
+bottom-16 of 49                        score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=4.94e-15 |GC-CAM|=2.87e-15 move=1.55e-15 rho=1.0
+top-24 of 49                           score-then-pool max|a-w/N|=1.73e-18 rel=3.83e-16 shift=2.70e-15 |GC-CAM|=2.14e-15 move=2e-15 rho=1.0
+bottom-24 of 49                        score-then-pool max|a-w/N|=3.47e-18 rel=4.34e-16 shift=3.53e-15 |GC-CAM|=1.91e-14 move=1.83e-15 rho=1.0
+top-32 of 49                           score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=4.27e-15 |GC-CAM|=1.16e-15 move=1.44e-15 rho=1.0
+bottom-32 of 49                        score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=2.40e-15 |GC-CAM|=6.64e-15 move=7.63e-16 rho=1.0
+top-48 of 49                           score-then-pool max|a-w/N|=1.73e-18 rel=2.22e-16 shift=2.30e-15 |GC-CAM|=1.51e-14 move=1.89e-15 rho=1.0
+bottom-48 of 49                        score-then-pool max|a-w/N|=1.73e-18 rel=2.20e-16 shift=1.85e-15 |GC-CAM|=3.20e-15 move=1.33e-15 rho=1.0
+max                                    score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=3.44e-15 |GC-CAM|=3.86e-15 move=1.22e-15 rho=1.0
+min                                    score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=1.73e-15 |GC-CAM|=1.89e-14 move=1.22e-15 rho=1.0
+median                                 score-then-pool max|a-w/N|=0.00e+00 rel=0.00e+00 shift=5.43e-16 |GC-CAM|=1.60e-15 move=1.22e-15 rho=1.0
+linear-gate attention                  score-then-pool max|a-w/N|=5.89e-17 rel=1.11e-14 shift=5.48e-14 |GC-CAM|=6.32e-14 move=8.77e-15 rho=1.0
+tanh-sigmoid gated attention (Ilse)    score-then-pool max|a-w/N|=2.81e-02 rel=5.70e+00 shift=2.69e+00 |GC-CAM|=1.80e+298 move=1 rho=0.8691221439553821
+GeM p=2                                pool-then-score max|a-w/N|=7.26e-03 rel=1.00e+00 shift=2.55e-01 |GC-CAM|=1.00e+00 move=1 rho=0.944751814143632
+GeM p=3                                pool-then-score max|a-w/N|=5.89e-03 rel=1.00e+00 shift=2.30e-01 |GC-CAM|=1.00e+00 move=1 rho=0.948562209329698
+channel-wise max                       pool-then-score max|a-w/N|=0.00e+00 rel=0.00e+00 shift=1.98e-15 |GC-CAM|=7.64e-15 move=1.03e-14 rho=1.0
+channel-wise LSE T=1                   pool-then-score max|a-w/N|=8.67e-18 rel=1.91e-15 shift=9.21e-15 |GC-CAM|=2.54e-14 move=8.33e-15 rho=1.0
+refit lse-8.0  vs refit gap_fc: mean max|diff|=0.714 rho=0.604; same weights: max|diff|=3.33e-16
+refit lse8.0   vs refit gap_fc: mean max|diff|=0.208 rho=0.931; same weights: max|diff|=4.44e-16
+refit lse0.25  vs refit gap_fc: mean max|diff|=0.246 rho=0.920; same weights: max|diff|=3.33e-16
+refit maxpool  vs refit gap_fc: mean max|diff|=0.203 rho=0.933; same weights: max|diff|=3.33e-16
+wrote <repo>\analyses/theory_sweeps\out\t3_gradcam.json

@@ -1,0 +1,131 @@
+<repo>\analyses/theory_sweeps\scripts\theory_sweeps_lib.py:50: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  t = torch.from_numpy(np.ascontiguousarray(F)).to(dev)
+gap_fc   1-Pearson 0.0000 (t2b 0.0000, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0000 | zero N fd64 0.000 tied 0.000
+ln_gap   1-Pearson 0.0000 (t2b 0.0000, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0000 | zero N fd64 0.000 tied 0.000
+tok_mlp  1-Pearson 0.0000 (t2b 0.0000, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0000 | zero N fd64 0.000 tied 0.000
+gap_mlp  1-Pearson 0.0486 (t2b 0.0486, err 0.0e+00) | 1-Spearman fd64 0.0710 fd32 0.0710 | zero N fd64 0.000 tied 0.000
+bilin    1-Pearson 0.6261 (t2b 0.6261, err 3.8e-15) | 1-Spearman fd64 0.6334 fd32 0.6333 | zero N fd64 0.000 tied 0.000
+ln_post  1-Pearson 0.1551 (t2b 0.1551, err 2.2e-16) | 1-Spearman fd64 0.1891 fd32 0.1891 | zero N fd64 0.000 tied 0.000
+lse0.25  1-Pearson 0.0667 (t2b 0.0667, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0000 exact 2.22e-16 (1-Pearson exact 0.0667, min rho 1.000000000000) | zero N fd64 0.000 tied 0.000
+lse0.5   1-Pearson 0.2539 (t2b 0.2539, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0064 exact 2.22e-16 (1-Pearson exact 0.2539, min rho 1.000000000000) | zero N fd64 0.000 tied 0.000
+lse1.0   1-Pearson 0.4360 (t2b 0.4360, err 0.0e+00) | 1-Spearman fd64 0.0000 fd32 0.0795 exact 2.22e-16 (1-Pearson exact 0.4360, min rho 1.000000000000) | zero N fd64 0.000 tied 0.003
+lse2.0   1-Pearson 0.5411 (t2b 0.5411, err 0.0e+00) | 1-Spearman fd64 0.0274 fd32 0.2665 exact 2.22e-16 (1-Pearson exact 0.5411, min rho 1.000000000000) | zero N fd64 0.195 tied 0.231
+lse4.0   1-Pearson 0.5879 (t2b 0.5879, err 1.1e-16) | 1-Spearman fd64 0.1789 fd32 0.4503 exact 2.22e-16 (1-Pearson exact 0.5879, min rho 1.000000000000) | zero N fd64 0.563 tied 0.608
+lse8.0   1-Pearson 0.6047 (t2b 0.6047, err 0.0e+00) | 1-Spearman fd64 0.3906 fd32 0.5887 exact 2.22e-16 (1-Pearson exact 0.6047, min rho 1.000000000000) | zero N fd64 0.718 tied 0.808
+maxpool  1-Pearson 0.6276 (t2b 0.6276, err 0.0e+00) | 1-Spearman fd64 0.7248 fd32 0.7248 | zero N fd64 0.915 tied 0.956
+attn     1-Pearson 0.5073 (t2b 0.5073, err 1.1e-16) | 1-Spearman fd64 0.9071 fd32 0.9063 | zero N fd64 0.000 tied 0.000
+8 aggregators: 1-Pearson 0.0667..0.6276, 1-Spearman (exact for LSE) 0.0000..0.9071
+
+LSE temperature sweeps, ResNet-50 / Imagenette, frozen backbone:
+{
+ "outputs/probe7_andor.json": {
+  "producer": "scripts/probe7_andor.py",
+  "temps": [
+   -8.0,
+   -4.0,
+   -2.0,
+   -1.0,
+   -0.5,
+   0.0,
+   0.5,
+   1.0,
+   2.0,
+   4.0,
+   8.0
+  ],
+  "fields": [
+   "I2",
+   "Rhalf",
+   "T",
+   "acc",
+   "corrNS",
+   "del_G",
+   "del_N",
+   "del_S",
+   "del_rand",
+   "ins_G",
+   "ins_N",
+   "ins_S",
+   "spGN",
+   "spGS",
+   "spNS"
+  ],
+  "one_minus_corrNS": {
+   "lse-8.0": 0.5212179916792459,
+   "lse-4.0": 0.5055679518253134,
+   "lse-2.0": 0.4537077421110779,
+   "lse-1.0": 0.3461719658840138,
+   "lse-0.5": 0.17247238024054734,
+   "lse0.0": 2.894129380592858e-12,
+   "lse0.5": 0.2509232936091095,
+   "lse1.0": 0.4395908770488225,
+   "lse2.0": 0.5453915035677492,
+   "lse4.0": 0.5881121544004584,
+   "lse8.0": 0.6073994364324546
+  },
+  "spNS_float32": {
+   "lse-8.0": 0.4270043012264075,
+   "lse-4.0": 0.6056986580930678,
+   "lse-2.0": 0.7901655434846819,
+   "lse-1.0": 0.9564315050602701,
+   "lse-0.5": 0.9993208334453816,
+   "lse0.0": 0.9999999999999999,
+   "lse0.5": 0.9968895546445997,
+   "lse1.0": 0.9055772040046766,
+   "lse2.0": 0.7119117187685324,
+   "lse4.0": 0.5342330679578967,
+   "lse8.0": 0.3887608620069597
+  }
+ },
+ "analyses/closed_form_maps/out/t3_andor_exact.json": {
+  "producer": "analyses/closed_form_maps/scripts/t3_andor_exact.py (closed form)",
+  "spNS_exact": {
+   "lse-8.0": 0.9999999999999999,
+   "lse-4.0": 0.9999999999999999,
+   "lse-2.0": 0.9999999999999999,
+   "lse-1.0": 0.9999999999999999,
+   "lse-0.5": 0.9999999999999999,
+   "lse0.0": 0.9999999999999999,
+   "lse0.5": 0.9999999999999999,
+   "lse1.0": 0.9999999999999999,
+   "lse2.0": 0.9999999999999999,
+   "lse4.0": 0.9999999999999999,
+   "lse8.0": 0.9999999999999999
+  },
+  "spNS_bank32": {
+   "lse-8.0": 0.4839158163265306,
+   "lse-4.0": 0.5014955357142856,
+   "lse-2.0": 0.5579910714285714,
+   "lse-1.0": 0.6883035714285715,
+   "lse-0.5": 0.8527455357142857,
+   "lse0.0": 0.9999999999999999,
+   "lse0.5": 0.5916996173469387,
+   "lse1.0": 0.3973533163265306,
+   "lse2.0": 0.2751211734693877,
+   "lse4.0": 0.18841198979591833,
+   "lse8.0": 0.14886798469387752
+  }
+ },
+ "analyses/theory_sweeps/out/heads": [
+  "lse-0.5",
+  "lse-1.0",
+  "lse-2.0",
+  "lse-4.0",
+  "lse-8.0",
+  "lse0.0",
+  "lse0.25",
+  "lse0.5",
+  "lse1.0",
+  "lse2.0",
+  "lse4.0",
+  "lse8.0"
+ ],
+ "probe10_fan_files": [
+  "probe10_fan_convnext_t_imagenette.json",
+  "probe10_fan_resnet50_cifar100.json",
+  "probe10_fan_resnet50_imagewoof.json",
+  "probe10_fan_vgg16_imagenette.json"
+ ]
+}
+  -> <repo>\analyses/localisation_extra\out\l7_rank_sep.json
+  -> <repo>\analyses/localisation_extra\out\tab_l7_rank_sep.tex

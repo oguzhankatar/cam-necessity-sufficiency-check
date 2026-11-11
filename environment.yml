@@ -1,0 +1,11 @@
+# Conda environment of the analyses. Exact package versions are pinned in requirements.txt
+# (torch and torchvision as CUDA 12.4 wheels). A CPU-only environment for the structural check
+# and for scripts/verify_numbers.py is described in scripts/requirements-check.txt.
+name: cam-ns-check
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

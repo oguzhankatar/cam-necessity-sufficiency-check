@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[mobilenetv3_large_100] linfit solved on 10000 images (C=960)
+  holdout  n=40000 shipped=0.7239 linfit=0.6770 (-4.68 pts) argmax-agree=0.8337
+  -> <repo>\outputs\scope\s8_linfit.json
+[mobilenetv4_conv_small] linfit solved on 10000 images (C=960)
+  holdout  n=40000 shipped=0.7043 linfit=0.6508 (-5.35 pts) argmax-agree=0.8127
+  -> <repo>\outputs\scope\s8_linfit.json
+[ghostnet_100] linfit solved on 10000 images (C=960)
+  holdout  n=40000 shipped=0.7000 linfit=0.6593 (-4.07 pts) argmax-agree=0.8324
+  -> <repo>\outputs\scope\s8_linfit.json
+[hgnetv2_b0] linfit solved on 10000 images (C=1024)
+  holdout  n=40000 shipped=0.7549 linfit=0.6848 (-7.01 pts) argmax-agree=0.8090
+  -> <repo>\outputs\scope\s8_linfit.json
+[maxvit_tiny_tf_224] linfit solved on 10000 images (C=512)
+  holdout  n=40000 shipped=0.7994 linfit=0.7951 (-0.43 pts) argmax-agree=0.9643
+  -> <repo>\outputs\scope\s8_linfit.json
+[caformer_s18] linfit solved on 10000 images (C=512)
+  holdout  n=40000 shipped=0.8083 linfit=0.7965 (-1.18 pts) argmax-agree=0.9332
+  -> <repo>\outputs\scope\s8_linfit.json
+[convformer_s18] linfit solved on 10000 images (C=512)
+  holdout  n=40000 shipped=0.8014 linfit=0.7913 (-1.01 pts) argmax-agree=0.9281
+  -> <repo>\outputs\scope\s8_linfit.json
+[mambaout_tiny] linfit solved on 10000 images (C=576)
+  holdout  n=40000 shipped=0.7944 linfit=0.7758 (-1.86 pts) argmax-agree=0.9032
+  -> <repo>\outputs\scope\s8_linfit.json
+[convnext_tiny] linfit solved on 10000 images (C=768)
+  holdout  n=40000 shipped=0.8097 linfit=0.8084 (-0.13 pts) argmax-agree=0.9868
+  -> <repo>\outputs\scope\s8_linfit.json

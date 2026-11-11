@@ -1,0 +1,25 @@
+check_model.py demo  (timm 1.0.27, torch 2.6.0+cu124, CPU, random weights)
+vgg11 is an extra negative control for the class-token-stack rule (dense aggregator on a single feature map).
+
+coat_tiny              verdict_check degenerate             verdict class-token            rules ['class-token-stack rule']  (0s)
+    aggregator aggregate(Conv1d) [DENSE]; blocking_op None
+    WARNING: class-token-stack rule fired: forward_features returned 3 token sequences and the layer taken as the aggregator (aggregate(Conv1d)) reduces a stack of their 3 class tokens, not the spatial cells (CoaT pattern); audited verdict class-token, the check returned degenerate.
+volo_d1_224            verdict_check class-token            verdict aggregator-blocked     rules ['max-over-tokens rule']  (0s)
+    aggregator functional(global_pool=token) [TOKEN]; blocking_op aten.max.dim
+    WARNING: max-over-tokens rule fired: forward_head contains a non-linear reduction over the cell/token axis (aten.max.dim, [(1, 196, 1000)] -> [(1, 1000)]) that the module-level check does not see (VOLO pattern); audited verdict aggregator-blocked, the check returned class-token.
+convnext_zepto_rms     verdict_check nonlinearity-blocked   verdict normalisation-blocked  rules ['unlisted-normalisation rule']  (0s)
+    aggregator head.global_pool.pool(AdaptiveAvgPool2d) [MEAN]; blocking_op head.norm(SimpleNorm2d)
+    WARNING: unlisted-normalisation rule fired: the operation(s) the check labelled nonlinear (head.norm(SimpleNorm2d)) are normalisation modules missing from its tables (SimpleNorm/RMS pattern); audited verdict normalisation-blocked, the check returned nonlinearity-blocked.
+resnet50               verdict_check degenerate             verdict degenerate             rules -  (0s)
+    aggregator global_pool.pool(AdaptiveAvgPool2d) [MEAN]; blocking_op None
+convnext_tiny          verdict_check normalisation-blocked  verdict normalisation-blocked  rules -  (0s)
+    aggregator head.global_pool.pool(AdaptiveAvgPool2d) [MEAN]; blocking_op head.norm(LayerNorm2d)
+vit_base_patch16_224   verdict_check class-token            verdict class-token            rules -  (1s)
+    aggregator functional(global_pool=token) [TOKEN]; blocking_op None
+vgg11                  verdict_check nonlinearity-blocked   verdict nonlinearity-blocked   rules -  (1s)
+    aggregator pre_logits.fc1(Conv2d) [DENSE]; blocking_op pre_logits.act1(ReLU)
+
+Footprint on the 901 census records (timm 1.0.27):
+  max-over-tokens rule (non-linear cell-axis reduction in the operator trace, verdict not aggregator-blocked): 11  ['volo_d1_224', 'volo_d1_384', 'volo_d2_224', 'volo_d2_384', 'volo_d3_224', 'volo_d3_448', 'volo_d4_224', 'volo_d4_448', 'volo_d5_224', 'volo_d5_448', 'volo_d5_512']
+  unlisted-normalisation rule (all nonlinear-labelled tail ops are unlisted normalisations): 2  ['convnext_zepto_rms', 'convnext_zepto_rms_ols']
+  class-token-stack rule candidates (dense aggregator): 11  ['coat_mini', 'coat_small', 'coat_tiny', 'vgg11', 'vgg11_bn', 'vgg13', 'vgg13_bn', 'vgg16', 'vgg16_bn', 'vgg19', 'vgg19_bn']; the class-token-stack rule also needs a list of token sequences from forward_features, which only the CoaT models return (vgg11 above: not fired).

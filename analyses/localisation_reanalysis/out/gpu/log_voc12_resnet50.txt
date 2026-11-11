@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[    69s] voc12 resnet50 fit=5717 eval=5823 K=20 grid=14x14 C=2048
+[   166s] fit features extracted
+[   179s]   fit gap      final train loss 0.2980
+[   356s]   fit lse-refit T=1 final train loss 0.4408
+[   360s]   cert T=-8 corr per pair [0.7694, 0.7281, 0.1434]  effective cells [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[   363s]   cert T=-2 corr per pair [0.7892, 0.7403, 0.4162]  effective cells [1.2, 1.2, 1.0, 2.1, 1.0, 1.7]
+[   366s]   cert T=-0.5 corr per pair [0.953, 0.8651, 0.8456]  effective cells [5.7, 2.4, 1.8, 3.7, 1.5, 8.1]
+[   368s]   cert T=+0.5 corr per pair [0.9902, 0.9787, 0.9663]  effective cells [17.9, 4.6, 2.7, 10.4, 12.8, 4.0]
+[   371s]   cert T=+1 corr per pair [0.9755, 0.9613, 0.8089]  effective cells [3.4, 2.0, 1.1, 3.4, 5.0, 1.4]
+[   375s]   cert T=+2 corr per pair [0.9448, 0.9472, 0.5735]  effective cells [1.6, 1.9, 1.0, 1.7, 2.1, 1.0]
+[   378s]   cert T=+8 corr per pair [0.7658, 0.9416, 0.1469]  effective cells [1.0, 1.3, 1.0, 1.0, 1.0, 1.0]
+[   381s]   certificate T=1 corr reproduced 0.808948 vs archived 0.808948
+[   382s]   24/5823 images, 35 records
+[   401s]   984/5823 images, 1416 records
+[   419s]   1944/5823 images, 2928 records
+[   439s]   2904/5823 images, 4368 records
+[   458s]   3864/5823 images, 5802 records
+[   477s]   4824/5823 images, 7239 records
+[   497s]   5784/5823 images, 8788 records
+[   498s] evaluation done: 8856 records
+[   498s] reproduction: {"pt_collapsed_agree": 1.0, "pt_N_lse_agree": 1.0, "pt_S_lse_agree": 1.0, "pt_center_agree": 1.0}
+[   498s] classification: {"gap": {"mAP": 0.8791814379360616}, "lse_reused": {"mAP": 0.8585626194785501}, "lse_refit": {"mAP": 0.8939884536541346}}
+[   498s] eval-record separation (1-corr): {"lse": {"n": 8856, "mean_sep": 0.6865832846472378, "median_sep": 0.6690151454287084, "q25": 0.5640987885184395, "q75": 0.772305001611361}, "rf": {"n": 8856, "mean_sep": 0.24360051537496988, "median_sep": 0.09724304660040217, "q25": 0.01198432330475993, "q75": 0.4152436448850434}}
+[   498s] saved voc12_resnet50

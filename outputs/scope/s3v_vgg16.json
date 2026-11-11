@@ -1,0 +1,53 @@
+[
+ {
+  "model": "vgg16",
+  "aggregator": "pre_logits.fc1 Conv2d(512,4096,k=7) DENSE",
+  "T": 49,
+  "C": 512,
+  "n_eval": 50000,
+  "acts": [
+   "pre_logits.act1",
+   "pre_logits.act2"
+  ],
+  "linact_r2": {
+   "pre_logits.act1": 0.3872643665717909,
+   "pre_logits.act2": 0.3828125231977067
+  },
+  "cfgs": {
+   "shipped": {
+    "maxNS": 0.7993394106918227,
+    "Rhalf": 0.20521543162124628,
+    "I2": 0.039824913565253556,
+    "corrNS_min": 0.31755839455901547,
+    "corrNS_mean": 0.6890963357269202,
+    "additive": false,
+    "acc": 0.67684,
+    "dacc_pts": 0.0
+   },
+   "delact": {
+    "maxNS": 1.6108438163197058e-14,
+    "Rhalf": 1.4605092741682417e-14,
+    "I2": 8.245184486325903e-15,
+    "corrNS_min": 0.9999999999999997,
+    "corrNS_mean": 0.9999999999999999,
+    "additive": true,
+    "acc": 0.31612,
+    "dacc_pts": -36.071999999999996
+   },
+   "linact": {
+    "maxNS": 1.1946131369204497e-14,
+    "Rhalf": 1.909128254228889e-14,
+    "I2": 1.0785964924084692e-14,
+    "corrNS_min": 0.9999999999999998,
+    "corrNS_mean": 1.0,
+    "additive": true,
+    "acc": 0.51416,
+    "dacc_pts": -16.268000000000004
+   }
+  },
+  "reaching_edits": [
+   "delact",
+   "linact"
+  ]
+ }
+]

@@ -1,0 +1,370 @@
+{
+ "dataset": "voc12",
+ "backbone": "vitb16",
+ "timm": "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+ "input": 224,
+ "grid": [
+  14,
+  14
+ ],
+ "C": 768,
+ "eval_res": 224,
+ "n_fit": 5717,
+ "n_eval": 5823,
+ "n_records": 8856,
+ "n_bank": 8,
+ "bank_idx": [
+  302,
+  1595,
+  1688,
+  2465,
+  4054,
+  4367,
+  4656,
+  5644
+ ],
+ "basis": "bank",
+ "tau": 1.0,
+ "n_thresholds": 100,
+ "deltas": [
+  0.3,
+  0.5,
+  0.7
+ ],
+ "certificate": {
+  "collapsed_gap": {
+   "tag": "collapsed_gap",
+   "maxNS": 1.4913032133984282e-14,
+   "Rhalf": 8.941222566280298e-15,
+   "I2": 9.655662060915713e-15,
+   "corrNS_recorded_never_used": 1.0,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": true
+  },
+  "edited_lse_tau1": {
+   "tag": "edited_lse_tau1",
+   "maxNS": 0.7337886289476432,
+   "Rhalf": 1.1753676913020679,
+   "I2": 0.007617618020999739,
+   "corrNS_recorded_never_used": 0.8138575438449194,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": false
+  },
+  "edited_lnpost": {
+   "tag": "edited_lnpost",
+   "maxNS": 0.23210592538547745,
+   "Rhalf": 0.2632127868775808,
+   "I2": 0.0032693774617200545,
+   "corrNS_recorded_never_used": 0.9782362159586112,
+   "n_active": 196,
+   "T": 196,
+   "n_pairs": 3,
+   "ADDITIVE": false
+  }
+ },
+ "maps": [
+  "collapsed",
+  "collapsed_b3",
+  "N_lse",
+  "S_lse",
+  "N_lse_b3",
+  "S_lse_b3",
+  "cam",
+  "gradcam",
+  "center",
+  "actnorm",
+  "random",
+  "N_ln",
+  "S_ln",
+  "N_ln_b3",
+  "S_ln_b3"
+ ],
+ "code_sha": "f069cd656eec9dd3",
+ "refit": "frozen backbone; a linear head fitted on GAP-pooled cells. The LSE row reuses those weights unchanged (Condition A): the ONLY difference between the collapsed and edited-LSE models is the pooling operator.  The lnpost row refits the linear head on LN(mean_t z_t) because that is a different pooled vector; the LayerNorm itself is the shipped one.",
+ "classification": {
+  "gap": {
+   "mAP": 0.9043951113870097,
+   "n_class_eval": 20
+  },
+  "lnpost": {
+   "mAP": 0.9035956497940255,
+   "n_class_eval": 20
+  }
+ },
+ "per_map": {
+  "collapsed": {
+   "pointing_strict": [
+    0.6833785004516711,
+    0.6737804878048781,
+    0.6929765130984643
+   ],
+   "pointing_tol15": [
+    0.8198961156278229,
+    0.8119890469738031,
+    0.8279132791327913
+   ],
+   "concentration": {
+    "participation_ratio": 0.7621640330864422,
+    "top1_mass_fraction": 0.014908939702682615,
+    "entropy_over_logT": 0.9665821933275262
+   },
+   "spearman_vs_collapsed": 1.0000000000000002
+  },
+  "collapsed_b3": {
+   "pointing_strict": [
+    0.7540650406504065,
+    0.7449158762420958,
+    0.7627625338753387
+   ],
+   "pointing_tol15": [
+    0.8337850045167118,
+    0.8259908536585366,
+    0.841579155374887
+   ],
+   "concentration": {
+    "participation_ratio": 0.8107479279243534,
+    "top1_mass_fraction": 0.012300961388877759,
+    "entropy_over_logT": 0.9743566568829845
+   },
+   "spearman_vs_collapsed": 0.5563340754779409
+  },
+  "N_lse": {
+   "pointing_strict": [
+    0.6989611562782294,
+    0.689134485094851,
+    0.7085591689250226
+   ],
+   "pointing_tol15": [
+    0.8233965672990063,
+    0.815379403794038,
+    0.8315266485998193
+   ],
+   "concentration": {
+    "participation_ratio": 0.07952983471053203,
+    "top1_mass_fraction": 0.4681054174493737,
+    "entropy_over_logT": 0.38234056934663335
+   },
+   "spearman_vs_collapsed": 0.7240633659569622
+  },
+  "S_lse": {
+   "pointing_strict": [
+    0.709349593495935,
+    0.6996358401084012,
+    0.7186088527551943
+   ],
+   "pointing_tol15": [
+    0.8385275519421861,
+    0.8310749774164409,
+    0.8463188798554652
+   ],
+   "concentration": {
+    "participation_ratio": 0.5004226169960122,
+    "top1_mass_fraction": 0.051859040107614746,
+    "entropy_over_logT": 0.8621930605019865
+   },
+   "spearman_vs_collapsed": 0.9194831740543551
+  },
+  "N_lse_b3": {
+   "pointing_strict": [
+    0.7068654019873533,
+    0.6972673893405601,
+    0.7162404019873532
+   ],
+   "pointing_tol15": [
+    0.8176377597109304,
+    0.8095076784101174,
+    0.8257678410117435
+   ],
+   "concentration": {
+    "participation_ratio": 0.20735884202724483,
+    "top1_mass_fraction": 0.08880889818802067,
+    "entropy_over_logT": 0.6550742133725694
+   },
+   "spearman_vs_collapsed": 0.3840561036329289
+  },
+  "S_lse_b3": {
+   "pointing_strict": [
+    0.7268518518518519,
+    0.717476851851852,
+    0.7361111111111112
+   ],
+   "pointing_tol15": [
+    0.8423667570009034,
+    0.8346883468834688,
+    0.8495934959349594
+   ],
+   "concentration": {
+    "participation_ratio": 0.7000220336048162,
+    "top1_mass_fraction": 0.017337464087734438,
+    "entropy_over_logT": 0.9418696351590761
+   },
+   "spearman_vs_collapsed": 0.45939762450107796
+  },
+  "cam": {
+   "pointing_strict": [
+    0.7092366757000903,
+    0.6995229223125565,
+    0.7186088527551943
+   ],
+   "pointing_tol15": [
+    0.8389792231255646,
+    0.8314137308039747,
+    0.8468834688346883
+   ],
+   "concentration": {
+    "participation_ratio": 0.7674013264031453,
+    "top1_mass_fraction": 0.014762067220252301,
+    "entropy_over_logT": 0.9674131902572661
+   },
+   "spearman_vs_collapsed": 0.9345103116499853
+  },
+  "gradcam": {
+   "pointing_strict": [
+    0.7091237579042458,
+    0.6994100045167119,
+    0.718385840108401
+   ],
+   "pointing_tol15": [
+    0.8387533875338753,
+    0.8311878952122854,
+    0.8465447154471545
+   ],
+   "concentration": {
+    "participation_ratio": 0.7131377510113249,
+    "top1_mass_fraction": 0.018651982312997927,
+    "entropy_over_logT": 0.9415153694769897
+   },
+   "spearman_vs_collapsed": 0.9233033984328441
+  },
+  "center": {
+   "pointing_strict": [
+    0.5911246612466124,
+    0.580736224028907,
+    0.6009485094850948
+   ],
+   "pointing_tol15": [
+    0.7052845528455285,
+    0.6954607046070461,
+    0.7151112240289069
+   ],
+   "concentration": {
+    "participation_ratio": 0.6597195353840073,
+    "top1_mass_fraction": 0.01395091486133755,
+    "entropy_over_logT": 0.9523291689967416
+   },
+   "spearman_vs_collapsed": 0.04346133353421803
+  },
+  "actnorm": {
+   "pointing_strict": [
+    0.261743450767841,
+    0.25259710930442636,
+    0.2706667795844625
+   ],
+   "pointing_tol15": [
+    0.4077461607949413,
+    0.3974706413730804,
+    0.4173441734417344
+   ],
+   "concentration": {
+    "participation_ratio": 0.9899191723052502,
+    "top1_mass_fraction": 0.006111226699208087,
+    "entropy_over_logT": 0.9990272501350141
+   },
+   "spearman_vs_collapsed": 0.01996134590317367
+  },
+  "random": {
+   "pointing_strict": [
+    0.2566621499548329,
+    0.24762872628726287,
+    0.26580849141824753
+   ],
+   "pointing_tol15": [
+    0.3982610659439928,
+    0.387646793134598,
+    0.4086523261065944
+   ],
+   "concentration": {
+    "participation_ratio": 0.7504897604245149,
+    "top1_mass_fraction": 0.0101679770722541,
+    "entropy_over_logT": 0.9634568628207929
+   },
+   "spearman_vs_collapsed": -0.0008553795006509066
+  },
+  "N_ln": {
+   "pointing_strict": [
+    0.7072041553748871,
+    0.6979420731707318,
+    0.7164634146341463
+   ],
+   "pointing_tol15": [
+    0.8284778681120144,
+    0.82079945799458,
+    0.8363849367660343
+   ],
+   "concentration": {
+    "participation_ratio": 0.6463322052986752,
+    "top1_mass_fraction": 0.020753633958515382,
+    "entropy_over_logT": 0.9484177844146766
+   },
+   "spearman_vs_collapsed": 0.9210701232712589
+  },
+  "S_ln": {
+   "pointing_strict": [
+    0.7311427280939476,
+    0.721996386630533,
+    0.7404019873532068
+   ],
+   "pointing_tol15": [
+    0.8475609756097561,
+    0.839769647696477,
+    0.8550135501355014
+   ],
+   "concentration": {
+    "participation_ratio": 0.7276036822138172,
+    "top1_mass_fraction": 0.017209473431755197,
+    "entropy_over_logT": 0.9631962217300025
+   },
+   "spearman_vs_collapsed": 0.9145581912645357
+  },
+  "N_ln_b3": {
+   "pointing_strict": [
+    0.7766485998193315,
+    0.7674994354110208,
+    0.7853432700993677
+   ],
+   "pointing_tol15": [
+    0.8519647696476965,
+    0.8446251129177959,
+    0.8594201671183378
+   ],
+   "concentration": {
+    "participation_ratio": 0.7008927919766139,
+    "top1_mass_fraction": 0.016061523634058217,
+    "entropy_over_logT": 0.95655052788198
+   },
+   "spearman_vs_collapsed": 0.5703962600564947
+  },
+  "S_ln_b3": {
+   "pointing_strict": [
+    0.7863595302619693,
+    0.7776648599819331,
+    0.7950570234869014
+   ],
+   "pointing_tol15": [
+    0.8543360433604336,
+    0.8472193992773261,
+    0.8617886178861789
+   ],
+   "concentration": {
+    "participation_ratio": 0.794069763976462,
+    "top1_mass_fraction": 0.013052020788002999,
+    "entropy_over_logT": 0.9730121997019623
+   },
+   "spearman_vs_collapsed": 0.5291863701647215
+  }
+ }
+}

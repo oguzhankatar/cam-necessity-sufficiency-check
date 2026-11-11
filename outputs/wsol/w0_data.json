@@ -1,0 +1,48 @@
+{
+ "CUB_200_2011": {
+  "obtained": true,
+  "source": "https://data.caltech.edu/records/65de6-vp158/files/CUB_200_2011.tgz",
+  "n_train": 5994,
+  "n_test": 5794,
+  "n_class": 200,
+  "boxes_per_image": 1,
+  "bytes_on_disk": 1250309446,
+  "archive_bytes": 1150585339,
+  "archive_sha256_first_1MB": "0057f3c89c359c9d",
+  "role": "MaxBoxAccV2 (Choe et al. CVPR 2020 WSOL benchmark)"
+ },
+ "VOC2012": {
+  "obtained": true,
+  "source": "http://pjreddie.com/media/files/VOCtrainval_11-May-2012.tar",
+  "n_train": 5717,
+  "n_val_det": 5823,
+  "n_val_seg": 1449,
+  "n_class": 20,
+  "n_val_boxes": 15787,
+  "n_records_det": 8856,
+  "n_records_seg": 2147,
+  "bytes_on_disk": 1968207603,
+  "archive_bytes": 1999639040,
+  "role": "pointing game (boxes on det-val; per-class masks + PxAP on seg-val)"
+ },
+ "COCO_val2017": {
+  "obtained": true,
+  "source": "http://images.cocodataset.org/zips/val2017.zip",
+  "n_images_with_annotations": 4952,
+  "n_fit_half": 2476,
+  "n_eval_half": 2476,
+  "n_class": 80,
+  "n_records_eval": 7339,
+  "bytes_on_disk": 1649121454,
+  "role": "pointing game + PxAP on instance masks (RISE / D-RISE protocol)"
+ },
+ "OpenImages30k": {
+  "obtained": false,
+  "reason": "clovaai/wsolevaluation distributes it only through OneDrive / Google Drive consent pages (prepare_openimages.sh points at onedrive.live.com/download?cid=B7111B95B80CCC66...).  A direct GET returns HTTP 403 with an HTML consent page, and the OpenImages V5 originals would have to be re-cropped with their metadata to reconstruct the benchmark.  SKIPPED, as instructed, rather than approximated.",
+  "probe_http_status": 403
+ },
+ "ILSVRC2012_val_boxes": {
+  "obtained": false,
+  "reason": "the project ImageNet mirror (data/in1k) is the ungated HuggingFace `evanarlian/imagenet_1k_resized_256` re-encode, which discards the original ILSVRC2012_val_%08d filenames and reorders images inside each class directory.  The bbox XMLs are keyed by those filenames, so they cannot be joined to the mirror without re-downloading the gated original val set.  SKIPPED rather than guessed."
+ }
+}

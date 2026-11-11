@@ -1,0 +1,134 @@
+{
+ "check_S3_relocation_collapsed": [
+  {
+   "n": 24,
+   "win": 19,
+   "loss": 1,
+   "tie": 4
+  },
+  "+0.047 [+0.021, +0.120]",
+  "$-$0.015"
+ ],
+ "cam_tally_total": {
+  "n": 96,
+  "win": 18,
+  "loss": 33,
+  "tie": 45
+ },
+ "cam_by_arm_backbone": [
+  {
+   "arm": "relocated normalisation",
+   "backbone": "all",
+   "n": 24,
+   "win": 13,
+   "loss": 6,
+   "tie": 5,
+   "med_win": "+0.058 [+0.022, +0.180]",
+   "med_loss": "$-$0.016 [$-$0.021, $-$0.006]"
+  },
+  {
+   "arm": "replaced aggregator",
+   "backbone": "all",
+   "n": 72,
+   "win": 5,
+   "loss": 27,
+   "tie": 40,
+   "med_win": "+0.002 [+0.001, +0.004]",
+   "med_loss": "$-$0.023 [$-$0.112, $-$0.010]"
+  },
+  {
+   "arm": "replaced aggregator",
+   "backbone": "resnet50",
+   "n": 24,
+   "win": 2,
+   "loss": 9,
+   "tie": 13,
+   "med_win": "+0.032 [+0.018, +0.046]",
+   "med_loss": "$-$0.013 [$-$0.226, $-$0.008]"
+  },
+  {
+   "arm": "replaced aggregator",
+   "backbone": "vgg16gap",
+   "n": 24,
+   "win": 1,
+   "loss": 10,
+   "tie": 13,
+   "med_win": "+0.002",
+   "med_loss": "$-$0.043 [$-$0.115, $-$0.009]"
+  },
+  {
+   "arm": "replaced aggregator",
+   "backbone": "vitb16",
+   "n": 24,
+   "win": 2,
+   "loss": 8,
+   "tie": 14,
+   "med_win": "+0.001 [+0.001, +0.001]",
+   "med_loss": "$-$0.037 [$-$0.078, $-$0.017]"
+  }
+ ],
+ "wins_vs_collapsed": 39,
+ "of_which_win_vs_cam": 16,
+ "of_which_tie_vs_cam": 19,
+ "of_which_loss_vs_cam": 4,
+ "protocol_metrics_vs_collapsed": {
+  "n": 72,
+  "win": 28,
+  "loss": 16,
+  "tie": 28
+ },
+ "cub_extra_metrics_vs_collapsed": {
+  "n": 24,
+  "win": 11,
+  "loss": 10,
+  "tie": 3
+ },
+ "protocol_metrics_vs_centre": {
+  "n": 72,
+  "win": 60,
+  "loss": 10,
+  "tie": 2
+ },
+ "protocol_metrics_vs_cam": {
+  "n": 72,
+  "win": 11,
+  "loss": 27,
+  "tie": 34
+ },
+ "all_vs_collapsed": {
+  "n": 96,
+  "win": 39,
+  "loss": 26,
+  "tie": 31
+ },
+ "all_vs_centre": {
+  "n": 96,
+  "win": 68,
+  "loss": 24,
+  "tie": 4
+ },
+ "pxap_separated_above_collapsed": [
+  [
+   "voc12seg",
+   "vitb16",
+   "S_lse",
+   0.0299
+  ]
+ ],
+ "pxap_ln_range": {
+  "N_ln": [
+   -0.025932527200465794,
+   -0.011326968213404898
+  ],
+  "S_ln": [
+   -0.02718058512088245,
+   -0.019780817722013483
+  ]
+ }
+}
+voc12seg resnet50 {'collapsed': 0.4642, 'cam': 0.4872, 'center': 0.321, 'N_lse': 0.1773, 'S_lse': 0.4508, 'd_N_lse': -0.287, 'dcam_N_lse': -0.3099, 'd_S_lse': -0.0134, 'dcam_S_lse': -0.0364}
+voc12seg vgg16gap {'collapsed': 0.3752, 'cam': 0.3873, 'center': 0.321, 'N_lse': 0.1842, 'S_lse': 0.3208, 'd_N_lse': -0.1911, 'dcam_N_lse': -0.2031, 'd_S_lse': -0.0544, 'dcam_S_lse': -0.0664}
+voc12seg vitb16 {'collapsed': 0.4254, 'cam': 0.4427, 'center': 0.321, 'N_lse': 0.1631, 'S_lse': 0.4553, 'N_ln': 0.3995, 'S_ln': 0.3982, 'd_N_lse': -0.2623, 'dcam_N_lse': -0.2796, 'd_S_lse': 0.0299, 'dcam_S_lse': 0.0126, 'd_N_ln': -0.0259, 'dcam_N_ln': -0.0432, 'd_S_ln': -0.0272, 'dcam_S_ln': -0.0445}
+coco17 resnet50 {'collapsed': 0.2406, 'cam': 0.249, 'center': 0.1562, 'N_lse': 0.1101, 'S_lse': 0.1726, 'd_N_lse': -0.1306, 'dcam_N_lse': -0.1389, 'd_S_lse': -0.068, 'dcam_S_lse': -0.0763}
+coco17 vgg16gap {'collapsed': 0.1949, 'cam': 0.2008, 'center': 0.1562, 'N_lse': 0.1087, 'S_lse': 0.1357, 'd_N_lse': -0.0862, 'dcam_N_lse': -0.0921, 'd_S_lse': -0.0592, 'dcam_S_lse': -0.065}
+coco17 vitb16 {'collapsed': 0.2382, 'cam': 0.2462, 'center': 0.1562, 'N_lse': 0.1039, 'S_lse': 0.2147, 'N_ln': 0.2269, 'S_ln': 0.2184, 'd_N_lse': -0.1343, 'dcam_N_lse': -0.1423, 'd_S_lse': -0.0235, 'dcam_S_lse': -0.0315, 'd_N_ln': -0.0113, 'dcam_N_ln': -0.0193, 'd_S_ln': -0.0198, 'dcam_S_ln': -0.0278}

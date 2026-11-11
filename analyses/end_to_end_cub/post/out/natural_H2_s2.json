@@ -1,0 +1,56 @@
+{
+ "head": "H2",
+ "seed": 2,
+ "n_test": 5794,
+ "maps": [
+  "attn",
+  "attn_ev",
+  "gradcam"
+ ],
+ "post_hoc": true,
+ "checks": {
+  "gradcam_vs_closed_form_rel": 0.0,
+  "head64_logit_vs_float32_abs": 1.0238014844787813e-05
+ },
+ "all_zero_maps": {
+  "attn": 0,
+  "attn_ev": 0,
+  "gradcam": 0
+ },
+ "per_map": {
+  "attn": {
+   "MaxBoxAccV2": 0.6286963525486134,
+   "per_delta": {
+    "0.3": 0.9710044874007594,
+    "0.5": 0.7259233690024163,
+    "0.7": 0.18916120124266483
+   },
+   "pointing_strict": 0.9960303762512944,
+   "pointing_tol15": 0.9987918536416983,
+   "best_iou": 0.6264672875404358
+  },
+  "attn_ev": {
+   "MaxBoxAccV2": 0.5663905189276263,
+   "per_delta": {
+    "0.3": 0.9490852606144288,
+    "0.5": 0.6246116672419745,
+    "0.7": 0.12547462892647565
+   },
+   "pointing_strict": 0.9979288919571971,
+   "pointing_tol15": 0.9996548153261995,
+   "best_iou": 0.5860800743103027
+  },
+  "gradcam": {
+   "MaxBoxAccV2": 0.4455183523184904,
+   "per_delta": {
+    "0.3": 0.7846047635484984,
+    "0.5": 0.43510528132550913,
+    "0.7": 0.11684501208146358
+   },
+   "pointing_strict": 0.8988608905764585,
+   "pointing_tol15": 0.9452882292026235,
+   "best_iou": 0.6261704564094543
+  }
+ },
+ "precision": "backbone float32 (TF32 off); maps and Grad-CAM float64"
+}

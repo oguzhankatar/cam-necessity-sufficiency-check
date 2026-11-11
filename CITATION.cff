@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article as below."
+title: "Necessity versus sufficiency in last-layer class activation maps: a structural check of the classification head (analysis code)"
+authors:
+  - family-names: "Katar"
+    given-names: "Oguzhan"
+    affiliation: "Firat University, Elazig, Türkiye"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/oguzhankatar/cam-necessity-sufficiency-check"
+keywords:
+  - class activation maps
+  - explainable artificial intelligence
+  - necessity and sufficiency
+  - structural check
+  - classification head
+  - weakly supervised localisation
+preferred-citation:
+  type: article
+  title: "Necessity versus sufficiency in last-layer class activation maps: a structural check of the classification head"
+  authors:
+    - family-names: "Katar"
+      given-names: "Oguzhan"
+      affiliation: "Firat University, Elazig, Türkiye"
+  year: 2026
+  notes: "Article under review. Citation details will be added on publication."

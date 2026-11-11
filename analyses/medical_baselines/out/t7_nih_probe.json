@@ -1,0 +1,223 @@
+{
+ "densenet121-res224-nih": {
+  "all": {
+   "auc": {
+    "Atelectasis": 0.6758344658502471,
+    "Cardiomegaly": 0.8230004225429738,
+    "Effusion": 0.7499638249828777,
+    "Infiltration": 0.6177260452941112,
+    "Mass": 0.7137200274035167,
+    "Nodule": 0.6236171301253974,
+    "Pneumonia": 0.6009113721829384,
+    "Pneumothorax": 0.6049479593384919,
+    "Consolidation": 0.6530557530044698,
+    "Edema": 0.7322205437031556,
+    "Emphysema": 0.48643580447555945,
+    "Fibrosis": 0.6679717404503577,
+    "Pleural_Thickening": 0.6945260752943753,
+    "Hernia": 0.7046025436751172
+   },
+   "mean_auc": 0.6677524077373992,
+   "n": 5720,
+   "n_pos": {
+    "Atelectasis": 874,
+    "Cardiomegaly": 366,
+    "Effusion": 1143,
+    "Infiltration": 1433,
+    "Mass": 435,
+    "Nodule": 441,
+    "Pneumonia": 227,
+    "Pneumothorax": 650,
+    "Consolidation": 411,
+    "Edema": 212,
+    "Emphysema": 247,
+    "Fibrosis": 108,
+    "Pleural_Thickening": 254,
+    "Hernia": 31
+   }
+  },
+  "xrv_heldout": {
+   "auc": {
+    "Atelectasis": 0.6310825543664079,
+    "Cardiomegaly": 0.8441176470588235,
+    "Effusion": 0.7294350894816147,
+    "Infiltration": 0.6135060821363366,
+    "Mass": 0.7154940726014284,
+    "Nodule": 0.6604600694444445,
+    "Pneumonia": 0.6715388143332868,
+    "Pneumothorax": 0.616639183546225,
+    "Consolidation": 0.6163993663993663,
+    "Edema": 0.7373801604382704,
+    "Emphysema": 0.45408682127260763,
+    "Fibrosis": 0.6008158508158508,
+    "Pleural_Thickening": 0.6579361271059927,
+    "Hernia": 0.800232288037166
+   },
+   "mean_auc": 0.6677945805027016,
+   "n": 1114,
+   "n_pos": {
+    "Atelectasis": 163,
+    "Cardiomegaly": 60,
+    "Effusion": 209,
+    "Infiltration": 269,
+    "Mass": 108,
+    "Nodule": 90,
+    "Pneumonia": 47,
+    "Pneumothorax": 123,
+    "Consolidation": 78,
+    "Edema": 38,
+    "Emphysema": 47,
+    "Fibrosis": 22,
+    "Pleural_Thickening": 72,
+    "Hernia": 7
+   }
+  },
+  "xrv_train": {
+   "auc": {
+    "Atelectasis": 0.6858116269370556,
+    "Cardiomegaly": 0.8182444140446876,
+    "Effusion": 0.7548894230544942,
+    "Infiltration": 0.6188376203797441,
+    "Mass": 0.7114297618766852,
+    "Nodule": 0.6143327273762056,
+    "Pneumonia": 0.582541296379977,
+    "Pneumothorax": 0.602354913606183,
+    "Consolidation": 0.6617078112514574,
+    "Edema": 0.7312544088966346,
+    "Emphysema": 0.4941386745347254,
+    "Fibrosis": 0.6813773410166701,
+    "Pleural_Thickening": 0.7051087474912068,
+    "Hernia": 0.6778517386876183
+   },
+   "mean_auc": 0.6671343218238103,
+   "n": 4606,
+   "n_pos": {
+    "Atelectasis": 711,
+    "Cardiomegaly": 306,
+    "Effusion": 934,
+    "Infiltration": 1164,
+    "Mass": 327,
+    "Nodule": 351,
+    "Pneumonia": 180,
+    "Pneumothorax": 527,
+    "Consolidation": 333,
+    "Edema": 174,
+    "Emphysema": 200,
+    "Fibrosis": 86,
+    "Pleural_Thickening": 182,
+    "Hernia": 24
+   }
+  }
+ },
+ "forward_vs_cached_head_maxabs_logit": 5.7220458984375e-06,
+ "densenet121-res224-all": {
+  "all": {
+   "auc": {
+    "Atelectasis": 0.7338624603461678,
+    "Cardiomegaly": 0.8688519486987922,
+    "Effusion": 0.7908183696832521,
+    "Infiltration": 0.6492240046060153,
+    "Mass": 0.7361706847616872,
+    "Nodule": 0.6384291672089686,
+    "Pneumonia": 0.6110893239373139,
+    "Pneumothorax": 0.6677232589895312,
+    "Consolidation": 0.6875983902834053,
+    "Edema": 0.7681237239829544,
+    "Emphysema": 0.5801250304217022,
+    "Fibrosis": 0.6917996489005042,
+    "Pleural_Thickening": 0.6860585552491998,
+    "Hernia": 0.8826994936464825
+   },
+   "mean_auc": 0.7137552900511412,
+   "n": 5720,
+   "n_pos": {
+    "Atelectasis": 874,
+    "Cardiomegaly": 366,
+    "Effusion": 1143,
+    "Infiltration": 1433,
+    "Mass": 435,
+    "Nodule": 441,
+    "Pneumonia": 227,
+    "Pneumothorax": 650,
+    "Consolidation": 411,
+    "Edema": 212,
+    "Emphysema": 247,
+    "Fibrosis": 108,
+    "Pleural_Thickening": 254,
+    "Hernia": 31
+   }
+  },
+  "xrv_heldout": {
+   "auc": {
+    "Atelectasis": 0.7085341229445272,
+    "Cardiomegaly": 0.8837760910815939,
+    "Effusion": 0.7620925744798964,
+    "Infiltration": 0.6613624865269131,
+    "Mass": 0.741449451439511,
+    "Nodule": 0.6611545138888889,
+    "Pneumonia": 0.6155057927376418,
+    "Pneumothorax": 0.6708670719401442,
+    "Consolidation": 0.6595139095139096,
+    "Edema": 0.7978379964781843,
+    "Emphysema": 0.5697621089154321,
+    "Fibrosis": 0.633033633033633,
+    "Pleural_Thickening": 0.6793159522286202,
+    "Hernia": 0.8992128016518259
+   },
+   "mean_auc": 0.7102441790614803,
+   "n": 1114,
+   "n_pos": {
+    "Atelectasis": 163,
+    "Cardiomegaly": 60,
+    "Effusion": 209,
+    "Infiltration": 269,
+    "Mass": 108,
+    "Nodule": 90,
+    "Pneumonia": 47,
+    "Pneumothorax": 123,
+    "Consolidation": 78,
+    "Edema": 38,
+    "Emphysema": 47,
+    "Fibrosis": 22,
+    "Pleural_Thickening": 72,
+    "Hernia": 7
+   }
+  },
+  "xrv_train": {
+   "auc": {
+    "Atelectasis": 0.7396738217881845,
+    "Cardiomegaly": 0.8655578355373157,
+    "Effusion": 0.7973144765876847,
+    "Infiltration": 0.6461696628069272,
+    "Mass": 0.7332324209048815,
+    "Nodule": 0.6327437805698676,
+    "Pneumonia": 0.6094931465582166,
+    "Pneumothorax": 0.6667887030018612,
+    "Consolidation": 0.6940907675754389,
+    "Edema": 0.7605489335657081,
+    "Emphysema": 0.5826849750340445,
+    "Fibrosis": 0.7054074912533443,
+    "Pleural_Thickening": 0.6868467201875882,
+    "Hernia": 0.8771097046413502
+   },
+   "mean_auc": 0.7141187457151724,
+   "n": 4606,
+   "n_pos": {
+    "Atelectasis": 711,
+    "Cardiomegaly": 306,
+    "Effusion": 934,
+    "Infiltration": 1164,
+    "Mass": 327,
+    "Nodule": 351,
+    "Pneumonia": 180,
+    "Pneumothorax": 527,
+    "Consolidation": 333,
+    "Edema": 174,
+    "Emphysema": 200,
+    "Fibrosis": 86,
+    "Pleural_Thickening": 182,
+    "Hernia": 24
+   }
+  }
+ }
+}

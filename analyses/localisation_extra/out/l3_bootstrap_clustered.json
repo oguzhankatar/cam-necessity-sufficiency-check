@@ -1,0 +1,365 @@
+{
+ "task3": {
+  "n_boot": 2000,
+  "n_boot_mbav2": 1000,
+  "seed": 0,
+  "ci": "percentile 2.5 / 97.5",
+  "lines": {
+   "wlib_n_boot": 58,
+   "wlib_n_boot_mbav2": 59,
+   "wlib_seed": 60,
+   "wlib_boot_diff": [
+    526,
+    533
+   ],
+   "wlib_boot_mbav2_diff": [
+    546,
+    556
+   ],
+   "wlib_boot_mbav2_p_line": 554,
+   "wlib_boot_mbav2_floor_line": 556,
+   "wlib_maxboxacc_v2": [
+    495,
+    499
+   ],
+   "wlib_wilcoxon": [
+    559,
+    572
+   ],
+   "wlib_mcnemar": [
+    575,
+    583
+   ],
+   "wlib_holm": [
+    586,
+    596
+   ],
+   "w3_call_mbav2": 81,
+   "w3_call_boot_diff": [
+    89,
+    101,
+    111
+   ],
+   "w3_call_wilcoxon": [
+    91,
+    113
+   ],
+   "w3_call_mcnemar": 103,
+   "w3_holm": 123,
+   "w3_primary_const": 53
+  },
+  "n_primary_mbav2": 16,
+  "n_primary_mbav2_at_floor": 15,
+  "floor": 0.001,
+  "distinct_p_holm_mbav2": [
+   0.004,
+   0.008,
+   0.88
+  ],
+  "primary_rows_per_metric": {
+   "pointing_strict": 64,
+   "pointing_tol15": 64,
+   "peak_mask_iou": 32,
+   "MaxBoxAccV2": 16,
+   "best_iou": 16
+  },
+  "primary_tests": {
+   "pointing_strict|mcnemar": 64,
+   "pointing_tol15|mcnemar": 64,
+   "peak_mask_iou|wilcoxon": 32,
+   "MaxBoxAccV2|paired bootstrap": 16,
+   "best_iou|wilcoxon": 16
+  }
+ },
+ "task4": {
+  "n": 192,
+  "changed_image_perm": 2,
+  "changed_record_perm": 2,
+  "changed_clustering_only": 0,
+  "changed_cluster_boot": 2,
+  "same_two_rows_image_vs_record": true,
+  "rows": [
+   {
+    "dataset": "voc12seg",
+    "backbone": "resnet50",
+    "metric": "peak_mask_iou",
+    "a": "S_lse",
+    "b": "collapsed",
+    "diff": -0.00048676279230552844,
+    "test_orig": "wilcoxon",
+    "p_orig": 0.005142755350829977,
+    "p_holm_orig": 0.005142755350829977,
+    "sig_orig": "loss",
+    "p_perm_rec": 0.5644717764111794,
+    "p_holm_perm_rec": 0.5644717764111794,
+    "sig_perm_rec": "tie",
+    "p_perm_img": 0.5694715264236788,
+    "p_holm_perm_img": 0.5694715264236788,
+    "sig_perm_img": "tie",
+    "p_cboot": 0.594,
+    "p_holm_cboot": 0.594,
+    "sig_cboot": "tie",
+    "p_wil_img": 0.001506464374333257,
+    "p_holm_wil_img": 0.001506464374333257,
+    "sig_wil_img": "loss"
+   },
+   {
+    "dataset": "coco17",
+    "backbone": "vgg16gap",
+    "metric": "peak_mask_iou",
+    "a": "N_lse",
+    "b": "center",
+    "diff": 0.011023637472447001,
+    "test_orig": "wilcoxon",
+    "p_orig": 0.05811631143377845,
+    "p_holm_orig": 0.05811631143377845,
+    "sig_orig": "tie",
+    "p_perm_rec": 4.999750012499375e-05,
+    "p_holm_perm_rec": 0.000199990000499975,
+    "sig_perm_rec": "win",
+    "p_perm_img": 4.999750012499375e-05,
+    "p_holm_perm_img": 0.000199990000499975,
+    "sig_perm_img": "win",
+    "p_cboot": 0.0005,
+    "p_holm_cboot": 0.002,
+    "sig_cboot": "win",
+    "p_wil_img": 0.01919340544847852,
+    "p_holm_wil_img": 0.01919340544847852,
+    "sig_wil_img": "win"
+   }
+  ],
+  "wil_img_changed": 9,
+  "summary": {
+   "perm_img": {
+    "label": "image-level sign-flip permutation",
+    "per_dataset": {
+     "cub": {
+      "n": 64,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12": {
+      "n": 32,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12seg": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "loss->tie": 1
+      },
+      "changed_vs_collapsed": 1
+     },
+     "coco17": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 0
+     },
+     "all": {
+      "n": 192,
+      "changed": 2,
+      "transitions": {
+       "loss->tie": 1,
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 1
+     }
+    }
+   },
+   "cboot": {
+    "label": "image-clustered bootstrap p",
+    "per_dataset": {
+     "cub": {
+      "n": 64,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12": {
+      "n": 32,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12seg": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "loss->tie": 1
+      },
+      "changed_vs_collapsed": 1
+     },
+     "coco17": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 0
+     },
+     "all": {
+      "n": 192,
+      "changed": 2,
+      "transitions": {
+       "loss->tie": 1,
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 1
+     }
+    }
+   },
+   "wil_img": {
+    "label": "Wilcoxon on image-mean differences",
+    "per_dataset": {
+     "cub": {
+      "n": 64,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12": {
+      "n": 32,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12seg": {
+      "n": 48,
+      "changed": 6,
+      "transitions": {
+       "tie->win": 1,
+       "win->tie": 5
+      },
+      "changed_vs_collapsed": 3
+     },
+     "coco17": {
+      "n": 48,
+      "changed": 3,
+      "transitions": {
+       "win->tie": 1,
+       "tie->win": 2
+      },
+      "changed_vs_collapsed": 1
+     },
+     "all": {
+      "n": 192,
+      "changed": 9,
+      "transitions": {
+       "tie->win": 3,
+       "win->tie": 6
+      },
+      "changed_vs_collapsed": 4
+     }
+    }
+   },
+   "perm_rec": {
+    "label": "record-level sign-flip permutation (test change only)",
+    "per_dataset": {
+     "cub": {
+      "n": 64,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12": {
+      "n": 32,
+      "changed": 0,
+      "transitions": {},
+      "changed_vs_collapsed": 0
+     },
+     "voc12seg": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "loss->tie": 1
+      },
+      "changed_vs_collapsed": 1
+     },
+     "coco17": {
+      "n": 48,
+      "changed": 1,
+      "transitions": {
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 0
+     },
+     "all": {
+      "n": 192,
+      "changed": 2,
+      "transitions": {
+       "loss->tie": 1,
+       "tie->win": 1
+      },
+      "changed_vs_collapsed": 1
+     }
+    }
+   },
+   "clustering_only": {
+    "cub": {
+     "n": 64,
+     "changed": 0,
+     "transitions": {}
+    },
+    "voc12": {
+     "n": 32,
+     "changed": 0,
+     "transitions": {}
+    },
+    "voc12seg": {
+     "n": 48,
+     "changed": 0,
+     "transitions": {}
+    },
+    "coco17": {
+     "n": 48,
+     "changed": 0,
+     "transitions": {}
+    },
+    "all": {
+     "n": 192,
+     "changed": 0,
+     "transitions": {}
+    }
+   },
+   "tallies": {
+    "orig|collapsed": {
+     "loss": 26,
+     "win": 39,
+     "tie": 31
+    },
+    "orig|center": {
+     "loss": 24,
+     "tie": 4,
+     "win": 68
+    },
+    "perm_img|collapsed": {
+     "loss": 25,
+     "win": 39,
+     "tie": 32
+    },
+    "perm_img|center": {
+     "loss": 24,
+     "tie": 3,
+     "win": 69
+    },
+    "cboot|collapsed": {
+     "loss": 25,
+     "win": 39,
+     "tie": 32
+    },
+    "cboot|center": {
+     "loss": 24,
+     "tie": 3,
+     "win": 69
+    }
+   }
+  },
+  "design": "C3 task 3: Holm verdicts of the 192 primary contrasts recomputed\nfrom image-clustered tests.\n\nFor every primary contrast the record-level test of w3 (McNemar / Wilcoxon)\nis replaced by\n  (A) an image-level paired sign-flip permutation test (20,000 flips,\n      seed 0): the exchangeable unit is the image, so all records of an image\n      flip together;                                     <- primary variant\n  (B) a clustered-bootstrap p (2,000 image resamples, seed 0,\n      p = 2 min(P(b<=0), P(b>=0)), floored at 1/2000), the construction w3\n      already uses for MaxBoxAccV2;\n  (D) a cluster-level Wilcoxon signed-rank test on the per-image mean of the\n      record differences (the w3 test family, applied to image units);\n  (C) the same sign-flip test with every record its own cluster, to separate\n      the effect of clustering (C -> A) from the effect of changing the test\n      (original -> C).\nMaxBoxAccV2 rows keep w3's paired bootstrap over images (already clustered;\nCUB has one record per image).  Holm is then re-applied inside each\n(dataset, backbone, metric) family over all of the family's primary rows.\n"
+ }
+}

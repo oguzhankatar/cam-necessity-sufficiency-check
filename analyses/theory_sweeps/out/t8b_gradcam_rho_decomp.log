@@ -1,0 +1,11 @@
+probe30_images_subset_of_probe29              True
+bank_overlap                                  0
+same_reference_for_shared_images              0
+probe29_config_224                            0.9404400019651903
+archived_probe29_spGN                         0.9405762923732166
+probe29_config_restricted_to_probe30_images   0.9415522770848896
+probe30_config_128                            0.9495215439422152
+archived_probe30_rho                          0.9495285454647051
+probe30_images_with_probe29_refs              0.9415522770848896
+probe29_other_96_images                       0.9389569684722577
+wrote <repo>\analyses/theory_sweeps\out\t8b_gradcam_rho_decomp.json

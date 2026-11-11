@@ -1,0 +1,32 @@
+NIH test 5720 train 7000
+paper pp mean AUC 0.66754 (m1 0.66754) | xrv pp 0.66775 | held-out: paper 0.6675 xrv 0.6678
+wrote <repo>\analyses/medical_baselines\out\t6_nih_auc.json
+m10 replicate mean AUC {'gap': 0.6920891026609304, 'lse8.0': 0.6496384523601899, 'lse-8.0': 0.6681195443588691} archived {'gap': 0.6920850361854589, 'lse8.0': 0.6496660795681726, 'lse-8.0': 0.6681436635580108}
+m10 replicate hit vs archived: max |diff| 0.0010
+wrote maps maps_nih_m10.npz 984
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  ep0 96s
+  ep1 68s
+  ep2 88s
+  ep3 95s
+  ep4 90s
+  ep5 87s
+  ep6 103s
+  ep7 72s
+m6 replicate mean AUC 0.6906 (archived 0.6930)
+m6 replicate hit vs archived: max |diff| 0.0986
+wrote maps maps_nih_m6.npz 984
+  ep0 val acc 0.6027
+  ep1 val acc 0.5946
+  ep2 val acc 0.6272
+  ep3 val acc 0.6939
+  ep4 val acc 0.6980
+  ep5 val acc 0.7252
+  ep6 val acc 0.7333
+  ep7 val acc 0.7293
+  ep8 val acc 0.7347
+  ep9 val acc 0.7306
+  ep10 val acc 0.7347
+  ep11 val acc 0.7401
+isic replicate {'nevus': 0.8323414492963352, 'melanoma': 0.8051681153561081, 'seborrheic_keratosis': 0.9165945092446391, 'macro': 0.8513680246323608, 'accuracy': 0.7401360544217687} archived macro 0.8338414437525664
+wrote maps maps_isic.npz 735

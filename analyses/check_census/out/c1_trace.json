@@ -1,0 +1,3303 @@
+{
+ "module_class": {
+  "n_distinct_all": 33,
+  "commonest_all": 27,
+  "commonest_models": [
+   "regnety_032",
+   "regnetx_032",
+   "xception41",
+   "repvgg_a2",
+   "mobilevit_s",
+   "mobilevitv2_050",
+   "fastvit_t8",
+   "coatnet_0_rw_224",
+   "focalnet_tiny_srf",
+   "gcvit_tiny",
+   "nextvit_small",
+   "regnety_040",
+   "regnetx_016",
+   "regnetz_b16",
+   "xception65",
+   "fastvit_s12",
+   "fastvit_sa12",
+   "mobilevit_xs",
+   "mobilevitv2_100",
+   "coatnet_1_rw_224",
+   "coatnext_nano_rw_224",
+   "eca_nfnet_l0",
+   "dm_nfnet_f0",
+   "cspresnet50",
+   "ese_vovnet39b",
+   "rexnet_100",
+   "regnetz_c16"
+  ],
+  "n_distinct_dev": 23,
+  "n_distinct_heldout": 27,
+  "n_heldout_seen_in_dev": 71,
+  "n_heldout_novel": 11,
+  "n_novel_traces": 10,
+  "novel_models": [
+   "inception_next_tiny",
+   "volo_d1_224",
+   "resnetv2_50",
+   "repvit_m1_0",
+   "efficientvit_b1",
+   "efficientvit_m1",
+   "starnet_s1",
+   "shvit_s1",
+   "fasternet_t0",
+   "dla34",
+   "hgnet_tiny"
+  ],
+  "novel_detail": [
+   {
+    "model": "inception_next_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "volo_d1_224",
+    "verdict": "DEGENERATE",
+    "gt": "HARD-BLOCKED",
+    "agree": false,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "resnetv2_50",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "repvit_m1_0",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "efficientvit_b1",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "efficientvit_m1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "starnet_s1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "shvit_s1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "fasternet_t0",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "dla34",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "hgnet_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   }
+  ],
+  "majority_label_dev": "ADDITIVE",
+  "majority_label_heldout": "ADDITIVE",
+  "four_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 77
+   },
+   "seen": {
+    "n": 71,
+    "rule": 71,
+    "rule_v2b": 71,
+    "majority": 51,
+    "nearest_trace": 71
+   },
+   "novel": {
+    "n": 11,
+    "rule": 10,
+    "rule_v2b": 11,
+    "majority": 6,
+    "nearest_trace": 6
+   },
+   "heldout_minus_vacuous": {
+    "n": 76,
+    "rule": 75,
+    "rule_v2b": 76,
+    "majority": 57,
+    "nearest_trace": 71
+   }
+  },
+  "three_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 77
+   },
+   "seen": {
+    "n": 71,
+    "rule": 71,
+    "rule_v2b": 71,
+    "majority": 51,
+    "nearest_trace": 71
+   },
+   "novel": {
+    "n": 11,
+    "rule": 10,
+    "rule_v2b": 11,
+    "majority": 6,
+    "nearest_trace": 6
+   },
+   "dev": {
+    "n": 65,
+    "rule": 65,
+    "rule_v2b": 65,
+    "majority": 32,
+    "nearest_trace": 65
+   }
+  },
+  "per_trace_heldout": {
+   "n_traces": 27,
+   "n_traces_all_agree": 26,
+   "n_novel_traces": 10,
+   "n_novel_traces_all_agree": 9,
+   "n_traces_majority_right": 12,
+   "n_traces_nearest_right": 22,
+   "n_novel_traces_majority_right": 5,
+   "traces": [
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 16,
+     "in_dev": true,
+     "models": [
+      "regnety_040",
+      "regnetx_016",
+      "regnetz_b16",
+      "xception65",
+      "fastvit_s12",
+      "fastvit_sa12",
+      "mobilevit_xs",
+      "mobilevitv2_100",
+      "coatnet_1_rw_224",
+      "coatnext_nano_rw_224",
+      "eca_nfnet_l0",
+      "dm_nfnet_f0",
+      "cspresnet50",
+      "ese_vovnet39b",
+      "rexnet_100",
+      "regnetz_c16"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 13,
+     "in_dev": true,
+     "models": [
+      "efficientnet_b3",
+      "efficientnet_lite0",
+      "tf_efficientnetv2_b0",
+      "efficientnetv2_rw_t",
+      "legacy_xception",
+      "resnest50d",
+      "resnest14d",
+      "seresnext26d_32x4d",
+      "seresnet50",
+      "ecaresnet50d",
+      "legacy_seresnet18",
+      "skresnet18",
+      "mixnet_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=avg",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 9,
+     "in_dev": true,
+     "models": [
+      "mixer_b16_224",
+      "gmixer_24_224",
+      "gmlp_s16_224",
+      "resmlp_12_224",
+      "twins_pcpvt_small",
+      "twins_svt_base",
+      "pvt_v2_b1",
+      "pvt_v2_b2",
+      "mvitv2_tiny"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 6,
+     "in_dev": true,
+     "models": [
+      "densenet169",
+      "densenetblur121d",
+      "hrnet_w18_small",
+      "convmixer_768_32",
+      "visformer_small",
+      "selecsls42b"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=token",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 4,
+     "in_dev": true,
+     "models": [
+      "xcit_tiny_12_p16_224",
+      "convit_tiny",
+      "tnt_s_patch16_224",
+      "coat_lite_tiny"
+     ],
+     "gts": [
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=avg",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "efficientformer_l3",
+      "efficientformerv2_s1",
+      "swiftformer_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "tiny_vit_11m_224",
+      "tiny_vit_21m_224",
+      "davit_small"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=None",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "mambaout_femto",
+      "mambaout_small",
+      "mambaout_kobe"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "poolformer_s24",
+      "poolformerv2_s24"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=avg",
+      [
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "levit_192",
+      "levit_conv_128s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=None",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "hiera_small_224",
+      "hiera_base_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "FastAdaptiveAvgPool",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "tresnet_m",
+      "sequencer2d_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": false,
+     "models": [
+      "resnetv2_50",
+      "dla34"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "global_pool=token",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "flexivit_small",
+      "vit_small_patch16_224"
+     ],
+     "gts": [
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "convformer_s36"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "inception_next_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "global_pool=token",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "volo_d1_224"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": false,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "global_pool=avg",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "repvit_m1_0"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Hardswish",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "efficientvit_b1"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "efficientvit_m1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "starnet_s1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "shvit_s1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "fasternet_t0"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "ghostnetv2_100"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "Conv2d",
+      [
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "AdaptiveAvgPool2d",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "vgg19"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "AdaptiveAvgPool2d",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "hgnet_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "global_pool=avg",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "beit_base_patch16_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    }
+   ]
+  },
+  "gt_conflicts_seen_vs_dev": []
+ },
+ "agg_category": {
+  "n_distinct_all": 33,
+  "commonest_all": 27,
+  "commonest_models": [
+   "regnety_032",
+   "regnetx_032",
+   "xception41",
+   "repvgg_a2",
+   "mobilevit_s",
+   "mobilevitv2_050",
+   "fastvit_t8",
+   "coatnet_0_rw_224",
+   "focalnet_tiny_srf",
+   "gcvit_tiny",
+   "nextvit_small",
+   "regnety_040",
+   "regnetx_016",
+   "regnetz_b16",
+   "xception65",
+   "fastvit_s12",
+   "fastvit_sa12",
+   "mobilevit_xs",
+   "mobilevitv2_100",
+   "coatnet_1_rw_224",
+   "coatnext_nano_rw_224",
+   "eca_nfnet_l0",
+   "dm_nfnet_f0",
+   "cspresnet50",
+   "ese_vovnet39b",
+   "rexnet_100",
+   "regnetz_c16"
+  ],
+  "n_distinct_dev": 23,
+  "n_distinct_heldout": 27,
+  "n_heldout_seen_in_dev": 71,
+  "n_heldout_novel": 11,
+  "n_novel_traces": 10,
+  "novel_models": [
+   "inception_next_tiny",
+   "volo_d1_224",
+   "resnetv2_50",
+   "repvit_m1_0",
+   "efficientvit_b1",
+   "efficientvit_m1",
+   "starnet_s1",
+   "shvit_s1",
+   "fasternet_t0",
+   "dla34",
+   "hgnet_tiny"
+  ],
+  "novel_detail": [
+   {
+    "model": "inception_next_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "volo_d1_224",
+    "verdict": "DEGENERATE",
+    "gt": "HARD-BLOCKED",
+    "agree": false,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "resnetv2_50",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "repvit_m1_0",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "efficientvit_b1",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "efficientvit_m1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "starnet_s1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "shvit_s1",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "fasternet_t0",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "dla34",
+    "verdict": "IN-SCOPE",
+    "gt": "ADDITIVE",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "hgnet_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   }
+  ],
+  "majority_label_dev": "ADDITIVE",
+  "majority_label_heldout": "ADDITIVE",
+  "four_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 77
+   },
+   "seen": {
+    "n": 71,
+    "rule": 71,
+    "rule_v2b": 71,
+    "majority": 51,
+    "nearest_trace": 71
+   },
+   "novel": {
+    "n": 11,
+    "rule": 10,
+    "rule_v2b": 11,
+    "majority": 6,
+    "nearest_trace": 6
+   },
+   "heldout_minus_vacuous": {
+    "n": 76,
+    "rule": 75,
+    "rule_v2b": 76,
+    "majority": 57,
+    "nearest_trace": 71
+   }
+  },
+  "three_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 77
+   },
+   "seen": {
+    "n": 71,
+    "rule": 71,
+    "rule_v2b": 71,
+    "majority": 51,
+    "nearest_trace": 71
+   },
+   "novel": {
+    "n": 11,
+    "rule": 10,
+    "rule_v2b": 11,
+    "majority": 6,
+    "nearest_trace": 6
+   },
+   "dev": {
+    "n": 65,
+    "rule": 65,
+    "rule_v2b": 65,
+    "majority": 32,
+    "nearest_trace": 65
+   }
+  },
+  "per_trace_heldout": {
+   "n_traces": 27,
+   "n_traces_all_agree": 26,
+   "n_novel_traces": 10,
+   "n_novel_traces_all_agree": 9,
+   "n_traces_majority_right": 12,
+   "n_traces_nearest_right": 22,
+   "n_novel_traces_majority_right": 5,
+   "traces": [
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 16,
+     "in_dev": true,
+     "models": [
+      "regnety_040",
+      "regnetx_016",
+      "regnetz_b16",
+      "xception65",
+      "fastvit_s12",
+      "fastvit_sa12",
+      "mobilevit_xs",
+      "mobilevitv2_100",
+      "coatnet_1_rw_224",
+      "coatnext_nano_rw_224",
+      "eca_nfnet_l0",
+      "dm_nfnet_f0",
+      "cspresnet50",
+      "ese_vovnet39b",
+      "rexnet_100",
+      "regnetz_c16"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 13,
+     "in_dev": true,
+     "models": [
+      "efficientnet_b3",
+      "efficientnet_lite0",
+      "tf_efficientnetv2_b0",
+      "efficientnetv2_rw_t",
+      "legacy_xception",
+      "resnest50d",
+      "resnest14d",
+      "seresnext26d_32x4d",
+      "seresnet50",
+      "ecaresnet50d",
+      "legacy_seresnet18",
+      "skresnet18",
+      "mixnet_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 9,
+     "in_dev": true,
+     "models": [
+      "mixer_b16_224",
+      "gmixer_24_224",
+      "gmlp_s16_224",
+      "resmlp_12_224",
+      "twins_pcpvt_small",
+      "twins_svt_base",
+      "pvt_v2_b1",
+      "pvt_v2_b2",
+      "mvitv2_tiny"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 6,
+     "in_dev": true,
+     "models": [
+      "densenet169",
+      "densenetblur121d",
+      "hrnet_w18_small",
+      "convmixer_768_32",
+      "visformer_small",
+      "selecsls42b"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "TOKEN",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 4,
+     "in_dev": true,
+     "models": [
+      "xcit_tiny_12_p16_224",
+      "convit_tiny",
+      "tnt_s_patch16_224",
+      "coat_lite_tiny"
+     ],
+     "gts": [
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "efficientformer_l3",
+      "efficientformerv2_s1",
+      "swiftformer_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "tiny_vit_11m_224",
+      "tiny_vit_21m_224",
+      "davit_small"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "mambaout_femto",
+      "mambaout_small",
+      "mambaout_kobe"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "poolformer_s24",
+      "poolformerv2_s24"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "levit_192",
+      "levit_conv_128s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "hiera_small_224",
+      "hiera_base_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "tresnet_m",
+      "sequencer2d_s"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": false,
+     "models": [
+      "resnetv2_50",
+      "dla34"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "TOKEN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "flexivit_small",
+      "vit_small_patch16_224"
+     ],
+     "gts": [
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm2d",
+        "NORM"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "convformer_s36"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "inception_next_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "TOKEN",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "volo_d1_224"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": false,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "repvit_m1_0"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Hardswish",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "efficientvit_b1"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "efficientvit_m1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "starnet_s1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "BatchNorm1d",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "shvit_s1"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "GELU",
+        "NONLINEAR"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "fasternet_t0"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "ghostnetv2_100"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "DENSE",
+      [
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "AdaptiveAvgPool2d",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ],
+       [
+        "Identity",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "vgg19"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "Identity",
+        "AFFINE"
+       ],
+       [
+        "Conv2d",
+        "AFFINE"
+       ],
+       [
+        "ReLU",
+        "NONLINEAR"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Flatten",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "hgnet_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       [
+        "LayerNorm",
+        "NORM"
+       ],
+       [
+        "Dropout",
+        "AFFINE"
+       ],
+       [
+        "Linear",
+        "AFFINE"
+       ]
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "beit_base_patch16_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    }
+   ]
+  },
+  "gt_conflicts_seen_vs_dev": []
+ },
+ "kinds_only": {
+  "n_distinct_all": 22,
+  "commonest_all": 35,
+  "commonest_models": [
+   "regnety_032",
+   "regnetx_032",
+   "xception41",
+   "repvgg_a2",
+   "mobilevit_s",
+   "mobilevitv2_050",
+   "fastvit_t8",
+   "swin_tiny_patch4_window7_224",
+   "swinv2_tiny_window8_256",
+   "coatnet_0_rw_224",
+   "focalnet_tiny_srf",
+   "gcvit_tiny",
+   "nextvit_small",
+   "regnety_040",
+   "regnetx_016",
+   "regnetz_b16",
+   "xception65",
+   "fastvit_s12",
+   "fastvit_sa12",
+   "mobilevit_xs",
+   "mobilevitv2_100",
+   "coatnet_1_rw_224",
+   "coatnext_nano_rw_224",
+   "eca_nfnet_l0",
+   "dm_nfnet_f0",
+   "tresnet_m",
+   "resnetv2_50",
+   "cspresnet50",
+   "ese_vovnet39b",
+   "rexnet_100",
+   "sequencer2d_s",
+   "efficientvit_m1",
+   "shvit_s1",
+   "dla34",
+   "regnetz_c16"
+  ],
+  "n_distinct_dev": 19,
+  "n_distinct_heldout": 17,
+  "n_heldout_seen_in_dev": 79,
+  "n_heldout_novel": 3,
+  "n_novel_traces": 3,
+  "novel_models": [
+   "inception_next_tiny",
+   "efficientvit_b1",
+   "hgnet_tiny"
+  ],
+  "novel_detail": [
+   {
+    "model": "inception_next_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "efficientvit_b1",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   },
+   {
+    "model": "hgnet_tiny",
+    "verdict": "NONLIN-BLOCKED",
+    "gt": "HARD-BLOCKED",
+    "agree": true,
+    "nearest": "ADDITIVE"
+   }
+  ],
+  "majority_label_dev": "ADDITIVE",
+  "majority_label_heldout": "ADDITIVE",
+  "four_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 78
+   },
+   "seen": {
+    "n": 79,
+    "rule": 78,
+    "rule_v2b": 79,
+    "majority": 57,
+    "nearest_trace": 78
+   },
+   "novel": {
+    "n": 3,
+    "rule": 3,
+    "rule_v2b": 3,
+    "majority": 0,
+    "nearest_trace": 0
+   },
+   "heldout_minus_vacuous": {
+    "n": 76,
+    "rule": 75,
+    "rule_v2b": 76,
+    "majority": 57,
+    "nearest_trace": 72
+   }
+  },
+  "three_way": {
+   "all_heldout": {
+    "n": 82,
+    "rule": 81,
+    "rule_v2b": 82,
+    "majority": 57,
+    "nearest_trace": 78
+   },
+   "seen": {
+    "n": 79,
+    "rule": 78,
+    "rule_v2b": 79,
+    "majority": 57,
+    "nearest_trace": 78
+   },
+   "novel": {
+    "n": 3,
+    "rule": 3,
+    "rule_v2b": 3,
+    "majority": 0,
+    "nearest_trace": 0
+   },
+   "dev": {
+    "n": 65,
+    "rule": 65,
+    "rule_v2b": 65,
+    "majority": 32,
+    "nearest_trace": 65
+   }
+  },
+  "per_trace_heldout": {
+   "n_traces": 17,
+   "n_traces_all_agree": 16,
+   "n_novel_traces": 3,
+   "n_novel_traces_all_agree": 3,
+   "n_traces_majority_right": 4,
+   "n_traces_nearest_right": 13,
+   "n_novel_traces_majority_right": 0,
+   "traces": [
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 22,
+     "in_dev": true,
+     "models": [
+      "efficientnet_b3",
+      "efficientnet_lite0",
+      "tf_efficientnetv2_b0",
+      "efficientnetv2_rw_t",
+      "legacy_xception",
+      "resnest50d",
+      "resnest14d",
+      "seresnext26d_32x4d",
+      "seresnet50",
+      "ecaresnet50d",
+      "legacy_seresnet18",
+      "skresnet18",
+      "mixer_b16_224",
+      "gmixer_24_224",
+      "gmlp_s16_224",
+      "resmlp_12_224",
+      "twins_pcpvt_small",
+      "twins_svt_base",
+      "pvt_v2_b1",
+      "pvt_v2_b2",
+      "mixnet_s",
+      "mvitv2_tiny"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 22,
+     "in_dev": true,
+     "models": [
+      "regnety_040",
+      "regnetx_016",
+      "regnetz_b16",
+      "xception65",
+      "fastvit_s12",
+      "fastvit_sa12",
+      "mobilevit_xs",
+      "mobilevitv2_100",
+      "coatnet_1_rw_224",
+      "coatnext_nano_rw_224",
+      "eca_nfnet_l0",
+      "dm_nfnet_f0",
+      "tresnet_m",
+      "resnetv2_50",
+      "cspresnet50",
+      "ese_vovnet39b",
+      "rexnet_100",
+      "sequencer2d_s",
+      "efficientvit_m1",
+      "shvit_s1",
+      "dla34",
+      "regnetz_c16"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 10,
+     "in_dev": true,
+     "models": [
+      "densenet169",
+      "densenetblur121d",
+      "efficientformer_l3",
+      "efficientformerv2_s1",
+      "hrnet_w18_small",
+      "convmixer_768_32",
+      "starnet_s1",
+      "swiftformer_s",
+      "visformer_small",
+      "selecsls42b"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "TOKEN",
+      [
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 4,
+     "in_dev": true,
+     "models": [
+      "xcit_tiny_12_p16_224",
+      "convit_tiny",
+      "tnt_s_patch16_224",
+      "coat_lite_tiny"
+     ],
+     "gts": [
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "levit_192",
+      "levit_conv_128s",
+      "repvit_m1_0"
+     ],
+     "gts": [
+      "ADDITIVE"
+     ],
+     "verdicts": [
+      "IN-SCOPE"
+     ],
+     "all_agree": true,
+     "majority_all_right": true,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "NORM",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "tiny_vit_11m_224",
+      "tiny_vit_21m_224",
+      "davit_small"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "TOKEN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "volo_d1_224",
+      "flexivit_small",
+      "vit_small_patch16_224"
+     ],
+     "gts": [
+      "HARD-BLOCKED",
+      "VACUOUS"
+     ],
+     "verdicts": [
+      "DEGENERATE"
+     ],
+     "all_agree": false,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "NORM",
+       "AFFINE",
+       "NONLINEAR",
+       "NORM",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 3,
+     "in_dev": true,
+     "models": [
+      "mambaout_femto",
+      "mambaout_small",
+      "mambaout_kobe"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "NORM",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "poolformer_s24",
+      "poolformerv2_s24"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "NORM",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "hiera_small_224",
+      "hiera_base_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "NONLINEAR",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 2,
+     "in_dev": true,
+     "models": [
+      "fasternet_t0",
+      "ghostnetv2_100"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "NORM",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "NONLINEAR",
+       "NORM",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "convformer_s36"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "NONLINEAR",
+       "NORM",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "inception_next_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "NORM",
+       "NONLINEAR",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "efficientvit_b1"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "DENSE",
+      [
+       "NONLINEAR",
+       "AFFINE",
+       "AFFINE",
+       "NONLINEAR",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "vgg19"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "AFFINE",
+       "AFFINE",
+       "NONLINEAR",
+       "AFFINE",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": false,
+     "models": [
+      "hgnet_tiny"
+     ],
+     "gts": [
+      "HARD-BLOCKED"
+     ],
+     "verdicts": [
+      "NONLIN-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": false
+    },
+    {
+     "trace": [
+      "MEAN",
+      [
+       "NORM",
+       "AFFINE",
+       "AFFINE"
+      ]
+     ],
+     "n": 1,
+     "in_dev": true,
+     "models": [
+      "beit_base_patch16_224"
+     ],
+     "gts": [
+      "NORM-ONLY"
+     ],
+     "verdicts": [
+      "NORM-BLOCKED"
+     ],
+     "all_agree": true,
+     "majority_all_right": false,
+     "nearest_all_right": true
+    }
+   ]
+  },
+  "gt_conflicts_seen_vs_dev": [
+   [
+    "volo_d1_224",
+    "HARD-BLOCKED",
+    [
+     "VACUOUS",
+     "VACUOUS"
+    ]
+   ]
+  ]
+ }
+}

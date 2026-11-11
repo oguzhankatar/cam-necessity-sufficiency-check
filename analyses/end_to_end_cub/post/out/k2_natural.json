@@ -1,0 +1,1530 @@
+{
+ "post_hoc": true,
+ "n_test": 5794,
+ "n_boot": 1000,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "alpha": 0.05,
+ "family_definition": [
+  "H1_cam",
+  "H1_gradcam",
+  "H2_attn",
+  "H2_attn_ev",
+  "H2_gradcam",
+  "H3_gradcam",
+  "H3_cam"
+ ],
+ "mba_wlib_check_max_abs": 0.0,
+ "sanity_H0_cam_recomputed_vs_stored": [
+  {
+   "seed": 0,
+   "MaxBoxAccV2_recomputed": 0.6106892187320216,
+   "MaxBoxAccV2_stored": 0.6106892187320216,
+   "abs_diff": {
+    "MaxBoxAccV2": 0.0,
+    "pointing_strict": 0.0,
+    "pointing_tol15": 0.0,
+    "best_iou": 0.0
+   },
+   "per_delta_abs_diff": 0.0,
+   "curve_max_abs_diff": 0.0,
+   "map_max_abs_diff": 0.0,
+   "map_max_abs": 216.9090116158733,
+   "pointing_identical": true
+  },
+  {
+   "seed": 1,
+   "MaxBoxAccV2_recomputed": 0.6089632953630192,
+   "MaxBoxAccV2_stored": 0.6089632953630192,
+   "abs_diff": {
+    "MaxBoxAccV2": 0.0,
+    "pointing_strict": 0.0,
+    "pointing_tol15": 0.0,
+    "best_iou": 0.0
+   },
+   "per_delta_abs_diff": 0.0,
+   "curve_max_abs_diff": 0.0,
+   "map_max_abs_diff": 0.0,
+   "map_max_abs": 207.4075588005967,
+   "pointing_identical": true
+  },
+  {
+   "seed": 2,
+   "MaxBoxAccV2_recomputed": 0.608560579910252,
+   "MaxBoxAccV2_stored": 0.608560579910252,
+   "abs_diff": {
+    "MaxBoxAccV2": 0.0,
+    "pointing_strict": 0.0,
+    "pointing_tol15": 0.0,
+    "best_iou": 0.0
+   },
+   "per_delta_abs_diff": 0.0,
+   "curve_max_abs_diff": 0.0,
+   "map_max_abs_diff": 0.0,
+   "map_max_abs": 216.74954430416773,
+   "pointing_identical": true
+  }
+ ],
+ "bootstrap_reproduces_k2_stats": {
+  "contrast": "H3_S - H0_collapsed, MaxBoxAccV2",
+  "diff_abs_err": 0.0,
+  "ci_abs_err": 0.0,
+  "p_equal": true
+ },
+ "natural_vs_collapsed_MaxBoxAccV2": [
+  {
+   "a": "H1_cam",
+   "b": "H0_collapsed",
+   "a_label": "H1 CAM (per-cell class score)",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": -0.09431212365282093,
+   "ci": [
+    -0.0994141449008553,
+    -0.0881558508802209
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    -0.09981590150730646,
+    -0.08347716028075014,
+    -0.0996433091704062
+   ],
+   "p_holm": 0.007,
+   "verdict": "worse",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H1_gradcam",
+   "b": "H0_collapsed",
+   "a_label": "H1 Grad-CAM",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": -0.052276301154450956,
+   "ci": [
+    -0.05730113527403823,
+    -0.04688710543474092
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    -0.060292256357151075,
+    -0.04078932228742371,
+    -0.05574732481877809
+   ],
+   "p_holm": 0.007,
+   "verdict": "worse",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H2_attn",
+   "b": "H0_collapsed",
+   "a_label": "H2 attention weights",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": 0.027346296935527148,
+   "ci": [
+    0.02153520883672763,
+    0.032370651631956404
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    0.013634794615118961,
+    0.045161661488896665,
+    0.023242434702565817
+   ],
+   "p_holm": 0.007,
+   "verdict": "better",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H2_attn_ev",
+   "b": "H0_collapsed",
+   "a_label": "H2 attention x class evidence",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": -0.026099796724580997,
+   "ci": [
+    -0.03258447436044947,
+    -0.02082470371648828
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    -0.028247612472672934,
+    -0.010988378782648689,
+    -0.039063398918421366
+   ],
+   "p_holm": 0.007,
+   "verdict": "worse",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H2_gradcam",
+   "b": "H0_collapsed",
+   "a_label": "H2 Grad-CAM",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": -0.17464426801672228,
+   "ci": [
+    -0.18078615809458068,
+    -0.16737381582479954
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    -0.18064664595558633,
+    -0.1833505925670233,
+    -0.15993556552755722
+   ],
+   "p_holm": 0.007,
+   "verdict": "worse",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H3_gradcam",
+   "b": "H0_collapsed",
+   "a_label": "H3 Grad-CAM",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": -0.09442718521075437,
+   "ci": [
+    -0.1002579296590343,
+    -0.08878868944885514
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    -0.10136923253940866,
+    -0.08416752962835106,
+    -0.09774479346450338
+   ],
+   "p_holm": 0.007,
+   "verdict": "worse",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  },
+  {
+   "a": "H3_cam",
+   "b": "H0_collapsed",
+   "a_label": "H3 CAM (LayerNorm ignored)",
+   "b_label": "H0 collapsed (stored)",
+   "metric": "MaxBoxAccV2",
+   "diff": 0.015360717984121494,
+   "ci": [
+    0.011083783991101886,
+    0.01971435968243003
+   ],
+   "p": 0.001,
+   "diff_per_seed": [
+    0.01536071798412142,
+    0.016453802784489713,
+    0.014267633183753348
+   ],
+   "p_holm": 0.007,
+   "verdict": "better",
+   "family": "post hoc: MaxBoxAccV2 vs H0 collapsed (7 natural maps)",
+   "ci_excludes_0": true
+  }
+ ],
+ "secondary": {
+  "vs_collapsed_pointing_strict": [
+   {
+    "a": "H1_cam",
+    "b": "H0_collapsed",
+    "a_label": "H1 CAM (per-cell class score)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.004602462317339777,
+    "ci": [
+     -0.006443447244275687,
+     -0.002761477390403866
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.003969623748705558,
+     -0.004142216085605799,
+     -0.005695547117707974
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H1_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H1 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.004832585433206766,
+    "ci": [
+     -0.006731101139109423,
+     -0.00293263145782994
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.00431480842250604,
+     -0.00431480842250604,
+     -0.005868139454608215
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn",
+    "b": "H0_collapsed",
+    "a_label": "H2 attention weights",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.000517777010700725,
+    "ci": [
+     -0.0010930848003681969,
+     0.0021300770912438143
+    ],
+    "p": 0.582,
+    "diff_per_seed": [
+     -0.00034518467380048324,
+     0.001380738695201933,
+     0.0005177770107007249
+    ],
+    "p_holm": 0.582,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": false
+   },
+   {
+    "a": "H2_attn_ev",
+    "b": "H0_collapsed",
+    "a_label": "H2 attention x class evidence",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.0017834541479691633,
+    "ci": [
+     0.0003451846738004832,
+     0.0032806926705787583
+    ],
+    "p": 0.012,
+    "diff_per_seed": [
+     0.0006903693476009665,
+     0.0022437003797031413,
+     0.002416292716603383
+    ],
+    "p_holm": 0.036000000000000004,
+    "verdict": "better",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H2 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.10211713266597629,
+    "ci": [
+     -0.10861811068921871,
+     -0.09526809342998505
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.10044874007594062,
+     -0.10925094925785295,
+     -0.09665170866413532
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H3 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.014325163962720053,
+    "ci": [
+     -0.01685651823725693,
+     -0.01179380968818318
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.015360717984121504,
+     -0.012599240593717639,
+     -0.015015533310321022
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_cam",
+    "b": "H0_collapsed",
+    "a_label": "H3 CAM (LayerNorm ignored)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.00143826947416868,
+    "ci": [
+     5.609250949257872e-05,
+     0.002877977217811528
+    ],
+    "p": 0.04,
+    "diff_per_seed": [
+     0.0012081463583016915,
+     0.0005177770107007249,
+     0.0025888850535036242
+    ],
+    "p_holm": 0.08,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   }
+  ],
+  "vs_collapsed_best_iou": [
+   {
+    "a": "H1_cam",
+    "b": "H0_collapsed",
+    "a_label": "H1 CAM (per-cell class score)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.005753101575478847,
+    "ci": [
+     -0.008099376648397005,
+     -0.003491701300963956
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.007800845663980406,
+     0.0001721248277557855,
+     -0.009630583890211923
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H1_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H1 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.026044660265972287,
+    "ci": [
+     -0.028493667879815797,
+     -0.02372193254052285
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.026870803302491496,
+     -0.020313394676108258,
+     -0.030949782819317092
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn",
+    "b": "H0_collapsed",
+    "a_label": "H2 attention weights",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.023279722208615183,
+    "ci": [
+     -0.026032369458297157,
+     -0.020679593614967285
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.02732251578100311,
+     -0.01368569956387081,
+     -0.02883095128097162
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn_ev",
+    "b": "H0_collapsed",
+    "a_label": "H2 attention x class evidence",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.06303422118147818,
+    "ci": [
+     -0.06564636242406312,
+     -0.06043079989999677
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.06380757080596153,
+     -0.056076892476411865,
+     -0.06921820026206114
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H2 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.03912035566062925,
+    "ci": [
+     -0.04192061643499273,
+     -0.03617058066275525
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.04495693618881114,
+     -0.0432762825539452,
+     -0.029127848239131414
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H3 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": -0.05787005571162188,
+    "ci": [
+     -0.060611215419531524,
+     -0.055131590750937265
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.06075441839368252,
+     -0.055123924419494756,
+     -0.05773182432168839
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_cam",
+    "b": "H0_collapsed",
+    "a_label": "H3 CAM (LayerNorm ignored)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": 0.02336031868719503,
+    "ci": [
+     0.02178145411465381,
+     0.024823340893365266
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.022298412710623695,
+     0.025880295915730378,
+     0.021902247435231025
+    ],
+    "p_holm": 0.007,
+    "verdict": "better",
+    "family": "post hoc: best_iou vs H0 collapsed (7 natural maps)",
+    "ci_excludes_0": true
+   }
+  ],
+  "vs_cam_MaxBoxAccV2": [
+   {
+    "a": "H1_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 CAM (per-cell class score)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": -0.09878034748590499,
+    "ci": [
+     -0.10432247919303494,
+     -0.092565105664864
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.10562651018294789,
+     -0.08796456104015649,
+     -0.1027499712346106
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H1_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": -0.05674452498753502,
+    "ci": [
+     -0.06186476431557545,
+     -0.05141190120047555
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.0661028650327925,
+     -0.04527672304683006,
+     -0.05885398688298249
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention weights",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": 0.02287807310244309,
+    "ci": [
+     0.017180608292102904,
+     0.02776818931461663
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.007824185939477535,
+     0.04067426072949032,
+     0.020135772638361416
+    ],
+    "p_holm": 0.007,
+    "verdict": "better",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn_ev",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention x class evidence",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": -0.030568020557665054,
+    "ci": [
+     -0.036820657385034435,
+     -0.025139032715836236
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.03405822114831436,
+     -0.015475779542055035,
+     -0.04217006098262577
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H2 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": -0.17911249184980635,
+    "ci": [
+     -0.1852505465424002,
+     -0.17205202700111225
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.18645725463122775,
+     -0.18783799332642964,
+     -0.16304222759176162
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": -0.09889540904383842,
+    "ci": [
+     -0.10429179611091931,
+     -0.09335279791355035
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.10717984121505009,
+     -0.0886549303877574,
+     -0.10085145552870778
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 CAM (LayerNorm ignored)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": 0.010892494151037435,
+    "ci": [
+     0.00657720630537333,
+     0.015247094695662192
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.009550109308479993,
+     0.011966402025083367,
+     0.011160971119548946
+    ],
+    "p_holm": 0.007,
+    "verdict": "better",
+    "family": "post hoc: MaxBoxAccV2 vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   }
+  ],
+  "H0_refs_vs_collapsed_MaxBoxAccV2": [
+   {
+    "a": "H0_cam",
+    "b": "H0_collapsed",
+    "a_label": "H0 CAM (recomputed)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": 0.004468223833084058,
+    "ci": [
+     0.002051451693322627,
+     0.006635695930656227
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.005810608675641427,
+     0.004487400759406346,
+     0.003106662064204402
+    ],
+    "p_holm": 0.002,
+    "verdict": "better",
+    "family": "post hoc: MaxBoxAccV2 H0 references vs H0 collapsed",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H0_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H0 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "MaxBoxAccV2",
+    "diff": 0.00615579334944194,
+    "ci": [
+     0.0037572392896866123,
+     0.008745157826103661
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.007076285812909866,
+     0.005638016338741281,
+     0.005753077896674674
+    ],
+    "p_holm": 0.002,
+    "verdict": "better",
+    "family": "post hoc: MaxBoxAccV2 H0 references vs H0 collapsed",
+    "ci_excludes_0": true
+   }
+  ],
+  "vs_cam_pointing_strict": [
+   {
+    "a": "H1_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 CAM (per-cell class score)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.004890116212173513,
+    "ci": [
+     -0.006731101139109423,
+     -0.0030491312852376023
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.003969623748705558,
+     -0.00431480842250604,
+     -0.00638591646530894
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H1_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.005120239328040501,
+    "ci": [
+     -0.006961224254976412,
+     -0.003221723622137844
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.00431480842250604,
+     -0.0044874007594062825,
+     -0.006558508802209182
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention weights",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.0002301231158669888,
+    "ci": [
+     -0.001380738695201933,
+     0.0018409849269359106
+    ],
+    "p": 0.79,
+    "diff_per_seed": [
+     -0.00034518467380048324,
+     0.0012081463583016915,
+     -0.00017259233690024162
+    ],
+    "p_holm": 0.79,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": false
+   },
+   {
+    "a": "H2_attn_ev",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention x class evidence",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.0014958002531354274,
+    "ci": [
+     0.00011506155793349425,
+     0.0029340697273041077
+    ],
+    "p": 0.038,
+    "diff_per_seed": [
+     0.0006903693476009665,
+     0.0020711080428028996,
+     0.0017259233690024164
+    ],
+    "p_holm": 0.11399999999999999,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H2 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.10240478656081002,
+    "ci": [
+     -0.10873317224715223,
+     -0.09555574732481878
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.10044874007594062,
+     -0.10942354159475319,
+     -0.09734207801173628
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": -0.01461281785755379,
+    "ci": [
+     -0.017144172132090664,
+     -0.012022494534575998
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.015360717984121504,
+     -0.01277183293061788,
+     -0.01570590265792199
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 CAM (LayerNorm ignored)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.0011506155793349442,
+    "ci": [
+     -0.00017259233690024154,
+     0.002531354274536877
+    ],
+    "p": 0.08,
+    "diff_per_seed": [
+     0.0012081463583016915,
+     0.00034518467380048324,
+     0.0018985157059026579
+    ],
+    "p_holm": 0.16,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": false
+   }
+  ],
+  "H0_refs_vs_collapsed_pointing_strict": [
+   {
+    "a": "H0_cam",
+    "b": "H0_collapsed",
+    "a_label": "H0 CAM (recomputed)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.00028765389483373605,
+    "ci": [
+     -0.00034518467380048324,
+     0.0009204924634679553
+    ],
+    "p": 0.396,
+    "diff_per_seed": [
+     0.0,
+     0.00017259233690024162,
+     0.0006903693476009665
+    ],
+    "p_holm": 0.792,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict H0 references vs H0 collapsed",
+    "ci_excludes_0": false
+   },
+   {
+    "a": "H0_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H0 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "pointing_strict",
+    "diff": 0.00028765389483373605,
+    "ci": [
+     -0.00034518467380048324,
+     0.0009204924634679553
+    ],
+    "p": 0.396,
+    "diff_per_seed": [
+     0.0,
+     0.00017259233690024162,
+     0.0006903693476009665
+    ],
+    "p_holm": 0.792,
+    "verdict": "no difference",
+    "family": "post hoc: pointing_strict H0 references vs H0 collapsed",
+    "ci_excludes_0": false
+   }
+  ],
+  "vs_cam_best_iou": [
+   {
+    "a": "H1_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 CAM (per-cell class score)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.007548882243973711,
+    "ci": [
+     -0.009776390332116955,
+     -0.005300314262009556
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.009818088706913265,
+     -0.0016705986880046317,
+     -0.011157959337003238
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H1_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H1 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.027840440934467144,
+    "ci": [
+     -0.03019210934018952,
+     -0.025558141849917053
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.028888046345424356,
+     -0.022156118191868673,
+     -0.032477158266108405
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention weights",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.02507550287711004,
+    "ci": [
+     -0.02786521982063414,
+     -0.02246395452752814
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.02933975882393597,
+     -0.015528423079631226,
+     -0.030358326727762938
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_attn_ev",
+    "b": "H0_cam_stored",
+    "a_label": "H2 attention x class evidence",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.06483000184997303,
+    "ci": [
+     -0.06738057360814965,
+     -0.062310465772492316
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.06582481384889438,
+     -0.05791961599217228,
+     -0.07074557570885245
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H2_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H2 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.040916136329124116,
+    "ci": [
+     -0.04376799481459148,
+     -0.038113998193793165
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.046974179231744,
+     -0.04511900606970561,
+     -0.030655223685922727
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_gradcam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 Grad-CAM",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": -0.05966583638011675,
+    "ci": [
+     -0.06241391970792202,
+     -0.05691865317361881
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     -0.06277166143661538,
+     -0.056966647935255174,
+     -0.05925919976847971
+    ],
+    "p_holm": 0.007,
+    "verdict": "worse",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H3_cam",
+    "b": "H0_cam_stored",
+    "a_label": "H3 CAM (LayerNorm ignored)",
+    "b_label": "H0 CAM (stored)",
+    "metric": "best_iou",
+    "diff": 0.021564538018700168,
+    "ci": [
+     0.020109483784834264,
+     0.02289266407025991
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.02028116966769084,
+     0.02403757239996996,
+     0.020374871988439708
+    ],
+    "p_holm": 0.007,
+    "verdict": "better",
+    "family": "post hoc: best_iou vs H0 CAM (stored) (7 natural maps)",
+    "ci_excludes_0": true
+   }
+  ],
+  "H0_refs_vs_collapsed_best_iou": [
+   {
+    "a": "H0_cam",
+    "b": "H0_collapsed",
+    "a_label": "H0 CAM (recomputed)",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": 0.0017957806684948635,
+    "ci": [
+     0.0010780408537822662,
+     0.0024887649566809555
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.002017243042932859,
+     0.0018427235157604171,
+     0.0015273754467913148
+    ],
+    "p_holm": 0.002,
+    "verdict": "better",
+    "family": "post hoc: best_iou H0 references vs H0 collapsed",
+    "ci_excludes_0": true
+   },
+   {
+    "a": "H0_gradcam",
+    "b": "H0_collapsed",
+    "a_label": "H0 Grad-CAM",
+    "b_label": "H0 collapsed (stored)",
+    "metric": "best_iou",
+    "diff": 0.001711367576638844,
+    "ci": [
+     0.0009956798023816327,
+     0.0024385425568093306
+    ],
+    "p": 0.001,
+    "diff_per_seed": [
+     0.0019254551844881615,
+     0.0017068294006501719,
+     0.001501818144778198
+    ],
+    "p_holm": 0.002,
+    "verdict": "better",
+    "family": "post hoc: best_iou H0 references vs H0 collapsed",
+    "ci_excludes_0": true
+   }
+  ]
+ },
+ "maps": {
+  "H0_cam": {
+   "MaxBoxAccV2": [
+    0.6106892187320216,
+    0.6089632953630192,
+    0.608560579910252
+   ],
+   "pointing_strict": [
+    0.9968933379357956,
+    0.9963755609250949,
+    0.9962029685881947
+   ],
+   "pointing_tol15": [
+    0.9989644459785986,
+    0.9991370383154988,
+    0.9993096306523991
+   ],
+   "best_iou": [
+    0.6582764387130737,
+    0.6573238372802734,
+    0.6568256616592407
+   ],
+   "MaxBoxAccV2_mean": 0.609404364668431,
+   "pointing_strict_mean": 0.9964906224830284,
+   "pointing_tol15_mean": 0.9991370383154988,
+   "best_iou_mean": 0.6574753125508627,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H0_gradcam": {
+   "MaxBoxAccV2": [
+    0.6119548958692901,
+    0.6101139109423541,
+    0.6112069957427223
+   ],
+   "pointing_strict": [
+    0.9968933379357956,
+    0.9963755609250949,
+    0.9962029685881947
+   ],
+   "pointing_tol15": [
+    0.9989644459785986,
+    0.9991370383154988,
+    0.9993096306523991
+   ],
+   "best_iou": [
+    0.6581846475601196,
+    0.6571879386901855,
+    0.6568000316619873
+   ],
+   "MaxBoxAccV2_mean": 0.6110919341847888,
+   "pointing_strict_mean": 0.9964906224830284,
+   "pointing_tol15_mean": 0.9991370383154988,
+   "best_iou_mean": 0.6573908726374308,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H1_cam": {
+   "MaxBoxAccV2": [
+    0.5050627085490738,
+    0.5209987343228627,
+    0.5058106086756414
+   ],
+   "pointing_strict": [
+    0.9929237141870901,
+    0.9920607525025888,
+    0.9898170521228857
+   ],
+   "pointing_tol15": [
+    0.9967207455988955,
+    0.9979288919571971,
+    0.9967207455988955
+   ],
+   "best_iou": [
+    0.6484584212303162,
+    0.6556532382965088,
+    0.6456676721572876
+   ],
+   "MaxBoxAccV2_mean": 0.5106240171825259,
+   "pointing_strict_mean": 0.9916005062708549,
+   "pointing_tol15_mean": 0.9971234610516627,
+   "best_iou_mean": 0.6499264438947042,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H1_gradcam": {
+   "MaxBoxAccV2": [
+    0.5445863536992291,
+    0.5636865723161891,
+    0.5497065930272695
+   ],
+   "pointing_strict": [
+    0.9925785295132896,
+    0.9918881601656886,
+    0.9896444597859855
+   ],
+   "pointing_tol15": [
+    0.9963755609250949,
+    0.9977562996202969,
+    0.9965481532619952
+   ],
+   "best_iou": [
+    0.6293883919715881,
+    0.6351677179336548,
+    0.6243484616279602
+   ],
+   "MaxBoxAccV2_mean": 0.5526598396808959,
+   "pointing_strict_mean": 0.9913703831549879,
+   "pointing_tol15_mean": 0.9968933379357957,
+   "best_iou_mean": 0.6296348571777344,
+   "all_zero_maps": [
+    3,
+    3,
+    1
+   ]
+  },
+  "H2_attn": {
+   "MaxBoxAccV2": [
+    0.6185134046714992,
+    0.6496375560925095,
+    0.6286963525486134
+   ],
+   "pointing_strict": [
+    0.9965481532619952,
+    0.9975837072833966,
+    0.9960303762512944
+   ],
+   "pointing_tol15": [
+    0.9989644459785986,
+    0.9996548153261995,
+    0.9987918536416983
+   ],
+   "best_iou": [
+    0.6289367079734802,
+    0.6417953968048096,
+    0.6264672875404358
+   ],
+   "MaxBoxAccV2_mean": 0.6322824377708741,
+   "pointing_strict_mean": 0.9967207455988953,
+   "pointing_tol15_mean": 0.9991370383154988,
+   "best_iou_mean": 0.6323997974395752,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H2_attn_ev": {
+   "MaxBoxAccV2": [
+    0.5766309975837073,
+    0.5934875158209642,
+    0.5663905189276263
+   ],
+   "pointing_strict": [
+    0.9975837072833966,
+    0.9984466689678978,
+    0.9979288919571971
+   ],
+   "pointing_tol15": [
+    0.9996548153261995,
+    1.0,
+    0.9996548153261995
+   ],
+   "best_iou": [
+    0.5924515724182129,
+    0.5994041562080383,
+    0.5860800743103027
+   ],
+   "MaxBoxAccV2_mean": 0.5788363441107659,
+   "pointing_strict_mean": 0.9979864227361638,
+   "pointing_tol15_mean": 0.999769876884133,
+   "best_iou_mean": 0.592645267645518,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H2_gradcam": {
+   "MaxBoxAccV2": [
+    0.4242319641007939,
+    0.42112530203658954,
+    0.4455183523184904
+   ],
+   "pointing_strict": [
+    0.896444597859855,
+    0.8869520193303417,
+    0.8988608905764585
+   ],
+   "pointing_tol15": [
+    0.9401104590956162,
+    0.9340697273041076,
+    0.9452882292026235
+   ],
+   "best_iou": [
+    0.6113023161888123,
+    0.6122048497200012,
+    0.6261704564094543
+   ],
+   "MaxBoxAccV2_mean": 0.43029187281862463,
+   "pointing_strict_mean": 0.8940858359222185,
+   "pointing_tol15_mean": 0.9398228052007824,
+   "best_iou_mean": 0.6165592074394226,
+   "all_zero_maps": [
+    1,
+    0,
+    0
+   ]
+  },
+  "H3_gradcam": {
+   "MaxBoxAccV2": [
+    0.5035093775169716,
+    0.5203083649752618,
+    0.5077091243815443
+   ],
+   "pointing_strict": [
+    0.9815326199516742,
+    0.983603727994477,
+    0.9804970659302727
+   ],
+   "pointing_tol15": [
+    0.9937866758715913,
+    0.9958577839143942,
+    0.9946496375560925
+   ],
+   "best_iou": [
+    0.5955047607421875,
+    0.600357174873352,
+    0.5975664854049683
+   ],
+   "MaxBoxAccV2_mean": 0.5105089556245925,
+   "pointing_strict_mean": 0.9818778046254746,
+   "pointing_tol15_mean": 0.9947646991140259,
+   "best_iou_mean": 0.5978094736735026,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  },
+  "H3_cam": {
+   "MaxBoxAccV2": [
+    0.6202393280405016,
+    0.6209296973881026,
+    0.619721551029801
+   ],
+   "pointing_strict": [
+    0.9981014842940974,
+    0.9967207455988955,
+    0.9981014842940974
+   ],
+   "pointing_tol15": [
+    0.9993096306523991,
+    0.9993096306523991,
+    0.9994822229892992
+   ],
+   "best_iou": [
+    0.6785576343536377,
+    0.6813614368438721,
+    0.6772005558013916
+   ],
+   "MaxBoxAccV2_mean": 0.6202968588194685,
+   "pointing_strict_mean": 0.9976412380623634,
+   "pointing_tol15_mean": 0.9993671614313658,
+   "best_iou_mean": 0.6790398756663004,
+   "all_zero_maps": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "checks": {
+  "H0": [
+   {
+    "gradcam_vs_closed_form_rel": 2.368316978533846e-15,
+    "head64_logit_vs_float32_abs": 4.659309961851932e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 2.5520643345427832e-15,
+    "head64_logit_vs_float32_abs": 4.5375628126009815e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 2.483781159884256e-15,
+    "head64_logit_vs_float32_abs": 4.0693949863168655e-06
+   }
+  ],
+  "H1": [
+   {
+    "gradcam_vs_closed_form_rel": 4.60730558079995e-15,
+    "head64_logit_vs_float32_abs": 9.492953985557051e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 3.554350875285984e-14,
+    "head64_logit_vs_float32_abs": 9.139198283492078e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 5.082555974837772e-15,
+    "head64_logit_vs_float32_abs": 8.236340676148757e-06
+   }
+  ],
+  "H2": [
+   {
+    "gradcam_vs_closed_form_rel": 0.0,
+    "head64_logit_vs_float32_abs": 7.7001500677909e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 0.0,
+    "head64_logit_vs_float32_abs": 9.700647197519174e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 0.0,
+    "head64_logit_vs_float32_abs": 1.0238014844787813e-05
+   }
+  ],
+  "H3": [
+   {
+    "gradcam_vs_closed_form_rel": 7.433226145637998e-15,
+    "head64_logit_vs_float32_abs": 6.755181029660662e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 8.008569114117667e-15,
+    "head64_logit_vs_float32_abs": 6.486813429518179e-06
+   },
+   {
+    "gradcam_vs_closed_form_rel": 1.0257356632337213e-14,
+    "head64_logit_vs_float32_abs": 8.207021629402789e-06
+   }
+  ]
+ },
+ "stored_reference": {
+  "collapsed": {
+   "MaxBoxAccV2": 0.6048786100563802,
+   "per_delta": {
+    "0.3": 0.9758370728339661,
+    "0.5": 0.6900241629271661,
+    "0.7": 0.14877459440800828
+   },
+   "pointing_strict": 0.9968933379357956,
+   "pointing_tol15": 0.9987918536416983,
+   "best_iou": 0.656259298324585
+  },
+  "cam": {
+   "MaxBoxAccV2": 0.6106892187320216,
+   "per_delta": {
+    "0.3": 0.9756644804970659,
+    "0.5": 0.7022782188470832,
+    "0.7": 0.15412495685191577
+   },
+   "pointing_strict": 0.9968933379357956,
+   "pointing_tol15": 0.9989644459785986,
+   "best_iou": 0.6582764387130737
+  }
+ },
+ "stored_H0": {
+  "collapsed": {
+   "MaxBoxAccV2": 0.604936140835347,
+   "pointing_strict": 0.9962029685881947,
+   "pointing_tol15": 0.9989644459785986,
+   "best_iou": 0.6556795636812845
+  },
+  "cam": {
+   "MaxBoxAccV2": 0.609404364668431,
+   "pointing_strict": 0.9964906224830284,
+   "pointing_tol15": 0.9991370383154988,
+   "best_iou": 0.6574753125508627
+  }
+ }
+}

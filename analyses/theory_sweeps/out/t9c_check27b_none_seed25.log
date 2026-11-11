@@ -1,0 +1,4 @@
+{'none_s2': {'sum': -3.1895483657717705, 'abs_sum': 2654.293974481523}, 'none_s5': {'sum': -0.24026725068688393, 'abs_sum': 2662.4618587829173}}
+none seed 2: acc=0.726879 (2853/3925) md5=93dc1c4af4ca5c1652c59c20a0478fb5
+none seed 5: acc=0.720510 (2828/3925) md5=ebd58e7b13bc622214e77e64c6746ed9
+disagreements seed2 vs seed5: 751

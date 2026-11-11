@@ -1,0 +1,184 @@
+B3: 192 rows (+48 N-vs-S); 216 of them also in w3_stats.json, max |diff| 0.0e+00, max |p| 0.0e+00
+  SET B3 (Holm, family = 4/8 rows per cell-metric)
+    N_ln_b3 | center                         n=12   better 9    worse 3    no difference 0   
+    N_ln_b3 | collapsed_b3                   n=12   better 12   worse 0    no difference 0   
+    N_ln_b3 | vs center | extent             n=4    better 3    worse 1    no difference 0   
+    N_ln_b3 | vs center | maxloc             n=8    better 6    worse 2    no difference 0   
+    N_ln_b3 | vs collapsed_b3 | extent       n=4    better 4    worse 0    no difference 0   
+    N_ln_b3 | vs collapsed_b3 | maxloc       n=8    better 8    worse 0    no difference 0   
+    N_lse_b3 | center                        n=36   better 22   worse 11   no difference 3   
+    N_lse_b3 | collapsed_b3                  n=36   better 0    worse 33   no difference 3   
+    N_lse_b3 | vs center | extent            n=12   better 3    worse 8    no difference 1   
+    N_lse_b3 | vs center | maxloc            n=24   better 19   worse 3    no difference 2   
+    N_lse_b3 | vs collapsed_b3 | extent      n=12   better 0    worse 12   no difference 0   
+    N_lse_b3 | vs collapsed_b3 | maxloc      n=24   better 0    worse 21   no difference 3   
+    S_ln_b3 | center                         n=12   better 9    worse 2    no difference 1   
+    S_ln_b3 | collapsed_b3                   n=12   better 12   worse 0    no difference 0   
+    S_ln_b3 | vs center | extent             n=4    better 3    worse 0    no difference 1   
+    S_ln_b3 | vs center | maxloc             n=8    better 6    worse 2    no difference 0   
+    S_ln_b3 | vs collapsed_b3 | extent       n=4    better 4    worse 0    no difference 0   
+    S_ln_b3 | vs collapsed_b3 | maxloc       n=8    better 8    worse 0    no difference 0   
+    S_lse_b3 | center                        n=36   better 24   worse 10   no difference 2   
+    S_lse_b3 | collapsed_b3                  n=36   better 2    worse 31   no difference 3   
+    S_lse_b3 | vs center | extent            n=12   better 6    worse 6    no difference 0   
+    S_lse_b3 | vs center | maxloc            n=24   better 18   worse 4    no difference 2   
+    S_lse_b3 | vs collapsed_b3 | extent      n=12   better 0    worse 12   no difference 0   
+    S_lse_b3 | vs collapsed_b3 | maxloc      n=24   better 2    worse 19   no difference 3   
+    aggregator | vs center                   n=72   better 46   worse 21   no difference 5   
+    aggregator | vs collapsed_b3             n=72   better 2    worse 64   no difference 6   
+    all                                      n=192  better 90   worse 90   no difference 12  
+    relocation | vs center                   n=24   better 18   worse 5    no difference 1   
+    relocation | vs collapsed_b3             n=24   better 24   worse 0    no difference 0   
+    vs center                                n=96   better 64   worse 26   no difference 6   
+    vs collapsed_b3                          n=96   better 26   worse 64   no difference 6   
+  SET B3, raw P < 0.05 (for comparison with the reader count)
+    N_ln_b3 | center                         n=12   better 9    worse 3    no difference 0   
+    N_ln_b3 | collapsed_b3                   n=12   better 12   worse 0    no difference 0   
+    N_lse_b3 | center                        n=36   better 22   worse 11   no difference 3   
+    N_lse_b3 | collapsed_b3                  n=36   better 0    worse 34   no difference 2   
+    S_ln_b3 | center                         n=12   better 9    worse 2    no difference 1   
+    S_ln_b3 | collapsed_b3                   n=12   better 12   worse 0    no difference 0   
+    S_lse_b3 | center                        n=36   better 24   worse 10   no difference 2   
+    S_lse_b3 | collapsed_b3                  n=36   better 2    worse 32   no difference 2   
+  SET B3 within-model N_b3 vs S_b3 (better = N better)
+    aggregator                               n=36   better 9    worse 21   no difference 6   
+    aggregator | extent                      n=12   better 0    worse 11   no difference 1   
+    aggregator | maxloc                      n=24   better 9    worse 10   no difference 5   
+    relocation                               n=12   better 0    worse 8    no difference 4   
+    relocation | extent                      n=4    better 0    worse 3    no difference 1   
+    relocation | maxloc                      n=8    better 0    worse 5    no difference 3   
+
+  SET CTL (Holm, family = 4/8 rows per cell-metric)
+    N_ln | vs actnorm                        n=12   better 12   worse 0    no difference 0   
+    N_ln | vs random                         n=12   better 12   worse 0    no difference 0   
+    N_lse | vs actnorm                       n=36   better 26   worse 10   no difference 0   
+    N_lse | vs random                        n=36   better 30   worse 6    no difference 0   
+    S_ln | vs actnorm                        n=12   better 12   worse 0    no difference 0   
+    S_ln | vs random                         n=12   better 12   worse 0    no difference 0   
+    S_lse | vs actnorm                       n=36   better 30   worse 6    no difference 0   
+    S_lse | vs random                        n=36   better 36   worse 0    no difference 0   
+    aggregator | vs actnorm | extent         n=24   better 12   worse 12   no difference 0   
+    aggregator | vs actnorm | maxloc         n=48   better 44   worse 4    no difference 0   
+    aggregator | vs random | extent          n=24   better 18   worse 6    no difference 0   
+    aggregator | vs random | maxloc          n=48   better 48   worse 0    no difference 0   
+    all                                      n=192  better 170  worse 22   no difference 0   
+    relocation | vs actnorm | extent         n=8    better 8    worse 0    no difference 0   
+    relocation | vs actnorm | maxloc         n=16   better 16   worse 0    no difference 0   
+    relocation | vs random | extent          n=8    better 8    worse 0    no difference 0   
+    relocation | vs random | maxloc          n=16   better 16   worse 0    no difference 0   
+    vs actnorm                               n=96   better 80   worse 16   no difference 0   
+    vs random                                n=96   better 90   worse 6    no difference 0   
+  CTL verdicts that change when the family also holds the centre rows: 0
+  context: collapsed vs actnorm / random (family of 2)
+    collapsed | actnorm                      n=36   better 30   worse 6    no difference 0   
+    collapsed | actnorm | extent             n=12   better 8    worse 4    no difference 0   
+    collapsed | actnorm | maxloc             n=24   better 22   worse 2    no difference 0   
+    collapsed | random                       n=36   better 36   worse 0    no difference 0   
+    collapsed | random | extent              n=12   better 12   worse 0    no difference 0   
+    collapsed | random | maxloc              n=24   better 24   worse 0    no difference 0   
+  SET B3CTL (3x3 maps vs actnorm / random; family 4/8)
+    N_ln_b3 | vs actnorm                     n=12   better 12   worse 0    no difference 0   
+    N_ln_b3 | vs random                      n=12   better 12   worse 0    no difference 0   
+    N_lse_b3 | vs actnorm                    n=36   better 27   worse 9    no difference 0   
+    N_lse_b3 | vs random                     n=36   better 31   worse 4    no difference 1   
+    S_ln_b3 | vs actnorm                     n=12   better 12   worse 0    no difference 0   
+    S_ln_b3 | vs random                      n=12   better 12   worse 0    no difference 0   
+    S_lse_b3 | vs actnorm                    n=36   better 28   worse 6    no difference 2   
+    S_lse_b3 | vs random                     n=36   better 34   worse 1    no difference 1   
+    aggregator | vs actnorm | extent         n=24   better 12   worse 11   no difference 1   
+    aggregator | vs actnorm | maxloc         n=48   better 43   worse 4    no difference 1   
+    aggregator | vs random | extent          n=24   better 17   worse 5    no difference 2   
+    aggregator | vs random | maxloc          n=48   better 48   worse 0    no difference 0   
+    all                                      n=192  better 168  worse 20   no difference 4   
+    relocation | vs actnorm | extent         n=8    better 8    worse 0    no difference 0   
+    relocation | vs actnorm | maxloc         n=16   better 16   worse 0    no difference 0   
+    relocation | vs random | extent          n=8    better 8    worse 0    no difference 0   
+    relocation | vs random | maxloc          n=16   better 16   worse 0    no difference 0   
+    vs actnorm                               n=96   better 79   worse 15   no difference 2   
+    vs random                                n=96   better 89   worse 5    no difference 2   
+  context: collapsed_b3 vs actnorm / random (family of 2)
+    collapsed_b3 | actnorm                   n=36   better 30   worse 6    no difference 0   
+    collapsed_b3 | random                    n=36   better 36   worse 0    no difference 0   
+  CTL rows that are NOT "better":
+    cub      resnet50 MaxBoxAccV2     N_lse  vs actnorm  0.2509 vs 0.6304 d -0.3795 [-0.3882, -0.3706] p_holm 0.004 worse
+    cub      resnet50 MaxBoxAccV2     S_lse  vs actnorm  0.5645 vs 0.6304 d -0.0659 [-0.0747, -0.0558] p_holm 0.004 worse
+    cub      resnet50 MaxBoxAccV2     N_lse  vs random   0.2509 vs 0.2874 d -0.0364 [-0.0412, -0.0331] p_holm 0.004 worse
+    cub      resnet50 best_iou        N_lse  vs actnorm  0.3516 vs 0.7184 d -0.3669 [-0.3709, -0.3628] p_holm 0 worse
+    cub      resnet50 best_iou        S_lse  vs actnorm  0.6466 vs 0.7184 d -0.0718 [-0.0755, -0.0680] p_holm 1.7e-271 worse
+    cub      resnet50 best_iou        N_lse  vs random   0.3516 vs 0.4779 d -0.1263 [-0.1292, -0.1232] p_holm 0 worse
+    cub      vgg16gap MaxBoxAccV2     N_lse  vs actnorm  0.2509 vs 0.6900 d -0.4390 [-0.4490, -0.4306] p_holm 0.004 worse
+    cub      vgg16gap MaxBoxAccV2     S_lse  vs actnorm  0.3786 vs 0.6900 d -0.3114 [-0.3212, -0.3024] p_holm 0.004 worse
+    cub      vgg16gap MaxBoxAccV2     N_lse  vs random   0.2509 vs 0.2874 d -0.0364 [-0.0412, -0.0331] p_holm 0.004 worse
+    cub      vgg16gap best_iou        N_lse  vs actnorm  0.3496 vs 0.7557 d -0.4061 [-0.4104, -0.4018] p_holm 0 worse
+    cub      vgg16gap best_iou        S_lse  vs actnorm  0.5650 vs 0.7557 d -0.1907 [-0.1951, -0.1865] p_holm 0 worse
+    cub      vgg16gap best_iou        N_lse  vs random   0.3496 vs 0.4779 d -0.1283 [-0.1312, -0.1252] p_holm 0 worse
+    cub      vgg16gap pointing_strict N_lse  vs actnorm  0.9767 vs 0.9943 d -0.0176 [-0.0221, -0.0135] p_holm 1.3e-16 worse
+    cub      vgg16gap pointing_strict S_lse  vs actnorm  0.9786 vs 0.9943 d -0.0157 [-0.0198, -0.0117] p_holm 1.48e-14 worse
+    cub      vgg16gap pointing_tol15  N_lse  vs actnorm  0.9865 vs 0.9962 d -0.0097 [-0.0131, -0.0064] p_holm 9.64e-09 worse
+    cub      vgg16gap pointing_tol15  S_lse  vs actnorm  0.9877 vs 0.9962 d -0.0085 [-0.0117, -0.0054] p_holm 1.24e-07 worse
+    cub      vitb16   MaxBoxAccV2     N_lse  vs random   0.2691 vs 0.2874 d -0.0182 [-0.0255, -0.0127] p_holm 0.008 worse
+    cub      vitb16   best_iou        N_lse  vs random   0.4511 vs 0.4779 d -0.0268 [-0.0311, -0.0223] p_holm 1.14e-48 worse
+    voc12seg resnet50 peak_mask_iou   N_lse  vs actnorm  0.2622 vs 0.3620 d -0.0998 [-0.1082, -0.0916] p_holm 1.27e-120 worse
+    voc12seg vgg16gap peak_mask_iou   N_lse  vs actnorm  0.2603 vs 0.4025 d -0.1422 [-0.1516, -0.1327] p_holm 8.7e-161 worse
+    coco17   resnet50 peak_mask_iou   N_lse  vs actnorm  0.1956 vs 0.2117 d -0.0160 [-0.0196, -0.0124] p_holm 1.21e-56 worse
+    coco17   vgg16gap peak_mask_iou   N_lse  vs actnorm  0.1847 vs 0.2303 d -0.0457 [-0.0495, -0.0420] p_holm 2.28e-184 worse
+
+  SET MC primary analogue (meancell basis, family of 4)
+    all                                      n=28   better 13   worse 7    no difference 8   
+    cub | center                             n=8    better 6    worse 2    no difference 0   
+    cub | collapsed                          n=8    better 2    worse 2    no difference 4   
+    voc12seg | center                        n=6    better 5    worse 1    no difference 0   
+    voc12seg | collapsed                     n=6    better 0    worse 2    no difference 4   
+    vs center                                n=14   better 11   worse 3    no difference 0   
+    vs collapsed                             n=14   better 2    worse 4    no difference 8   
+  MC verdict == bank verdict: 22 of 28
+    cub      MaxBoxAccV2     N_lse  vs collapsed  mc 0.2509 vs 0.5039 d -0.2529 [-0.2631,-0.2441] p_holm 0.004 worse         | bank d -0.2786 worse
+    cub      MaxBoxAccV2     S_lse  vs collapsed  mc 0.5752 vs 0.5039 d +0.0713 [+0.0646,+0.0778] p_holm 0.004 better        | bank d +0.0350 better
+    cub      MaxBoxAccV2     N_lse  vs center     mc 0.2509 vs 0.5636 d -0.3126 [-0.3194,-0.3074] p_holm 0.004 worse         | bank d -0.3126 worse
+    cub      MaxBoxAccV2     S_lse  vs center     mc 0.5752 vs 0.5636 d +0.0116 [+0.0018,+0.0211] p_holm 0.022 better        | bank d +0.0010 no difference
+    cub      best_iou        N_lse  vs collapsed  mc 0.3516 vs 0.6598 d -0.3083 [-0.3127,-0.3041] p_holm 0 worse         | bank d -0.3092 worse
+    cub      best_iou        S_lse  vs collapsed  mc 0.6615 vs 0.6598 d +0.0017 [+0.0013,+0.0020] p_holm 1.86e-44 better        | bank d -0.0142 worse
+    cub      best_iou        N_lse  vs center     mc 0.3516 vs 0.6251 d -0.2736 [-0.2772,-0.2700] p_holm 0 worse         | bank d -0.2736 worse
+    cub      best_iou        S_lse  vs center     mc 0.6615 vs 0.6251 d +0.0364 [+0.0316,+0.0408] p_holm 5.28e-46 better        | bank d +0.0215 better
+    cub      pointing_strict N_lse  vs collapsed  mc 0.9594 vs 0.9600 d -0.0005 [-0.0017,+0.0007] p_holm 1 no difference | bank d -0.0069 worse
+    cub      pointing_strict S_lse  vs collapsed  mc 0.9600 vs 0.9600 d +0.0000 [+0.0000,+0.0000] p_holm 1 no difference | bank d -0.0050 worse
+    cub      pointing_strict N_lse  vs center     mc 0.9594 vs 0.9446 d +0.0148 [+0.0071,+0.0223] p_holm 0.000471 better        | bank d +0.0135 better
+    cub      pointing_strict S_lse  vs center     mc 0.9600 vs 0.9446 d +0.0154 [+0.0076,+0.0228] p_holm 0.000346 better        | bank d +0.0154 better
+    cub      pointing_tol15  N_lse  vs collapsed  mc 0.9934 vs 0.9934 d +0.0000 [+0.0000,+0.0000] p_holm 1 no difference | bank d -0.0028 worse
+    cub      pointing_tol15  S_lse  vs collapsed  mc 0.9934 vs 0.9934 d +0.0000 [+0.0000,+0.0000] p_holm 1 no difference | bank d -0.0017 no difference
+    cub      pointing_tol15  N_lse  vs center     mc 0.9934 vs 0.9867 d +0.0067 [+0.0031,+0.0104] p_holm 0.00124 better        | bank d +0.0057 better
+    cub      pointing_tol15  S_lse  vs center     mc 0.9934 vs 0.9867 d +0.0067 [+0.0031,+0.0104] p_holm 0.00124 better        | bank d +0.0067 better
+    voc12seg pointing_strict N_lse  vs collapsed  mc 0.6735 vs 0.6712 d +0.0023 [-0.0028,+0.0079] p_holm 0.999 no difference | bank d +0.0079 no difference
+    voc12seg pointing_strict S_lse  vs collapsed  mc 0.6716 vs 0.6712 d +0.0005 [+0.0000,+0.0014] p_holm 1 no difference | bank d +0.0121 better
+    voc12seg pointing_strict N_lse  vs center     mc 0.6735 vs 0.4099 d +0.2636 [+0.2389,+0.2878] p_holm 1.33e-84 better        | bank d +0.2571 better
+    voc12seg pointing_strict S_lse  vs center     mc 0.6716 vs 0.4099 d +0.2618 [+0.2371,+0.2869] p_holm 2.58e-84 better        | bank d +0.2613 better
+    voc12seg pointing_tol15  N_lse  vs collapsed  mc 0.9129 vs 0.9106 d +0.0023 [+0.0000,+0.0051] p_holm 0.25 no difference | bank d +0.0028 no difference
+    voc12seg pointing_tol15  S_lse  vs collapsed  mc 0.9110 vs 0.9106 d +0.0005 [+0.0000,+0.0014] p_holm 1 no difference | bank d +0.0051 no difference
+    voc12seg pointing_tol15  N_lse  vs center     mc 0.9129 vs 0.6530 d +0.2599 [+0.2394,+0.2790] p_holm 1.63e-124 better        | bank d +0.2552 better
+    voc12seg pointing_tol15  S_lse  vs center     mc 0.9110 vs 0.6530 d +0.2580 [+0.2371,+0.2781] p_holm 2.53e-121 better        | bank d +0.2576 better
+    voc12seg peak_mask_iou   N_lse  vs collapsed  mc 0.2674 vs 0.4880 d -0.2206 [-0.2279,-0.2135] p_holm 0 worse         | bank d -0.2167 worse
+    voc12seg peak_mask_iou   S_lse  vs collapsed  mc 0.4865 vs 0.4880 d -0.0015 [-0.0021,-0.0010] p_holm 2.4e-34 worse         | bank d -0.0005 worse
+    voc12seg peak_mask_iou   N_lse  vs center     mc 0.2674 vs 0.3209 d -0.0535 [-0.0628,-0.0444] p_holm 1.05e-46 worse         | bank d -0.0587 worse
+    voc12seg peak_mask_iou   S_lse  vs center     mc 0.4865 vs 0.3209 d +0.1656 [+0.1567,+0.1742] p_holm 2.12e-216 better        | bank d +0.1576 better
+  SET MC 3x3 analogue (family of 4)
+    all                                      n=28   better 7    worse 18   no difference 3   
+    vs center                                n=14   better 7    worse 5    no difference 2   
+    vs collapsed_b3                          n=14   better 0    worse 13   no difference 1   
+  MC b3 verdict == bank verdict: 25 of 28
+  SET MC N_lse vs S_lse (better = N better)
+    all                                      n=7    better 0    worse 3    no difference 4   
+    cub      MaxBoxAccV2     N 0.2509 S 0.5752 d -0.3242 [-0.3345,-0.3155] p 0.001 worse | bank worse
+    cub      best_iou        N 0.3516 S 0.6615 d -0.3099 [-0.3143,-0.3059] p 0 worse | bank worse
+    cub      pointing_strict N 0.9594 S 0.9600 d -0.0005 [-0.0017,+0.0007] p 0.581 no difference | bank worse
+    cub      pointing_tol15  N 0.9934 S 0.9934 d +0.0000 [+0.0000,+0.0000] p 1 no difference | bank worse
+    voc12seg pointing_strict N 0.6735 S 0.6716 d +0.0019 [-0.0033,+0.0075] p 0.608 no difference | bank no difference
+    voc12seg pointing_tol15  N 0.9129 S 0.9110 d +0.0019 [-0.0005,+0.0042] p 0.219 no difference | bank no difference
+    voc12seg peak_mask_iou   N 0.2674 S 0.4865 d -0.2191 [-0.2264,-0.2122] p 8.53e-310 worse | bank worse
+  meancell collapsed vs cam, max |per-record difference| over the 7 metric arrays: 0.00593
+
+  Holm verdict vs CI disagreements per set: {'B3': 3, 'B3_NS': 0, 'CTL': 0, 'B3CTL': 0, 'MC': 0, 'MC_B3': 0}
+  -> <repo>\analyses/localisation_extra\out\l2_protocol_rows.json
+  -> <repo>\analyses/localisation_extra\out\tab_l2_b3.tex
+  -> <repo>\analyses/localisation_extra\out\tab_l2_controls.tex
+  -> <repo>\analyses/localisation_extra\out\tab_l2_meancell.tex
+  -> <repo>\analyses/localisation_extra\out\tab_l2_tally.tex

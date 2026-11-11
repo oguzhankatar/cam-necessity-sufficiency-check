@@ -1,0 +1,48 @@
+  convnext_tiny                interp_s=1.0     corr=0.8959 d_act=1.312 d_pool=1.340 d_ln=1.356
+  convnext_tiny                interp_s=0.5     corr=0.8808 d_act=0.656 d_pool=0.670 d_ln=0.723
+  convnext_tiny                interp_s=0.25    corr=0.9451 d_act=0.328 d_pool=0.335 d_ln=0.316
+  convnext_tiny                interp_s=0.1     corr=0.9901 d_act=0.131 d_pool=0.134 d_ln=0.112
+  convnext_tiny                interp_s=0.05    corr=0.9976 d_act=0.066 d_pool=0.067 d_ln=0.054
+  convnext_tiny                interp_s=0.02    corr=0.9996 d_act=0.026 d_pool=0.027 d_ln=0.021
+  convnext_tiny                interp_s=0.01    corr=0.9999 d_act=0.013 d_pool=0.013 d_ln=0.010
+  convnext_tiny                zeros            corr=0.8402 d_act=1.000 d_pool=1.000 d_ln=1.019
+  convnext_tiny                datasetmean      corr=0.8881 d_act=0.975 d_pool=0.930 d_ln=1.043
+  convnext_tiny                gaussian         corr=0.8964 d_act=1.413 d_pool=1.045 d_ln=2.579
+  convnext_tiny                shuffleA         corr=0.9840 d_act=1.216 d_pool=0.000 d_ln=0.000
+  convnext_tiny                bank             corr=0.8959 d_act=1.312 d_pool=1.340 d_ln=1.356
+  convnext_tiny d_act: spearman(dist,corr)=-0.700 violations 12/55
+  convnext_tiny d_pool: spearman(dist,corr)=-0.764 violations 11/55
+  convnext_tiny d_ln: spearman(dist,corr)=-0.736 violations 13/55
+wrote <repo>\analyses/theory_sweeps\out\t6_refdist.json
+  swin_tiny_patch4_window7_224 interp_s=1.0     corr=0.8439 d_act=0.792 d_pool=0.499 d_ln=1.339
+  swin_tiny_patch4_window7_224 interp_s=0.5     corr=0.9642 d_act=0.396 d_pool=0.249 d_ln=0.694
+  swin_tiny_patch4_window7_224 interp_s=0.25    corr=0.9918 d_act=0.198 d_pool=0.125 d_ln=0.356
+  swin_tiny_patch4_window7_224 interp_s=0.1     corr=0.9988 d_act=0.079 d_pool=0.050 d_ln=0.145
+  swin_tiny_patch4_window7_224 interp_s=0.05    corr=0.9997 d_act=0.040 d_pool=0.025 d_ln=0.073
+  swin_tiny_patch4_window7_224 interp_s=0.02    corr=1.0000 d_act=0.016 d_pool=0.010 d_ln=0.029
+  swin_tiny_patch4_window7_224 interp_s=0.01    corr=1.0000 d_act=0.008 d_pool=0.005 d_ln=0.015
+  swin_tiny_patch4_window7_224 zeros            corr=0.9695 d_act=1.000 d_pool=1.000 d_ln=1.093
+  swin_tiny_patch4_window7_224 datasetmean      corr=0.9232 d_act=0.569 d_pool=0.371 d_ln=0.971
+  swin_tiny_patch4_window7_224 gaussian         corr=0.9430 d_act=1.414 d_pool=1.014 d_ln=4.638
+  swin_tiny_patch4_window7_224 shuffleA         corr=0.9998 d_act=0.688 d_pool=0.000 d_ln=0.000
+  swin_tiny_patch4_window7_224 bank             corr=0.8439 d_act=0.792 d_pool=0.499 d_ln=1.339
+  swin_tiny_patch4_window7_224 d_act: spearman(dist,corr)=-0.736 violations 10/55
+  swin_tiny_patch4_window7_224 d_pool: spearman(dist,corr)=-0.873 violations 7/55
+  swin_tiny_patch4_window7_224 d_ln: spearman(dist,corr)=-0.909 violations 6/55
+wrote <repo>\analyses/theory_sweeps\out\t6_refdist.json
+  vit_betwixt_patch16_reg4_gap_256 interp_s=1.0     corr=0.5356 d_act=1.342 d_pool=1.233 d_ln=1.403
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.5     corr=0.7885 d_act=0.671 d_pool=0.617 d_ln=0.766
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.25    corr=0.9294 d_act=0.335 d_pool=0.308 d_ln=0.359
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.1     corr=0.9872 d_act=0.134 d_pool=0.123 d_ln=0.134
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.05    corr=0.9967 d_act=0.067 d_pool=0.062 d_ln=0.065
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.02    corr=0.9995 d_act=0.027 d_pool=0.025 d_ln=0.026
+  vit_betwixt_patch16_reg4_gap_256 interp_s=0.01    corr=0.9999 d_act=0.013 d_pool=0.012 d_ln=0.013
+  vit_betwixt_patch16_reg4_gap_256 zeros            corr=0.7338 d_act=1.000 d_pool=1.000 d_ln=1.015
+  vit_betwixt_patch16_reg4_gap_256 datasetmean      corr=0.7257 d_act=0.944 d_pool=0.823 d_ln=1.000
+  vit_betwixt_patch16_reg4_gap_256 gaussian         corr=0.7163 d_act=1.413 d_pool=1.008 d_ln=1.938
+  vit_betwixt_patch16_reg4_gap_256 shuffleA         corr=0.9995 d_act=1.206 d_pool=0.000 d_ln=0.000
+  vit_betwixt_patch16_reg4_gap_256 bank             corr=0.5356 d_act=1.342 d_pool=1.233 d_ln=1.403
+  vit_betwixt_patch16_reg4_gap_256 d_act: spearman(dist,corr)=-0.727 violations 9/55
+  vit_betwixt_patch16_reg4_gap_256 d_pool: spearman(dist,corr)=-0.982 violations 2/55
+  vit_betwixt_patch16_reg4_gap_256 d_ln: spearman(dist,corr)=-0.973 violations 3/55
+wrote <repo>\analyses/theory_sweeps\out\t6_refdist.json

@@ -1,0 +1,74 @@
+[
+ {
+  "model": "lcnet_050",
+  "family": "MobileNetV3",
+  "T": 49,
+  "C": 256,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.59895,
+    "acc_linfit": 0.447675,
+    "dacc_pts": -15.1275,
+    "argmax_agree": 0.597125
+   }
+  },
+  "secs": 49.200095891952515
+ },
+ {
+  "model": "repghostnet_100",
+  "family": "RepGhostNet",
+  "T": 49,
+  "C": 960,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.70115,
+    "acc_linfit": 0.651775,
+    "dacc_pts": -4.9375,
+    "argmax_agree": 0.82755
+   }
+  },
+  "secs": 49.34347915649414
+ },
+ {
+  "model": "hardcorenas_a",
+  "family": "MobileNetV3",
+  "T": 49,
+  "C": 960,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.725625,
+    "acc_linfit": 0.647375,
+    "dacc_pts": -7.825,
+    "argmax_agree": 0.7793
+   }
+  },
+  "secs": 49.47057366371155
+ },
+ {
+  "model": "mobilenetv3_small_100",
+  "family": "MobileNetV3",
+  "T": 49,
+  "C": 576,
+  "n_fit": 10000,
+  "compose_rel_err": 0.0,
+  "res": {
+   "holdout": {
+    "n": 40000,
+    "acc_shipped": 0.642375,
+    "acc_linfit": 0.55425,
+    "dacc_pts": -8.8125,
+    "argmax_agree": 0.728125
+   }
+  },
+  "secs": 49.686081886291504
+ }
+]

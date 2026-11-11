@@ -1,0 +1,49 @@
+Task 5 -- certificate separation 1-corr(N,S) (min-corr pair of n probe pairs)
+dataset   backbone  n_pair    LSE       LN   gapADD  lseADD/lnADD
+cub       resnet50       3  0.635       --     True  False/--
+cub       vgg16gap       3  0.778       --     True  False/--
+cub       vitb16         3  0.604    0.221     True  False/False
+voc12     resnet50       3  0.191       --     True  False/--
+voc12     vgg16gap       3  0.397       --     True  False/--
+voc12     vitb16         3  0.186    0.022     True  False/False
+voc12seg  resnet50       3  0.191       --     True  False/--
+voc12seg  vgg16gap       3  0.397       --     True  False/--
+voc12seg  vitb16         3  0.186    0.022     True  False/False
+coco17    resnet50       3  0.606       --     True  False/--
+coco17    vgg16gap       3  0.670       --     True  False/--
+coco17    vitb16         3  0.479    0.108     True  False/False
+
+separation beside verdicts vs collapsed (win/loss/tie)
+  cub       resnet50  aggregator sep 0.635  n=8 win 1 loss 6 tie 1
+  cub       vgg16gap  aggregator sep 0.778  n=8 win 0 loss 6 tie 2
+  cub       vitb16    aggregator sep 0.604  n=8 win 5 loss 3 tie 0
+  cub       vitb16    relocation sep 0.221  n=8 win 8 loss 0 tie 0
+  voc12     resnet50  aggregator sep 0.191  n=4 win 1 loss 0 tie 3
+  voc12     vgg16gap  aggregator sep 0.397  n=4 win 1 loss 0 tie 3
+  voc12     vitb16    aggregator sep 0.186  n=4 win 3 loss 0 tie 1
+  voc12     vitb16    relocation sep 0.022  n=4 win 4 loss 0 tie 0
+  voc12seg  resnet50  aggregator sep 0.191  n=6 win 1 loss 2 tie 3
+  voc12seg  vgg16gap  aggregator sep 0.397  n=6 win 0 loss 2 tie 4
+  voc12seg  vitb16    aggregator sep 0.186  n=6 win 3 loss 1 tie 2
+  voc12seg  vitb16    relocation sep 0.022  n=6 win 4 loss 0 tie 2
+  coco17    resnet50  aggregator sep 0.606  n=6 win 0 loss 2 tie 4
+  coco17    vgg16gap  aggregator sep 0.670  n=6 win 0 loss 2 tie 4
+  coco17    vitb16    aggregator sep 0.479  n=6 win 5 loss 1 tie 0
+  coco17    vitb16    relocation sep 0.108  n=6 win 3 loss 1 tie 2
+  aggregator, 12 cells: Spearman(sep, (win-loss)/n) = -0.756 (p=0.004)
+
+Task 6 -- design facts
+cub       resnet50  resnet50.tv_in1k                              in=448 grid=[14, 14] C=2048 fit=5994 eval=5794 rec=5794 bank=8 tau=1 sha=f069cd656eec9dd3 primary=16 cls={'gap': 0.6215}
+cub       vgg16gap  vgg16.tv_in1k                                 in=448 grid=[14, 14] C=512 fit=5994 eval=5794 rec=5794 bank=8 tau=1 sha=f069cd656eec9dd3 primary=16 cls={'gap': 0.5668}
+cub       vitb16    vit_base_patch16_224.augreg2_in21k_ft_in1k    in=224 grid=[14, 14] C=768 fit=5994 eval=5794 rec=5794 bank=8 tau=1 sha=f069cd656eec9dd3 primary=32 cls={'gap': 0.8331, 'lnpost': 0.8348}
+voc12     resnet50  resnet50.tv_in1k                              in=448 grid=[14, 14] C=2048 fit=5717 eval=5823 rec=8856 bank=8 tau=1 sha=f069cd656eec9dd3 primary=8 cls={'gap': 0.8792}
+voc12     vgg16gap  vgg16.tv_in1k                                 in=448 grid=[14, 14] C=512 fit=5717 eval=5823 rec=8856 bank=8 tau=1 sha=f069cd656eec9dd3 primary=8 cls={'gap': 0.8111}
+voc12     vitb16    vit_base_patch16_224.augreg2_in21k_ft_in1k    in=224 grid=[14, 14] C=768 fit=5717 eval=5823 rec=8856 bank=8 tau=1 sha=f069cd656eec9dd3 primary=16 cls={'gap': 0.9044, 'lnpost': 0.9036}
+voc12seg  resnet50  resnet50.tv_in1k                              in=448 grid=[14, 14] C=2048 fit=5717 eval=1449 rec=2147 bank=8 tau=1 sha=f069cd656eec9dd3 primary=12 cls={'gap': 0.8851}
+voc12seg  vgg16gap  vgg16.tv_in1k                                 in=448 grid=[14, 14] C=512 fit=5717 eval=1449 rec=2147 bank=8 tau=1 sha=f069cd656eec9dd3 primary=12 cls={'gap': 0.823}
+voc12seg  vitb16    vit_base_patch16_224.augreg2_in21k_ft_in1k    in=224 grid=[14, 14] C=768 fit=5717 eval=1449 rec=2147 bank=8 tau=1 sha=f069cd656eec9dd3 primary=24 cls={'gap': 0.913, 'lnpost': 0.9127}
+coco17    resnet50  resnet50.tv_in1k                              in=448 grid=[14, 14] C=2048 fit=2476 eval=2476 rec=7339 bank=8 tau=1 sha=f069cd656eec9dd3 primary=12 cls={'gap': 0.6205}
+coco17    vgg16gap  vgg16.tv_in1k                                 in=448 grid=[14, 14] C=512 fit=2476 eval=2476 rec=7339 bank=8 tau=1 sha=f069cd656eec9dd3 primary=12 cls={'gap': 0.5227}
+coco17    vitb16    vit_base_patch16_224.augreg2_in21k_ft_in1k    in=224 grid=[14, 14] C=768 fit=2476 eval=2476 rec=7339 bank=8 tau=1 sha=f069cd656eec9dd3 primary=24 cls={'gap': 0.6972, 'lnpost': 0.6925}
+total primary contrasts: 192
+  -> <repo>\analyses/localisation_reanalysis\out\t5_t6_archive.json

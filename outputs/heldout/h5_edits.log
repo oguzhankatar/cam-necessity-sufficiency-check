@@ -1,0 +1,175 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[convformer_s36] family=MetaFormer pool=head.global_pool.pool
+  compose check: rel err 0.00e+00 PASS  T=49 C=512
+  post-pool leaves=9  acts=['head.fc.act.relu']  norms=['head.norm', 'head.fc.norm']
+  linact per-channel R2 = {'head.fc.act.relu': 0.7979}
+  [shipped  ] dev_seg=3.95e-01  maxNS=1.09e+00 Rhalf=1.85e+00 I2=1.39e-01 corrNS>=-0.795531  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=7.30e-15 Rhalf=5.68e-15 I2=3.03e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=6.31e-01  maxNS=1.56e+00 Rhalf=5.54e+00 I2=5.31e-02 corrNS>=-0.973560  ADDITIVE=False
+  [delnorm  ] dev_seg=8.86e-01  maxNS=1.78e+00 Rhalf=1.91e+00 I2=2.07e-02 corrNS>=-0.597010  ADDITIVE=False
+  [delboth  ] dev_seg=4.96e-01  maxNS=1.36e+00 Rhalf=2.69e+00 I2=2.73e-02 corrNS>=-0.590688  ADDITIVE=False
+  [linact   ] dev_seg=3.45e-01  maxNS=1.10e+00 Rhalf=3.43e+00 I2=9.71e-02 corrNS>=-0.720233  ADDITIVE=False
+   acc  12800/50000  shipped=0.8552 poollast=0.8305 delact=0.8379 delnorm=0.1627 delboth=0.0001 linact=0.8550
+   acc  25600/50000  shipped=0.8359 poollast=0.8121 delact=0.8086 delnorm=0.2384 delboth=0.0000 linact=0.8370
+   acc  38400/50000  shipped=0.8221 poollast=0.7993 delact=0.7781 delnorm=0.2904 delboth=0.0001 linact=0.8227
+  shipped:0.8131(+0.00)  poollast:0.7888(-2.43)  delact:0.7605(-5.26)  delnorm:0.3109(-50.22)  delboth:0.0001(-81.30)  linact:0.8137(+0.06)
+  REACHABLE=True  best=poollast  cost=-2.426000000000006 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[inception_next_tiny] family=MetaNeXt pool=head.global_pool.pool
+  compose check: rel err 0.00e+00 PASS  T=49 C=768
+  post-pool leaves=6  acts=['head.act']  norms=['head.norm']
+  linact per-channel R2 = {'head.act': 0.5727}
+  [shipped  ] dev_seg=5.10e-01  maxNS=1.14e+00 Rhalf=2.29e+00 I2=1.12e-01 corrNS>=-0.412326  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=3.55e-15 Rhalf=3.71e-15 I2=1.18e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=1.30e-01  maxNS=8.45e-01 Rhalf=6.01e-01 I2=4.08e-02 corrNS>=0.856539  ADDITIVE=False
+  [delnorm  ] dev_seg=3.04e-01  maxNS=8.94e-01 Rhalf=8.25e-01 I2=5.26e-02 corrNS>=0.772988  ADDITIVE=False
+  [delboth  ] dev_seg=4.15e-16  maxNS=6.74e-15 Rhalf=1.41e-14 I2=7.69e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=1.51e-01  maxNS=7.24e-01 Rhalf=4.43e-01 I2=2.34e-02 corrNS>=0.848009  ADDITIVE=False
+   acc  12800/50000  shipped=0.8298 poollast=0.7345 delact=0.8063 delnorm=0.8298 delboth=0.8009 linact=0.8204
+   acc  25600/50000  shipped=0.8094 poollast=0.7180 delact=0.7868 delnorm=0.8066 delboth=0.7796 linact=0.8018
+   acc  38400/50000  shipped=0.7927 poollast=0.6961 delact=0.7739 delnorm=0.7886 delboth=0.7666 linact=0.7862
+  shipped:0.7848(+0.00)  poollast:0.6885(-9.63)  delact:0.7689(-1.59)  delnorm:0.7796(-0.52)  delboth:0.7604(-2.44)  linact:0.7780(-0.68)
+  REACHABLE=True  best=delboth  cost=-2.442000000000011 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[mambaout_femto] family=MambaOut pool=head(mean over H,W)
+  compose check: rel err 0.00e+00 PASS  T=49 C=288
+  post-pool leaves=6  acts=['head.pre_logits.act']  norms=['head.norm', 'head.pre_logits.norm']
+  linact per-channel R2 = {'head.pre_logits.act': 0.5499}
+  [shipped  ] dev_seg=5.03e-01  maxNS=1.16e+00 Rhalf=1.93e+00 I2=1.06e-01 corrNS>=-0.710459  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=3.83e-15 Rhalf=4.18e-15 I2=2.31e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=3.10e-01  maxNS=9.43e-01 Rhalf=9.26e-01 I2=1.02e-01 corrNS>=0.263136  ADDITIVE=False
+  [delnorm  ] dev_seg=2.64e-01  maxNS=8.58e-01 Rhalf=8.31e-01 I2=5.99e-02 corrNS>=0.786326  ADDITIVE=False
+  [delboth  ] dev_seg=4.17e-16  maxNS=8.28e-15 Rhalf=9.39e-15 I2=6.69e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=4.86e-01  maxNS=1.16e+00 Rhalf=1.62e+00 I2=2.31e-01 corrNS>=-0.151118  ADDITIVE=False
+   acc  12800/50000  shipped=0.8042 poollast=0.6359 delact=0.6137 delnorm=0.7831 delboth=0.4682 linact=0.7734
+   acc  25600/50000  shipped=0.7865 poollast=0.6340 delact=0.6082 delnorm=0.7654 delboth=0.4664 linact=0.7578
+   acc  38400/50000  shipped=0.7658 poollast=0.6247 delact=0.6151 delnorm=0.7462 delboth=0.4745 linact=0.7391
+  shipped:0.7570(+0.00)  poollast:0.6208(-13.63)  delact:0.6228(-13.42)  delnorm:0.7376(-1.95)  delboth:0.4740(-28.31)  linact:0.7314(-2.56)
+  REACHABLE=True  best=poollast  cost=-13.626000000000005 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[mambaout_small] family=MambaOut pool=head(mean over H,W)
+  compose check: rel err 0.00e+00 PASS  T=49 C=576
+  post-pool leaves=6  acts=['head.pre_logits.act']  norms=['head.norm', 'head.pre_logits.norm']
+  linact per-channel R2 = {'head.pre_logits.act': 0.5365}
+  [shipped  ] dev_seg=4.29e-01  maxNS=1.03e+00 Rhalf=1.02e+00 I2=1.51e-01 corrNS>=0.293690  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=6.93e-15 Rhalf=7.09e-15 I2=3.70e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=2.59e-01  maxNS=1.01e+00 Rhalf=2.10e+00 I2=9.52e-02 corrNS>=0.382958  ADDITIVE=False
+  [delnorm  ] dev_seg=1.09e-01  maxNS=7.12e-01 Rhalf=2.11e-01 I2=8.27e-03 corrNS>=0.661359  ADDITIVE=False
+  [delboth  ] dev_seg=4.68e-16  maxNS=8.30e-15 Rhalf=8.72e-15 I2=6.91e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=3.09e-01  maxNS=9.64e-01 Rhalf=1.45e+00 I2=1.09e-01 corrNS>=0.130191  ADDITIVE=False
+   acc  12800/50000  shipped=0.8517 poollast=0.7801 delact=0.8092 delnorm=0.0040 delboth=0.8159 linact=0.8466
+   acc  25600/50000  shipped=0.8332 poollast=0.7704 delact=0.7936 delnorm=0.0084 delboth=0.8024 linact=0.8305
+   acc  38400/50000  shipped=0.8184 poollast=0.7601 delact=0.7865 delnorm=0.0207 delboth=0.7936 linact=0.8166
+  shipped:0.8097(+0.00)  poollast:0.7532(-5.66)  delact:0.7807(-2.90)  delnorm:0.0207(-78.91)  delboth:0.7876(-2.21)  linact:0.8086(-0.11)
+  REACHABLE=True  best=delboth  cost=-2.212000000000003 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[mambaout_kobe] family=MambaOut pool=head(mean over H,W)
+  compose check: rel err 0.00e+00 PASS  T=49 C=288
+  post-pool leaves=6  acts=['head.pre_logits.act']  norms=['head.norm', 'head.pre_logits.norm']
+  linact per-channel R2 = {'head.pre_logits.act': 0.592}
+  [shipped  ] dev_seg=4.60e-01  maxNS=1.18e+00 Rhalf=1.84e+00 I2=1.19e-01 corrNS>=-0.883115  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=4.19e-15 Rhalf=5.49e-15 I2=3.32e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=3.57e-01  maxNS=9.58e-01 Rhalf=1.10e+00 I2=1.08e-01 corrNS>=0.503083  ADDITIVE=False
+  [delnorm  ] dev_seg=2.18e-01  maxNS=9.23e-01 Rhalf=8.10e-01 I2=3.11e-02 corrNS>=0.647996  ADDITIVE=False
+  [delboth  ] dev_seg=3.66e-16  maxNS=4.20e-15 Rhalf=8.34e-15 I2=8.72e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=4.52e-01  maxNS=1.00e+00 Rhalf=1.33e+00 I2=1.37e-01 corrNS>=0.508287  ADDITIVE=False
+   acc  12800/50000  shipped=0.8187 poollast=0.6629 delact=0.6883 delnorm=0.8067 delboth=0.6912 linact=0.7929
+   acc  25600/50000  shipped=0.7971 poollast=0.6577 delact=0.6738 delnorm=0.7849 delboth=0.6764 linact=0.7743
+   acc  38400/50000  shipped=0.7790 poollast=0.6519 delact=0.6749 delnorm=0.7681 delboth=0.6681 linact=0.7596
+  shipped:0.7697(+0.00)  poollast:0.6482(-12.16)  delact:0.6762(-9.35)  delnorm:0.7578(-1.20)  delboth:0.6579(-11.18)  linact:0.7518(-1.79)
+  REACHABLE=True  best=delboth  cost=-11.183999999999994 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[efficientvit_b1] family=EfficientVit pool=head.global_pool.pool
+Traceback (most recent call last):
+  File "<repo>\scripts\scope\s3_edits.py", line 327, in <module>
+    allr.append(run(nm))
+                ^^^^^^^
+  File "<repo>\scripts\scope\s3_edits.py", line 128, in run
+    comp = POST(X2.mean(1))
+           ^^^^^^^^^^^^^^^^
+  File "<repo>\scripts\scope\s3_edits.py", line 123, in POST
+    return ag.post(v, torch.zeros(v.shape[0], C, 1, 1, device=v.device,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\scripts\scope\shead.py", line 89, in post
+    z = s.m.forward_head(x_dummy)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\timm\models\efficientvit_mit.py", line 908, in forward_head
+    return self.head(x, pre_logits=pre_logits) if pre_logits else self.head(x)
+                                                                  ^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\timm\models\efficientvit_mit.py", line 744, in forward
+    x = self.in_conv(x)
+        ^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\timm\models\efficientvit_mit.py", line 83, in forward
+    x = self.conv(x)
+        ^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-env>\Lib\site-packages\torch\nn\modules\conv.py", line 549, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [1536, 256, 1, 1], expected input[2, 1536, 1, 1] to have 256 channels, but got 1536 channels instead
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[fasternet_t0] family=FasterNet pool=global_pool.pool
+  compose check: rel err 0.00e+00 PASS  T=49 C=320
+  post-pool leaves=5  acts=['act']  norms=[]
+  linact per-channel R2 = {'act': 0.4559}
+  [shipped  ] dev_seg=3.84e-01  maxNS=1.78e+00 Rhalf=4.30e+00 I2=8.73e-02 corrNS>=0.019428  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=5.61e-15 Rhalf=1.66e-14 I2=5.38e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=8.26e-16  maxNS=7.29e-15 Rhalf=2.14e-14 I2=9.65e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=2.88e-16  maxNS=4.12e-15 Rhalf=1.64e-14 I2=5.24e-15 corrNS>=1.000000  ADDITIVE=True
+   acc  12800/50000  shipped=0.7341 poollast=0.1151 delact=0.0346 linact=0.6553
+   acc  25600/50000  shipped=0.7084 poollast=0.1135 delact=0.0492 linact=0.6246
+   acc  38400/50000  shipped=0.6829 poollast=0.1046 delact=0.0677 linact=0.5954
+  shipped:0.6717(+0.00)  poollast:0.1186(-55.31)  delact:0.0711(-60.06)  linact:0.5859(-8.58)
+  REACHABLE=True  best=linact  cost=-8.578000000000008 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[ghostnetv2_100] family=GhostNet pool=global_pool.pool
+  compose check: rel err 0.00e+00 PASS  T=49 C=960
+  post-pool leaves=5  acts=['act2']  norms=[]
+  linact per-channel R2 = {'act2': 0.7438}
+  [shipped  ] dev_seg=1.12e-01  maxNS=7.59e-01 Rhalf=2.74e-01 I2=3.70e-02 corrNS>=0.306463  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=2.61e-15 Rhalf=6.58e-15 I2=2.94e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=2.93e-16  maxNS=4.84e-15 Rhalf=9.77e-15 I2=4.89e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=1.84e-16  maxNS=5.87e-15 Rhalf=8.50e-15 I2=4.60e-15 corrNS>=1.000000  ADDITIVE=True
+   acc  12800/50000  shipped=0.7837 poollast=0.7382 delact=0.7563 linact=0.7445
+   acc  25600/50000  shipped=0.7565 poollast=0.7163 delact=0.7282 linact=0.7188
+   acc  38400/50000  shipped=0.7321 poollast=0.6949 delact=0.7030 linact=0.6960
+  shipped:0.7221(+0.00)  poollast:0.6857(-3.65)  delact:0.6953(-2.68)  linact:0.6885(-3.36)
+  REACHABLE=True  best=delact  cost=-2.6839999999999975 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json
+[hgnet_tiny] family=HighPerfGpuNet pool=head.global_pool.pool
+  compose check: rel err 0.00e+00 PASS  T=49 C=768
+  post-pool leaves=6  acts=['head.last_conv.1']  norms=[]
+  linact per-channel R2 = {'head.last_conv.1': 0.4752}
+  [shipped  ] dev_seg=1.49e-01  maxNS=8.96e-01 Rhalf=1.11e-01 I2=2.33e-02 corrNS>=0.721083  ADDITIVE=False
+  [poollast ] dev_seg=n/a      maxNS=2.00e-15 Rhalf=6.62e-15 I2=3.49e-15 corrNS>=1.000000  ADDITIVE=True
+  [delact   ] dev_seg=3.35e-16  maxNS=4.31e-15 Rhalf=1.39e-14 I2=6.48e-15 corrNS>=1.000000  ADDITIVE=True
+  [linact   ] dev_seg=3.33e-16  maxNS=4.17e-15 Rhalf=1.05e-14 I2=6.35e-15 corrNS>=1.000000  ADDITIVE=True
+   acc  12800/50000  shipped=0.8112 poollast=0.8052 delact=0.7805 linact=0.6803
+   acc  25600/50000  shipped=0.7891 poollast=0.7815 delact=0.7558 linact=0.6523
+   acc  38400/50000  shipped=0.7720 poollast=0.7618 delact=0.7359 linact=0.6393
+  shipped:0.7628(+0.00)  poollast:0.7530(-0.98)  delact:0.7219(-4.09)  linact:0.6258(-13.70)
+  REACHABLE=True  best=poollast  cost=-0.9800000000000031 pts
+  -> <repo>\outputs\scope\h5_edits_heldout.json

@@ -1,0 +1,191 @@
+{
+ "fit_n": 13,
+ "coef_pair": [
+  -3.872638421445848,
+  5.054819496264914,
+  -4.908682041776917
+ ],
+ "coef_alt": [
+  -20.61820493916195,
+  24.015815105455243
+ ],
+ "pair": [
+  "f_nnorm",
+  "f_expand"
+ ],
+ "alt": [
+  "m_linr2"
+ ],
+ "rows": [
+  {
+   "model": "convformer_s36",
+   "f_nnorm": 2.0,
+   "f_expand": 2.0,
+   "C": 512,
+   "T": 49,
+   "m_linr2": 0.7978846164742827,
+   "blocker": "head.fc.act.relu(ReLU)",
+   "pred_pair": -3.5803635124698534,
+   "pred_alt": -1.456355514428509,
+   "reaching_edits": [
+    "poollast"
+   ],
+   "best_edit": "poollast",
+   "y": -2.426000000000006,
+   "acc_shipped": 0.8131
+  },
+  {
+   "model": "inception_next_tiny",
+   "f_nnorm": 1.0,
+   "f_expand": 1.584962500721156,
+   "C": 768,
+   "T": 49,
+   "m_linr2": 0.5727147588182526,
+   "blocker": "head.act(GELU)",
+   "pred_pair": -6.597895889360707,
+   "pred_alt": -6.863993183217401,
+   "reaching_edits": [
+    "poollast",
+    "delboth"
+   ],
+   "best_edit": "delboth",
+   "y": -2.442000000000011,
+   "acc_shipped": 0.7848
+  },
+  {
+   "model": "mambaout_femto",
+   "f_nnorm": 2.0,
+   "f_expand": 2.0,
+   "C": 288,
+   "T": 49,
+   "m_linr2": 0.5498717619542006,
+   "blocker": "head.pre_logits.act(GELU)",
+   "pred_pair": -3.5803635124698534,
+   "pred_alt": -7.412586372358968,
+   "reaching_edits": [
+    "poollast",
+    "delboth"
+   ],
+   "best_edit": "poollast",
+   "y": -13.626000000000005,
+   "acc_shipped": 0.75704
+  },
+  {
+   "model": "mambaout_small",
+   "f_nnorm": 2.0,
+   "f_expand": 2.0,
+   "C": 576,
+   "T": 49,
+   "m_linr2": 0.5365006931804941,
+   "blocker": "head.pre_logits.act(GELU)",
+   "pred_pair": -3.5803635124698534,
+   "pred_alt": -7.733703487790629,
+   "reaching_edits": [
+    "poollast",
+    "delboth"
+   ],
+   "best_edit": "delboth",
+   "y": -2.212000000000003,
+   "acc_shipped": 0.80974
+  },
+  {
+   "model": "mambaout_kobe",
+   "f_nnorm": 2.0,
+   "f_expand": 2.0,
+   "C": 288,
+   "T": 49,
+   "m_linr2": 0.5919899108333279,
+   "blocker": "head.pre_logits.act(GELU)",
+   "pred_pair": -3.5803635124698534,
+   "pred_alt": -6.401084696293811,
+   "reaching_edits": [
+    "poollast",
+    "delboth"
+   ],
+   "best_edit": "delboth",
+   "y": -11.183999999999994,
+   "acc_shipped": 0.76972
+  },
+  {
+   "model": "fasternet_t0",
+   "f_nnorm": 0.0,
+   "f_expand": 2.0,
+   "C": 320,
+   "T": 49,
+   "m_linr2": 0.4559305683214296,
+   "blocker": "act(GELU)",
+   "pred_pair": -13.690002504999681,
+   "pred_alt": -9.668660709429366,
+   "reaching_edits": [
+    "poollast",
+    "delact",
+    "linact"
+   ],
+   "best_edit": "linact",
+   "y": -8.578000000000008,
+   "acc_shipped": 0.67168
+  },
+  {
+   "model": "ghostnetv2_100",
+   "f_nnorm": 0.0,
+   "f_expand": 0.41503749927884376,
+   "C": 960,
+   "T": 49,
+   "m_linr2": 0.7437928475776396,
+   "blocker": "act2(ReLU)",
+   "pred_pair": -5.909925540819908,
+   "pred_alt": -2.755413434977303,
+   "reaching_edits": [
+    "poollast",
+    "delact",
+    "linact"
+   ],
+   "best_edit": "delact",
+   "y": -2.6839999999999975,
+   "acc_shipped": 0.72214
+  },
+  {
+   "model": "hgnet_tiny",
+   "f_nnorm": 0.0,
+   "f_expand": 1.4150374992788437,
+   "C": 768,
+   "T": 49,
+   "m_linr2": 0.47516364427069646,
+   "blocker": "head.last_conv.1(ReLU)",
+   "pred_pair": -10.818607582596824,
+   "pred_alt": -9.206762713522595,
+   "reaching_edits": [
+    "poollast",
+    "delact",
+    "linact"
+   ],
+   "best_edit": "poollast",
+   "y": -0.9800000000000031,
+   "acc_shipped": 0.7628
+  }
+ ],
+ "score_pair": {
+  "n": 8,
+  "r2_oos": -0.885251388311288,
+  "pearson": -0.13478431444580646,
+  "spearman": -0.30952380952380953,
+  "mae": 5.313053939722137,
+  "rmse": 6.250439075665518
+ },
+ "score_alt": {
+  "n": 8,
+  "r2_oos": -0.09383805964828196,
+  "pearson": 0.2547743899616402,
+  "spearman": -0.11904761904761905,
+  "mae": 3.912313368231999,
+  "rmse": 4.761046322302423
+ },
+ "score_const": {
+  "n": 8,
+  "r2_oos": -0.09242644694809177,
+  "pearson": NaN,
+  "spearman": 0.11904761904761905,
+  "mae": 4.555615384615383,
+  "rmse": 4.757973233419961
+ }
+}

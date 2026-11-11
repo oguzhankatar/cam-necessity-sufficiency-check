@@ -1,0 +1,279 @@
+== task 3 (blocked separation)
+  all                    n=48  1-corr(mean) 0.015/0.410/1.637 | 1-corr(min) 0.030/0.605/1.838 | maxNS 0.385/0.923/1.288 | Rhalf 1.61e-03/6.31e-01/3.59e+00 | argmin maxNS rdnet_tiny
+  dev                    n=29  1-corr(mean) 0.015/0.300/0.941 | 1-corr(min) 0.030/0.474/1.838 | maxNS 0.385/0.853/1.151 | Rhalf 1.06e-01/6.22e-01/2.26e+00 | argmin maxNS rdnet_tiny
+  heldout                n=19  1-corr(mean) 0.041/0.537/1.637 | 1-corr(min) 0.056/0.823/1.692 | maxNS 0.446/1.002/1.288 | Rhalf 1.61e-03/1.34e+00/3.59e+00 | argmin maxNS davit_small
+  NORM-ONLY              n=24  1-corr(mean) 0.015/0.339/0.793 | 1-corr(min) 0.030/0.504/1.496 | maxNS 0.385/0.837/1.254 | Rhalf 1.68e-01/6.22e-01/1.83e+00 | argmin maxNS rdnet_tiny
+  HARD-BLOCKED           n=24  1-corr(mean) 0.058/0.422/1.637 | 1-corr(min) 0.113/0.653/1.838 | maxNS 0.436/0.993/1.288 | Rhalf 1.61e-03/8.32e-01/3.59e+00 | argmin maxNS lcnet_050
+  heldout_NORM-ONLY      n=8  1-corr(mean) 0.041/0.477/0.793 | 1-corr(min) 0.056/0.703/1.361 | maxNS 0.446/0.905/1.254 | Rhalf 1.68e-01/7.44e-01/1.57e+00 | argmin maxNS davit_small
+  heldout_HARD-BLOCKED   n=11  1-corr(mean) 0.058/0.659/1.637 | 1-corr(min) 0.113/0.823/1.692 | maxNS 0.469/1.003/1.288 | Rhalf 1.61e-03/1.36e+00/3.59e+00 | argmin maxNS volo_d1_224
+    rdnet_tiny                           dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.015 1-c(min)=0.030 maxNS=0.385 Rh=0.565 I2=0.0349
+    lcnet_050                            dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.167 1-c(min)=0.302 maxNS=0.436 Rh=0.107 I2=0.0335
+    davit_small                          heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.041 1-c(min)=0.056 maxNS=0.446 Rh=0.309 I2=0.0155
+    volo_d1_224                          heldout DEGENERATE     HARD-BLOCKED 1-c(mean)=0.537 1-c(min)=0.602 maxNS=0.469 Rh=0.00161 I2=0
+    poolformer_s24                       heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.198 1-c(min)=0.435 maxNS=0.522 Rh=0.168 I2=0.00959
+    hgnetv2_b0                           dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.300 1-c(min)=0.385 maxNS=0.597 Rh=0.185 I2=0.0348
+    hiera_base_224                       heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.311 1-c(min)=0.369 maxNS=0.614 Rh=0.305 I2=0.0281
+    davit_tiny                           dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.049 1-c(min)=0.076 maxNS=0.633 Rh=0.64 I2=0.0452
+    convnext_tiny                        dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.051 1-c(min)=0.055 maxNS=0.641 Rh=0.623 I2=0.0358
+    hardcorenas_a                        dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.287 1-c(min)=0.359 maxNS=0.705 Rh=0.24 I2=0.0447
+    vit_betwixt_patch16_reg4_gap_256     dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.500 1-c(min)=0.620 maxNS=0.726 Rh=0.234 I2=0.00227
+    vit_base_patch16_rope_reg1_gap_256   dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.343 1-c(min)=0.397 maxNS=0.763 Rh=0.393 I2=0.00367
+    beitv2_base_patch16_224              dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.202 1-c(min)=0.250 maxNS=0.769 Rh=0.622 I2=0.01
+    ghostnet_100                         dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.262 1-c(min)=0.369 maxNS=0.808 Rh=0.232 I2=0.0234
+    convnext_base                        dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.194 1-c(min)=0.263 maxNS=0.815 Rh=0.588 I2=0.0616
+    hiera_small_224                      heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.417 1-c(min)=0.546 maxNS=0.815 Rh=0.418 I2=0.0216
+    naflexvit_base_patch16_gap           dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.492 1-c(min)=0.625 maxNS=0.833 Rh=0.397 I2=0.00231
+    poolformer_s12                       dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.221 1-c(min)=0.474 maxNS=0.842 Rh=0.288 I2=0.0124
+    mobilenetv3_large_100                dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.215 1-c(min)=0.287 maxNS=0.850 Rh=0.208 I2=0.0148
+    convnextv2_tiny                      dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.185 1-c(min)=0.263 maxNS=0.853 Rh=0.66 I2=0.0749
+    hgnet_tiny                           heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.058 1-c(min)=0.113 maxNS=0.857 Rh=0.0864 I2=0.0165
+    hiera_tiny_224                       dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.465 1-c(min)=0.608 maxNS=0.863 Rh=0.397 I2=0.0192
+    vgg16                                dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.289 1-c(min)=0.363 maxNS=0.894 Rh=0.106 I2=0.077
+    mobilenetv3_small_100                dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.417 1-c(min)=0.646 maxNS=0.900 Rh=0.973 I2=0.0582
+    maxvit_tiny_tf_224                   dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.404 1-c(min)=0.508 maxNS=0.947 Rh=0.691 I2=0.0421
+    vitamin_small_224                    dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.155 1-c(min)=0.218 maxNS=0.967 Rh=1.83 I2=0.00448
+    mambaout_small                       heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.357 1-c(min)=0.661 maxNS=0.984 Rh=1.34 I2=0.0953
+    eva02_tiny_patch14_336               dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.336 1-c(min)=0.535 maxNS=0.989 Rh=0.901 I2=0.014
+    mambaout_tiny                        dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.567 1-c(min)=0.829 maxNS=0.989 Rh=1.52 I2=0.0878
+    edgenext_small                       dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.652 1-c(min)=0.952 maxNS=0.992 Rh=0.909 I2=0.0414
+    poolformerv2_s24                     heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.537 1-c(min)=0.860 maxNS=0.995 Rh=1.34 I2=0.091
+    mambaout_femto                       heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.772 1-c(min)=1.183 maxNS=0.996 Rh=1.57 I2=0.0754
+    mambaout_kobe                        heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.679 1-c(min)=1.298 maxNS=1.002 Rh=1.75 I2=0.11
+    ghostnetv2_100                       heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.229 1-c(min)=0.443 maxNS=1.003 Rh=0.282 I2=0.0227
+    repghostnet_100                      dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.269 1-c(min)=0.627 maxNS=1.012 Rh=0.369 I2=0.0321
+    vgg19                                heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.428 1-c(min)=0.751 maxNS=1.020 Rh=0.516 I2=0.0414
+    poolformerv2_s12                     dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.725 1-c(min)=1.496 maxNS=1.026 Rh=1.31 I2=0.0596
+    convformer_s18                       dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.869 1-c(min)=1.838 maxNS=1.038 Rh=2.26 I2=0.117
+    caformer_s18                         dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.941 1-c(min)=1.396 maxNS=1.042 Rh=1.93 I2=0.0598
+    beit_base_patch16_224                heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.793 1-c(min)=1.136 maxNS=1.064 Rh=1.07 I2=0.0321
+    convformer_s36                       heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=1.637 1-c(min)=1.692 maxNS=1.065 Rh=1.65 I2=0.111
+    efficientvit_b1                      heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.850 1-c(min)=1.310 maxNS=1.075 Rh=1.36 I2=0.102
+    tiny_vit_21m_224                     heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.592 1-c(min)=1.314 maxNS=1.075 Rh=1.57 I2=0.116
+    mobilenetv4_conv_small               dev     NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.881 1-c(min)=1.018 maxNS=1.125 Rh=1.84 I2=0.118
+    tiny_vit_5m_224                      dev     NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.580 1-c(min)=1.479 maxNS=1.151 Rh=1.4 I2=0.0927
+    inception_next_tiny                  heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.659 1-c(min)=0.823 maxNS=1.194 Rh=2.81 I2=0.0923
+    tiny_vit_11m_224                     heldout NORM-BLOCKED   NORM-ONLY    1-c(mean)=0.607 1-c(min)=1.361 maxNS=1.254 Rh=1.43 I2=0.153
+    fasternet_t0                         heldout NONLIN-BLOCKED HARD-BLOCKED 1-c(mean)=0.695 1-c(min)=1.175 maxNS=1.288 Rh=3.59 I2=0.0686
+== task 8 {
+ "n": 89,
+ "maxNS": {
+  "max": 4.4275215317930665e-14,
+  "model": "mixer_b16_224"
+ },
+ "Rhalf": {
+  "max": 8.094249993337201e-14,
+  "model": "convmixer_768_32"
+ },
+ "I2": {
+  "max": 4.167660648535517e-14,
+  "model": "convmixer_768_32"
+ },
+ "any_of_three": {
+  "max": 8.094249993337201e-14,
+  "model": "convmixer_768_32"
+ },
+ "verify_numbers_quantity_seg_d0_d1_perm_dev": {
+  "max": 4.815209504296822e-16,
+  "model": "hrnet_w18_small"
+ },
+ "vacuous_n": 10,
+ "vacuous_max_any": 0.0,
+ "smallest_maxNS_among_failing": {
+  "value": 0.38463402407100955,
+  "model": "rdnet_tiny"
+ },
+ "n_in_gap_1e-12_to_1e-4": 0
+}
+== task 4 {
+ "frozen_rule_sha_raw": "a07131d7c558f058721784993c03e134923e09a88ccada8779bca5b5413a6cc7",
+ "frozen_rule_sha_crlf_to_lf": "b4caf08e85ee7049ab39acd5dbf40dfa85b8d15964dd5442cbcecf05188893e0",
+ "frozen_rule_recorded": "b4caf08e85ee7049ab39acd5dbf40dfa85b8d15964dd5442cbcecf05188893e0",
+ "frozen_rule_has_crlf": true,
+ "frozen_rule_match_raw": false,
+ "frozen_rule_match_lf": true,
+ "s4_decide_match": true,
+ "slib_match": true,
+ "s4_decide_has_crlf": true,
+ "slib_has_crlf": false,
+ "block_hashes_match": 10,
+ "n_blocks": 10,
+ "file_mtimes_local": {
+  "scripts/scope/slib.py": "2026-09-23 15:11:39",
+  "scripts/scope/s4_decide.py": "2026-09-23 15:39:19",
+  "outputs/scope/s4_decide.json": "2026-09-23 15:40:06",
+  "scripts/heldout/h0_freeze.py": "2026-09-23 16:46:19",
+  "scripts/heldout/frozen_rule.py": "2026-09-23 18:07:48",
+  "outputs/heldout/h0_freeze.json": "2026-09-23 18:07:48",
+  "outputs/heldout/h2_diagnose.json": "2026-09-23 17:06:06",
+  "scripts/heldout/rule_v2.py": "2026-09-23 17:07:34",
+  "scripts/heldout/h1_run.py": "2026-09-23 17:08:18",
+  "scripts/heldout/hlib.py": "2026-09-23 17:16:19",
+  "outputs/heldout/h1_D.json": "2026-09-23 17:18:16",
+  "outputs/heldout/h1_B.json": "2026-09-23 17:27:19",
+  "outputs/heldout/h1_A.json": "2026-09-23 17:28:49"
+ },
+ "h1_run_rule_v2_lines": [
+  [
+   25,
+   "import rule_v2 as R2"
+  ],
+  [
+   54,
+   "st = R2.structural_v2(m, f)          # calls frozen_rule.structural first"
+  ]
+ ],
+ "crossvit": {
+  "error": "ValueError: forward_features returned list",
+  "v1": "DEGENERATE",
+  "v2a": "DEGENERATE",
+  "v2b": "IN-SCOPE",
+  "v2b_agg": "MEAN"
+ },
+ "volo": {
+  "v1": "DEGENERATE",
+  "v2a": "AGG-BLOCKED",
+  "v2b": "AGG-BLOCKED",
+  "gt": "HARD-BLOCKED",
+  "agg_name": "functional(global_pool=token)",
+  "maxNS": 0.46933548005335596,
+  "Rhalf": 0.00160715639612441,
+  "I2": 0.0,
+  "corrNS_min": 0.3976868987228405,
+  "n_active": 2,
+  "spatial_mass": 1.0,
+  "module_pool": false
+ },
+ "repair_changes_v1_to_v2b": [
+  [
+   "crossvit_9_240",
+   "D",
+   "DEGENERATE",
+   "IN-SCOPE"
+  ],
+  [
+   "volo_d1_224",
+   "A",
+   "DEGENERATE",
+   "AGG-BLOCKED"
+  ]
+ ],
+ "repair_changes_v1_to_v2a": [
+  [
+   "volo_d1_224",
+   "A",
+   "DEGENERATE",
+   "AGG-BLOCKED"
+  ]
+ ],
+ "counts": {
+  "dev_listed": 66,
+  "dev_measured": 65,
+  "heldout": 82,
+  "A": 49,
+  "B": 33
+ },
+ "verdicts_v1_all148": {
+  "IN-SCOPE": 89,
+  "NONLIN-BLOCKED": 23,
+  "NORM-BLOCKED": 24,
+  "DEGENERATE": 12
+ },
+ "verdicts_v1_dev66": {
+  "IN-SCOPE": 32,
+  "NONLIN-BLOCKED": 13,
+  "NORM-BLOCKED": 16,
+  "DEGENERATE": 5
+ },
+ "module_pool_false": 46,
+ "module_pool_false_heldout": 28,
+ "agree": {
+  "dev": 65,
+  "heldout": 81
+ },
+ "class_token_verdicts": [
+  [
+   "vit_base_patch16_224",
+   "D",
+   "VACUOUS"
+  ],
+  [
+   "deit3_small_patch16_224",
+   "D",
+   "VACUOUS"
+  ],
+  [
+   "pit_s_224",
+   "D",
+   "VACUOUS"
+  ],
+  [
+   "cait_xxs24_224",
+   "D",
+   "VACUOUS"
+  ],
+  [
+   "crossvit_9_240",
+   "D",
+   null
+  ],
+  [
+   "volo_d1_224",
+   "A",
+   "HARD-BLOCKED"
+  ],
+  [
+   "xcit_tiny_12_p16_224",
+   "B",
+   "VACUOUS"
+  ],
+  [
+   "convit_tiny",
+   "B",
+   "VACUOUS"
+  ],
+  [
+   "tnt_s_patch16_224",
+   "B",
+   "VACUOUS"
+  ],
+  [
+   "coat_lite_tiny",
+   "B",
+   "VACUOUS"
+  ],
+  [
+   "flexivit_small",
+   "B",
+   "VACUOUS"
+  ],
+  [
+   "vit_small_patch16_224",
+   "B",
+   "VACUOUS"
+  ]
+ ],
+ "names_D_equals_scope_names": true
+}
+== task 7
+  s3_edits           mobilenetv3_large_100      best=poollast  cost=-3.388 delact_add=True delact_cost=-6.802 y=-3.388000000000002 reach=['delact', 'linact', 'poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  s3_edits           mobilenetv3_small_100      best=poollast  cost=-7.532 delact_add=True delact_cost=-12.412 y=-7.531999999999995 reach=['delact', 'linact', 'poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  s3_edits           mobilenetv4_conv_small     best=delact    cost=-6.384 delact_add=True delact_cost=-6.384 y=-6.384 reach=['delact', 'linact', 'poollast'] | None
+  s3_edits           lcnet_050                  best=linact    cost=-18.520 delact_add=True delact_cost=-20.648 y=-18.519999999999996 reach=['delact', 'linact', 'poollast'] | cheapest reaching edit replaces the activation by its fitted affine part
+  s3_edits           ghostnet_100               best=delact    cost=-3.800 delact_add=True delact_cost=-3.800 y=-3.7999999999999923 reach=['delact', 'linact', 'poollast'] | None
+  s3_edits           repghostnet_100            best=delact    cost=-4.790 delact_add=True delact_cost=-4.790 y=-4.790000000000005 reach=['delact', 'linact', 'poollast'] | None
+  s3_edits           hardcorenas_a              best=poollast  cost=-7.488 delact_add=True delact_cost=-9.502 y=-7.487999999999994 reach=['delact', 'linact', 'poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  s3_edits           hgnetv2_b0                 best=linact    cost=-11.354 delact_add=True delact_cost=-12.948 y=-11.353999999999997 reach=['delact', 'linact', 'poollast'] | cheapest reaching edit replaces the activation by its fitted affine part
+  s3_edits           maxvit_tiny_tf_224         best=delboth   cost=-0.064 delact_add=False delact_cost=-0.070 y=-0.06399999999999739 reach=['delboth', 'poollast'] | cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False
+  s3_edits           caformer_s18               best=poollast  cost=-3.692 delact_add=False delact_cost=-4.406 y=-3.6919999999999953 reach=['poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  s3_edits           convformer_s18             best=poollast  cost=-3.150 delact_add=False delact_cost=-6.960 y=-3.1499999999999972 reach=['poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  s3_edits           mambaout_tiny              best=delboth   cost=-3.276 delact_add=False delact_cost=-9.094 y=-3.276000000000001 reach=['delboth', 'poollast'] | cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False
+  s3v_vgg16          vgg16                      best=linact    cost=-16.268 delact_add=True delact_cost=-36.072 y=-16.268000000000004 reach=['delact', 'linact'] | cheapest reaching edit replaces the activation by its fitted affine part
+  h5_edits_heldout   convformer_s36             best=poollast  cost=-2.426 delact_add=False delact_cost=-5.256 y=None reach=['poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  h5_edits_heldout   inception_next_tiny        best=delboth   cost=-2.442 delact_add=False delact_cost=-1.586 y=None reach=['delboth', 'poollast'] | cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False
+  h5_edits_heldout   mambaout_femto             best=poollast  cost=-13.626 delact_add=False delact_cost=-13.420 y=None reach=['delboth', 'poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
+  h5_edits_heldout   mambaout_small             best=delboth   cost=-2.212 delact_add=False delact_cost=-2.904 y=None reach=['delboth', 'poollast'] | cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False
+  h5_edits_heldout   mambaout_kobe              best=delboth   cost=-11.184 delact_add=False delact_cost=-9.350 y=None reach=['delboth', 'poollast'] | cheapest reaching edit deletes the normalisation AND the activation(s); delact alone additive=False
+  h5_edits_heldout   efficientvit_b1            ERROR RuntimeError: Given groups=1, weight of size [1536, 256, 1, 1], expected input[2, 1536, 1,
+  h5_edits_heldout   fasternet_t0               best=linact    cost=-8.578 delact_add=True delact_cost=-60.058 y=None reach=['delact', 'linact', 'poollast'] | cheapest reaching edit replaces the activation by its fitted affine part
+  h5_edits_heldout   ghostnetv2_100             best=delact    cost=-2.684 delact_add=True delact_cost=-2.684 y=None reach=['delact', 'linact', 'poollast'] | None
+  h5_edits_heldout   hgnet_tiny                 best=poollast  cost=-0.980 delact_add=True delact_cost=-4.092 y=None reach=['delact', 'linact', 'poollast'] | cheapest reaching edit moves the whole post-pool map inside the mean (no deletion)
